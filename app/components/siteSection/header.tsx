@@ -79,13 +79,13 @@ export function Header() {
             />
           </Anchor>
           <Group spacing={40} className={classes.group}>
-            <Text className='cursor-pointer' size="md" onClick={bonusOpen}>
+            <Text color={'#fff'} className='cursor-pointer' size="md" onClick={bonusOpen}>
               Sign up for Players
             </Text>
-            <Text size="md" component={NextLink} href="/distributor-signup">
+            <Text color={'#fff'} size="md" component={NextLink} href="/distributor-signup">
               PASA for Distribution
             </Text>
-            <Text size="md" component={NextLink} href="/games">
+            <Text color={'#fff'} size="md" component={NextLink} href="/games">
               Games
             </Text>
           </Group>
