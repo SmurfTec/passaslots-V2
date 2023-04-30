@@ -1,48 +1,73 @@
-import { BackgroundImage, Button, Container, Grid, Group, Image, Text, Title } from '@mantine/core';
+import { BackgroundImage, Button, Container, Grid, Group, Image, Text, Title, createStyles } from '@mantine/core';
 import { NextLink } from '@mantine/next';
 import { useBonusModal } from '@pasa/hooks';
+import { HomeTopCarousel } from './hometopCarousel';
+
+const useStyles = createStyles((theme) => ({
+  backdrop: {
+    backgroundColor: '#150B2E',
+    backgroundImage: "url('/images/header/backgroundImage.png')",
+    backgroundRepeat: 'no-repeat',
+    // position: 'relative',
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    minHeight: '100vh', 
+    position: 'relative',
+    // width: '100%',
+    // height: '100vh',
+  },
+}));
 
 export function HighTideHome() {
   const [BonusModal, bonusOpen] = useBonusModal();
+  const { classes } = useStyles();
   return (
     <>
-      <BackgroundImage className="" style={{ backgroundSize: 'cover' }} src="/images/pages/home/businessBackground.png">
-        <Container size={1300} py={100}>
-          <Grid>
-            <Grid.Col xs={6}>
-              <Title color="white" order={2}>
-                <span className="text-[#c1aa84]">RIDE THE HIGH</span> TIDE OF <br /> LUCK
-              </Title>
-              <Text color="white" mt={50} className="font-[300]" size="sm">
-                Pasa has everything you need to run your business smoothly. It has an insights system that takes care of
-                things like keeping track of customers, giving you reports, and managing jackpots and bonuses. Plus,
-                it's safe and works on all types of devices like computers, phones, tablets, and even special terminals
-                you can use on the go. So no matter where you are, you'll always have everything you need!
-              </Text>
-            </Grid.Col>
-            <Grid.Col xs={6} className="text-right">
-              <Button
-                px={50}
-                styles={{
-                  root: {
-                    fontSize: '16px',
-                    color: 'white',
-                    '&:hover': { background: '#AE7A5D' },
-                  },
-                }}
-                bg={'#AE7A5D'}
-                size="lg"
-                variant="outline"
-                onClick={bonusOpen}
-              >
-                SIGN UP
-              </Button>
-            </Grid.Col>
-          </Grid>
-        </Container>
-      </BackgroundImage>
+      <div className={classes.backdrop}>
+        <BackgroundImage className="" style={{ backgroundSize: 'cover' }} src="/images/pages/home/highTideImage.png">
+          <Container size={1300} py={100}>
+            <Grid>
+              <Grid.Col xs={6}>
+                <Title color="white" order={2} my={60}>
+                  RIDE THE HIGH <span className="text-[#016BE6]">TIDE OF <br /> LUCK</span>
+                </Title>
+                <Text color="white" mt={80} className="font-[300]" size="md" mb={80}>
+                To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile players 
+                to launch into playing this slot sensation the moment you’ve logged into your unique real money account. 
+                You never know, one spin is all it takes to potentially change your life forever!
+                </Text>
+                <Button 
+                  component={NextLink} 
+                  href="games/#gameSlots" 
+                  mt={40} 
+                  px={50}
+                  mb={60}
+                  styles={{
+                    root: {
+                      fontSize: '16px',
+                      color: 'white',
+                      borderColor: '#F6CAA7',
+                      '&:hover': { background: '#016BE6' },
+                    },
+                  }}
+                  bg={'#016BE6'}
+                  size="lg"
+                  radius={50} 
+                  className="text-sm font-bold uppercase ">
+                  More on Slot Games
+                </Button>
+              </Grid.Col>
+            </Grid>
+          </Container>
+        </BackgroundImage>
+      </div>
       {BonusModal}
-      <Container size={1300} pt={100}>
+
+      <div className="my-20">
+        <HomeTopCarousel />
+      </div>
+
+      {/* <Container size={1300} pt={100}>
         <Image src="/images/pages/home/homeMobile2.png" alt="home mobile" />
         <div className="text-center md:text-right">
           <Button
@@ -65,8 +90,8 @@ export function HighTideHome() {
             Play Now
           </Button>
         </div>
-      </Container>
-      <Image pt={50} src="/images/pages/home/multipleGames.png" alt="multiple games" />
+      </Container> */}
+      {/* <Image pt={50} src="/images/pages/home/multipleGames.png" alt="multiple games" /> */}
 
       <Container size={1300} pb={50}>
         <Group position="apart" className="space-y-5">

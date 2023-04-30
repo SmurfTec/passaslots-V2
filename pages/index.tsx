@@ -25,11 +25,13 @@ export function Index() {
     <div>
       <HomeHero />
       <WinHome />
-      <div className="my-20">
-        <HomeTopCarousel />
-      </div>
       <WhyPasaHome />
       <HighTideHome />
+
+      {/* <div className="my-20">
+        <HomeTopCarousel />
+      </div> */}
+  
       <HomeCollection />
       <MiddleHeading />
       <div className="my-20">

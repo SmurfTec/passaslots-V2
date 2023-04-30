@@ -1,25 +1,31 @@
-import { Container, Grid, Image, Rating, Text, Title } from '@mantine/core';
+import { Container, Grid, Group, Image, Rating, Text, Title } from '@mantine/core';
 
 export type SingleTestimonialProps = {
   name: string;
   rating: number;
   description: string;
   image: string;
+  date: string;
 };
 
-export function SingleTestimonial({ description, image, name, rating }: SingleTestimonialProps) {
+export function SingleTestimonial({ description, image, name, rating, date }: SingleTestimonialProps) {
   return (
     <div>
-        <Grid>
+        <Grid style={{ border: '2px solid #016BE6', margin: "20px", padding: "10px", borderRadius: '50px' }}>
           <Grid.Col order={2} orderSm={1} sm={9} className='space-y-8'>
-            <Title className='font-bold' order={3}>{name}</Title>
-            <Text style={{ borderLeft: '3px solid black', padding: "20px" }} pl={10} size="sm">
+            <Group>
+              <Image width={80} height={80} src={image} alt="testimonial" />
+              <Grid.Col order={1} orderSm={2} sm={4}>
+                <Title color={'white'} className='font-bold' order={4}>{name}</Title>
+                <Rating defaultValue={rating} readOnly />
+              </Grid.Col>
+            </Group>
+            <Text color={'white'} pl={10} size="sm" className='space-y-40'>
               {description}
             </Text>
-          </Grid.Col>
-          <Grid.Col order={1} orderSm={2} sm={3}>
-            <Image width={80} height={80} src={image} alt="testimonial" />
-            <Rating defaultValue={rating} readOnly />
+            <Text color={'white'} pl={10} size="sm" className=''>
+              {date}
+            </Text>
           </Grid.Col>
         </Grid>
     </div>
