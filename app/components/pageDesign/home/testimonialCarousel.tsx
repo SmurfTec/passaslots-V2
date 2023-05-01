@@ -1,4 +1,4 @@
-import { Center, Container, Grid, Text } from '@mantine/core';
+import { Center, Container, Grid, Text, Title, BackgroundImage } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { Comment } from '@pasa/components';
 import { Carousel } from '@pasa/customComponents';
@@ -67,61 +67,83 @@ export const TestimonialCarousel = () => {
   const matches = useMediaQuery('(max-width: 700px)');
   return (
     // <Flex className='py-16 sm:py-24' mb={80} bg="black" gap="md" align="center" direction="row" wrap="nowrap">
-    <div className="bg-black py-16 sm:py-24 mb-20 sm:mb-0">
+    <div className="bg-gradient-to-r from-blue-500 to-purple-600 py-20"
+    style={{
+      backgroundImage:
+        'linear-gradient(to right, #1A0E37, #016BE6, #A74C9A, #84329A)',
+      backdropFilter: 'blur(20px)',}}>
       <Container size={1300}>
-        <Grid m={0}>
-          <Grid.Col md={3} className="relative">
-            <Center>
-              <Text color="white" size={'md'} className="absolute top-1/2 -translate-y-1/2">
-                Clients Testimonials
-              </Text>
-            </Center>
-          </Grid.Col>
-          <Grid.Col md={8} p={0} className="text-center">
-            <Carousel
-              align="start"
-              // maw={"90vw"}
-              mr={'-20px'}
-              mt={'50px'}
-              mx="auto"
-              styles={{
-                controls: {
-                  position: 'relative',
-                  WebkitJustifyContent: 'start !important',
-                  bottom: '50px',
-                  left: '-250px',
-                },
-                control: {
-                  margin: '0 0 0 10px !important',
-                  color: '#808080',
-                  backgroundColor: 'transparent',
-                  borderRadius: 'unset',
-                  borderColor: 'transparent',
-                  minWidth: '15px',
-                  ['&:hover']: {
-                    color: '#3E66DF',
-                  },
-                },
-              }}
-              slideSize={matches ? '100%' : '50%'}
-              slideGap={'xl'}
-              withControls
-              withIndicators={false}
-              slidesToScroll={matches ? 1 : 2}
-              loop
-              slides={comments.map((item, key) => (
-                <Comment
-                  key={key + item!.thumbnail}
-                  thumbnail={item!.thumbnail}
-                  name={item!.name}
-                  rating={item!.rating}
-                  description={item!.description}
-                  message={item!.message}
+        <BackgroundImage className="mb-10" style={{ backgroundSize: 'cover', rotate: '-10deg', }} src="/images/pages/home/multicolorfall.png">
+          <div style={{rotate: '10deg'}}>
+            <Title color={'white'} order={2} className="font-bold uppercase text-center">
+              What our community says
+            </Title>
+            <Title color={'white'} order={2} className="font-bold uppercase text-center">
+              about us
+            </Title>
+            <Grid m={0}>
+              {/* <Grid.Col md={3} className="relative">
+                <Center>
+                  <Text color="white" size={'md'} className="absolute top-1/2 -translate-y-1/2">
+                    Clients Testimonials
+                  </Text>
+                </Center>
+              </Grid.Col> */}
+              <Grid.Col md={12} p={0} className="text-center">
+                <Carousel
+                  align="start"
+                  // maw={"90vw"}
+                  mr={'-20px'}
+                  mt={'50px'}
+                  mx="auto"
+                  styles={{
+                    root: {
+                      background: 'transparent',
+                      color: '#FFFFFF',
+                      '&:hover': {
+                        background: 'transparent',
+                        color: '#FFFFFF',
+                      },
+                    },
+                    controls: {
+                      position: 'relative',
+                      WebkitJustifyContent: 'start !important',
+                      bottom: '50px',
+                      left: '-250px',
+                    },
+                    control: {
+                      margin: '0 0 0 10px !important',
+                      color: '#808080',
+                      backgroundColor: 'transparent',
+                      borderRadius: 'unset',
+                      borderColor: 'transparent',
+                      minWidth: '15px',
+                      ['&:hover']: {
+                        color: '#3E66DF',
+                      },
+                    },
+                  }}
+                  slideSize={matches ? '100%' : '33%'}
+                  slideGap={'xl'}
+                  withControls
+                  withIndicators={false}
+                  slidesToScroll={matches ? 1 : 2}
+                  loop
+                  slides={comments.map((item, key) => (
+                    <Comment
+                      key={key + item!.thumbnail}
+                      thumbnail={item!.thumbnail}
+                      name={item!.name}
+                      rating={item!.rating}
+                      description={item!.description}
+                      message={item!.message}
+                    />
+                  ))}
                 />
-              ))}
-            />
-          </Grid.Col>
-        </Grid>
+              </Grid.Col>
+            </Grid>
+          </div>
+        </BackgroundImage>
       </Container>
     </div>
   );

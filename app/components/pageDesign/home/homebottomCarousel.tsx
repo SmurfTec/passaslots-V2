@@ -1,15 +1,46 @@
-import { Container } from '@mantine/core';
 import { Carousel, useStylesCarousel } from '@pasa/customComponents';
+import { BackgroundImage, Container, createStyles, Button, Group, Image, Flex } from '@mantine/core';
+import { Embla } from '@mantine/carousel';
+import { useCallback, useEffect, useState } from 'react';
+
 const images = [
-  '/images/pages/home/carousel.png',
-  '/images/pages/home/carousel.png',
-  '/images/pages/home/carousel.png',
+  '/images/carousel/phonecarousel4.png',
+  '/images/carousel/phonecarousel1.png',
+  '/images/carousel/phonecarousel3.png',
+  '/images/carousel/phonecarousel5.png',
+  '/images/carousel/phonecarousel2.png',
 ];
 export const HomeBottomCarousel = () => {
-  const { classes } = useStylesCarousel();
+  // const { classes } = useStyles();
+  const [slideProgress, setSlideProgress] = useState(1);
+  const [embla, setEmbla] = useState<Embla | null>(null);
+  // const { classes } = useStylesCarousel();
+
+  const handleScroll = useCallback(() => {
+    if (!embla) return;
+    const progress = Math.min(2, Math.floor(Math.max(0, embla.scrollProgress() * 3)));
+    setSlideProgress(progress);
+    // console.log(progress);
+  }, [embla, setSlideProgress]);
+
+  useEffect(() => {
+    if (embla) {
+      embla.on('scroll', handleScroll);
+      handleScroll();
+    }
+  }, [embla]);
+
   return (
-    <Container size={1300}>
-      <Carousel images={images} loop classNames={classes} delay={4000} />
+    <Container size={1300} pt={20} mb={20} mt={30}>
+      <Carousel getEmblaApi={setEmbla} slideSize="20%" loop initialSlide={1} images={images} delay={4000} hC={493} wC={285} />
+      <Flex gap={5} justify='center' align='center' className='mt-5'>
+        <Image height={12} width={12}
+        src={slideProgress === 1 ? "/images/scroll/carouselIndicatorSelect.png" : "/images/scroll/carouselIndicatorNotSelect.png"}/>
+        <Image height={12} width={12}
+        src={slideProgress === 2 ? "/images/scroll/carouselIndicatorSelect.png" : "/images/scroll/carouselIndicatorNotSelect.png"}/>
+        <Image height={12} width={12}
+        src={slideProgress === 0 ? "/images/scroll/carouselIndicatorSelect.png" : "/images/scroll/carouselIndicatorNotSelect.png"}/>
+      </Flex>
     </Container>
   );
 };

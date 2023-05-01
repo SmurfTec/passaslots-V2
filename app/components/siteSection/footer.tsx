@@ -110,6 +110,8 @@ export function Footer() {
                 rightIcon={<ArrowRight />}
                 bg={'transparent'}
                 size="lg"
+                component="a"
+                href="http://Pasasweeps.net"
               >
                 PLAY PASA NOW
               </Button>

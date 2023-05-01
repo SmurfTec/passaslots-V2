@@ -40,6 +40,9 @@ export function WinHome() {
               root: {
                 background: '#016BE7',
                 borderColor: '#F6CAA7',
+                '&:hover': {
+                  background: '#016BE7',
+                }
               }
             }}
             onClick={bonusOpen} className="h-12 px-12 text-[14px] font-[300]">

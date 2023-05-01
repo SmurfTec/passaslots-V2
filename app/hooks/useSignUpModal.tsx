@@ -1,9 +1,10 @@
-import { Button, Container, Grid, Group, Image as MImage, Modal, ScrollArea, Stack, Text, Title } from '@mantine/core';
+import { Button, Container, Grid, Group, Image as MImage, Modal, ScrollArea, Stack, Text, Title, createStyles } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure, useLocalStorage } from '@mantine/hooks';
 import { NextLink } from '@mantine/next';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useThankModal } from './useThankModal';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
@@ -11,7 +12,9 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
   const [bonusValues] = useLocalStorage<{ name: string; email: string }>({
     key: 'bonus',
   });
+  const [thankYouModal, thankYouOpen] = useThankModal();
   const [message, setMessage] = useState(false);
+  const { classes } = useStyles();
   const [opened, { open, close }] = useDisclosure(false);
   const form = useForm({
     initialValues: {
@@ -38,107 +41,138 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
     })
       .then((res) => {
         setMessage(true);
+        thankYouOpen();
+        close();
       })
       .catch((e) => {
         setMessage(false);
       });
   };
   const modal = (
-    <Modal
-      withinPortal
-      keepMounted={false}
-      scrollAreaComponent={ScrollArea.Autosize}
-      styles={{
-        content: {
-          backgroundColor: '#F2F2F2',
-        },
-        header: {
-          backgroundColor: '#F2F2F2',
-        },
-        close: {
-          position: 'absolute',
-          top: 30,
-          right: 30,
-          borderRadius: '20px',
-          color: 'black',
-          backgroundColor: 'white',
-        },
-      }}
-      opened={opened}
-      closeButtonProps={{ size: 'lg' }}
-      onClose={handleClose}
-      size={900}
-      radius={3}
-    >
-      <Container size={800}>
-        <div className="text-center">
-          <Image className="my-4" alt="logo" src={'/images/modal/headerlogo.png'} height={80} width={110} />
-        </div>
-        <Grid align="top">
-          <Grid.Col md={9}>
-            <Stack align="flex-start" my={20}>
-              <Title order={2} size={'33px'} color="black" className=" font-bold uppercase">
-                SHIVER ME TIMBERS! Don't Miss out on the VIP offers.
-              </Title>
-              <Text size="md" color="#6D7D8E">
-                Sign up for VIP SMS updates to be the first one to know about our new games,
-                <br /> SMS exclusive bonuses, and other FIRE IN THE HOLE news.
-              </Text>
-              <Text size="sm" className="font-normal" color="#0F0F0F">
-                Don't worry, we take your data seriously and promise to never spam and keep it safe like our very own
-                treasure chest.
-              </Text>
-              <form onSubmit={form.onSubmit(handleSubmit)}>
-                <PhoneInput
-                  style={{ width: '100%' }}
-                  defaultCountry="US"
-                  placeholder="Phone Number"
-                  {...form.getInputProps('phone')}
-                />
-                <Text size={'10px'} opacity={0.5} maw={'32rem'} className="font-normal" mt={10} color="#0F0F0F">
-                  By entering your phone number and submitting this form, you consent to receive marketing text messages
-                  (such as promotion codes and account reminders) from pasa® US at the number provided, including
-                  messages sent by the autodialer. Consent is not a condition of any purchase. Message and data rates
-                  may apply. Message frequency varies. You can unsubscribe at any time by replying STOP to one of our
-                  messages. View our Privacy Policy and Terms of Service.
+    <>
+      <Modal
+        withinPortal
+        keepMounted={false}
+        scrollAreaComponent={ScrollArea.Autosize}
+        styles={{
+          content: {
+            backgroundColor: '#01152D',
+          },
+          header: {
+            backgroundColor: '#01152D',
+          },
+          close: {
+            position: 'absolute',
+            top: 30,
+            right: 30,
+            borderRadius: '20px',
+            color: '#016BE6',
+            backgroundColor: 'transparent',
+            '&:hover': {
+              backgroundColor: 'transparent',
+            },
+          },
+        }}
+        opened={opened}
+        closeButtonProps={{ size: 'lg' }}
+        onClose={handleClose}
+        size={1000}
+        radius={10}
+      >
+        <Container size={1000}>
+          <div className="text-center">
+            <Image className="my-4" alt="logo" src={'/images/modal/headerlogo.png'} height={80} width={110} />
+          </div>
+          <Grid align="top">
+            <Grid.Col md={9}>
+              <Stack align="flex-start" my={20}>
+                <Title order={2} size={'33px'} color="white" className="font-bold uppercase">
+                  SHIVER ME TIMBERS! Don't Miss out on the VIP offers.
+                </Title>
+                <Text size="md" color="#6D7D8E">
+                  Sign up for VIP SMS updates to be the first one to know about our new games,
+                  <br /> SMS exclusive bonuses, and other FIRE IN THE HOLE news.
                 </Text>
-
-                <Button
-                  styles={{ label: { fontSize: '12px' } }}
-                  radius={0}
-                  mt={40}
-                  mb={10}
-                  px={40}
-                  type="submit"
-                  className="text-base font-[400]"
-                  size="lg"
-                  bg={'#751F86'}
-                >
-                  SIGN UP FOR SMS UPDATES NOW
-                </Button>
-                {message && (
-                  <Text color="green" size={14}>
-                    ✅ Successfully saved email
+                <Text size="sm" className="font-normal" color="#FFFFFF">
+                  Don't worry, we take your data seriously and promise to never spam and keep it safe like our very own
+                  treasure chest.
+                </Text>
+                <form onSubmit={form.onSubmit(handleSubmit)}>
+                  <PhoneInput
+                    style={{ 
+                      borderRadius: 10,
+                      border: '1px solid #016BE6 !important',
+                      width: '100%', 
+                      color:'white', 
+                      backgroundColor: 'transparent', 
+                      '::placeholder': {
+                        color: 'white',
+                      },
+                    }}
+                    inputStyle={{ color: 'white' }}
+                    inputClassName={classes}
+                    className={classes.phoneinput}
+                    defaultCountry="US"
+                    placeholder="Phone Number"
+                    {...form.getInputProps('phone')}
+                  />
+                  <Text size={'10px'} opacity={0.5} maw={'32rem'} className="font-normal" mt={10} color="#FFFFFF">
+                    By entering your phone number and submitting this form, you consent to receive marketing text messages
+                    (such as promotion codes and account reminders) from pasa® US at the number provided, including
+                    messages sent by the autodialer. Consent is not a condition of any purchase. Message and data rates
+                    may apply. Message frequency varies. You can unsubscribe at any time by replying STOP to one of our
+                    messages. View our Privacy Policy and Terms of Service.
                   </Text>
-                )}
+
+                  <Button
+                    styles={{ label: { fontSize: '12px' }, root: { '&:hover': { background: '#016BE6' } } }}
+                    radius={50}
+                    mt={40}
+                    mb={10}
+                    px={40}
+                    type="submit"
+                    className="text-base font-[400]"
+                    size="lg"
+                    color={'white'}
+                    bg={'#016BE6'}
+                  >
+                    SIGN UP FOR SMS UPDATES NOW
+                  </Button>
+                  {message && (
+                    <Text color="green" size={14}>
+                      ✅ Successfully saved email
+                    </Text>
+                  )}
+                  
+                </form>
                 
-              </form>
-              <Group>
-                <Text size={'sm'} component={NextLink} href="/terms-and-conditions" color="dark">
-                  Terms and Conditions
+                <Text size={'md'} component={NextLink} href="/terms-and-conditions" color="white">
+                  Aye, Aye your code will be sent to your phone number too.
                 </Text>
-                <Text size={'sm'} component={NextLink} href="/privacy-policy" color="dark">
-                  Privacy Policy
-                </Text>
-              </Group>
-            </Stack>
-          </Grid.Col>
-          <Grid.Col md={3}>
-            <MImage className="md:mt-44" src="/images/modal/signupPirate.png" alt="pirate" />
-          </Grid.Col>
-        </Grid>
-      </Container>
-    </Modal>
+                <Group>
+                  <Text size={'sm'} component={NextLink} href="/terms-and-conditions" color="white">
+                    Terms and Conditions
+                  </Text>
+                  <Text size={'sm'} component={NextLink} href="/privacy-policy" color="white">
+                    Privacy Policy
+                  </Text>
+                </Group>
+              </Stack>
+            </Grid.Col>
+            <Grid.Col md={3}>
+              <MImage className="md:mt-44 bottom" src="/images/modal/bonusthief.png" alt="pirate" />
+            </Grid.Col>
+          </Grid>
+        </Container>
+      </Modal>
+      {thankYouModal}
+    </>
   );
   return [modal, open];
 };
+
+const useStyles = createStyles((theme) => ({
+  phoneinput: {
+    color:'white',
+  },
+}));

@@ -1,5 +1,22 @@
-import { Container, Grid, Title } from '@mantine/core';
+import { Container, createStyles, Grid, Title } from '@mantine/core';
 import { SingleCollection, SingleCollectionProps } from './singleCollection';
+
+const useStyles = createStyles((theme) => ({
+  backdrop: {
+    // backgroundColor: '#150B2E',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: 'linear-gradient(to right, #1A0E37, #016BE6, #A74C9A, #84329A)',
+    backdropFilter: 'blur(20px)',
+    backgroundSize: 'cover',
+    // position: 'relative',
+    backgroundPosition: 'center center',
+    minHeight: '100vh', 
+    position: 'relative',
+    // width: '100%',
+    // height: '100vh',
+  },
+}));
+
 
 const collectionData: SingleCollectionProps[] = [
   {
@@ -23,18 +40,21 @@ const collectionData: SingleCollectionProps[] = [
 ];
 
 export function HomeCollection() {
+  const { classes } = useStyles();
   return (
-    <Container pb={100} pt={50} size={1300}>
-      <Title mb={50} order={3} className="font-[700]">
-        POPULAR <span className="text-[#751F86]">COLLECTIONS</span>
-      </Title>
-      <Grid m={0} p={0} gutterMd={70}>
-        {collectionData.map((item, key) => (
-          <Grid.Col px={0} sm={6} key={key + item.content}>
-            <SingleCollection button={item.button} title={item.title} content={item.content} image={item.image} />
-          </Grid.Col>
-        ))}
-      </Grid>
-    </Container>
+    <div className={classes.backdrop}>
+      <Container pb={100} pt={100} size={1300}>
+        <Title color={'white'} mb={60} order={3} className="font-[700] text-center">
+          POPULAR COLLECTIONS
+        </Title>
+        <Grid m={0} p={0} gutterMd={70}>
+          {collectionData.map((item, key) => (
+            <Grid.Col px={0} sm={4} key={key + item.content}>
+              <SingleCollection button={item.button} title={item.title} content={item.content} image={item.image} />
+            </Grid.Col>
+          ))}
+        </Grid>
+      </Container>
+    </div>
   );
 }

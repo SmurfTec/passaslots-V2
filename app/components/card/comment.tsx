@@ -1,4 +1,4 @@
-import { Avatar, Group, Paper, Rating, Text } from '@mantine/core';
+import { Avatar, Flex, Grid, Group, Paper, Rating, Text, createStyles } from '@mantine/core';
 
 type CommentProps = {
   thumbnail: string;
@@ -8,23 +8,34 @@ type CommentProps = {
   message: string;
 };
 
+const useStyles = createStyles((theme) => ({
+  paper: {
+    border: "2px solid", 
+    borderRadius: '50px',
+    borderImage: "linear-gradient(to bottom, rgba(167, 76, 154, 1) 100%, rgba(167, 76, 154, 0.19) 19%)",
+    textAlign: 'left',
+  },
+}));
+
 export const Comment = ({ thumbnail, name, rating, description, message }: CommentProps) => {
+  const { classes } = useStyles();
   return (
-    <div>
-      <Paper radius={10} p={'xl'} className='text-left'>
-        <Group>
-          {/* <Avatar src={thumbnail} alt="thumbnail" radius="xl" /> */}
-          <div>
-            <Text className="font-medium text-xl">{name}</Text>
-            <Rating defaultValue={rating}  readOnly size={'xs'} />
-            <Text fz="sm" c="dimmed">
-              {description}
-            </Text>
-          </div>
-        </Group>
-        <Text mt={15} size={'md'}>
+    <div style={{
+      }}>
+      <Paper className={classes.paper} radius={10} p={'xl'} bg={'transparent'}>
+        <Text color={'white'} mt={15} size={'md'} mih={250}>
           {message}
         </Text>
+        <Rating mb={20} mt={20} defaultValue={rating}  readOnly size={'xs'} />
+          <Flex>
+            <Avatar src={thumbnail} alt="thumbnail" radius="xl" />
+            <Grid.Col>
+              <Text mb={0} color={'white'} className="font-medium text-xl">{name}</Text>
+              <Text color={'#808080'} fz="sm" c="dimmed">
+                {description}
+              </Text>
+            </Grid.Col>
+          </Flex>
       </Paper>
     </div>
   );

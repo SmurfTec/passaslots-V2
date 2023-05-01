@@ -70,14 +70,14 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
         closeButtonProps={{ size: 'lg' }}
         onClose={close}
         size={900}
-        radius={3}
+        radius={10}
       >
         <Container size={800}>
           <div className="text-center">
             <Image className="my-4" alt="logo" src={'/images/modal/headerlogo.png'} height={80} width={110} />
           </div>
           <Grid align="top">
-            <Grid.Col md={9}>
+            <Grid.Col md={12}>
               <Stack align="flex-start" my={20}>
                 <Title order={2} size={'33px'} color="#FFFFFF" className=" font-bold uppercase">
                   AHOY THERE MATEY!
@@ -122,9 +122,6 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
                   </Text>
                 </Group>
               </Stack>
-            </Grid.Col>
-            <Grid.Col md={3}>
-              <MImage className="md:mt-44" src="/images/modal/bonuspirate.png" alt="bonus pirate" />
             </Grid.Col>
           </Grid>
         </Container>

@@ -15,36 +15,25 @@ export type SingleCollectionProps = {
 
 export function SingleCollection({ button, content, image, title }: SingleCollectionProps) {
   return (
-    <Card p={0} m={0} radius="md">
+    <Card p={10} m={0} radius="sm" bg={'transparent'}>
       <Card.Section>
-        <Image alt={image} src={image} mb={-20}  />
-      </Card.Section>
-      <Card.Section
-      m={0}
-        className="min-h-[170px]"
-        style={{
-          backgroundColor: 'black',
-          //   borderImageSource: 'linear-gradient(180deg, #21C3C3 0%, rgba(255, 255, 255, 0.15) 100%)',
-        }}
-      >
-        <Grid align="top" p={20} m={0}>
-          <Grid.Col span={6}>
-            <Title color="white" order={4} className="font-[700]">
+        <Grid align={'center'} justify={'center'}>
+          <Image width={250} height={250} alt={image} src={image} mb={0}  />
+          <Grid.Col p={10} m={0}>
+            <Title color="white" order={4} className="font-[700] text-center">
               {title}
             </Title>
-          </Grid.Col>
-          <Grid.Col className="align-baseline" span={6}>
-            <Text color="white" mt={5} size="sm" className="font-[300] opacity-70">
+            <Text color="white" mt={5} size="sm" className="font-[300] opacity-70 text-center">
               {content}
             </Text>
-          </Grid.Col>
-          <Grid.Col span={6}>
-            <Image src="/images/pages/home/chips.png" width={85} height={42}  alt="pirate" />
-          </Grid.Col>
-          <Grid.Col span={6} className="relative ">
-            <Button styles={{label: {fontSize: "11px"}, root: {background: "linear-gradient(180deg, #F9F9F9 0%, #D8D8D8 100%)", color: "black"}}} className="" component={NextLink} href={button.path}>
-              {button.text}
-            </Button>
+            <Grid className='my-5' justify={'center'}>
+              <Image src="/images/pages/home/chips.png" width={85} height={42}  alt="pirate" />
+            </Grid>
+            <Grid className='my-5' justify={'center'}>
+              <Button radius={50} styles={{label: {fontSize: "16px"}, root: {background: "#016BE6", color: "white", '&:hover': { background: "#016BE6", },}}} className="text-center" component={NextLink} href={button.path}>
+                {button.text}
+              </Button>
+            </Grid>
           </Grid.Col>
         </Grid>
       </Card.Section>

@@ -79,7 +79,8 @@ export function HomeHero() {
                 },
               }}
               size="xl"
-              onClick={bonusOpen}
+              component='a'
+              href="http://Pasasweeps.net"
             >
               Play Now
             </Button>

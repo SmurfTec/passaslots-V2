@@ -6,13 +6,15 @@ type CarouselProps = MantineCarouselProps & {
   delay?: number;
   slides?: ReactNode[];
   images?: string[];
+  hC?: number;
+  wC?: number;
 };
 
-export const Carousel = ({ delay, images, slides, ...rest }: CarouselProps) => {
+export const Carousel = ({ delay, images, hC, wC, slides, ...rest }: CarouselProps) => {
   const autoplay = useRef(Autoplay({ delay: delay ?? 3000 }));
   return (
     <MantineCarousel
-      withIndicators
+      // withIndicators
       plugins={[autoplay.current]}
       onMouseEnter={autoplay.current.stop}
       onMouseLeave={autoplay.current.reset}
@@ -21,8 +23,8 @@ export const Carousel = ({ delay, images, slides, ...rest }: CarouselProps) => {
     >
       {slides && slides.map((slide,index) => <MantineCarousel.Slide key={index}>{slide}</MantineCarousel.Slide>)}
       {images && images.map((image,index) => (
-        <MantineCarousel.Slide key={index}>
-          <Image src={image} alt="slide" />
+        <MantineCarousel.Slide key={index} gap={50}>
+          <Image height={hC} width={wC} src={image} alt="slide" />
         </MantineCarousel.Slide>
       ))}
     </MantineCarousel>
