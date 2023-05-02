@@ -34,7 +34,7 @@ export const BottomSubHeading2 = () => {
               </Title>
             </div>
             <Grid className="text-center" justify={'center'}>
-              <Text className="text-center text-base font-normal mt-10 text-[#FFFFFF]" maw={600}>
+              <Text className="text-center leading-10 text-base font-normal mt-10 text-[#FFFFFF]" maw={600}>
                 Designed by renowned software developers, and featuring incredible graphics and audio, as well as
                 payout-packed symbols, no two gaming sessions will be the same, ensuring excitement at every spin.
               </Text>

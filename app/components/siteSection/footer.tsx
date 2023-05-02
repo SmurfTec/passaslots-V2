@@ -67,18 +67,18 @@ export function Footer() {
           <Grid.Col sm={12} className='text-center'>
             <div className='text-center'>
               <Group position='center'>
-                <Image src="/images/footer/footer2.png" width={55} height={55} alt="JACOG" />
-                <Image src="/images/footer/footer3.png" width={55} height={55} alt="JACOG" />
-                <Image src="/images/footer/footer4.png" width={55} height={55} alt="JACOG" />
-                <Image src="/images/footer/footer5.png" width={55} height={55} alt="JACOG" />
-                <Image src="/images/footer/footer1.png" width={55} height={55} alt="JACOG" />
+                <Image src="/images/footer/footer2.png" width={63} height={62} alt="JACOG" />
+                <Image src="/images/footer/footer3.png" width={70} height={70} alt="JACOG" />
+                <Image src="/images/footer/footer4.png" width={58} height={58} alt="JACOG" />
+                <Image src="/images/footer/footer5.png" width={76} height={76} alt="JACOG" />
+                <Image src="/images/footer/footer1.png" width={73} height={66} alt="JACOG" />
               </Group>
               <Divider className="my-5 mx-auto" w={50} size={'sm'} orientation="horizontal" />
               <Group mt={30} position='center'>
-                <Image src="/images/footer/payment1.png" width={50} height={50} alt="JACOG" />
-                <Image src="/images/footer/payment2.png" width={50} height={50} alt="JACOG" />
-                <Image src="/images/footer/payment3.png" width={50} height={50} alt="JACOG" />
-                <Image src="/images/footer/payment4.png" width={55} height={55} alt="JACOG" />
+                <Image src="/images/footer/payment1.png" width={42} height={41} alt="JACOG" />
+                <Image src="/images/footer/payment2.png" width={50} height={31.5} alt="JACOG" />
+                <Image src="/images/footer/payment3.png" width={59} height={37} alt="JACOG" />
+                <Image src="/images/footer/payment4.png" width={96} height={41} alt="JACOG" />
               </Group>
               <Divider className="my-5 mx-auto" w={50} size={'sm'} orientation="horizontal" />
               <Group mt={30} className="sm:space-x-4 xs:space-x-0" position='center'>

@@ -27,7 +27,7 @@ export function Hero() {
       backdropFilter: 'blur(20px)',
     }}>
       <div className={classes.backdrop} style={{ marginTop: '-115px' }}>
-        <div className="pt-[150px] pb-[50px]">
+        <div className="pt-[163px] pb-[50px]">
           <div className="text-center">
             <Group position='center'>
               <Title className="font-[700] text-[#FFB800]" order={3}>
@@ -35,19 +35,19 @@ export function Hero() {
               </Title>
             </Group>
             <Image className='mx-auto' src="/images/pages/about/homeImage.png" width={551} height={523} alt="vector" />
-            <Text color="black" className="font-[400] uppercase text-[#FFFFFF]" mt={28} size={28}>
+            <Text color="black" className="font-[400] uppercase text-[#FFFFFF]" mt={0} size={24}>
               25+ full-time professionals, 1 goal:
             </Text>
             <Grid justify='center' align='center'>
-              <Title color="white" mt={20} className="font-[700] justify-center text-center" order={3} maw={1000}>
+              <Title color="white" size={36} mt={20} className="font-[500] justify-center text-center" order={3} maw={1000}>
                 To create the world's most entertaining and user-friendly online game room platform.
               </Title>
             </Grid>
             <Grid justify='center' align='center'>
               <Title style={{
                 borderRadius: '50px',
-                border: '2px solid #016BE6',
-              }} p={20} mb={20} size={24} color="#FFFFFF" mt={35} className="font-[400]" order={4} maw={500}>
+                border: '7px solid #016BE6',
+              }} p={10} px={50} mb={50} size={31} color="#FFFFFF" mt={31} className="font-[400]" order={4} maw={541}>
                 How are we going to get there?
               </Title>
             </Grid>

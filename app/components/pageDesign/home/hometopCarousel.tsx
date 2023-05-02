@@ -53,7 +53,7 @@ export const HomeTopCarousel = () => {
     }}>
       <div className={classes.backdrop}>
         <Container size={1300} py={100} style={{ backgroundSize: 'cover', width: '100%' }}>
-            <Carousel getEmblaApi={setEmbla} slideSize="50%" loop initialSlide={1} images={images} delay={4000} hC={500} wC={500} />
+            <Carousel align={'center'} className='flex items-center' w={2100} ml={-623} mr={-300} getEmblaApi={setEmbla} slideSize="50%" loop initialSlide={2} images={images} delay={4000} />
             <Flex gap={5} justify='center' align='center' className='mt-5'>
               <Image height={12} width={12}
               src={slideProgress === 1 ? "/images/scroll/carouselIndicatorSelect.png" : "/images/scroll/carouselIndicatorNotSelect.png"}/>
@@ -64,7 +64,8 @@ export const HomeTopCarousel = () => {
             </Flex>
             <div className="text-center">
               <Button
-                my={50}
+                mb={0}
+                mt={35}
                 px={50}
                 styles={{
                   root: {

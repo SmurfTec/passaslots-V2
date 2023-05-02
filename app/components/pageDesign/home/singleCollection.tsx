@@ -20,17 +20,17 @@ export function SingleCollection({ button, content, image, title }: SingleCollec
         <Grid align={'center'} justify={'center'}>
           <Image width={250} height={250} alt={image} src={image} mb={0}  />
           <Grid.Col p={10} m={0}>
-            <Title color="white" order={4} className="font-[700] text-center">
+            <Title color="white" order={4} className="font-[500] text-center">
               {title}
             </Title>
             <Text color="white" mt={5} size="sm" className="font-[300] opacity-70 text-center">
               {content}
             </Text>
             <Grid className='my-5' justify={'center'}>
-              <Image src="/images/pages/home/chips.png" width={85} height={42}  alt="pirate" />
+              <Image src="/images/pages/home/chips.png" width={84} height={42}  alt="pirate" />
             </Grid>
             <Grid className='my-5' justify={'center'}>
-              <Button radius={50} styles={{label: {fontSize: "16px"}, root: {background: "#016BE6", color: "white", '&:hover': { background: "#016BE6", },}}} className="text-center" component={NextLink} href={button.path}>
+              <Button radius={50} styles={{label: {fontSize: "16px"}, root: {background: "linear-gradient(to bottom, #2072D2, #A74C9A)", color: "white", '&:hover': { background: "linear-gradient(to bottom, #2072D2, #A74C9A)", },}}} className="text-center" component={NextLink} href={button.path}>
                 {button.text}
               </Button>
             </Grid>

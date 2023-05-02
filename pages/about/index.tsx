@@ -1,4 +1,4 @@
-import { AboutContact, Approach, Content, Goal, Hero, Mission } from '@pasa/components';
+import { AboutContact, Approach, BottomSubHeading, Content, Goal, Hero, Mission } from '@pasa/components';
 
 export async function getStaticProps() {
   return {
@@ -15,6 +15,7 @@ export default function About() {
       <Approach />
       <Goal />
       <AboutContact />
+      <BottomSubHeading />
     </>
   );
 }

@@ -16,10 +16,7 @@ export const BottomSubHeading = () => {
             <Image className='mx-auto mb-10' width={508} height={545} src="/images/pages/home/cardsfalling.png" alt='image' />
             <div className="space-y-5 text-center">
               <Title order={2} className="font-bold uppercase text-[#FFFFFF]">
-                Sun, Sand, and Big<br></br> Wins Await You
-              </Title>
-              <Title order={2} className="font-bold uppercase text-[#FFFFFF]">
-                Awaits You
+                Sun, Sand, and Big Wins<br></br> Await You
               </Title>
               <Text className='text-center text-[#FFFFFF] opacity-70' size={'sm'}>
                 Begin your adventure of gaming with Pasa Slots today.
@@ -28,6 +25,7 @@ export const BottomSubHeading = () => {
             <div className="text-center">
               <Button
                 mt={15}
+                w={150}
                 size="lg"
                 className="text-sm font-bold"
                 styles={{
@@ -39,10 +37,10 @@ export const BottomSubHeading = () => {
                 }}
                 bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
                 radius={50}
-                component={NextLink}
-                href="/distributor-signup"
+                component='a'
+                href="http://Pasasweeps.net"
               >
-                FIND OUT MORE
+                PLAY NOW
               </Button>
             </div>
           </Grid.Col>

@@ -1,4 +1,4 @@
-import { ContactHero, ContactLayout } from '@pasa/components';
+import { BottomSubHeading, ContactHero, ContactLayout } from '@pasa/components';
 
 export async function getStaticProps() {
   return {
@@ -11,6 +11,7 @@ export default function ContactPage() {
     <>
       <ContactHero />
       <ContactLayout />
+      <BottomSubHeading />
     </>
   );
 }

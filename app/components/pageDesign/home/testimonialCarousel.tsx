@@ -125,7 +125,7 @@ export const TestimonialCarousel = () => {
                   }}
                   slideSize={matches ? '100%' : '33%'}
                   slideGap={'xl'}
-                  withControls
+                  withControls={false}
                   withIndicators={false}
                   slidesToScroll={matches ? 1 : 2}
                   loop

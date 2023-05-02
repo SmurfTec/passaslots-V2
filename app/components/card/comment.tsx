@@ -10,9 +10,8 @@ type CommentProps = {
 
 const useStyles = createStyles((theme) => ({
   paper: {
-    border: "2px solid", 
-    borderRadius: '50px',
-    borderImage: "linear-gradient(to bottom, rgba(167, 76, 154, 1) 100%, rgba(167, 76, 154, 0.19) 19%)",
+    border: "2px solid",
+    backgroundColor: "linear-gradient(to bottom, rgba(167, 76, 154, 1) 100%, rgba(167, 76, 154, 0.19) 19%)",
     textAlign: 'left',
   },
 }));
@@ -22,7 +21,7 @@ export const Comment = ({ thumbnail, name, rating, description, message }: Comme
   return (
     <div style={{
       }}>
-      <Paper className={classes.paper} radius={10} p={'xl'} bg={'transparent'}>
+      <Paper withBorder className={classes.paper} radius={50} p={'xl'} bg={'transparent'}>
         <Text color={'white'} mt={15} size={'md'} mih={250}>
           {message}
         </Text>
@@ -30,7 +29,7 @@ export const Comment = ({ thumbnail, name, rating, description, message }: Comme
           <Flex>
             <Avatar src={thumbnail} alt="thumbnail" radius="xl" />
             <Grid.Col>
-              <Text mb={0} color={'white'} className="font-medium text-xl">{name}</Text>
+              <Text mb={0} mt={-5} color={'white'} className="font-medium text-xl">{name}</Text>
               <Text color={'#808080'} fz="sm" c="dimmed">
                 {description}
               </Text>

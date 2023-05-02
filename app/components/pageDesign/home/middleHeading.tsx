@@ -20,9 +20,9 @@ export const MiddleHeading = () => {
   return (
     <div className={classes.backdrop}>
       <Container size={1300}>
-        <Flex ml={-150} py={100} mih={50} gap="md" justify="center" align="flex-start" direction="column" wrap="wrap">
-          <Title mt={80} mb={100} color={'white'} order={2} className="font-bold uppercase">More ACCESS from the touch of a finger</Title>
-          <Text color={'white'} size={'lg'} mt={50} maw={700}>
+        <Flex ml={-150} py={120} mih={50} gap="md" justify="center" align="flex-start" direction="column" wrap="wrap">
+          <Title mt={80} mb={50} color={'white'} order={2} maw={800} className="font-bold uppercase">More ACCESS from the touch of a finger</Title>
+          <Text color={'white'} className="leading-10 font[-400]" size={'md'} mt={0} maw={700}>
             This is where gaming creators meet life-long gamers. So we understand your daily frustrations when it comes to
             payments above all. We offer a variety of safe and secure payment methods to choose<span className="font-[700]"> from when it comes to
             deposits and withdrawals. View our full list of payment methods that can </span> be used in your region, and learn how

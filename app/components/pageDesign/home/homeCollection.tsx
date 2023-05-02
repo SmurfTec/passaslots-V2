@@ -21,21 +21,21 @@ const useStyles = createStyles((theme) => ({
 
 const collectionData: SingleCollectionProps[] = [
   {
-    title: 'Fishing Collection',
+    title: 'CASINO COLLECTION',
     button: { path: 'games/#gameSlots', text: 'More on Fish Games' },
-    content: 'Love fishing for cash. We do too.',
+    content: 'SPIN ALL DAY LONG',
     image: '/images/pages/home/collection1.png',
   },
   {
-    title: 'The Casino Collection',
+    title: 'SLOTS COLLECTION',
     button: { path: 'games/#gameSlots', text: 'More on Casino Games' },
-    content: 'Games that make you feel like you walked into the real-life casino.',
+    content: 'GAMES THAT MAKE YOU FEEL LIKE YOU WALKED INTO THE REAL-LIFE CASINO.',
     image: '/images/pages/home/collection2.png',
   },
   {
-    title: 'SLOTS COLLECTION',
+    title: 'FISHING COLLECTION',
     button: { path: 'games/#gameSlots', text: 'More on Slot Games' },
-    content: 'SPIN ALL DAY LONG',
+    content: 'LOVE FISHING FOR CASH. WE DO TOO.',
     image: '/images/pages/home/collection3.png',
   },
 ];
