@@ -174,10 +174,10 @@ export function Header() {
                   },
                 },
                 root: {
-                  background: 'linear-gradient(to bottom, #016BE6, rgb(246, 202, 167, 0.44) 44%)',
+                  background: 'linear-gradient(180deg, #016BE6 0%, rgba(246, 202, 167, 0.44) 100%)',
 
                   '&:hover': {
-                    background: 'linear-gradient(to bottom, #016BE6, rgb(246, 202, 167, 0.44) 44%)',
+                    background: 'linear-gradient(180deg, #016BE6 0%, rgba(246, 202, 167, 0.44) 100%)',
                   },
                 },
               }}
