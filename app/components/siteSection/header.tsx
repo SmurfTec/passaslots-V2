@@ -67,15 +67,15 @@ export function Header() {
 
   return (
     <header>
-      <Container size={1300} mt={30} mb={15} className="bg-transparent z-50 relative">
+      <Container size={1300} className="bg-transparent z-50 relative">
         <Group position="apart" spacing={40}>
           <Anchor href="/" component={NextLink}>
             <Image
               className="cursor-pointer"
               alt="logo"
               src={'/images/modal/headerlogo.png'}
-              height={70}
-              width={100}
+              height={80}
+              width={114}
             />
           </Anchor>
           <Group spacing={40} className={classes.group}>
@@ -174,10 +174,10 @@ export function Header() {
                   },
                 },
                 root: {
-                  background: 'linear-gradient(to bottom, #016BE6, rgb(246, 202, 167, 0.44) 44%)',
+                  background: 'linear-gradient(180deg, #016BE6 0%, rgba(246, 202, 167, 0.44) 100%)',
 
                   '&:hover': {
-                    background: 'linear-gradient(to bottom, #016BE6, rgb(246, 202, 167, 0.44) 44%)',
+                    background: 'linear-gradient(180deg, #016BE6 0%, rgba(246, 202, 167, 0.44) 100%)',
                   },
                 },
               }}
@@ -199,10 +199,10 @@ export function Header() {
                   },
                 },
                 root: {
-                  background: 'linear-gradient(to bottom, #016BE6, #A74C9A)',
+                  background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
 
                   '&:hover': {
-                    background: 'linear-gradient(to bottom, #016BE6, #A74C9A)',
+                    background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
                   },
                 },
               }}
