@@ -36,16 +36,16 @@ export function HighTideHome() {
   return (
     <>
       <div className={classes.backdrop}>
-        <BackgroundImage className="" style={{ backgroundSize: 'cover' }} src="/images/pages/home/highTideImage.png">
+        <BackgroundImage className="" style={{ backgroundSize: 'cover', backgroundPosition: 'center center', position: 'relative', width:'100%' }} src="/images/pages/home/highTideImage.png">
           <Container size={1300} py={100}>
-            <Grid>
+            <Grid ml={-120}>
               <Grid.Col xs={6}>
-                <Title color="white" order={2} my={60}>
+                <Title color="white" order={2} mt={103}>
                   RIDE THE HIGH <span className="text-[#016BE6]">TIDE OF <br /> LUCK</span>
                 </Title>
-                <Text color="white" mt={80} className="font-[300]" size="md" mb={80}>
+                <Text color="white" mt={61} className="font-[400] leading-8" maw={550} size="md" mb={80}>
                 To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile players 
-                to launch into playing this slot sensation the moment you’ve logged into your unique real money account. 
+                to launch into playing this slot sensation the moment <span className="font-[700]">you’ve logged into your unique real money</span> account. 
                 You never know, one spin is all it takes to potentially change your life forever!
                 </Text>
                 <Button 
@@ -53,16 +53,16 @@ export function HighTideHome() {
                   href="games/#gameSlots" 
                   mt={40} 
                   px={50}
-                  mb={60}
+                  mb={85}
                   styles={{
                     root: {
                       fontSize: '16px',
                       color: 'white',
-                      borderColor: '#F6CAA7',
-                      '&:hover': { background: '#016BE6' },
+                      // borderColor: '#F6CAA7',
+                      '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
                     },
                   }}
-                  bg={'#016BE6'}
+                  bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
                   size="lg"
                   radius={50} 
                   className="text-sm font-bold uppercase ">
@@ -101,10 +101,10 @@ export function HighTideHome() {
                     radius={50}
                     styles={{
                       root: {
-                        borderColor: '#F6CAA7',
+                        // borderColor: '#F6CAA7',
                         color: '#FFFFFF',
                         '&:hover': {
-                          background: '#016BE6',
+                          background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
                         },
                       },
                     }}>

@@ -1,6 +1,7 @@
 import { Carousel } from '@mantine/carousel';
 import { Container, Title } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
+import { ChevronLeft, ChevronRight } from 'tabler-icons-react';
 import { SingleTestimonial, SingleTestimonialProps } from './singleTestimonial';
 export function WhyPasaHome() {
   const testimonialData: SingleTestimonialProps[] = [
@@ -43,8 +44,8 @@ export function WhyPasaHome() {
     <div 
     className="bg-gradient-to-r from-blue-500 to-purple-600"
     style={{
-      backgroundImage:
-        'linear-gradient(to right, #1A0E37, #016BE6, #A74C9A, #84329A)',
+      backgroundColor: '#150B2E',
+      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
       backdropFilter: 'blur(20px)',
     }}>
       <Container size={1300} py={100}>
@@ -57,7 +58,7 @@ export function WhyPasaHome() {
             controls: {
               position: 'relative',
               WebkitJustifyContent: 'end !important',
-              bottom: '400px',
+              bottom: '560px',
               right: '0 !important',
             },
             control: {
@@ -73,7 +74,10 @@ export function WhyPasaHome() {
           }}
           slideSize={"33.33%"}
           pt={20}
+          loop
           initialSlide={1}
+          previousControlIcon={<ChevronLeft size={28}/>}
+          nextControlIcon={<ChevronRight size={28}/>}
         >
           {testimonialData.map((td, key) => (
             <Carousel.Slide key={key + td.image}>

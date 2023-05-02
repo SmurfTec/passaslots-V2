@@ -69,8 +69,8 @@ export const TestimonialCarousel = () => {
     // <Flex className='py-16 sm:py-24' mb={80} bg="black" gap="md" align="center" direction="row" wrap="nowrap">
     <div className="bg-gradient-to-r from-blue-500 to-purple-600 py-20"
     style={{
-      backgroundImage:
-        'linear-gradient(to right, #1A0E37, #016BE6, #A74C9A, #84329A)',
+      backgroundColor: '#150B2E',
+      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
       backdropFilter: 'blur(20px)',}}>
       <Container size={1300}>
         <BackgroundImage className="mb-10" style={{ backgroundSize: 'cover', rotate: '-10deg', }} src="/images/pages/home/multicolorfall.png">

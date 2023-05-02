@@ -1,29 +1,60 @@
-import { BackgroundImage, Group, Text, Title ,Image} from '@mantine/core';
+import { BackgroundImage, Group, Text, Title, Image, createStyles, Grid} from '@mantine/core';
 import { ScrollButton } from '@pasa/customComponents';
 
+const useStyles = createStyles((theme) => ({
+  backdrop: {
+    // backgroundColor: '#150B2E',
+    backgroundImage: "url('/images/header/backgroundImage.png')",
+    backgroundRepeat: 'no-repeat',
+    // position: 'relative',
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    minHeight: '100vh', 
+    position: 'relative',
+    // width: '100%',
+    // height: '100vh',
+  },
+}));
+
 export function Hero() {
+  const { classes } = useStyles();
   return (
-    <BackgroundImage className="min-h-[85vh] sm:min-h-[92vh] relative" src="/images/pages/about/heroBackground.png">
-      <div className="md:top-1/2 md:-translate-y-1/2 md:left-1/2 md:-translate-x-1/2 absolute left-2 right-2 -translate-x-0 top-1/2 -translate-y-1/2">
-        <div className="text-center">
-          <Group position='center'>
-            <Title className="font-[500]" order={4}>
-              About Us
-            </Title>
-            <Image src="/images/vector/heroLine.png" width={60} height={1} alt="vector" />
-          </Group>
-          <Text color="black" className="font-[400]" my={28} size={28}>
-            25+ full-time professionals, 1 goal:
-          </Text>
-          <Title color="black" mt={95} className="font-[700]" order={3}>
-            To create the world's most entertaining and user-friendly online game room platform.
-          </Title>
-          <Title mb={20} size={32} color="#0F0F0F" mt={20} className="font-[400]" order={3}>
-            How are we going to get there?
-          </Title>
+    <div 
+    className="bg-gradient-to-r from-blue-500 to-purple-600"
+    style={{
+      backgroundColor: '#150B2E',
+      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+      backdropFilter: 'blur(20px)',
+    }}>
+      <div className={classes.backdrop} style={{ marginTop: '-115px' }}>
+        <div className="pt-[150px] pb-[50px]">
+          <div className="text-center">
+            <Group position='center'>
+              <Title className="font-[700] text-[#FFB800]" order={3}>
+                About Us
+              </Title>
+            </Group>
+            <Image className='mx-auto' src="/images/pages/about/homeImage.png" width={551} height={523} alt="vector" />
+            <Text color="black" className="font-[400] uppercase text-[#FFFFFF]" mt={28} size={28}>
+              25+ full-time professionals, 1 goal:
+            </Text>
+            <Grid justify='center' align='center'>
+              <Title color="white" mt={20} className="font-[700] justify-center text-center" order={3} maw={1000}>
+                To create the world's most entertaining and user-friendly online game room platform.
+              </Title>
+            </Grid>
+            <Grid justify='center' align='center'>
+              <Title style={{
+                borderRadius: '50px',
+                border: '2px solid #016BE6',
+              }} p={20} mb={20} size={24} color="#FFFFFF" mt={35} className="font-[400]" order={4} maw={500}>
+                How are we going to get there?
+              </Title>
+            </Grid>
+          </div>
         </div>
+          {/* <ScrollButton pointerPosition='DOWN' className='bottom-20 left-1/2 absolute' /> */}
       </div>
-      <ScrollButton pointerPosition='DOWN' className='bottom-20 left-1/2 absolute' />
-    </BackgroundImage>
+    </div>
   );
 }

@@ -46,8 +46,8 @@ export const HomeTopCarousel = () => {
     <div 
     className="bg-gradient-to-r from-blue-500 to-purple-600"
     style={{
-      backgroundImage:
-        'linear-gradient(to right, #1A0E37, #016BE6, #A74C9A, #84329A)',
+      backgroundColor: '#150B2E',
+      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
       backdropFilter: 'blur(20px)',
       backgroundSize: 'cover',
     }}>
@@ -70,11 +70,11 @@ export const HomeTopCarousel = () => {
                   root: {
                     fontSize: '16px',
                     color: 'white',
-                    borderColor: '#F6CAA7',
-                    '&:hover': { background: '#016BE6' },
+                    // borderColor: '#F6CAA7',
+                    '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
                   },
                 }}
-                bg={'#016BE6'}
+                bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
                 radius={50}
                 size="lg"
                 variant="outline"

@@ -45,11 +45,11 @@ export const BottomSubHeading2 = () => {
                 root: {
                   fontSize: '16px',
                   color: 'white',
-                  borderColor: '#F6CAA7',
-                  '&:hover': { background: '#016BE6' },
+                  // borderColor: '#F6CAA7',
+                  '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
                 },
               }}
-              bg={'#016BE6'} radius={50}
+              bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'} radius={50}
               mt={15} size="lg" className="text-sm font-bold mt-10 mb-20" component={NextLink} href="/distributor-signup">
                 FIND OUT MORE
               </Button>

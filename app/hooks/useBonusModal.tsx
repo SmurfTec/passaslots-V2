@@ -98,10 +98,10 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
                         root: {
                           fontSize: '10px',
                           color: 'white',
-                          '&:hover': { background: '#016BE6' },
+                          '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
                         },
                       }}
-                      bg={'#016BE6'}
+                      bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
                       radius={50}
                       px={40}
                       className="text-base font-light"

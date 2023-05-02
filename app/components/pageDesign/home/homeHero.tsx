@@ -1,9 +1,10 @@
-import { BackgroundImage, Button, Grid, Group, Image, Text, Title, createStyles } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { BackgroundImage, Button, Grid, Group, Image, Text, Title, createStyles, Modal, Popover } from '@mantine/core';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { NextLink } from '@mantine/next';
-import { ScrollButton } from '@pasa/customComponents';
+import { Carousel, ScrollButton } from '@pasa/customComponents';
 import { useBonusModal } from '@pasa/hooks';
-import { ArrowRight } from 'tabler-icons-react';
+import { useState } from 'react';
+import { ArrowRight, Dots } from 'tabler-icons-react';
 
 const useStyles = createStyles((theme) => ({
   backdrop: {
@@ -20,59 +21,112 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+const images = [
+  '/images/pages/home/HomeFirstImage.png',
+  '/images/pages/home/HomeFirstImage.png',
+  '/images/pages/home/HomeFirstImage.png',
+];
+
 export function HomeHero() {
   const matches = useMediaQuery('(max-width: 1000px)');
   const { classes } = useStyles();
   const [BonusModal, bonusOpen] = useBonusModal();
+  const [sideButtons, setSideButtons] = useState(false);
+  const [opened, { open, close }] = useDisclosure(false);
+  const handleSideButtons = () => {
+    if (sideButtons) {
+      setSideButtons(false);
+    }
+  };
   return (
-    <div 
-    className="bg-gradient-to-r from-blue-500 to-purple-600"
+    <div onClick={handleSideButtons}
+    className="bg-gradient-to-br from-blue-800 to-indigo-900"
     style={{
-      backgroundImage:
-        'linear-gradient(to right, #1A0E37, #016BE6, #A74C9A, #84329A)',
-      backdropFilter: 'blur(20px)',
+      backgroundColor: '#150B2E',
+      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+      backdropFilter: 'blur(50px)',
     }}>
       <div className={classes.backdrop} style={{ marginTop: '-115px' }}>
         <Grid m={0} align="center">
           {!matches ? (
-            <Grid.Col md={1}>
-              <Group className="ml-6 space-y-4" style={{ writingMode: 'vertical-rl', rotate: '180deg' }}>
-                <Text component={NextLink} href="/how-it-works" size="sm">
-                  How does it work?
-                </Text>
-                <Text component={NextLink} href="/about" size="sm">
-                  About Us
-                </Text>
-                <Text component={NextLink} href="/contact" size="sm">
-                  Contact Us
-                </Text>
-              </Group>
-            </Grid.Col>
+            <Group align={'center'}>
+              <Popover
+                opened={sideButtons}
+                onClose={close}
+                position="right"
+                styles={{
+                  dropdown: {
+                    background: 'transparent',
+                    border: '0px',
+                  }
+                }}
+              >
+                <Popover.Target>
+                  <Button className='justify-center' onClick={() => setSideButtons(!sideButtons)} h={70} w={70} radius={5} 
+                    bg={sideButtons ? '#3F2680' : 'linear-gradient(to top right, #3F2680, #50A1FF)'}
+                    styles={{
+                      root: {
+                        '&:hover': {
+                          background: sideButtons ? '#3F2680' : 'linear-gradient(to top right, #3F2680, #50A1FF)',
+                        },
+                      },
+                    }}>
+                      <Dots size={34} />
+                  </Button>
+                </Popover.Target>
+                <Popover.Dropdown>
+                    <Group align='center'>
+                      <Button bg={'#0076FF'} className="hover:bg-[#0076FF]" radius={50} mb={150} ml={-20} component={NextLink} href="/about" size="sm">
+                        About Us
+                      </Button>
+                      <Button className="text-top items-center hover:bg-[#0076FF]" bg={'#0076FF'} mt={-20} radius={50} ml={-90} component={NextLink} href="/contact" size="sm">
+                        Contact Us
+                      </Button>
+                      <Button bg={'#0076FF'} className="hover:bg-[#0076FF]" radius={90} mt={120} ml={-140} component={NextLink} href="/how-it-works" size="sm">
+                        How does it work?
+                      </Button>
+                    </Group>
+                </Popover.Dropdown>
+              </Popover>
+            </Group>
           ) : undefined}
-          <Grid.Col order={2} orderMd={2} m={0} md={11} className='relative text-center mt-60'>
-            <Image className='mx-auto' width={500} height={500} src="/images/pages/home/HomeFirstImage.png" alt='image' />
-            <Title color={'#FFB800'} mt={10} className="font-[700] uppercase" order={1}>
+          <Grid.Col order={2} orderMd={2} m={0} md={8} className='relative text-center mt-[190px]'>
+            <Carousel styles={{
+              indicator: {
+                width: "22px",
+                height: "22px",
+                transition: 'width 250ms ease',
+                backgroundColor: '#D9D9D9',
+                gap: '21px',
+
+                '&[data-active]': {
+                  width: "22px",
+                  backgroundColor: '#016BE6',
+                },
+              },
+            }}
+            withIndicators ml={351} mr={150} slideSize="50%" loop initialSlide={1} images={images} delay={5000} hC={598} wC={598} />
+            {/* <Image className='ml-[421px]' width={598} height={598} src="/images/pages/home/HomeFirstImage.png" alt='image' /> */}
+            <Title color={'#FFB800'} mt={27} className="font-[700] uppercase ml-[210px]" order={1}>
               Pasa SLOTS
             </Title>
-            <Title color={'#ffffff'} mt={30} className="font-[400] uppercase" size={'md'} order={2}>
+            <Title color={'#ffffff'} mt={13} className="font-[400] uppercase ml-[210px]" size={'md'} order={2}>
               Seize Your $10 Sign up Fortune by the Seashore
             </Title>
             <Button
-              mt={40}
+              mt={58}
               radius={50}
               w={180}
-              mb={40}
+              mb={106}
               styles={{
                 root: {
-                  background: '#016BE7',
-                  borderColor: '#F6CAA7',
+                  background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
+                  // boxShadow: 'inset 0 0 2px 2px #F6CAA7',
                   '&:hover': {
-                    background: '#016BE7',
+                    background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
                   },
                   fontSize: '17px',
-                },
-                leftIcon: {
-                  padding: '0 10px',
+                  marginLeft: "210px",
                 },
                 label: {
                   marginBottom: '-2px',
@@ -89,52 +143,7 @@ export function HomeHero() {
 
           </Grid.Col>
           {BonusModal}
-          {/* <Grid.Col order={1} orderMd={3} p={0} md={6} className="min-h-screen">
-            <BackgroundImage className="min-h-screen lg:min-h-[120vh] relative" src="/images/pages/home/heroImage.png">
-              <BackgroundImage
-                className="space-y-4 align-bottom absolute left-1/2 p-10 -translate-x-1/2 bottom-0 sm:bottom-10 sm:w-[80%] w-full"
-                src="/images/pages/home/HeroImageSubBackground.png"
-              >
-                <Text color="white" size="md">
-                  The new home to your online gamroom needs at Pasa Slots!
-                </Text>
-                <Title order={2} color="white">
-                  ONLINE 24/7
-                </Title>
-                <Title style={{ marginTop: '-1px' }} className="font-[700]" order={3} color="white">
-                  PLATFORM
-                </Title>
-                <Text my={20} color="white" className="tracking-[0.005em]" opacity={0.8} size="sm">
-                  Let us take you on a journey where you can travel and explore our platform with more than just your own
-                  money. Take advantage of our daily match bonuses and enjoy a wide range of gaming options.
-                </Text>
-                <Group position="apart">
-                  <Button
-                    bg="white"
-                    styles={{
-                      root: {
-                        color: '#8D8664',
-                        '&:hover': {
-                          backgroundColor: 'white',
-                        },
-                      },
-                    }}
-                    radius={20}
-                    className="font-[600] sm:w-1/2"
-                    uppercase
-                    onClick={bonusOpen}
-                  >
-                    EARN FREE Credits now
-                  </Button>
-                  <Image mt={10} width="60%" height={30} src="/images/pages/home/heroCompany.png" alt="company" />
-                </Group>
-
-                
-              </BackgroundImage>
-            </BackgroundImage>
-          </Grid.Col> */}
         </Grid>
-        {/* <ScrollButton pointerPosition="DOWN" className="absolute bottom-0 left-[44%]" /> */}
       </div>
     </div>
   );

@@ -125,7 +125,7 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
                   </Text>
 
                   <Button
-                    styles={{ label: { fontSize: '12px' }, root: { '&:hover': { background: '#016BE6' } } }}
+                    styles={{ label: { fontSize: '12px' }, root: { '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' } } }}
                     radius={50}
                     mt={40}
                     mb={10}

@@ -25,7 +25,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan(810)]: {
       display: 'none',
     },
-    borderColor: '#F6CAA7',
+    // borderColor: '#F6CAA7',
   },
   item: {
     paddingRight: 40,
@@ -164,7 +164,7 @@ export function Header() {
               <Menu.Item></Menu.Item>
             </Menu.Dropdown>
           </Menu>
-          <Group spacing={5}>
+          <Group spacing={16}>
             <Button
               styles={{
                 label: {
@@ -174,10 +174,10 @@ export function Header() {
                   },
                 },
                 root: {
-                  background: 'transparent',
+                  background: 'linear-gradient(to bottom, #016BE6, rgb(246, 202, 167, 0.44) 44%)',
 
                   '&:hover': {
-                    background: 'transparent',
+                    background: 'linear-gradient(to bottom, #016BE6, rgb(246, 202, 167, 0.44) 44%)',
                   },
                 },
               }}
@@ -199,10 +199,10 @@ export function Header() {
                   },
                 },
                 root: {
-                  background: '#016BE7',
+                  background: 'linear-gradient(to bottom, #016BE6, #A74C9A)',
 
                   '&:hover': {
-                    background: '#016BE7',
+                    background: 'linear-gradient(to bottom, #016BE6, #A74C9A)',
                   },
                 },
               }}
