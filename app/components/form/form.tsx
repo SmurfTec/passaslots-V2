@@ -1,4 +1,4 @@
-import { Button, Checkbox, Group, Text, TextInput, Textarea, createStyles } from '@mantine/core';
+import { Button, Checkbox, Group, Text, TextInput, Textarea, createStyles, Grid } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -6,6 +6,7 @@ import { useState } from 'react';
 type ContactForm = {
   firstName: string;
   message: string;
+  subject: string;
   lastName: string;
   phone: string;
   email: string;
@@ -20,6 +21,7 @@ export function ContactForm() {
     initialValues: {
       firstName: '',
       message: '',
+      subject: '',
       lastName: '',
       phone: '',
       purpose: '',
@@ -32,12 +34,12 @@ export function ContactForm() {
     },
   });
 
-  const handleSubmit = ({ firstName, message, lastName, phone, email, check }: ContactForm) => {
+  const handleSubmit = ({ firstName, message, subject, lastName, phone, email, check }: ContactForm) => {
     console.log(check);
     const purpose = router.pathname === '/contact' || router.pathname === '/about' ? 'message' : 'signup';
     fetch('/api/contact', {
       method: 'POST',
-      body: JSON.stringify({ firstName, message, lastName, phone, purpose, email }),
+      body: JSON.stringify({ firstName, message, subject, lastName, phone, purpose, email }),
       headers: { 'Content-Type': 'application/json' },
     })
       .then((res) => {
@@ -58,64 +60,91 @@ export function ContactForm() {
   return (
     <form onSubmit={form.onSubmit(handleSubmit)}>
       <div className="space-y-6">
-        <TextInput
-          classNames={{ input: classes.input }}
-          color="#F2F2F2"
-          size="xl"
-          placeholder="FIRST NAME"
-          required
-          {...form.getInputProps('firstName')}
-        />
-        <TextInput
-          classNames={{ input: classes.input }}
-          color="#F2F2F2"
-          size="xl"
-          placeholder="LAST NAME"
-          required
-          {...form.getInputProps('lastName')}
-        />
-        <TextInput
-          classNames={{ input: classes.input }}
-          color="#F2F2F2"
-          size="xl"
-          placeholder="EMAIL ADDRESS"
-          required
-          {...form.getInputProps('email')}
-        />
-        <TextInput
-          classNames={{ input: classes.input }}
-          color="#F2F2F2"
-          size="xl"
-          placeholder="PHONE NUMBER"
-          required
-          {...form.getInputProps('phone')}
-        />
+        <Grid>
+          <Grid.Col md={6} className='space-y-[18px] space-x-37'>
+            <TextInput
+              classNames={{ input: classes.input }}
+              color="#F2F2F2"
+              size="xl"
+              placeholder="First Name"
+              required
+              {...form.getInputProps('firstName')}
+            />
+            <TextInput
+              classNames={{ input: classes.input }}
+              color="#F2F2F2"
+              size="xl"
+              placeholder="Email Address"
+              required
+              {...form.getInputProps('email')}
+            />
+            <TextInput
+              classNames={{ input: classes.input }}
+              color="#F2F2F2"
+              size="xl"
+              placeholder="Subject"
+              required
+              {...form.getInputProps('subject')}
+            />
+          </Grid.Col>
+          <Grid.Col md={6} className='space-y-[18px] space-x-37'>
+            <TextInput
+              classNames={{ input: classes.input }}
+              color="#F2F2F2"
+              size="xl"
+              placeholder="Last Name"
+              required
+              {...form.getInputProps('lastName')}
+            />
+            <TextInput
+              classNames={{ input: classes.input }}
+              color="#F2F2F2"
+              size="xl"
+              placeholder="Phone Number"
+              required
+              {...form.getInputProps('phone')}
+            />
+          </Grid.Col>
+        </Grid>
         <Textarea
           classNames={{ input: classes.input }}
           color="#F2F2F2"
-          size="xl"
-          placeholder="MESSAGE"
+          size="255px"
+          placeholder="Message"
           required
           {...form.getInputProps('message')}
         />
-
         <Checkbox
-          className="opacity-50"
-          label="I'd like to receive more information about PASA; I understand and agree to the privacy policy. "
+          color='blue'
+          classNames={{label: classes.Checkbox}}
+          label={`I'd like to recieve more information tik mark here as well similar to the contact us page to get confirmation for emails and sms. `}
           {...form.getInputProps('check')}
         />
 
         <Group>
           <Button
-            bg="#6498B4"
             type="submit"
-            className="h-12 px-12 rounded-sm text-[14px] font-[400] w-[45%] lg:w-[auto]"
+            radius={50}
+            className="h-12 px-12 text-[20px] font-[400] w-[45%] lg:w-[auto]"
+            styles={{
+              root: {
+                background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
+                padding: '15px 53px',
+                // boxShadow: 'inset 0 0 2px 2px #F6CAA7',
+                '&:hover': {
+                  background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
+                },
+                fontStyle: 'normal',
+                lineHeight: '23px',
+                letterSpacing: '-0.015em',
+              },
+              label: {
+                marginBottom: '-2px',
+              },
+            }}
           >
             SUBMIT
           </Button>
-          <Text size={12} className="font-[600] w-[50%]" color="#86888A">
-            This site is protected by reCAPTCHA Enterprise andthe Google Privacy Policy and Terms of Service apply.
-          </Text>
         </Group>
         {message && (
           <Text color="green" size={15}>
@@ -129,12 +158,30 @@ export function ContactForm() {
 
 const useStyles = createStyles(() => ({
   input: {
+    border: '2px solid #016BE6',
+    borderRadius: '16px',
+    lineHeight: '188.69%',
+    letterSpacing: '0.005em',
+    height: '105px',
+    paddingLeft: '15px',
+    fontSize: '20px',
+    fontStyle: 'normal',
+    ':focus': {
+      border: '2px solid #016BE6',
+    },
     '::placeholder': {
-      paddingLeft: '15px',
-      fontSize: '14px',
-      color: '#0F0F0F',
-      opacity: 0.5,
-      fontWeight: 'bold',
+      // paddingLeft: '15px',
+      fontSize: '20px',
+      color: '#FFFFFF',
+      fontStyle: 'normal',
     },
   },
+  Checkbox: {
+    color: '#FFFFFF',
+    fontStyle: 'normal',
+    // fontWeight: '400',
+    fontSize: '16px',
+    lineHeight: '188.7%',
+    letterSpacing: '0.0125em',
+  }
 }));

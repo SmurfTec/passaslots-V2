@@ -3,34 +3,27 @@ import { ContactForm } from '@pasa/components/form';
 
 export function ContactLayout() {
   return (
-    <Container size={1300}>
+    <div style={{backgroundColor: '#150B2E'}}>
+    <Container fluid mr={69} ml={90}>
       <Grid align="center" >
-        <Grid.Col mt={200} span={12}>
-          <Title order={3} className="font-[700] uppercase">
-            Lets talk{' '}
-            <span className="text-[#751F86]">
-              We're here
+        <Grid.Col md={4} mt={99} mb={78} span={12}>
+          <Title order={2} className="font-[700] uppercase text-[#fff]">
+            Get in{' '}
+            <span className="text-[#50A1FF]">
+              touch<br/> with us
             </span>
           </Title>
         </Grid.Col>
-        <Grid.Col sm={6}>
-          <Image src="/images/pages/contact/pirate.png" alt="pirate" height={350} width={350} />
+        <Grid.Col mt={99} mb={78} span={12} md={8}>
+          <Text className='align-text-top font-[400] text-white text-lg leading-[188.69%] tracking-[0.005em]'>
+          If you have any questions or need help, please fill out the form below. We do our best to<br/> respond within 1 business day.
+          </Text>
         </Grid.Col>
-        <Grid.Col sm={6}>
-          <Text my={20} color="#0F0F0F" className="font-[700] tracking-[0.005em]"  size="sm">
-            Our door is always open for a good cup of coffee.
-          </Text>
-          
-
-          <Text my={20} color="#0F0F0F" className="font-[400] tracking-[0.005em]"  size="sm">
-            Pasa Slots invites you to contact us directly if you have any issues, queries or questions, we are here to
-            help so get in touch if you have anything you need or even just to say Hi! Please fill out the form below.
-            We do our best to respond within 1 business day.
-          </Text>
-
+        <Grid.Col mb={76} sm={12}>
           <ContactForm />
         </Grid.Col>
       </Grid>
     </Container>
+    </div>
   );
 }

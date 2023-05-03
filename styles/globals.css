@@ -50,6 +50,16 @@ body {
   box-shadow: unset !important;
 }
 
+.pasa-TextInput-input {
+  background: transparent;
+  color: #FFFFFF;
+}
+
+.pasa-Textarea-input {
+  background: transparent;
+  color: #FFFFFF;
+}
+
 /* .pasa-Button-root {
   background: linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%);
   border-radius: 50px;
