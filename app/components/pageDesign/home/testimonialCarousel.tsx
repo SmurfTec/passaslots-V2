@@ -72,7 +72,7 @@ export const TestimonialCarousel = () => {
       backgroundColor: '#150B2E',
       backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
       backdropFilter: 'blur(20px)',}}>
-      <Container size={1300}>
+      <Container fluid ml={90} mr={69}>
         <BackgroundImage className="mb-10" style={{ backgroundSize: 'cover', rotate: '-10deg', }} src="/images/pages/home/multicolorfall.png">
           <div style={{rotate: '10deg'}}>
             <Title color={'white'} order={2} className="font-bold uppercase text-center">

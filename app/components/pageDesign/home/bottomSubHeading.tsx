@@ -10,7 +10,7 @@ export const BottomSubHeading = () => {
       backdropFilter: 'blur(20px)',
       backgroundSize: 'cover',
     }}>
-      <Container size={1300} py={50}>
+      <Container fluid ml={90} mr={69} py={50}>
         <Grid align="top">
           <Grid.Col sm={12}>
             <Image className='mx-auto mb-10' width={508} height={545} src="/images/pages/home/cardsfalling.png" alt='image' />

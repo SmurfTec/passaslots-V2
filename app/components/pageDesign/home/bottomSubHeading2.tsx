@@ -21,7 +21,7 @@ export const BottomSubHeading2 = () => {
   const { classes } = useStyles();
   return (
     <div className={classes.backdrop}>
-      <Container size={1300}>
+      <Container fluid ml={90} mr={69}>
         <Grid align={'center'} justify='center' className="space-y-5">
           <HomeBottomCarousel />
           <Grid.Col mt={20}>

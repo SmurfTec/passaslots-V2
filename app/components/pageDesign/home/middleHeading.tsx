@@ -19,7 +19,7 @@ export const MiddleHeading = () => {
   const { classes } = useStyles();
   return (
     <div className={classes.backdrop}>
-      <Container size={1300}>
+      <Container fluid ml={90} mr={69}>
         <Flex ml={-150} py={120} mih={50} gap="md" justify="center" align="flex-start" direction="column" wrap="wrap">
           <Title mt={80} mb={50} color={'white'} order={2} maw={800} className="font-bold uppercase">More ACCESS from the touch of a finger</Title>
           <Text color={'white'} className="leading-10 font[-400]" size={'md'} mt={0} maw={700}>
