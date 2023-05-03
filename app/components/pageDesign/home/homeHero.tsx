@@ -235,7 +235,7 @@ export function HomeHero() {
                       size="sm"
                       style={{ fontWeight: '700', fontSize: '15px' }}
                     >
-                      How does it work?
+                      How it works?
                     </Button>
                   </Group>
                 </Popover.Dropdown>

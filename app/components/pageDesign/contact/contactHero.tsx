@@ -78,7 +78,7 @@ export function ContactHero() {
                         Contact Us
                       </Button>
                       <Button bg={'#0076FF'} className="hover:bg-[#0076FF]" radius={36} mt={120} ml={-140} component={NextLink} href="/how-it-works" size="sm">
-                        How does it work?
+                        How it works?
                       </Button>
                     </Group>
                 </Popover.Dropdown>
