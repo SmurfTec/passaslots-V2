@@ -7,6 +7,7 @@ body {
   line-height: 37.5px;
   font-size: 32px;
   letter-spacing: -1.5%;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 600px) {
@@ -15,36 +16,35 @@ body {
     line-height: 56.25px !important;
   }
 
-  h2{
+  h2 {
     font-size: 33.6px !important;
     line-height: 35.97px !important;
-    
   }
 }
 
-.PhoneInputInput{
+.PhoneInputInput {
   width: 100%;
   font-size: 14px;
   background-color: transparent;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.PhoneInputCountrySelect{
+.PhoneInputCountrySelect {
   font-size: 14px;
 }
 
-.PhoneInput{
+.PhoneInput {
   margin: 10px 0 20px;
   border: 1px solid #84848470 !important;
   padding: 10px 5px;
 }
 
-.PhoneInput--focus{
+.PhoneInput--focus {
   border-color: unset;
 }
 
-.PhoneInputCountryIcon{
+.PhoneInputCountryIcon {
   height: 20px !important;
   background-color: unset !important;
   box-shadow: unset !important;
