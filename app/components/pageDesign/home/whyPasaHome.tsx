@@ -48,7 +48,7 @@ export function WhyPasaHome() {
       backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
       backdropFilter: 'blur(20px)',
     }}>
-      <Container size={1300} py={100}>
+      <Container fluid pl={79} pr={69} py={100}>
         <Title color={'white'} order={3} className="font-[700]">
           WHY PASA SLOTS?
         </Title>
@@ -58,8 +58,7 @@ export function WhyPasaHome() {
             controls: {
               position: 'relative',
               WebkitJustifyContent: 'end !important',
-              bottom: '560px',
-              right: '0 !important',
+              bottom: '600px',
             },
             control: {
               margin: '0 0 0 10px !important',
@@ -72,10 +71,12 @@ export function WhyPasaHome() {
               borderColor: 'transparent',
             },
           }}
-          slideSize={"33.33%"}
+          slideSize={"33.333333%"}
           pt={20}
           loop
-          initialSlide={1}
+          align='start'
+          slidesToScroll={1}
+          slideGap={"xl"}
           previousControlIcon={<ChevronLeft size={28}/>}
           nextControlIcon={<ChevronRight size={28}/>}
         >

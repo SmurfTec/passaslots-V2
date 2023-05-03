@@ -44,8 +44,8 @@ export function HomeCollection() {
   const { classes } = useStyles();
   return (
     <div className={classes.backdrop}>
-      <Container pb={100} pt={100} size={1300}>
-        <Title color={'white'} mb={60} order={3} className="font-[700] text-center">
+      <Container pb={100} pt={100} fluid>
+        <Title color={'white'} mb={60} order={2} className="font-[700] text-center">
           POPULAR COLLECTIONS
         </Title>
         <Grid m={0} p={0} gutterMd={70}>

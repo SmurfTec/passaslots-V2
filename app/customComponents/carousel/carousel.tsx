@@ -24,7 +24,7 @@ export const Carousel = ({ delay, images, hC, wC, slides, ...rest }: CarouselPro
       {slides && slides.map((slide,index) => <MantineCarousel.Slide key={index}>{slide}</MantineCarousel.Slide>)}
       {images && images.map((image,index) => (
         <MantineCarousel.Slide key={index} gap={50}>
-          <Image height={hC ? hC : "auto"} width={wC ? wC : "auto"} className='flex items-center' styles={{image: {alignItems: 'center', alignSelf: 'center',}, root: {alignItems: 'center', alignSelf: 'center',}}} src={image} alt="slide" />
+          <Image height={hC ? hC : "auto"} width={wC ? wC : "auto"} className='flex justify-center items-center mx-auto my-auto' styles={{image: {alignItems: 'center', alignSelf: 'center',}, root: {alignItems: 'center', alignSelf: 'center',}}} src={image} alt="slide" />
         </MantineCarousel.Slide>
       ))}
     </MantineCarousel>

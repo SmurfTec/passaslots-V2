@@ -67,9 +67,9 @@ export function Header() {
 
   return (
     <header>
-      <Container size={1300} className="bg-transparent z-50 relative">
+      <Container fluid className="bg-transparent z-50 relative">
         <Group position="apart" spacing={40}>
-          <Anchor href="/" component={NextLink}>
+          <Anchor ml={79} mt={9} href="/" component={NextLink}>
             <Image
               className="cursor-pointer"
               alt="logo"
@@ -78,14 +78,14 @@ export function Header() {
               width={114}
             />
           </Anchor>
-          <Group spacing={40} className={classes.group}>
-            <Text color={'#fff'} className='cursor-pointer' size="md" onClick={bonusOpen}>
-              Sign up for Players
+          <Group spacing={31} className={classes.group}>
+            <Text color={'#fff'} className='cursor-pointer font-[700] uppercase' size="16px" onClick={bonusOpen}>
+              Signup for Players
             </Text>
-            <Text color={'#fff'} size="md" component={NextLink} href="/distributor-signup">
-              PASA for Distribution
+            <Text color={'#fff'} className='font-[700] uppercase' size="16px" component={NextLink} href="/distributor-signup">
+              PASA Distribution
             </Text>
-            <Text color={'#fff'} size="md" component={NextLink} href="/games">
+            <Text color={'#fff'} className='font-[700] uppercase' size="16px" component={NextLink} href="/games">
               Games
             </Text>
           </Group>
@@ -164,7 +164,7 @@ export function Header() {
               <Menu.Item></Menu.Item>
             </Menu.Dropdown>
           </Menu>
-          <Group spacing={16}>
+          <Group className={classes.group} spacing={10} mr={69}>
             <Button
               styles={{
                 label: {

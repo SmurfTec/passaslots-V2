@@ -3,20 +3,20 @@ import { Carousel, useStylesCarousel } from '@pasa/customComponents';
 import { Embla } from '@mantine/carousel';
 import { useCallback, useEffect, useState } from 'react';
 
-const useStyles = createStyles((theme) => ({
-  backdrop: {
-    // backgroundColor: '#150B2E',
-    backgroundRepeat: 'no-repeat',
-    // backgroundImage: `url('/images/pages/home/casinochipsfalling.png')`,
-    // position: 'relative',
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    // minHeight: '100vh', 
-    position: 'relative',
-    // width: '100%',
-    // height: '100vh',
-  },
-}));
+// const useStyles = createStyles((theme) => ({
+//   backdrop: {
+//     // backgroundColor: '#150B2E',
+//     backgroundRepeat: 'no-repeat',
+//     // backgroundImage: `url('/images/pages/home/casinochipsfalling.png')`,
+//     // position: 'relative',
+//     backgroundPosition: 'center center',
+//     backgroundSize: 'cover',
+//     // minHeight: '100vh', 
+//     position: 'relative',
+//     // width: '100%',
+//     // height: '100vh',
+//   },
+// }));
 
 const images = [
   '/images/carousel/newcarousel1.png',
@@ -24,7 +24,7 @@ const images = [
   '/images/carousel/newcarousel3.png',
 ];
 export const HomeTopCarousel = () => {
-  const { classes } = useStyles();
+  // const { classes } = useStyles();
   const [slideProgress, setSlideProgress] = useState(1);
   const [embla, setEmbla] = useState<Embla | null>(null);
 
@@ -51,9 +51,15 @@ export const HomeTopCarousel = () => {
       backdropFilter: 'blur(20px)',
       backgroundSize: 'cover',
     }}>
-      <div className={classes.backdrop}>
-        <Container size={1300} py={100} style={{ backgroundSize: 'cover', width: '100%' }}>
-            <Carousel align={'center'} className='flex items-center' w={2100} ml={-623} mr={-300} getEmblaApi={setEmbla} slideSize="50%" loop initialSlide={2} images={images} delay={4000} />
+      {/* <div className={classes.backdrop}> */}
+        <Container fluid py={100} style={{ backgroundSize: 'cover', width: '100%' }}>
+            <Carousel
+            // styles={{
+            //   indicator: {
+            //     backgroundImage: 'url("images/scroll/carouselIndicatiorSelect.png")'
+            //   }
+            // }}
+            align='center' /*withIndicators*/ className='flex justify-center align-middle items-center' getEmblaApi={setEmbla} slideSize="50%" loop initialSlide={3} images={images} delay={4000} />
             <Flex gap={5} justify='center' align='center' className='mt-5'>
               <Image height={12} width={12}
               src={slideProgress === 1 ? "/images/scroll/carouselIndicatorSelect.png" : "/images/scroll/carouselIndicatorNotSelect.png"}/>
@@ -69,8 +75,12 @@ export const HomeTopCarousel = () => {
                 px={50}
                 styles={{
                   root: {
-                    fontSize: '16px',
-                    color: 'white',
+                    fontSize: '20px',
+                    fontStyle: 'normal',
+                    color: '#FFFFFF',
+                    padding: '17px 53px',
+                    width: '203px',
+                    gap: '10px',
                     // borderColor: '#F6CAA7',
                     '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
                   },
@@ -87,7 +97,7 @@ export const HomeTopCarousel = () => {
               </Button>
             </div>
         </Container>
-      </div>
+      {/* </div> */}
     </div>
   );
 };

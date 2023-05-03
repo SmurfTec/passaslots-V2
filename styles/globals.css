@@ -27,6 +27,7 @@ body {
   font-size: 14px;
   background-color: transparent;
   border: none;
+  color: #FFFFFF;
 }
 
 .PhoneInputCountrySelect{
@@ -48,3 +49,12 @@ body {
   background-color: unset !important;
   box-shadow: unset !important;
 }
+
+/* .pasa-Button-root {
+  background: linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%);
+  border-radius: 50px;
+  font-weight: 500;
+  padding: 17px 53px;
+  width: 57px;
+  font-size: x-large;
+} */

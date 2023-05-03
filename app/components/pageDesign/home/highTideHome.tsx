@@ -38,16 +38,16 @@ export function HighTideHome() {
     <>
       <div className={classes.backdrop}>
         <BackgroundImage className="" style={{ backgroundSize: 'cover', backgroundPosition: 'center center', position: 'relative', width:'100%' }} src="/images/pages/home/highTideImage.png">
-          <Container size={1300} py={100}>
-            <Grid ml={-120}>
+          <Container fluid py={100}>
+            <Grid ml={'90px'}>
               <Grid.Col xs={6}>
-                <Title color="white" order={2} mt={103}>
-                  RIDE THE HIGH <span className="text-[#016BE6]">TIDE OF <br /> LUCK</span>
+                <Title className='font-[700] tracking[-0.015em]' color="white" order={2} mt={103}>
+                  RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF <br /> LUCK</span>
                 </Title>
-                <Text color="white" mt={61} className="font-[400] leading-10" maw={550} size="md" mb={80}>
-                To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile players 
-                to launch into playing this slot sensation the moment <span className="font-[700]">you’ve logged into your unique real money</span> account. 
-                You never know, one spin is all it takes to potentially change your life forever!
+                <Text color="white" mt={61} className="font-[400] leading-10" maw={628} size="md" mb={80}>
+                To see what kind of winnings are in store for you on the games, Pasa<br/> invites all our online and mobile players 
+                to launch into playing this slot<br/> sensation the moment <span className="font-[700]">you’ve logged into your unique real money</span><br/> account. 
+                You never know, one spin is all it takes to potentially change<br/> your life forever!
                 </Text>
                 <Button 
                   component={NextLink} 
@@ -57,7 +57,8 @@ export function HighTideHome() {
                   mb={85}
                   styles={{
                     root: {
-                      fontSize: '16px',
+                      fontSize: '20px',
+                      fontWeight: 'normal',
                       color: 'white',
                       // borderColor: '#F6CAA7',
                       '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
@@ -66,7 +67,7 @@ export function HighTideHome() {
                   bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
                   size="lg"
                   radius={50} 
-                  className="text-sm font-bold uppercase ">
+                  className="font-[500] uppercase ">
                   More on Slot Games
                 </Button>
               </Grid.Col>
@@ -79,7 +80,7 @@ export function HighTideHome() {
       <HomeTopCarousel />
 
       <div className={classes.backdrop2}>
-        <Container size={1300} h={120} pb={50}>
+        <Container fluid ml={90} mr={69} h={120} pb={50}>
           {/* <Grid>
             <Grid.Col md={6}>
               <Image className='text-baseline left ' src="/images/pages/home/playdicewin.png" alt="home mobile" />
@@ -92,27 +93,33 @@ export function HighTideHome() {
             <Grid align='baseline'>
               <Grid.Col md={12} mt={103}>
                 <div className="space-y-1">
-                  <Title color={'white'} order={3} className="font-bold uppercase mt-16 lg:mt-0 leading-snug">
-                    Play all day long with slots at <br /> the
-                    <span className="text-[#50A1FF]"> forefront of our industry</span> <br /> leading gaming platform
+                  <Title color={'white'} order={3} className="font-[700] uppercase mt-16 lg:mt-0 leading-snug">
+                    Play all day long with slots at the <br />
+                    <span className="text-[#50A1FF]">forefront of our industry</span> leading<br /> gaming platform
                   </Title>
                 </div>
                 <div>
-                  <Text color={'white'} className="text-base font-[300] md:mt-[60px] leading-10" maw={600}>
-                    To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
-                    players to launch into playing this slot sensation the moment{' '}
-                    <span className="font-[700]"> you've logged into your unique real money </span>
-                    account. You never know, one spin is all it takes to potentially change your life forever!
+                  <Text color={'white'} className="text-base font-[400] text-md md:mt-[60px] leading-10" maw={600}>
+                    To see what kind of winnings are in store for you on the games, Pasa<br/> invites all our online and mobile
+                    players to launch into playing this slot<br/> sensation the moment{' '}
+                    <span className="font-[700]"> you've logged into your unique real money </span><br/>
+                    account. You never know, one spin is all it takes to potentially change<br/> your life forever!
                   </Text>
                 </div>
                 <div className=''>
                   <Button component={NextLink} href="games/#gameSlots" mt={150} size="lg" 
-                    bg="linear-gradient(to bottom, #2072D2, #A74C9A)" className="text-sm font-bold uppercase"
+                    bg="linear-gradient(to bottom, #2072D2, #A74C9A)" className="font-[500] uppercase"
                     radius={50}
+                    px={50}
                     styles={{
                       root: {
                         // borderColor: '#F6CAA7',
+                        width: '315px',
+                        fontSize: '20px',
+                        fontStyle: 'normal',
                         color: '#FFFFFF',
+                        padding: '17px 53px',
+                        gap: '10px',
                         '&:hover': {
                           background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
                         },

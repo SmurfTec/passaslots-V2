@@ -21,10 +21,10 @@ export async function getStaticProps() {
 export function Index() {
   return (
     <div>
-      <HomeHero />
+      {/* <HomeHero />
       <WinHome />
       <WhyPasaHome />
-      <HighTideHome />
+      <HighTideHome /> */}
       <HomeCollection />
       <MiddleHeading />
       <TestimonialCarousel />
