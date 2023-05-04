@@ -70,8 +70,8 @@ export function WinHome() {
                   },
                 }}
                 onClick={bonusOpen}
-                className="h-12 px-12 text-xl font-[500]"
-                style={{ fontSize: '20px', lineHeight: '23.44px', letterSpacing: '-1.5%' }}
+                className="h-12 px-12 text-xl font-[500] "
+                style={{ fontSize: '20px', lineHeight: '23.44px', letterSpacing: '-1.5%', marginTop: '40px' }}
               >
                 SIGNUP
               </Button>

@@ -15,8 +15,7 @@ export function WhyPasaHome() {
     },
     {
       name: 'Samantha Richards',
-      description:
-        '"Entertainment at its highest peak and a modern touch of gaming with its user-friendly platform."',
+      description: '"Entertainment at its highest peak and a modern touch of gaming with its user-friendly platform."',
       image: '/images/pages/home/Ellipse3.png',
       rating: 5,
       date: '20 Aug, 2022',
@@ -31,8 +30,7 @@ export function WhyPasaHome() {
     },
     {
       name: 'Jessica Shaw',
-      description:
-        '"The support is organized and customer satisfaction is taken very seriously."',
+      description: '"The support is organized and customer satisfaction is taken very seriously."',
       image: '/images/pages/home/testimonialImage1.png',
       rating: 5,
       date: '17 Jan, 2023',
@@ -41,15 +39,25 @@ export function WhyPasaHome() {
 
   const matches = useMediaQuery('(max-width: 460px)', true);
   return (
-    <div 
-    className="bg-gradient-to-r from-blue-500 to-purple-600"
-    style={{
-      backgroundColor: '#150B2E',
-      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
-      backdropFilter: 'blur(20px)',
-    }}>
+    <div
+      className="bg-gradient-to-r from-blue-500 to-purple-600"
+      style={{
+        backgroundColor: '#150B2E',
+        backgroundImage:
+          'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+        backdropFilter: 'blur(20px)',
+        zIndex: 50,
+        boxShadow: '-1px 0px 20px 3px #016BE6',
+        borderTop: '6px solid #016BE6',
+      }}
+    >
       <Container fluid pl={79} pr={69} py={100}>
-        <Title color={'white'} order={3} className="font-[700]">
+        <Title
+          color={'white'}
+          order={3}
+          className="font-[700]"
+          style={{ fontSize: '48px', lineHeight: '56.25px', letterSpacing: '-1.5%' }}
+        >
           WHY PASA SLOTS?
         </Title>
 
@@ -71,18 +79,24 @@ export function WhyPasaHome() {
               borderColor: 'transparent',
             },
           }}
-          slideSize={"33.333333%"}
+          slideSize={'25%'}
           pt={20}
           loop
-          align='start'
+          align="start"
           slidesToScroll={1}
-          slideGap={"xl"}
-          previousControlIcon={<ChevronLeft size={28}/>}
-          nextControlIcon={<ChevronRight size={28}/>}
+          slideGap={'md'}
+          previousControlIcon={<ChevronLeft size={28} />}
+          nextControlIcon={<ChevronRight size={28} />}
         >
           {testimonialData.map((td, key) => (
             <Carousel.Slide key={key + td.image}>
-              <SingleTestimonial image={td.image} description={td.description} name={td.name} rating={td.rating} date={td.date} />
+              <SingleTestimonial
+                image={td.image}
+                description={td.description}
+                name={td.name}
+                rating={td.rating}
+                date={td.date}
+              />
             </Carousel.Slide>
           ))}
         </Carousel>
