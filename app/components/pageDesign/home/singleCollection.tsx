@@ -33,7 +33,7 @@ export function SingleCollection({ button, content, image, title }: SingleCollec
               <Button
                 radius={50}
                 styles={{
-                  label: { fontSize: '20px', fontWeight: '500' },
+                  label: { fontSize: '20px', fontWeight: 'bolder' },
                   root: {
                     padding: '10px',
                     border: 'none',
