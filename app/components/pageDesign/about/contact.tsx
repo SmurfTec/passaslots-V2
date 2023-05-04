@@ -1,47 +1,34 @@
-import { Button, Container, Grid, Image, Text, Title } from '@mantine/core';
+import { Button, Container, Grid, Image, Text, Title, BackgroundImage } from '@mantine/core';
 import { ContactForm } from '@pasa/components/form';
 import { useBonusModal } from '@pasa/hooks';
 
 export function AboutContact() {
   const [BonusModal, bonusOpen] = useBonusModal();
   return (
-    <div>
-      <Container size={1300} pt={100}>
-        <Grid>
-          <Grid.Col sm={6}>
-            <Title order={3} className="font-[700]">
-              INTERESTED IN <br /> GETTING STARTED
-            </Title>
-          </Grid.Col>
-          <Grid.Col className="text-left mt-10 sm:mt-0 sm:text-right " sm={6} p={0}>
-            <Button onClick={bonusOpen} className="h-12 px-12 rounded-md text-[14px] font-[300]">
-              SIGN UP NOW
-            </Button>
-          </Grid.Col>
-          {BonusModal}
-          <Grid.Col mt={100} span={12}>
-            <Title order={3} className="font-[700] text-center sm:text-left">
-              GET IN{' '}
-              <span className="text-[#C1C1C1]">
-                TOUCH <br /> WITH US
+    <div style={{backgroundColor: '#150B2E'}}>
+    <BackgroundImage style={{backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom right'}} bgsz='auto' src="/images/pages/contact/querygiant.png">
+      <Container fluid mr={69} ml={90}>
+        <Grid align="center" >
+          <Grid.Col md={4} mt={99} mb={78} span={12}>
+            <Title order={2} className="font-[700] uppercase text-[#fff]">
+              Get in{' '}
+              <span className="text-[#50A1FF]">
+                touch<br/> with us
               </span>
             </Title>
           </Grid.Col>
-        </Grid>
-        <Grid align="center">
-          <Grid.Col sm={6} className="text-center sm:text-left mt-10 sm:mt-0">
-            <Image src="/images/pages/about/pirate.png" alt="pirate" />
-          </Grid.Col>
-          <Grid.Col sm={6} my={30}>
-            <Text my={40} color="#0F0F0F" className="font-[400] tracking-[0.005em]" opacity={0.8} size="sm">
-              If you have any questions or need help, please fill out the form <br /> below. We do our best to respond
-              within 1 business day.
+          <Grid.Col mt={99} mb={78} span={12} md={8}>
+            <Text className='align-text-top font-[400] text-white text-lg leading-[188.69%] tracking-[0.005em]'>
+            If you have any questions or need help, please fill out the form below. We do our best to<br/> respond within 1 business day.
             </Text>
-
+          </Grid.Col>
+          <Grid.Col mb={76} sm={12}>
             <ContactForm />
           </Grid.Col>
         </Grid>
       </Container>
+    {/* <Image w={257} h={428} className='absolute center top-1/2' src="/images/pages/contact/querygiant.png" alt='' /> */}
+    </BackgroundImage>
     </div>
   );
 }

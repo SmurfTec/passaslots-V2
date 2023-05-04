@@ -1,4 +1,4 @@
-import { DistributionContent, DistributorHero } from '@pasa/components';
+import { BottomSubHeading, DistributionContent, DistributorHero } from '@pasa/components';
 
 export async function getStaticProps() {
   return {
@@ -11,6 +11,7 @@ export default function DistributorSignup() {
     <>
       <DistributorHero />
       <DistributionContent />
+      <BottomSubHeading/>
     </>
   );
 }

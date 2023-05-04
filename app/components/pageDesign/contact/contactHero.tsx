@@ -77,7 +77,7 @@ export function ContactHero() {
                       <Button className="text-top items-center hover:bg-[#0076FF]" bg={'#0076FF'} mt={-20} radius={35} ml={-90} component={NextLink} href="/contact" size="sm">
                         Contact Us
                       </Button>
-                      <Button bg={'#0076FF'} className="hover:bg-[#0076FF]" radius={36} mt={120} ml={-140} component={NextLink} href="/how-it-works" size="sm">
+                      <Button bg={'#0076FF'} className="hover:bg-[#0076FF]" radius={36} mt={120} ml={-136} component={NextLink} href="/how-it-works" size="sm">
                         How it works?
                       </Button>
                     </Group>

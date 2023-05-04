@@ -102,6 +102,8 @@ export function Footer() {
                     color: 'white',
                     borderImage: 'linear-gradient(to bottom, #FFFFFF, #016BE6)',
                     borderImageWidth: '2px',
+                    borderImageRepeat: 'round',
+                    borderRadius: '50px',
                     borderImageSlice: '1',
                     '&:hover': { background: 'transparent' },
                   },
