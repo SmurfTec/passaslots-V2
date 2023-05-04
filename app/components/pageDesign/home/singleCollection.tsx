@@ -3,8 +3,8 @@ import { NextLink } from '@mantine/next';
 
 export type Link = {
   text: string;
-  path: string
-}
+  path: string;
+};
 
 export type SingleCollectionProps = {
   title: string;
@@ -18,7 +18,7 @@ export function SingleCollection({ button, content, image, title }: SingleCollec
     <Card p={10} m={0} radius="sm" bg={'transparent'}>
       <Card.Section>
         <Grid align={'center'} justify={'center'}>
-          <Image width={250} height={250} alt={image} src={image} mb={0}  />
+          <Image width={250} height={250} alt={image} src={image} mb={0} />
           <Grid.Col p={10} m={0}>
             <Title color="white" order={4} className="font-[500] text-center">
               {title}
@@ -26,11 +26,26 @@ export function SingleCollection({ button, content, image, title }: SingleCollec
             <Text color="white" mt={5} size="sm" className="font-[300] opacity-70 text-center">
               {content}
             </Text>
-            <Grid className='my-5' justify={'center'}>
-              <Image src="/images/pages/home/chips.png" width={84} height={42}  alt="pirate" />
+            <Grid className="my-5" justify={'center'}>
+              <Image src="/images/pages/home/chips.png" width={84} height={42} alt="pirate" />
             </Grid>
-            <Grid className='my-5' justify={'center'}>
-              <Button radius={50} styles={{label: {fontSize: "16px"}, root: {background: "linear-gradient(to bottom, #2072D2, #A74C9A)", color: "white", '&:hover': { background: "linear-gradient(to bottom, #2072D2, #A74C9A)", },}}} className="text-center" component={NextLink} href={button.path}>
+            <Grid className="my-5" justify={'center'}>
+              <Button
+                radius={50}
+                styles={{
+                  label: { fontSize: '20px', fontWeight: '500' },
+                  root: {
+                    padding: '10px',
+                    border: 'none',
+                    background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
+                    color: 'white',
+                    '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
+                  },
+                }}
+                className="text-center"
+                component={NextLink}
+                href={button.path}
+              >
                 {button.text}
               </Button>
             </Grid>

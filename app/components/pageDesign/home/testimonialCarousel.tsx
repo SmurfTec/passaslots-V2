@@ -67,14 +67,25 @@ export const TestimonialCarousel = () => {
   const matches = useMediaQuery('(max-width: 700px)');
   return (
     // <Flex className='py-16 sm:py-24' mb={80} bg="black" gap="md" align="center" direction="row" wrap="nowrap">
-    <div className="bg-gradient-to-r from-blue-500 to-purple-600 py-20"
-    style={{
-      backgroundColor: '#150B2E',
-      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
-      backdropFilter: 'blur(20px)',}}>
+    <div
+      className="bg-gradient-to-r from-blue-500 to-purple-600 py-20"
+      style={{
+        backgroundColor: '#150B2E',
+        backgroundImage:
+          'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+        backdropFilter: 'blur(20px)',
+        zIndex: 50,
+        boxShadow: '-1px 0px 20px 3px #016BE6',
+        borderTop: '6px solid #016BE6',
+      }}
+    >
       <Container fluid ml={90} mr={69}>
-        <BackgroundImage className="mb-10" style={{ backgroundSize: 'cover', rotate: '-10deg', }} src="/images/pages/home/multicolorfall.png">
-          <div style={{rotate: '10deg'}}>
+        <BackgroundImage
+          className="mb-10"
+          style={{ backgroundSize: 'cover', rotate: '-10deg' }}
+          src="/images/pages/home/multicolorfall.png"
+        >
+          <div style={{ rotate: '10deg' }}>
             <Title color={'white'} order={2} className="font-bold uppercase text-center">
               What our community says
             </Title>
