@@ -228,7 +228,7 @@ export function Header() {
                 w={180}
                 maw={180}
                 onClick={bonusOpen}
-                style={{ border: 'none' }}
+                style={{ border: 'none', marginLeft: '10px' }}
                 className="font-[500] text-base "
                 size="lg"
                 radius={50}

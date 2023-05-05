@@ -6,18 +6,18 @@ const useStyles = createStyles((theme) => ({
     // backgroundColor: '#150B2E',
     backgroundRepeat: 'no-repeat',
     backgroundColor: '#150B2E',
-    backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+    backgroundImage:
+      'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
     backdropFilter: 'blur(20px)',
     backgroundSize: 'cover',
     // position: 'relative',
     backgroundPosition: 'center center',
-    minHeight: '100vh', 
+    minHeight: '100vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
   },
 }));
-
 
 const collectionData: SingleCollectionProps[] = [
   {
@@ -43,7 +43,10 @@ const collectionData: SingleCollectionProps[] = [
 export function HomeCollection() {
   const { classes } = useStyles();
   return (
-    <div className={classes.backdrop}>
+    <div
+      className={classes.backdrop}
+      style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
+    >
       <Container pb={100} pt={100} fluid>
         <Title color={'white'} mb={60} order={2} className="font-[700] text-center">
           POPULAR COLLECTIONS

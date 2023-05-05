@@ -105,6 +105,8 @@ export function HomeHero() {
                 loop
                 images={images}
                 delay={5000}
+                hC={596}
+                wC={598}
               />
             </Center>
             {/* <Image className='ml-[421px]' width={598} height={598} src="/images/pages/home/HomeFirstImage.png" alt='image' /> */}

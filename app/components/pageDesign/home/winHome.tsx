@@ -30,12 +30,18 @@ export function WinHome() {
             <Image
               className="text-center mx-auto"
               mb={58}
-              width={772}
-              height={437}
+              width={644}
+              height={363}
               src="/images/pages/home/winHomeImage.png"
               alt="image"
             />
-            <Title color={'#fff'} mb={29} order={3} className="font-[700] uppercase text-center">
+            <Title
+              color={'#fff'}
+              mb={29}
+              order={3}
+              className="font-[700] uppercase text-center"
+              style={{ fontSize: '48px', letterSpacing: '-1.5%', lineHeight: '56.2px' }}
+            >
               Play on any device now
             </Title>
             <Text
@@ -43,6 +49,7 @@ export function WinHome() {
               color="#fff"
               className="font-[400] tracking-[0.005em] font-weight text-2xl leading-6 text-center"
               size="sm"
+              style={{ fontSize: '24px', letterSpacing: '-1.5%', lineHeight: '28.13px' }}
             >
               Every kind of game imaginable, a safe and secure environment <br /> to play in, and quick top-up{' '}
               <span className="font-[700]">solutions to fund your account</span> with.
@@ -54,6 +61,7 @@ export function WinHome() {
                 w={176}
                 styles={{
                   root: {
+                    border: 'none',
                     background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
                     // borderColor: '#F6CAA7',
                     '&:hover': {
@@ -62,7 +70,8 @@ export function WinHome() {
                   },
                 }}
                 onClick={bonusOpen}
-                className="h-12 px-12 text-xl font-[500]"
+                className="h-12 px-12 text-xl font-[500] "
+                style={{ fontSize: '20px', lineHeight: '23.44px', letterSpacing: '-1.5%', marginTop: '40px' }}
               >
                 SIGNUP
               </Button>
