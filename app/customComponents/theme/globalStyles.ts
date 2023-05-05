@@ -10,8 +10,8 @@ export const globalStyles = (theme: MantineTheme): CSSObject => {
     },
     body: {
       ...theme.fn.fontStyles(),
-      backgroundColor: '#F2F2F2',
-      color: theme.black,
+      backgroundColor: '#150B2E',
+      color: '#FFFFFF',
       lineHeight: '1.5',
       fontSize: '1.8rem',
     },

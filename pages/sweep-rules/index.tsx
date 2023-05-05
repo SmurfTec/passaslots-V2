@@ -5,7 +5,7 @@ export async function getStaticProps() {
   };
 }
 export default function SweepRules(){
-    return (<Container size={1300}>
+    return (<Container fluid ml={90} mr={69}>
             <>
   <p>
     
@@ -18,7 +18,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -42,7 +42,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -71,7 +71,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -96,7 +96,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -120,7 +120,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -158,7 +158,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -182,7 +182,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -207,7 +207,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -231,7 +231,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -259,7 +259,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -283,7 +283,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -307,7 +307,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -331,7 +331,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -365,7 +365,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -389,7 +389,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -417,7 +417,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -442,7 +442,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -467,7 +467,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -492,7 +492,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -516,7 +516,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -540,7 +540,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -565,7 +565,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -586,7 +586,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -610,7 +610,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -631,7 +631,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -667,7 +667,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -691,7 +691,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -720,7 +720,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -744,7 +744,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -772,7 +772,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -796,7 +796,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -820,7 +820,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -844,7 +844,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -870,7 +870,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -894,7 +894,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -919,7 +919,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -943,7 +943,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -969,7 +969,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -993,7 +993,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1019,7 +1019,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1045,7 +1045,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1074,7 +1074,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1102,7 +1102,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1137,7 +1137,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1165,7 +1165,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1189,7 +1189,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1215,7 +1215,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1239,7 +1239,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1269,7 +1269,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1293,7 +1293,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1317,7 +1317,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1341,7 +1341,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1373,7 +1373,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1401,7 +1401,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1426,7 +1426,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1457,7 +1457,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1481,7 +1481,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1512,7 +1512,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1538,7 +1538,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1562,7 +1562,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1593,7 +1593,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1617,7 +1617,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1658,7 +1658,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1682,7 +1682,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1724,7 +1724,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1748,7 +1748,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1805,7 +1805,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1829,7 +1829,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1869,7 +1869,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1893,7 +1893,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1919,7 +1919,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1940,7 +1940,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1964,7 +1964,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -1995,7 +1995,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -2019,7 +2019,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -2050,7 +2050,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -2074,7 +2074,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -2101,7 +2101,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -2125,7 +2125,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -2155,7 +2155,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -2179,7 +2179,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -2205,7 +2205,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",
@@ -2229,7 +2229,7 @@ export default function SweepRules(){
       style={{
         fontSize: "11pt",
         fontFamily: "Arial",
-        color: "#000000",
+        color: "#FFFFFF",
         backgroundColor: "transparent",
         fontWeight: 400,
         fontStyle: "normal",

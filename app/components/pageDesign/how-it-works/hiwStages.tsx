@@ -71,7 +71,7 @@ export function HiwStage() {
           <Grid>
             <Grid.Col mt={318} sm={5}>
               <Group className='flex flex-col'>
-                <Grid mt={246} align='center'>
+                <Grid mt={246} justify='flex-end' ml='auto' align='center'>
                   <Title className='absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]'>
                     STAGE 2
                   </Title>
@@ -79,7 +79,7 @@ export function HiwStage() {
                     Visit your favorite gaming platform<br/> in browser or download the app
                   </Text>
                 </Grid>
-                <Grid mt={610} align='center'>
+                <Grid mt={610} justify='flex-end' ml='auto' align='center'>
                   <Title className='absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]'>
                     STAGE 4
                   </Title>
@@ -87,7 +87,7 @@ export function HiwStage() {
                     Purchase first game credit
                   </Text>
                 </Grid>
-                <Grid mt={475} align='center'>
+                <Grid mt={475} justify='flex-end' ml='auto' align='center'>
                   <Title className='absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]'>
                     STAGE 6
                   </Title>
@@ -217,6 +217,7 @@ export function HiwStage() {
                 }}/>
               </Group>
             </Grid.Col>
+            {/* text-align-last-end */}
             <Grid.Col mt={318} sm={5}>
               <Group className='flex flex-col content-start'>
                 <Grid align='center'>

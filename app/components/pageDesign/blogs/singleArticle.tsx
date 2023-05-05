@@ -9,20 +9,32 @@ export type SingleArticleProps = {
 
 export function SingleArticle({ author, date, image, title }: SingleArticleProps) {
   return (
-    <Grid grow gutterXs={40} align="top">
+    <Grid style={{ 
+      border: '2px solid #016BE6',
+      background: `rgba(217, 217, 217, 0.04)`,
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'auto',
+      borderRadius: '18px',
+      width: '558px',
+      height: '163px'
+      // margin: 'auto',
+      // justifyContent: 'space-between'
+    }} align="top">
       <Grid.Col xs={5} sm={3}>
-        <Image src={image} alt={image} />
+        <Image height='auto' width='auto' src={image} alt={image} />
       </Grid.Col>
-      <Grid.Col xs={7} sm={9} className="space-y-4">
-        <Text className="font-[300]" size="sm" color="#E3E3E3" pr={30}>
-          {date}
-        </Text>
-        <Title color="white" className="font-[700]" order={4}>
+      <Grid.Col xs={7} sm={9} className="space-y-4 px-[19px]">
+        <Title color='#EEEEEE' className="font-[700] leading-[30px] text-[22px] uppercase">
           {title}
         </Title>
-        <Text className="font-[300]" size="sm" color="#E3E3E3" pr={30}>
-          By {author}
-        </Text>
+        <div className='flex justify-between'>
+          <Text color='white' className="font-[400] text-[14px] leading-[20px] opacity-70 mt-[45px]">
+            By {author}
+          </Text>
+          <Text color='white' className="font-[400] text-[14px] leading-[20px] opacity-70 mt-[45px]">
+            {date}
+          </Text>
+        </div>
       </Grid.Col>
     </Grid>
   );

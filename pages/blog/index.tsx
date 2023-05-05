@@ -1,4 +1,4 @@
-import { BlogArticle, BlogDiscover, BlogHero, BlogLayout, NewsletterBlog } from '@pasa/components';
+import { BlogArticle, BlogDiscover, BlogHero, BlogLayout, BottomSubHeading, NewsletterBlog } from '@pasa/components';
 
 export async function getStaticProps() {
   return {
@@ -12,8 +12,9 @@ export default function Blogs() {
       <BlogHero />
       <BlogLayout />
       <NewsletterBlog />
-      <BlogArticle />
       <BlogDiscover />
+      <BlogArticle />
+      <BottomSubHeading/>
     </>
   );
 }

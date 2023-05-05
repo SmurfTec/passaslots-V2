@@ -16,7 +16,7 @@ export function Mission() {
           <Grid.Col mt={318} sm={5} className='grid justify-items-end'>
             <Group className='flex flex-col'>
               <div className='flex mt-[390px]'>
-                <Grid mr={43} align='center'>
+                <Grid justify='flex-end' ml='auto' mr={43} align='center'>
                   <Title mb={70} className='absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]'>
                     OUR APPROACH
                   </Title>
@@ -29,7 +29,7 @@ export function Mission() {
                     all around the world.
                   </Text>
                 </Grid>
-                <MImage className='ml-[380px] text-right' src='/images/pages/about/capitalT.png' />
+                <MImage className='ml-[43px] text-right' src='/images/pages/about/capitalT.png' />
               </div>
             </Group>
           </Grid.Col>

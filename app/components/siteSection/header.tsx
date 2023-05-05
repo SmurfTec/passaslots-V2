@@ -84,8 +84,11 @@ export function Header() {
               >
                 Signup for Players
               </Text>
-              <Text
-                color={'#fff'}
+              <Text style={{
+                textDecoration: router.pathname === '/distributor-signup' ? 'underline' : '',
+                textUnderlineOffset: router.pathname === '/distributor-signup' ? '11px' : '',
+              }} 
+                color={router.pathname === '/distributor-signup' ? '#FFB800' : '#fff'}
                 className="font-[700] uppercase"
                 size="16px"
                 component={NextLink}
@@ -93,7 +96,10 @@ export function Header() {
               >
                 PASA Distribution
               </Text>
-              <Text color={'#fff'} className="font-[700] uppercase" size="16px" component={NextLink} href="/games">
+              <Text style={{
+                textDecoration: router.pathname === '/games' ? 'underline' : '',
+                textUnderlineOffset: router.pathname === '/games' ? '11px' : '',
+              }} color={router.pathname === '/games' ? '#FFB800' : '#fff'} className="font-[700] uppercase" size="16px" component={NextLink} href="/games">
                 Games
               </Text>
             </Group>

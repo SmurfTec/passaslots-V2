@@ -1,8 +1,8 @@
-import { ActionIcon, BackgroundImage, Container, Grid, Image, Text, TextInput, Title } from '@mantine/core';
+import { ActionIcon, BackgroundImage, Container, Grid, Group, Image, Stack, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useMediaQuery } from '@mantine/hooks';
 import { useState } from 'react';
-import { ArrowRight } from 'tabler-icons-react';
+import { ChevronRight } from 'tabler-icons-react';
 
 export function NewsletterBlog() {
   const [message, setMessage] = useState(false);
@@ -32,61 +32,91 @@ export function NewsletterBlog() {
       });
   };
   return (
-    <BackgroundImage className="relative text-center" src="/images/pages/blogs/newsletterBackground.png">
-      <Container size={1300} py={100}>
-        <Grid>
-          <Grid.Col sm={6}>
-            <Title color="white" className="uppercase" order={2}>
-              Add some luck <br /> to your inbox
-            </Title>
-          </Grid.Col>
-
-          <Grid.Col sm={6}></Grid.Col>
-
-          <Grid.Col sm={6}></Grid.Col>
-          <Grid.Col sm={4}>
-            <Text mt={20} color="white" className="font-[300] tracking-[0.005em]" size="sm">
-              Join our email newsletter "The High Roller Herald" to be the first to know about new things happening at
-              Pasa, from new games, winning tips, and oh, did we mention the occasional gift?
-            </Text>
-
-            <form onSubmit={form.onSubmit(handleSubmit)}>
-              <TextInput
-                mt={40}
-                // maw={'60%'}
-                p={10}
-                styles={{ input: { padding: '20px', fontSize: '12px', fontWeight: 'bold' } }}
-                radius="xl"
-                size="lg"
-                rightSection={
-                  <ActionIcon type='submit' size={42} bg="#BA6833" mr={10} radius="xl" variant="filled">
-                    <ArrowRight size="1.1rem" />
-                  </ActionIcon>
-                }
-                placeholder="Email Address"
-                rightSectionWidth={42}
-                {...form.getInputProps('email')}
-              />
-              {message && (
-                <Text color="green" size={14}>
-                  ✅ Successfully saved email
-                </Text>
-              )}
-            </form>
-          </Grid.Col>
-          <Grid.Col sm={2}></Grid.Col>
-        </Grid>
-      </Container>
-      {matches ? undefined : (
-        <>
-          <div className="absolute right-0 top-1/4">
-            <Image src="/images/pages/about/rightEllipse.png" alt="rightEllips" height={180} width={103} />
-          </div>
-          <div className="absolute left-0 bottom-10">
-            <Image src="/images/pages/about/leftEllipse.png" alt="leftEllipse" height={180} width={95} />
-          </div>
-        </>
-      )}
-    </BackgroundImage>
+    <div style={{
+      backgroundColor: '#150B2E',
+      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+      backdropFilter: 'blur(20px)',
+      backgroundRepeat: 'no-repeat',
+      // position: 'relative',
+      backgroundPosition: 'center center',
+      backgroundSize: 'cover',
+      minHeight: '100vh', 
+      // height: '1127px',
+      position: 'relative',
+      // width: '100%',
+      // height: '100vh',
+    }}>
+      <BackgroundImage style={{
+          backgroundPosition: 'center center',
+          backgroundSize: '100% 100%',
+          backgroundRepeat: 'no-repeat',
+          minHeight: '100vh',
+        }} className='relative opacity-21' src="/images/header/backgroundImage.png">
+        <Container fluid pl={90} pr={69} py={100}>
+          <Grid justify='center' align='center'>
+            <Grid.Col sm={12}>
+              <Grid justify='center' align='center'>
+                <Image height='auto' width='auto' className='mx-auto my-auto' src='/images/pages/blogs/addsomeluck.png' alt='image' />
+                <div className='flex flex-col mt-[85px]'>
+                  <Title color="white" className="uppercase font-[700] leading-[51px] text-center tracking-[0.0125em] text-[48px]">
+                    Add some luck to your inbox
+                  </Title>
+                  <Text mt={33} color="white" className=" font-[400] leading-[38px] text-center tracking-[0.005em] text-[20px]">
+                    Join our email newsletter "The High Roller Herald" to be the first to know about new things<br/> 
+                    happening at Pasa, from new games, winning tips, and oh, did we mention the occasional gift?
+                  </Text>
+                </div>
+              </Grid>
+              <Grid align='center' justify='center'>
+                <form onSubmit={form.onSubmit(handleSubmit)}>
+                  <TextInput
+                  className='font-[600] mx-auto leading-[16px] uppercase tracking-[0.0125em]'
+                    mt={40}
+                    // maw={'60%'}
+                    // p={10}
+                    styles={{ 
+                      input: { 
+                        padding: '30px', 
+                        fontSize: '14px', 
+                        width: '425px', 
+                        borderRadius: '50px', 
+                        borderColor: '#016BE6',
+                        ':focus': {
+                          borderColor: '#016BE6',
+                        },
+                        '::placeholder': {
+                          color: 'white',
+                          fontSize: '14px'
+                        },
+                      },
+                    }}
+                    // radius="xl"
+                    // size="lg"
+                    rightSection={
+                      <ActionIcon type='submit' size={56} bg="#FFB800" mr={10} radius="xl" variant="filled"
+                      sx={{
+                        ':hover': {
+                          background: '#FFB800'
+                        }
+                      }}>
+                        <ChevronRight size="1.1rem" />
+                      </ActionIcon>
+                    }
+                    placeholder="Email Address"
+                    rightSectionWidth={42}
+                    {...form.getInputProps('email')}
+                  />
+                  {message && (
+                    <Text color="green" size={14}>
+                      ✅ Successfully saved email
+                    </Text>
+                  )}
+                </form>
+              </Grid>
+            </Grid.Col>
+          </Grid>
+        </Container>
+      </BackgroundImage>
+    </div>
   );
 }

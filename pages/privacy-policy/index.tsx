@@ -6,7 +6,7 @@ export async function getStaticProps() {
 }
 export default function PrivacyPolicy() {
   return (
-    <Container size={1300}>
+    <Container fluid ml={90} mr={69}>
       <>
         <p
           dir="ltr"
@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
             }}
           >
             PRIVACY POLICY:&nbsp;
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -73,7 +73,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -112,7 +112,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -131,7 +131,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -157,7 +157,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -178,7 +178,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -193,7 +193,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -214,7 +214,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -236,7 +236,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -251,7 +251,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -272,7 +272,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -287,7 +287,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -309,7 +309,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -324,7 +324,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -346,7 +346,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -361,7 +361,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -381,7 +381,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -401,7 +401,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -420,7 +420,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -438,7 +438,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -456,7 +456,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -474,7 +474,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -492,7 +492,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -510,7 +510,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -528,7 +528,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -546,7 +546,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -564,7 +564,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -582,7 +582,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -600,7 +600,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -618,7 +618,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -636,7 +636,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -654,7 +654,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -672,7 +672,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -692,7 +692,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -711,7 +711,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -730,7 +730,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -749,7 +749,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -770,7 +770,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -790,7 +790,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -811,7 +811,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -826,7 +826,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -847,7 +847,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -862,7 +862,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -883,7 +883,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -898,7 +898,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -919,7 +919,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -939,7 +939,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -961,7 +961,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -980,7 +980,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -1001,7 +1001,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1023,7 +1023,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1038,7 +1038,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 700,
                   fontStyle: 'normal',
@@ -1054,7 +1054,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -1075,7 +1075,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1090,7 +1090,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 700,
                   fontStyle: 'normal',
@@ -1106,7 +1106,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -1128,7 +1128,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1143,7 +1143,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 700,
                   fontStyle: 'normal',
@@ -1159,7 +1159,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -1181,7 +1181,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1196,7 +1196,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 700,
                   fontStyle: 'normal',
@@ -1212,7 +1212,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -1234,7 +1234,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1250,7 +1250,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1269,7 +1269,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1285,7 +1285,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1307,7 +1307,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1322,7 +1322,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 700,
                   fontStyle: 'normal',
@@ -1338,7 +1338,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -1359,7 +1359,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1374,7 +1374,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 700,
                   fontStyle: 'normal',
@@ -1390,7 +1390,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -1411,7 +1411,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1427,7 +1427,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1449,7 +1449,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'decimal',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1464,7 +1464,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 700,
                   fontStyle: 'normal',
@@ -1480,7 +1480,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -1502,7 +1502,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1521,7 +1521,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -1541,7 +1541,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1560,7 +1560,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1581,7 +1581,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1600,7 +1600,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -1619,7 +1619,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1639,7 +1639,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1658,7 +1658,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -1678,7 +1678,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1700,7 +1700,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1725,7 +1725,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1744,7 +1744,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -1764,7 +1764,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1785,7 +1785,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1807,7 +1807,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1826,7 +1826,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -1846,7 +1846,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1869,7 +1869,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1887,7 +1887,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -1906,7 +1906,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1931,7 +1931,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -1949,7 +1949,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -1968,7 +1968,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -1988,7 +1988,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '10.5pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -2008,7 +2008,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2026,7 +2026,7 @@ export default function PrivacyPolicy() {
               style={{
                 fontSize: '11pt',
                 fontFamily: 'Arial',
-                color: '#000000',
+                color: '#FFFFFF',
                 backgroundColor: 'transparent',
                 fontWeight: 400,
                 fontStyle: 'normal',
@@ -2045,7 +2045,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2064,7 +2064,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2082,7 +2082,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2104,7 +2104,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2125,7 +2125,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2145,7 +2145,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2169,7 +2169,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '10.5pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2189,7 +2189,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2211,7 +2211,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -2230,7 +2230,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2250,7 +2250,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2264,7 +2264,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -2278,7 +2278,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -2297,7 +2297,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'italic',
@@ -2317,7 +2317,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2343,7 +2343,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -2362,7 +2362,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2381,7 +2381,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2399,7 +2399,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2419,7 +2419,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2438,7 +2438,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2460,7 +2460,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -2479,7 +2479,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -2507,10 +2507,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2529,7 +2529,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 700,
                         fontStyle: 'normal',
@@ -2545,10 +2545,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2567,7 +2567,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 700,
                         fontStyle: 'normal',
@@ -2583,10 +2583,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2605,7 +2605,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 700,
                         fontStyle: 'normal',
@@ -2623,10 +2623,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2645,7 +2645,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -2661,10 +2661,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2683,7 +2683,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -2701,10 +2701,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2723,7 +2723,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -2741,10 +2741,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2763,7 +2763,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -2779,10 +2779,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2801,7 +2801,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -2817,10 +2817,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2839,7 +2839,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -2857,10 +2857,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2879,7 +2879,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -2895,10 +2895,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2917,7 +2917,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -2933,10 +2933,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2955,7 +2955,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -2973,10 +2973,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -2995,7 +2995,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3011,10 +3011,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3033,7 +3033,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3049,10 +3049,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3071,7 +3071,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3089,10 +3089,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3111,7 +3111,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3127,10 +3127,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3149,7 +3149,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3165,10 +3165,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3187,7 +3187,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3205,10 +3205,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3227,7 +3227,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3243,10 +3243,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3265,7 +3265,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3282,10 +3282,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3304,7 +3304,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3322,10 +3322,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3344,7 +3344,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3360,10 +3360,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3382,7 +3382,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3398,10 +3398,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3420,7 +3420,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3438,10 +3438,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3460,7 +3460,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3476,10 +3476,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3498,7 +3498,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3514,10 +3514,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3536,7 +3536,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3554,10 +3554,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3576,7 +3576,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3592,10 +3592,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3614,7 +3614,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3631,10 +3631,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3653,7 +3653,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3671,10 +3671,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3693,7 +3693,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3709,10 +3709,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3731,7 +3731,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3747,10 +3747,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3769,7 +3769,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3787,10 +3787,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3809,7 +3809,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3825,10 +3825,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3847,7 +3847,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3864,10 +3864,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3886,7 +3886,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3904,10 +3904,10 @@ export default function PrivacyPolicy() {
               <tr style={{ height: '0pt' }}>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3926,7 +3926,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '10.5pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -3942,10 +3942,10 @@ export default function PrivacyPolicy() {
                 </td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3954,10 +3954,10 @@ export default function PrivacyPolicy() {
                 ></td>
                 <td
                   style={{
-                    borderLeft: 'solid #000000 1pt',
-                    borderRight: 'solid #000000 1pt',
-                    borderBottom: 'solid #000000 1pt',
-                    borderTop: 'solid #000000 1pt',
+                    borderLeft: 'solid #FFFFFF 1pt',
+                    borderRight: 'solid #FFFFFF 1pt',
+                    borderBottom: 'solid #FFFFFF 1pt',
+                    borderTop: 'solid #FFFFFF 1pt',
                     verticalAlign: 'top',
                     padding: '5pt 5pt 5pt 5pt',
                     overflow: 'hidden',
@@ -3976,7 +3976,7 @@ export default function PrivacyPolicy() {
                       style={{
                         fontSize: '11pt',
                         fontFamily: 'Arial',
-                        color: '#000000',
+                        color: '#FFFFFF',
                         backgroundColor: 'transparent',
                         fontWeight: 400,
                         fontStyle: 'normal',
@@ -4001,7 +4001,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4024,7 +4024,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4039,7 +4039,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4060,7 +4060,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4075,7 +4075,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4096,7 +4096,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4111,7 +4111,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4132,7 +4132,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -4148,7 +4148,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -4167,7 +4167,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4182,7 +4182,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4203,7 +4203,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4218,7 +4218,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4240,7 +4240,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4255,7 +4255,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4277,7 +4277,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '10.5pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -4296,7 +4296,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4318,7 +4318,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4339,7 +4339,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4361,7 +4361,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -4380,7 +4380,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4400,7 +4400,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4423,7 +4423,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4446,7 +4446,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4461,7 +4461,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4482,7 +4482,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4497,7 +4497,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4518,7 +4518,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4533,7 +4533,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4554,7 +4554,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4569,7 +4569,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4590,7 +4590,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4605,7 +4605,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4626,7 +4626,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4641,7 +4641,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4662,7 +4662,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4677,7 +4677,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4699,7 +4699,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4714,7 +4714,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4735,7 +4735,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4750,7 +4750,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '11pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -4771,7 +4771,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4792,7 +4792,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4813,7 +4813,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4832,7 +4832,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4853,7 +4853,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4875,7 +4875,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4896,7 +4896,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4919,7 +4919,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4943,7 +4943,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '10.5pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4967,7 +4967,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '10.5pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -4982,7 +4982,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '10.5pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -5003,7 +5003,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '10.5pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -5018,7 +5018,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '10.5pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -5040,7 +5040,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '10.5pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -5055,7 +5055,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '10.5pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -5078,7 +5078,7 @@ export default function PrivacyPolicy() {
               listStyleType: 'disc',
               fontSize: '10.5pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -5093,7 +5093,7 @@ export default function PrivacyPolicy() {
                 style={{
                   fontSize: '10.5pt',
                   fontFamily: 'Arial',
-                  color: '#000000',
+                  color: '#FFFFFF',
                   backgroundColor: 'transparent',
                   fontWeight: 400,
                   fontStyle: 'normal',
@@ -5116,7 +5116,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '10.5pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -5137,7 +5137,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -5156,7 +5156,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -5175,7 +5175,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
@@ -5201,7 +5201,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 700,
               fontStyle: 'normal',
@@ -5220,7 +5220,7 @@ export default function PrivacyPolicy() {
             style={{
               fontSize: '11pt',
               fontFamily: 'Arial',
-              color: '#000000',
+              color: '#FFFFFF',
               backgroundColor: 'transparent',
               fontWeight: 400,
               fontStyle: 'normal',
