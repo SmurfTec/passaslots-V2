@@ -176,12 +176,11 @@ export function Footer() {
                 styles={{
                   root: {
                     fontSize: '16px',
-                    color: 'white',
-                    borderImage: 'linear-gradient(to bottom, #FFFFFF, #016BE6)',
-                    borderImageWidth: '2px',
-                    borderImageRepeat: 'round',
-                    borderRadius: '50px',
+
                     borderImageSlice: '1',
+                    borderRadius: '50px',
+                    backgroundImage: 'linear-gradient(to bottom, #FFFFFF, #016BE6)',
+                    border: '2px solid #016BE6',
                     '&:hover': { background: 'transparent' },
                   },
                   label: { fontSize: '16px', fontWeight: 'lighter' },
