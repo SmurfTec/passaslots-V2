@@ -1,4 +1,4 @@
-import { PDAwaken, PDBusiness, PDExperience, PDHero, PDProfit } from '@pasa/components';
+import { BottomSubHeading, PDAwaken, PDBusiness, PDExperience, PDHero, PDProfit } from '@pasa/components';
 
 export async function getStaticProps() {
   return {
@@ -9,13 +9,12 @@ export async function getStaticProps() {
 export default function PasaForDistributor() {
   return (
     <>
-      <div style={{ marginTop: '120px' }}>
-        <PDHero />
-        <PDProfit />
-        <PDExperience />
-        <PDAwaken />
-        <PDBusiness />
-      </div>
+      <PDHero />
+      <PDProfit />
+      <PDExperience />
+      <PDAwaken />
+      <PDBusiness />
+      <BottomSubHeading />
     </>
   );
 }

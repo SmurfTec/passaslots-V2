@@ -85,14 +85,14 @@ export function Header() {
                 Signup for Players
               </Text>
               <Text style={{
-                textDecoration: router.pathname === '/distributor-signup' ? 'underline' : '',
-                textUnderlineOffset: router.pathname === '/distributor-signup' ? '11px' : '',
+                textDecoration: router.pathname === '/pasa-for-distributor' ? 'underline' : '',
+                textUnderlineOffset: router.pathname === '/pasa-for-distributor' ? '11px' : '',
               }} 
-                color={router.pathname === '/distributor-signup' ? '#FFB800' : '#fff'}
+                color={router.pathname === '/pasa-for-distributor' ? '#FFB800' : '#fff'}
                 className="font-[700] uppercase"
                 size="16px"
                 component={NextLink}
-                href="/distributor-signup"
+                href="/pasa-for-distributor"
               >
                 PASA Distribution
               </Text>
@@ -131,7 +131,7 @@ export function Header() {
                 <Menu.Item
                   rightSection={<ArrowRight strokeWidth={0.8} size={30} />}
                   component={NextLink}
-                  href="/distributor-signup"
+                  href="/pasa-for-distributor"
                 >
                   PASA for Distribution
                 </Menu.Item>
