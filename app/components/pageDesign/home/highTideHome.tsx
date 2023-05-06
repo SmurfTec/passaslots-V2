@@ -11,7 +11,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '100vh',
+    minHeight: '80vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -24,7 +24,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '100vh',
+    minHeight: '90vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -45,7 +45,7 @@ export function HighTideHome() {
           style={{ backgroundSize: 'cover', backgroundPosition: 'center center', position: 'relative', width: '100%' }}
           src="/images/pages/home/highTideImage.png"
         >
-          <Container fluid py={100}>
+          <Container fluid py={50}>
             <Grid ml={'90px'}>
               <Grid.Col xs={6}>
                 <Title
@@ -53,6 +53,7 @@ export function HighTideHome() {
                   color="white"
                   order={2}
                   mt={103}
+                  mb={100}
                   style={{ fontSize: '54px', lineHeight: '69.39px', letterSpacing: '-1.5%' }}
                 >
                   RIDE THE HIGH{' '}
@@ -60,7 +61,15 @@ export function HighTideHome() {
                     TIDE OF <br /> LUCK
                   </span>
                 </Title>
-                <Text color="white" mt={61} className="font-[400] leading-10" maw={628} size="md" mb={80}>
+                <Text
+                  color="white"
+                  mt={61}
+                  className="font-[400] leading-10"
+                  maw={628}
+                  size="md"
+                  mb={80}
+                  style={{ fontSize: '20px', lineHeight: '37.74px' }}
+                >
                   To see what kind of winnings are in store for you on the games, Pasa
                   <br /> invites all our online and mobile players to launch into playing this slot
                   <br /> sensation the moment{' '}
@@ -78,6 +87,7 @@ export function HighTideHome() {
                     root: {
                       border: 'none',
                       fontSize: '20px',
+                      fontStyle: 'medium',
                       fontWeight: 'normal',
                       color: 'white',
                       // borderColor: '#F6CAA7',

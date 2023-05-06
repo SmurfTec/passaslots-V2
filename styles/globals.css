@@ -68,6 +68,3 @@ body {
   width: 57px;
   font-size: x-large;
 } */
-.mantine-carousel-item-active {
-  transform: scale(1.5);
-}

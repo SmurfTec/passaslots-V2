@@ -12,7 +12,7 @@ const useStyles = createStyles((theme) => ({
     backgroundSize: 'cover',
     // position: 'relative',
     backgroundPosition: 'center center',
-    minHeight: '100vh',
+    minHeight: '50vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -48,7 +48,7 @@ export function HomeCollection() {
       style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
     >
       <Container pb={100} pt={100} fluid>
-        <Title color={'white'} mb={60} order={2} className="font-[700] text-center">
+        <Title color={'white'} mb={100} order={2} className="font-[700] text-center">
           POPULAR COLLECTIONS
         </Title>
         <Grid m={0} p={0} gutterMd={70}>
