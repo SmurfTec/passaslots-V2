@@ -1,5 +1,5 @@
 import { Button, Container, Grid, Title } from '@mantine/core';
-import { SingleBlog, SingleBlogProps } from './singleBlog';
+import { SingleBlog, SingleBlogProps } from '../blogs/singleBlog';
 
 const blogData: Array<SingleBlogProps> = [
   {
@@ -40,13 +40,13 @@ const blogData: Array<SingleBlogProps> = [
   },
 ];
 
-export function BlogLayout() {
+export function MoreBlogs() {
   return (
     <Container py={100} fluid ml={90} mr={69}>
       <Grid>
         <Grid.Col sm={12} className='text-center sm:text-left'>
           <Title className="font-[700] text-[48px] leading-[56px] tracking-[-0.015em] uppercase">
-            FEATURED BLOGS
+            MORE BLOGS
           </Title>
         </Grid.Col>
       </Grid>
@@ -57,36 +57,6 @@ export function BlogLayout() {
             <SingleBlog author={item.author} date={item.date} image={item.image} title={item.title} />
           </Grid.Col>
         ))}
-      </Grid>
-      <Grid align='center' justify='center' className='text-center sm:text-center'p={0}>
-        <Button 
-          styles={{
-            root: {
-              border: 'none',
-              background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
-              padding: '15px 53px',
-              letterSpacing: '-0.015em',
-              // boxShadow: 'inset 0 0 2px 2px #F6CAA7',
-              '&:hover': {
-                background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
-              },
-              fontSize: '20px',
-              lineHeight: '23px',
-              textTransform: 'uppercase',
-              height: '57px',
-              width: '212px',
-            },
-            label: {
-              marginBottom: '-2px',
-              fontSize: '20px',
-              lineHeight: '23px'
-            },
-          }}
-          radius={50}
-          className='font-[500]'
-        >
-          LOAD MORE
-        </Button>
       </Grid>
     </Container>
   );
