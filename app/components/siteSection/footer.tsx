@@ -17,7 +17,15 @@ import { NextLink } from '@mantine/next';
 import { ScrollButton } from '@pasa/customComponents';
 import { useBonusModal } from '@pasa/hooks';
 import { useState } from 'react';
-import { BrandAndroid, BrandApple, BrandWindows, DeviceDesktop, DeviceMobile, DeviceTablet, ArrowRight } from 'tabler-icons-react';
+import {
+  BrandAndroid,
+  BrandApple,
+  BrandWindows,
+  DeviceDesktop,
+  DeviceMobile,
+  DeviceTablet,
+  ArrowRight,
+} from 'tabler-icons-react';
 
 const useStyles = createStyles((theme) => ({
   backdrop: {
@@ -61,12 +69,12 @@ export function Footer() {
       });
   };
   return (
-    <div className={classes.backdrop} >
-      <Container pos='relative' py={50} size={1300} >
+    <div className={classes.backdrop}>
+      <Container pos="relative" py={50} size={1300}>
         <Grid align="top">
-          <Grid.Col sm={12} className='text-center'>
-            <div className='text-center'>
-              <Group position='center'>
+          <Grid.Col sm={12} className="text-center">
+            <div className="text-center">
+              <Group position="center">
                 <Image src="/images/footer/footer2.png" width={63} height={62} alt="JACOG" />
                 <Image src="/images/footer/footer3.png" width={70} height={70} alt="JACOG" />
                 <Image src="/images/footer/footer4.png" width={58} height={58} alt="JACOG" />
@@ -74,14 +82,14 @@ export function Footer() {
                 <Image src="/images/footer/footer1.png" width={73} height={66} alt="JACOG" />
               </Group>
               <Divider className="my-5 mx-auto" w={50} size={'sm'} orientation="horizontal" />
-              <Group mt={30} position='center'>
+              <Group mt={30} position="center">
                 <Image src="/images/footer/payment1.png" width={42} height={41} alt="JACOG" />
                 <Image src="/images/footer/payment2.png" width={50} height={31.5} alt="JACOG" />
                 <Image src="/images/footer/payment3.png" width={59} height={37} alt="JACOG" />
                 <Image src="/images/footer/payment4.png" width={96} height={41} alt="JACOG" />
               </Group>
               <Divider className="my-5 mx-auto" w={50} size={'sm'} orientation="horizontal" />
-              <Group mt={30} className="sm:space-x-4 xs:space-x-0" position='center'>
+              <Group mt={30} className="sm:space-x-4 xs:space-x-0" position="center">
                 <BrandApple fill="#CAC6CB" color="#CAC6CB" />
                 <BrandWindows color="#CAC6CB" />
                 <BrandAndroid color="#CAC6CB" />
@@ -118,7 +126,7 @@ export function Footer() {
                 PLAY PASA NOW
               </Button>
 
-              <Group mt={20} position='center'>
+              <Group mt={20} position="center">
                 <ActionIcon component="a" href="https://www.facebook.com/pasaslots" variant="transparent">
                   <Avatar src="/images/socialIcons/facebook.png" size="1.25rem" />
                 </ActionIcon>
@@ -139,12 +147,20 @@ export function Footer() {
             </div>
           </Grid.Col>
           <Grid.Col xs={12}>
-            <Divider className='mt-10' size={'sm'} orientation="horizontal" />
+            <Divider className="mt-10" size={'sm'} orientation="horizontal" />
             <div className="text-center space-y-2 mt-10">
-              <Text color={'#ffffff'} size="md" className="block font-[500]" component={NextLink} href="/terms-and-conditions">
+              <Text
+                color={'#ffffff'}
+                size="md"
+                className="block font-[500]"
+                component={NextLink}
+                href="/terms-and-conditions"
+              >
                 Terms and Conditions
               </Text>
-              <Text color={'#ACACAC'} size="sm">© Copyright {new Date().getFullYear()} Pasa Slots All Rights Reserved</Text>
+              <Text color={'#ACACAC'} size="sm">
+                © Copyright {new Date().getFullYear()} Pasa Slots All Rights Reserved
+              </Text>
             </div>
           </Grid.Col>
         </Grid>
