@@ -10,8 +10,8 @@ type CommentProps = {
 
 const useStyles = createStyles((theme) => ({
   paper: {
-    border: "2px solid",
-    backgroundColor: "linear-gradient(to bottom, rgba(167, 76, 154, 1) 100%, rgba(167, 76, 154, 0.19) 19%)",
+    border: '2px solid',
+    backgroundColor: 'linear-gradient(to bottom, rgba(167, 76, 154, 1) 100%, rgba(167, 76, 154, 0.19) 19%)',
     textAlign: 'left',
   },
 }));
@@ -19,22 +19,23 @@ const useStyles = createStyles((theme) => ({
 export const Comment = ({ thumbnail, name, rating, description, message }: CommentProps) => {
   const { classes } = useStyles();
   return (
-    <div style={{
-      }}>
-      <Paper withBorder className={classes.paper} radius={50} p={'xl'} bg={'transparent'}>
-        <Text color={'white'} mt={15} size={'md'} mih={250}>
+    <div style={{ width: '400px' }}>
+      <Paper withBorder className={classes.paper} radius={30} p={'xl'} bg={'transparent'} mr={5}>
+        <Text color={'white'} mt={15} size={'md'} mih={250} style={{ fontWeight: '500', fontSize: '17px' }}>
           {message}
         </Text>
-        <Rating mb={20} mt={20} defaultValue={rating}  readOnly size={'xs'} />
-          <Flex>
-            <Avatar src={thumbnail} alt="thumbnail" radius="xl" />
-            <Grid.Col>
-              <Text mb={0} mt={-5} color={'white'} className="font-medium text-xl">{name}</Text>
-              <Text color={'#808080'} fz="sm" c="dimmed">
-                {description}
-              </Text>
-            </Grid.Col>
-          </Flex>
+        <Rating mb={20} mt={10} defaultValue={rating} readOnly size={'xs'} />
+        <Flex>
+          <Avatar src={thumbnail} alt="thumbnail" radius="xl" size={'lg'} />
+          <Grid.Col>
+            <Text mb={0} mt={-5} color={'white'} className="font-medium text-xl">
+              {name}
+            </Text>
+            <Text color={'#808080'} fz="sm" c="dimmed">
+              {description}
+            </Text>
+          </Grid.Col>
+        </Flex>
       </Paper>
     </div>
   );
