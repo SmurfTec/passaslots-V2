@@ -79,20 +79,30 @@ export const TestimonialCarousel = () => {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={90} mr={69}>
+      <Container fluid ml={90} mr={69} mt={50}>
         <BackgroundImage
           className="mb-10"
           style={{ backgroundSize: 'cover', rotate: '-10deg' }}
           src="/images/pages/home/multicolorfall.png"
         >
           <div style={{ rotate: '10deg' }}>
-            <Title color={'white'} order={2} className="font-bold uppercase text-center">
+            <Title
+              color={'white'}
+              order={2}
+              className="font-bold uppercase text-center"
+              style={{ fontWeight: '700', fontSize: '48px' }}
+            >
               What our community says
             </Title>
-            <Title color={'white'} order={2} className="font-bold uppercase text-center">
+            <Title
+              color={'white'}
+              order={2}
+              className="font-bold uppercase text-center"
+              style={{ fontWeight: '700', fontSize: '48px' }}
+            >
               about us
             </Title>
-            <Grid m={0}>
+            <Grid m={0} mt={50}>
               {/* <Grid.Col md={3} className="relative">
                 <Center>
                   <Text color="white" size={'md'} className="absolute top-1/2 -translate-y-1/2">
@@ -120,7 +130,7 @@ export const TestimonialCarousel = () => {
                       position: 'relative',
                       WebkitJustifyContent: 'start !important',
                       bottom: '50px',
-                      left: '-250px',
+                      left: '-100px',
                     },
                     control: {
                       margin: '0 0 0 10px !important',
@@ -134,8 +144,7 @@ export const TestimonialCarousel = () => {
                       },
                     },
                   }}
-                  slideSize={matches ? '100%' : '33%'}
-                  slideGap={'xl'}
+                  slideSize={'33%'}
                   withControls={false}
                   withIndicators={false}
                   slidesToScroll={matches ? 1 : 2}
