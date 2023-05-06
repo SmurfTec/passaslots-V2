@@ -9,6 +9,10 @@ const images = [
   '/images/carousel/phonecarousel3.png',
   '/images/carousel/phonecarousel5.png',
   '/images/carousel/phonecarousel2.png',
+  '/images/carousel/phonecarousel4.png',
+  '/images/carousel/phonecarousel1.png',
+  '/images/carousel/phonecarousel3.png',
+  '/images/carousel/phonecarousel5.png',
 ];
 export const HomeBottomCarousel = () => {
   // const { classes } = useStyles();
