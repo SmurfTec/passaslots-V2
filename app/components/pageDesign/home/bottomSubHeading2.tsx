@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '100vh', 
+    minHeight: '100vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -22,7 +22,7 @@ export const BottomSubHeading2 = () => {
   return (
     <div className={classes.backdrop}>
       <Container fluid ml={90} mr={69}>
-        <Grid align={'center'} justify='center' className="space-y-5">
+        <Grid align={'center'} justify="center" className="space-y-5">
           <HomeBottomCarousel />
           <Grid.Col mt={20}>
             <div className="space-y-1 mt-10">
@@ -39,18 +39,24 @@ export const BottomSubHeading2 = () => {
                 payout-packed symbols, no two gaming sessions will be the same, ensuring excitement at every spin.
               </Text>
             </Grid>
-            <div className='text-center mx-auto'>
-              <Button 
-              styles={{
-                root: {
-                  fontSize: '16px',
-                  color: 'white',
-                  // borderColor: '#F6CAA7',
-                  '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
-                },
-              }}
-              bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'} radius={50}
-              mt={15} size="lg" className="text-sm font-bold mt-10 mb-20" component={NextLink} href="/distributor-signup">
+            <div className="text-center mx-auto">
+              <Button
+                styles={{
+                  root: {
+                    fontSize: '16px',
+                    color: 'white',
+                    // borderColor: '#F6CAA7',
+                    '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
+                  },
+                }}
+                bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
+                radius={50}
+                mt={15}
+                size="lg"
+                className="text-sm font-bold mt-10 mb-20"
+                component={NextLink}
+                href="/distributor-signup"
+              >
                 FIND OUT MORE
               </Button>
             </div>
