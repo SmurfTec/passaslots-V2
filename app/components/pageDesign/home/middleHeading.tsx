@@ -8,7 +8,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '100vh',
+    minHeight: '80vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -24,10 +24,24 @@ export const MiddleHeading = () => {
     >
       <Container fluid ml={90} mr={69}>
         <Flex py={120} mih={50} gap="md" justify="center" align="flex-start" direction="column" wrap="wrap">
-          <Title mt={80} mb={50} color={'white'} order={2} maw={800} className="font-bold uppercase">
+          <Title
+            mb={50}
+            color={'white'}
+            order={2}
+            maw={800}
+            className="font-bold uppercase"
+            style={{ fontWeight: '700', fontSize: '48px' }}
+          >
             More ACCESS from the touch of a finger
           </Title>
-          <Text color={'white'} className="leading-10 font[-400]" size={'md'} mt={0} maw={700}>
+          <Text
+            color={'white'}
+            className="leading-10 font[-400]"
+            size={'md'}
+            mt={0}
+            maw={700}
+            style={{ fontSize: '20px', fontWeight: '400' }}
+          >
             This is where gaming creators meet life-long gamers. So we understand your daily frustrations when it comes
             to payments above all. We offer a variety of safe and secure payment methods to choose
             <span className="font-[700]">
