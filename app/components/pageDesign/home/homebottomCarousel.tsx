@@ -50,8 +50,8 @@ export const HomeBottomCarousel = () => {
       />
       <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: '50px' }}>
         <Image
-          height={12}
-          width={12}
+          height={15}
+          width={15}
           src={
             slideProgress === 0
               ? '/images/scroll/carouselIndicatorSelect.png'
@@ -59,8 +59,8 @@ export const HomeBottomCarousel = () => {
           }
         />
         <Image
-          height={12}
-          width={12}
+          height={15}
+          width={15}
           src={
             slideProgress === 1
               ? '/images/scroll/carouselIndicatorSelect.png'
@@ -68,8 +68,8 @@ export const HomeBottomCarousel = () => {
           }
         />
         <Image
-          height={12}
-          width={12}
+          height={15}
+          width={15}
           src={
             slideProgress === 2
               ? '/images/scroll/carouselIndicatorSelect.png'
