@@ -52,12 +52,12 @@ body {
 
 .pasa-TextInput-input {
   background: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .pasa-Textarea-input {
   background: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* .pasa-Button-root {
@@ -68,3 +68,6 @@ body {
   width: 57px;
   font-size: x-large;
 } */
+.mantine-carousel-item-active {
+  transform: scale(1.5);
+}

@@ -8,9 +8,20 @@ type CarouselProps = MantineCarouselProps & {
   images?: string[];
   hC?: number;
   wC?: number;
+  focusedIndex?: number;
 };
 
-export const Carousel = ({ delay, images, hC, wC, slides, ...rest }: CarouselProps) => {
+const getDynamicHeight = (focusedIndex: number, currentIndex: number, height: number) => {
+  if (focusedIndex !== undefined) {
+    if (currentIndex === focusedIndex) {
+      return height;
+    } else if (currentIndex - 1 === focusedIndex || currentIndex + 1 === focusedIndex) {
+      return height * 0.9;
+    } else return height * 0.7;
+  } else return height;
+};
+
+export const Carousel = ({ delay, images, hC, wC, slides, focusedIndex, ...rest }: CarouselProps) => {
   const autoplay = useRef(Autoplay({ delay: delay ?? 3000 }));
   return (
     <MantineCarousel
@@ -18,15 +29,29 @@ export const Carousel = ({ delay, images, hC, wC, slides, ...rest }: CarouselPro
       plugins={[autoplay.current]}
       onMouseEnter={autoplay.current.stop}
       onMouseLeave={autoplay.current.reset}
-      
       {...rest}
     >
-      {slides && slides.map((slide,index) => <MantineCarousel.Slide key={index}>{slide}</MantineCarousel.Slide>)}
-      {images && images.map((image,index) => (
-        <MantineCarousel.Slide key={index} gap={50}>
-          <Image height={hC ? hC : "auto"} width={wC ? wC : "auto"} className='flex justify-center items-center mx-auto my-auto' styles={{image: {alignItems: 'center', alignSelf: 'center',}, root: {alignItems: 'center', alignSelf: 'center',}}} src={image} alt="slide" />
-        </MantineCarousel.Slide>
-      ))}
+      {slides && slides.map((slide, index) => <MantineCarousel.Slide key={index}>{slide}</MantineCarousel.Slide>)}
+      {images &&
+        images.map((image, index) => (
+          <MantineCarousel.Slide
+            key={index}
+            gap={50}
+            style={focusedIndex !== undefined ? { display: 'flex', alignItems: 'center' } : {}}
+          >
+            <Image
+              height={focusedIndex !== undefined && hC ? getDynamicHeight(focusedIndex, index, hC) : 'auto'}
+              width={focusedIndex !== undefined && wC ? getDynamicHeight(focusedIndex, index, wC) : 'auto'}
+              className="flex justify-center items-center mx-auto my-auto"
+              styles={{
+                image: { alignItems: 'center', alignSelf: 'center' },
+                root: { alignItems: 'center', alignSelf: 'center' },
+              }}
+              src={image}
+              alt="slide"
+            />
+          </MantineCarousel.Slide>
+        ))}
     </MantineCarousel>
   );
 };
