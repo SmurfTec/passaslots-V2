@@ -31,11 +31,13 @@ export function SingleCollection({ button, content, image, title }: SingleCollec
             </Grid>
             <Grid className="my-5" justify={'center'}>
               <Button
+                size="lg"
                 radius={50}
+                py={15}
+                px={30}
                 styles={{
                   label: { fontSize: '20px', fontWeight: 'bolder' },
                   root: {
-                    padding: '10px',
                     border: 'none',
                     background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
                     color: 'white',

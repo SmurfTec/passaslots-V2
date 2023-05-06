@@ -54,7 +54,7 @@ export const BottomSubHeading2 = () => {
                 payout-packed symbols, no two gaming sessions will be the same, ensuring excitement at every spin.
               </Text>
             </Grid>
-            <div className="text-center mx-auto">
+            <div className="text-center mx-auto" style={{ marginBottom: '50px' }}>
               <Button
                 styles={{
                   root: {
@@ -68,7 +68,7 @@ export const BottomSubHeading2 = () => {
                 radius={50}
                 mt={15}
                 size="lg"
-                className="text-sm font-bold mt-10 mb-20"
+                className="text-sm font-bold mt-10 mb-10"
                 component={NextLink}
                 href="/distributor-signup"
                 style={{ border: 'none', fontWeight: '500 !important', fontSize: '20px !important' }}

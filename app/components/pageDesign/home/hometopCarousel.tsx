@@ -26,6 +26,21 @@ const images = [
 export const HomeTopCarousel = () => {
   // const { classes } = useStyles();
   const [slideProgress, setSlideProgress] = useState(1);
+  const [embla, setEmbla] = useState<Embla | null>(null);
+
+  const handleScroll = useCallback(() => {
+    if (!embla) return;
+    const progress = Math.min(2, Math.floor(Math.max(0, embla.scrollProgress() * 3)));
+    setSlideProgress(progress);
+    // console.log(progress);
+  }, [embla, setSlideProgress]);
+
+  useEffect(() => {
+    if (embla) {
+      embla.on('scroll', handleScroll);
+      handleScroll();
+    }
+  }, [embla]);
 
   return (
     <div
@@ -49,10 +64,11 @@ export const HomeTopCarousel = () => {
           //     backgroundImage: 'url("images/scroll/carouselIndicatiorSelect.png")'
           //   }
           // }}
+          getEmblaApi={setEmbla}
           styles={{
             indicator: {
-              width: '10.87px',
-              height: '10.87px',
+              width: '20px',
+              height: '20px',
               transition: 'width 250ms ease',
               marginTop: '50px',
               gap: '6px',
@@ -69,13 +85,43 @@ export const HomeTopCarousel = () => {
             },
           }}
           align="center"
-          withIndicators className="flex justify-center align-middle items-center"
+          className="flex justify-center align-middle items-center"
           slideSize="50%"
           loop
           initialSlide={3}
           images={images}
           delay={4000}
         />
+
+        <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: '50px' }}>
+          <Image
+            height={15}
+            width={15}
+            src={
+              slideProgress === 0
+                ? '/images/scroll/carouselIndicatorSelect.png'
+                : '/images/scroll/carouselIndicatorNotSelect.png'
+            }
+          />
+          <Image
+            height={15}
+            width={15}
+            src={
+              slideProgress === 1
+                ? '/images/scroll/carouselIndicatorSelect.png'
+                : '/images/scroll/carouselIndicatorNotSelect.png'
+            }
+          />
+          <Image
+            height={15}
+            width={15}
+            src={
+              slideProgress === 2
+                ? '/images/scroll/carouselIndicatorSelect.png'
+                : '/images/scroll/carouselIndicatorNotSelect.png'
+            }
+          />
+        </Flex>
         <div className="text-center">
           <Button
             mb={0}
