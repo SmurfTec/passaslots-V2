@@ -71,7 +71,7 @@ export function Footer() {
   return (
     <div
       className={classes.backdrop}
-      style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
+      style={{ zIndex: 150, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
     >
       <Container pos="relative" py={50} size={1300} style={{ marginTop: '50px' }}>
         <Grid align="top">
