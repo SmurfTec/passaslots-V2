@@ -36,3 +36,11 @@ enum purpose {
   message
   signup
 }
+
+model blogs {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  title  String
+  description String @unique
+  publishedOn String?
+  isDeleted Boolean
+}
