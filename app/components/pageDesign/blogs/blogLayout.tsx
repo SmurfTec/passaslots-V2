@@ -42,24 +42,28 @@ const blogData: Array<SingleBlogProps> = [
 
 export function BlogLayout() {
   return (
-    <Container py={100} fluid ml={90} mr={69}>
+    <Container
+      py={100}
+      fluid
+      pl={100}
+      pr={69}
+      style={{ zIndex: 150, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
+    >
       <Grid>
-        <Grid.Col sm={12} className='text-center sm:text-left'>
-          <Title className="font-[700] text-[48px] leading-[56px] tracking-[-0.015em] uppercase">
-            FEATURED BLOGS
-          </Title>
+        <Grid.Col sm={12} className="text-center sm:text-left">
+          <Title className="font-[700] text-[48px] leading-[56px] tracking-[-0.015em] uppercase">FEATURED BLOGS</Title>
         </Grid.Col>
       </Grid>
 
-      <Grid justify='space-between' py={100} grow gutter={30}>
+      <Grid justify="space-between" py={100} grow gutter={30}>
         {blogData.map((item, key) => (
-          <Grid.Col className='flex justify-between' key={key + item.title} md={4}>
+          <Grid.Col className="flex justify-between" key={key + item.title} md={4}>
             <SingleBlog author={item.author} date={item.date} image={item.image} title={item.title} />
           </Grid.Col>
         ))}
       </Grid>
-      <Grid align='center' justify='center' className='text-center sm:text-center'p={0}>
-        <Button 
+      <Grid align="center" justify="center" className="text-center sm:text-center" p={0}>
+        <Button
           styles={{
             root: {
               border: 'none',
@@ -79,11 +83,11 @@ export function BlogLayout() {
             label: {
               marginBottom: '-2px',
               fontSize: '20px',
-              lineHeight: '23px'
+              lineHeight: '23px',
             },
           }}
           radius={50}
-          className='font-[500]'
+          className="font-[500]"
         >
           LOAD MORE
         </Button>
