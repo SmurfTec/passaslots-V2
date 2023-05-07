@@ -73,55 +73,95 @@ const slotData: SingleSlotProps[] = [
 export function GameSlots() {
   const [showGames, setShowGames] = useState(false);
   return (
-    <div style={{
-      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
-      backdropFilter: 'blur(20px)',
-      backgroundSize: 'cover',
-      borderBottom: '7px solid #016BE6',
-      borderBottomLeftRadius: '240px',
-      borderBottomRightRadius: '240px',
-    }}>
+    <div
+      style={{
+        backgroundImage:
+          'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+        backdropFilter: 'blur(20px)',
+        backgroundSize: 'cover',
+        borderBottom: '7px solid #016BE6',
+        // borderBottomLeftRadius: '240px',
+        // borderBottomRightRadius: '240px',
+        zIndex: 150,
+        boxShadow: '-1px 0px 20px 3px #016BE6',
+        borderTop: '6px solid #016BE6',
+      }}
+    >
       <Container fluid pl={90} pr={69} pt={100} pb={0}>
-        <Title id='gameSlots' my={50} className="font-[700] uppercase leading-[56px] tracking-[-0.015em] text-[48px]">
+        <Title id="gameSlots" my={50} className="font-[700] uppercase leading-[56px] tracking-[-0.015em] text-[48px]">
           SLOTS
         </Title>
-        <div className='flex flex-row justify-between'>
-          {showGames && <div className='basis-[0.5%] my-auto mr-20'>
-            <ActionIcon onClick={() => setShowGames(!showGames)} bg='#FFB800' size={58} radius={50} className='drop_shadow_[0px_4px_32px_rgba(0, 0, 0, 0.11)] hover:bg-[#FFB800]'>
-              <ChevronLeft color='#FFFFFF' />
-            </ActionIcon>
-          </div>}
-          <div className='basis-[99.5%]'>
-          <Grid m={0} grow gutterSm={40}>
-            {slotData.slice(showGames ? 8 : 0, showGames ? 16 : 8).map((slot, key) => (
-              <Grid.Col key={key + slot.text} sm={3}>
-                <SingleSlot image={slot.image} text={slot.text} />
-              </Grid.Col>
-            ))}
-          </Grid>
+        <div className="flex flex-row justify-between">
+          {showGames && (
+            <div className="basis-[0.5%] my-auto mr-20">
+              <ActionIcon
+                onClick={() => setShowGames(!showGames)}
+                bg="#FFB800"
+                size={58}
+                radius={50}
+                className="drop_shadow_[0px_4px_32px_rgba(0, 0, 0, 0.11)] hover:bg-[#FFB800]"
+              >
+                <ChevronLeft color="#FFFFFF" />
+              </ActionIcon>
+            </div>
+          )}
+          <div className="basis-[99.5%]">
+            <Grid m={0} grow gutterSm={40}>
+              {slotData.slice(showGames ? 8 : 0, showGames ? 16 : 8).map((slot, key) => (
+                <Grid.Col key={key + slot.text} sm={3}>
+                  <SingleSlot image={slot.image} text={slot.text} />
+                </Grid.Col>
+              ))}
+            </Grid>
           </div>
-          {!showGames && <div className='basis-[0.5%] my-auto'>
-            <ActionIcon onClick={() => setShowGames(!showGames)} bg='#FFB800' size={58} radius={50} className='drop_shadow_[0px_4px_32px_rgba(0, 0, 0, 0.11)] hover:bg-[#FFB800]'>
-              <ChevronRight color='#FFFFFF' />
-            </ActionIcon>
-          </div>}
+          {!showGames && (
+            <div className="basis-[0.5%] my-auto">
+              <ActionIcon
+                onClick={() => setShowGames(!showGames)}
+                bg="#FFB800"
+                size={58}
+                radius={50}
+                className="drop_shadow_[0px_4px_32px_rgba(0, 0, 0, 0.11)] hover:bg-[#FFB800]"
+              >
+                <ChevronRight color="#FFFFFF" />
+              </ActionIcon>
+            </div>
+          )}
         </div>
-        <Grid m={0} pb={0} pt={200} align='center' justify='center'>
+        <Grid m={0} pb={0} pt={200} align="center" justify="center">
           <Grid.Col className="relative" xs={12} sm={12}>
             {/* <div className="absolute top-1/2 -translate-y-1/2 pr-32"> */}
-              <Title color="#FFFFFF" className="text-[700] text-[48px] leading-[63px] tracking-[0.0125em] text-center uppercase">
-                Experience a world of variety,<br/> 
-                right at your fingertips!
-              </Title>
-              <Text mt={30} color="#FFFFFF" className="font-[400] text-[20px] text-center leading-[43px] tracking-[0.005em]">
-                With an ever-growing selection of popular games like Fire Kirin Plus, Dragon Slayer, and<br/> 
-                Ocean King 5, you'll never get bored. And the best part? We add new games every<br/> 
-                month, ensuring that you always have access to the latest and greatest in gaming.
-              </Text>
+            <Title
+              color="#FFFFFF"
+              className="text-[700] text-[48px] leading-[63px] tracking-[0.0125em] text-center uppercase"
+            >
+              Experience a world of variety,
+              <br />
+              right at your fingertips!
+            </Title>
+            <Text
+              mt={30}
+              color="#FFFFFF"
+              className="font-[400] text-[20px] text-center leading-[43px] tracking-[0.005em]"
+            >
+              With an ever-growing selection of popular games like Fire Kirin Plus, Dragon Slayer, and
+              <br />
+              Ocean King 5, you'll never get bored. And the best part? We add new games every
+              <br />
+              month, ensuring that you always have access to the latest and greatest in gaming.
+            </Text>
             {/* </div> */}
           </Grid.Col>
-          <Grid pb={0} align='center'>
-            <Image mb={'-84px !important'} mx='auto !important' height='auto' width='auto' className='mx-auto' src="/images/pages/game/gameCouch.png" alt="gaming creator" />
+          <Grid pb={0} align="center">
+            <Image
+              mb={'-84px !important'}
+              mx="auto !important"
+              height="auto"
+              width="auto"
+              className="mx-auto"
+              src="/images/pages/game/gameCouch.png"
+              alt="gaming creator"
+            />
           </Grid>
         </Grid>
       </Container>
