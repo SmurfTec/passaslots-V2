@@ -17,23 +17,30 @@ type pageProps = {
 
 export function GameRecentWinners() {
   const { classes } = useStylesCarousel();
-  return (<>
-    <Container fluid pl={90} pr={69} mt={100}>
-      <Title color='white' className='uppercase text-[48px] font-[700] leading-[56px] tracking-[-0.015em]' mb={50}>
-        RECENT WINNERS
-      </Title>
-      <SimpleGrid
+  return (
+    <>
+      <Container
+        fluid
+        pl={90}
+        pr={69}
+        pt={100}
+        style={{ zIndex: 150, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
+      >
+        <Title color="white" className="uppercase text-[48px] font-[700] leading-[56px] tracking-[-0.015em]" mb={50}>
+          RECENT WINNERS
+        </Title>
+        <SimpleGrid
         // cols={2}
         // spacing={20}
         // breakpoints={[
         //   { maxWidth: '72rem', cols: 2, spacing: 'sm' },
         //   { maxWidth: '70rem', cols: 1, spacing: 'sm' },
         // ]}
-      >
-        <WinnerCard title="Recent Winners" data={recentWinners} />
-        {/* <WinnerCard title="Top Winners" data={topWinners} /> */}
-      </SimpleGrid>
-    </Container>
-  </>
+        >
+          <WinnerCard title="Recent Winners" data={recentWinners} />
+          {/* <WinnerCard title="Top Winners" data={topWinners} /> */}
+        </SimpleGrid>
+      </Container>
+    </>
   );
 }

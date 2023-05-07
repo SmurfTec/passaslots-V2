@@ -42,24 +42,33 @@ const articleData: Array<SingleArticleProps> = [
 
 export function BlogArticle() {
   return (
-    <div style={{
-      backgroundColor: '#150B2E',
-      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
-      backdropFilter: 'blur(20px)',
-      backgroundSize: 'cover',
-    }}>
+    <div
+      style={{
+        backgroundColor: '#150B2E',
+        backgroundImage:
+          'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+        backdropFilter: 'blur(20px)',
+        backgroundSize: 'cover',
+        zIndex: 150,
+        boxShadow: '-1px 0px 20px 3px #016BE6',
+        borderTop: '6px solid #016BE6',
+      }}
+    >
       <Container py={100} fluid pl={90} pr={69}>
         <Grid>
           <Grid.Col sm={12}>
-            <div className='text-center'>
-              <Title color="white" className="font-[700] text-center text-[48px] leading-[56px] tracking-[-0.015em] uppercase" >
+            <div className="text-center">
+              <Title
+                color="white"
+                className="font-[700] text-center text-[48px] leading-[56px] tracking-[-0.015em] uppercase"
+              >
                 More articles
               </Title>
             </div>
           </Grid.Col>
-          <Grid justify='space-between' py={100} grow gutter={30}>   
+          <Grid justify="space-between" py={100} grow gutter={30}>
             {articleData.map((article, key) => (
-              <Grid.Col className='flex justify-between' key={key + article.title} md={6}>
+              <Grid.Col className="flex justify-between" key={key + article.title} md={6}>
                 <SingleArticle
                   author={article.author}
                   date={article.date}

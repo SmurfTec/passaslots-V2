@@ -1,4 +1,15 @@
-import { ActionIcon, BackgroundImage, Container, Grid, Group, Image, Stack, Text, TextInput, Title } from '@mantine/core';
+import {
+  ActionIcon,
+  BackgroundImage,
+  Container,
+  Grid,
+  Group,
+  Image,
+  Stack,
+  Text,
+  TextInput,
+  Title,
+} from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useMediaQuery } from '@mantine/hooks';
 import { useState } from 'react';
@@ -32,73 +43,104 @@ export function NewsletterBlog() {
       });
   };
   return (
-    <div style={{
-      backgroundColor: '#150B2E',
-      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
-      backdropFilter: 'blur(20px)',
-      backgroundRepeat: 'no-repeat',
-      // position: 'relative',
-      backgroundPosition: 'center center',
-      backgroundSize: 'cover',
-      minHeight: '100vh', 
-      // height: '1127px',
-      position: 'relative',
-      // width: '100%',
-      // height: '100vh',
-    }}>
-      <BackgroundImage style={{
+    <div
+      style={{
+        backgroundColor: '#150B2E',
+        backgroundImage:
+          'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+        backdropFilter: 'blur(20px)',
+        backgroundRepeat: 'no-repeat',
+        // position: 'relative',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        minHeight: '100vh',
+        // height: '1127px',
+        position: 'relative',
+        // width: '100%',
+        // height: '100vh',
+        zIndex: 150,
+        boxShadow: '-1px 0px 20px 3px #016BE6',
+        borderTop: '6px solid #016BE6',
+      }}
+    >
+      <BackgroundImage
+        style={{
           backgroundPosition: 'center center',
           backgroundSize: '100% 100%',
           backgroundRepeat: 'no-repeat',
           minHeight: '100vh',
-        }} className='relative opacity-21' src="/images/header/backgroundImage.png">
+        }}
+        className="relative opacity-21"
+        src="/images/header/backgroundImage.png"
+      >
         <Container fluid pl={90} pr={69} py={100}>
-          <Grid justify='center' align='center'>
+          <Grid justify="center" align="center">
             <Grid.Col sm={12}>
-              <Grid justify='center' align='center'>
-                <Image height='auto' width='auto' className='mx-auto my-auto' src='/images/pages/blogs/addsomeluck.png' alt='image' />
-                <div className='flex flex-col mt-[85px]'>
-                  <Title color="white" className="uppercase font-[700] leading-[51px] text-center tracking-[0.0125em] text-[48px]">
+              <Grid justify="center" align="center">
+                <Image
+                  height="auto"
+                  width="auto"
+                  className="mx-auto my-auto"
+                  src="/images/pages/blogs/addsomeluck.png"
+                  alt="image"
+                />
+                <div className="flex flex-col mt-[85px]">
+                  <Title
+                    color="white"
+                    className="uppercase font-[700] leading-[51px] text-center tracking-[0.0125em] text-[48px]"
+                  >
                     Add some luck to your inbox
                   </Title>
-                  <Text mt={33} color="white" className=" font-[400] leading-[38px] text-center tracking-[0.005em] text-[20px]">
-                    Join our email newsletter "The High Roller Herald" to be the first to know about new things<br/> 
+                  <Text
+                    mt={33}
+                    color="white"
+                    className=" font-[400] leading-[38px] text-center tracking-[0.005em] text-[20px]"
+                  >
+                    Join our email newsletter "The High Roller Herald" to be the first to know about new things
+                    <br />
                     happening at Pasa, from new games, winning tips, and oh, did we mention the occasional gift?
                   </Text>
                 </div>
               </Grid>
-              <Grid align='center' justify='center'>
+              <Grid align="center" justify="center">
                 <form onSubmit={form.onSubmit(handleSubmit)}>
                   <TextInput
-                  className='font-[600] mx-auto leading-[16px] uppercase tracking-[0.0125em]'
+                    className="font-[600] mx-auto leading-[16px] uppercase tracking-[0.0125em]"
                     mt={40}
                     // maw={'60%'}
                     // p={10}
-                    styles={{ 
-                      input: { 
-                        padding: '30px', 
-                        fontSize: '14px', 
-                        width: '425px', 
-                        borderRadius: '50px', 
+                    styles={{
+                      input: {
+                        padding: '30px',
+                        fontSize: '14px',
+                        width: '425px',
+                        borderRadius: '50px',
                         borderColor: '#016BE6',
                         ':focus': {
                           borderColor: '#016BE6',
                         },
                         '::placeholder': {
                           color: 'white',
-                          fontSize: '14px'
+                          fontSize: '14px',
                         },
                       },
                     }}
                     // radius="xl"
                     // size="lg"
                     rightSection={
-                      <ActionIcon type='submit' size={56} bg="#FFB800" mr={10} radius="xl" variant="filled"
-                      sx={{
-                        ':hover': {
-                          background: '#FFB800'
-                        }
-                      }}>
+                      <ActionIcon
+                        type="submit"
+                        size={56}
+                        bg="#FFB800"
+                        mr={10}
+                        radius="xl"
+                        variant="filled"
+                        sx={{
+                          ':hover': {
+                            background: '#FFB800',
+                          },
+                        }}
+                      >
                         <ChevronRight size="1.1rem" />
                       </ActionIcon>
                     }
