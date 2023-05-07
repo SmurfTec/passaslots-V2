@@ -4,36 +4,57 @@ import { useBonusModal } from '@pasa/hooks';
 export function HiwSignup() {
   const [BonusModal, bonusOpen] = useBonusModal();
   return (
-    <div style={{
-      backgroundColor: '#150B2E',
-      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
-      backdropFilter: 'blur(20px)',
-      backgroundRepeat: 'no-repeat',
-      // position: 'relative',
-      backgroundPosition: 'center center',
-      backgroundSize: 'cover',
-      minHeight: '130vh', 
-      // height: '1127px',
-      position: 'relative',
-      marginTop: '-115px',
-    }}>
+    <div
+      style={{
+        backgroundColor: '#150B2E',
+        backgroundImage:
+          'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+        backdropFilter: 'blur(20px)',
+        backgroundRepeat: 'no-repeat',
+        // position: 'relative',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        minHeight: '130vh',
+        // height: '1127px',
+        position: 'relative',
+        marginTop: '-115px',
+        zIndex: 50,
+        boxShadow: '-1px 0px 20px 3px #016BE6',
+        borderTop: '6px solid #016BE6',
+      }}
+    >
       <Container fluid ml={90} mr={69} className="py-16 md:py-32">
-        <Grid justify='center' align='center'>
+        <Grid justify="center" align="center">
           <Grid.Col sm={12}>
-            <Image w="562px !important" h="562px !important" className="mx-auto my-auto pt-[33px]" src="/images/pages/hiw/winnings.png" alt="image" />
+            <Image
+              w="562px !important"
+              h="562px !important"
+              className="mx-auto my-auto pt-[33px]"
+              src="/images/pages/hiw/winnings.png"
+              alt="image"
+            />
           </Grid.Col>
           <Grid.Col sm={12}>
-            <Title color="white" className="text-center uppercase text-[64px] font-[700] leading-[68px] tracking-[0.0125em]">
-              Get a Taste of Paradise<br /> with Your Wins
+            <Title
+              color="white"
+              className="text-center uppercase text-[64px] font-[700] leading-[68px] tracking-[0.0125em]"
+            >
+              Get a Taste of Paradise
+              <br /> with Your Wins
             </Title>
           </Grid.Col>
           <Grid.Col sm={12}>
-            <Text opacity={0.8} mt={25} color="white" className="text-center font-[400] text-[20px] leading-[38px] tracking-[0.0125em]">
+            <Text
+              opacity={0.8}
+              mt={25}
+              color="white"
+              className="text-center font-[400] text-[20px] leading-[38px] tracking-[0.0125em]"
+            >
               Let's make things official, ride the Waves of Good Fortune, and become adventure buddies!
             </Text>
-            <Grid align='center' mt={40}>
+            <Grid align="center" mt={40}>
               <Grid.Col lg={12}>
-                <div className='text-center'>
+                <div className="text-center">
                   <Button
                     styles={{
                       root: {
@@ -50,7 +71,7 @@ export function HiwSignup() {
                       label: {
                         marginBottom: '-2px',
                         fontSize: '20px',
-                        lineHeight: '23px'
+                        lineHeight: '23px',
                       },
                     }}
                     radius={50}
@@ -65,7 +86,9 @@ export function HiwSignup() {
               <Grid.Col lg={12}>
                 <div className="text-left">
                   <Text className="text-center font-[400] leading-[17px] tracking-[0.005em] text-[13px]" color="white">
-                    Get your sign up bonus + updates on new<br/> games and VIP offers that arrive by the<br/> seashore.
+                    Get your sign up bonus + updates on new
+                    <br /> games and VIP offers that arrive by the
+                    <br /> seashore.
                   </Text>
                 </div>
               </Grid.Col>

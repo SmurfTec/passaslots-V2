@@ -84,10 +84,11 @@ export function Header() {
               >
                 Signup for Players
               </Text>
-              <Text style={{
-                textDecoration: router.pathname === '/pasa-for-distributor' ? 'underline' : '',
-                textUnderlineOffset: router.pathname === '/pasa-for-distributor' ? '11px' : '',
-              }} 
+              <Text
+                style={{
+                  textDecoration: router.pathname === '/pasa-for-distributor' ? 'underline' : '',
+                  textUnderlineOffset: router.pathname === '/pasa-for-distributor' ? '11px' : '',
+                }}
                 color={router.pathname === '/pasa-for-distributor' ? '#FFB800' : '#fff'}
                 className="font-[700] uppercase"
                 size="16px"
@@ -96,11 +97,31 @@ export function Header() {
               >
                 PASA Distribution
               </Text>
-              <Text style={{
-                textDecoration: router.pathname === '/games' ? 'underline' : '',
-                textUnderlineOffset: router.pathname === '/games' ? '11px' : '',
-              }} color={router.pathname === '/games' ? '#FFB800' : '#fff'} className="font-[700] uppercase" size="16px" component={NextLink} href="/games">
+              <Text
+                style={{
+                  textDecoration: router.pathname === '/games' ? 'underline' : '',
+                  textUnderlineOffset: router.pathname === '/games' ? '11px' : '',
+                }}
+                color={router.pathname === '/games' ? '#FFB800' : '#fff'}
+                className="font-[700] uppercase"
+                size="16px"
+                component={NextLink}
+                href="/games"
+              >
                 Games
+              </Text>
+              <Text
+                style={{
+                  textDecoration: router.pathname === '/blog' ? 'underline' : '',
+                  textUnderlineOffset: router.pathname === '/blog' ? '11px' : '',
+                }}
+                color={router.pathname === '/blog' ? '#FFB800' : '#fff'}
+                className="font-[700] uppercase"
+                size="16px"
+                component={NextLink}
+                href="/blog"
+              >
+                Blogs
               </Text>
             </Group>
             <Menu
@@ -138,6 +159,10 @@ export function Header() {
                 <Menu.Divider />
                 <Menu.Item rightSection={<ArrowRight strokeWidth={0.8} size={30} />} component={NextLink} href="/games">
                   Games
+                </Menu.Item>
+                <Menu.Divider />
+                <Menu.Item rightSection={<ArrowRight strokeWidth={0.8} size={30} />} component={NextLink} href="/blog">
+                  Blogs
                 </Menu.Item>
                 <Menu.Divider />
                 <Menu.Item
