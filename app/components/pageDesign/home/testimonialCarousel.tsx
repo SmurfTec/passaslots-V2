@@ -117,6 +117,7 @@ export const TestimonialCarousel = () => {
                   mr={'-20px'}
                   mt={'50px'}
                   mx="auto"
+                  p={10}
                   styles={{
                     root: {
                       background: 'transparent',
@@ -144,7 +145,7 @@ export const TestimonialCarousel = () => {
                       },
                     },
                   }}
-                  slideSize={'33%'}
+                  slideSize={'33.333333%'}
                   withControls={false}
                   withIndicators={false}
                   slidesToScroll={matches ? 1 : 2}

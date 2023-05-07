@@ -63,7 +63,7 @@ export function BlogHero() {
             <Image
               width="auto"
               height="auto"
-              className="mx-auto my-auto pt-[110px]"
+              className="mx-auto my-auto pt-[35px]"
               src="/images/pages/blogs/bloghero.png"
               alt="image"
             />
