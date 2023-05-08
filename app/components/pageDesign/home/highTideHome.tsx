@@ -11,7 +11,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '80vh',
+    minHeight: '70vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -49,39 +49,34 @@ export function HighTideHome() {
             <Grid ml={'90px'}>
               <Grid.Col xs={6}>
                 <Title
-                  className="font-[700] tracking[-0.015em]"
+                  className="font-[700] tracking[-0.015em] w-400 md:w-500 lg:w-560"
                   color="white"
                   order={2}
                   mt={103}
                   mb={100}
                   style={{ fontSize: '54px', lineHeight: '69.39px', letterSpacing: '-1.5%' }}
                 >
-                  RIDE THE HIGH{' '}
-                  <span className="text-[#50A1FF]">
-                    TIDE OF <br /> LUCK
-                  </span>
+                  RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
                 </Title>
                 <Text
                   color="white"
-                  mt={61}
+                  mt={20}
                   className="font-[400] leading-10"
                   maw={628}
                   size="md"
-                  mb={80}
+                  mb={50}
                   style={{ fontSize: '20px', lineHeight: '37.74px' }}
                 >
-                  To see what kind of winnings are in store for you on the games, Pasa
-                  <br /> invites all our online and mobile players to launch into playing this slot
-                  <br /> sensation the moment{' '}
+                  To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
+                  players to launch into playing this slot sensation the moment{' '}
                   <span className="font-[700]">you’ve logged into your unique real money</span>
-                  <br /> account. You never know, one spin is all it takes to potentially change
-                  <br /> your life forever!
+                  account. You never know, one spin is all it takes to potentially change your life forever!
                 </Text>
                 <Button
                   component={NextLink}
                   href="games/#gameSlots"
-                  mt={40}
-                  px={50}
+                  mt={20}
+                  px={20}
                   mb={85}
                   styles={{
                     root: {
