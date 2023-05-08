@@ -39,7 +39,6 @@ export const HomeBottomCarousel = () => {
     <Container size={1300} pt={20} mb={20} mt={30}>
       <Carousel
         style={{ marginTop: '100px' }}
-        loop
         getEmblaApi={setEmbla}
         slideSize="20%"
         initialSlide={1}
