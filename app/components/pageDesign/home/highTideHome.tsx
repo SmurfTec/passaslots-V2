@@ -24,7 +24,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '80vh',
+    minHeight: '90vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
