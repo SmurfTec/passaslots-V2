@@ -19,6 +19,9 @@ const useStyles = createStyles((theme) => ({
       display: 'none',
     },
     marginRight: '200px',
+    [theme.fn.smallerThan(1400)]: {
+      marginRight: '40px',
+    },
   },
   button: {
     fontSize: '16px',
