@@ -1,13 +1,71 @@
-import { Button, Container, Grid, Title, Image, Text, Group } from '@mantine/core';
+import { Button, Container, Grid, Title, Image, Text, Group, Popover } from '@mantine/core';
+import { useMediaQuery, useDisclosure } from '@mantine/hooks';
+import { NextLink } from '@mantine/next';
+import { useState } from 'react';
+import { Dots } from 'tabler-icons-react';
 
 export function SingleBlogHero() {
+  const matches = useMediaQuery('(max-width: 810px)', true);
+  const [sideButtons, setSideButtons] = useState(false);
+  const [opened, { open, close }] = useDisclosure(false);
+  const closesideMenu = () => {
+    if(sideButtons) {
+      setSideButtons(false);
+    }
+  };
   return (
-    <div style={{
+    <div onClick={closesideMenu} style={{
         backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
         backdropFilter: 'blur(20px)',
         backgroundSize: 'cover',
+        marginTop: '-115px',
     }}>
-        <Container py={100} mt={"-115px"} fluid ml={90} mr={69}>
+        {!matches ? (
+        <Group align={'center'} className=''>
+          {/* <Grid.Col> */}
+            <Popover
+              opened={sideButtons}
+              onClose={close}
+              position="right"
+              styles={{
+                dropdown: {
+                  background: 'transparent',
+                  border: '0px',
+                }
+              }}
+            >
+              <Popover.Target>
+                <Button className='absolute top-1/4' onClick={() => setSideButtons(!sideButtons)} h={70} w={70} 
+                  bg={sideButtons ? 'linear-gradient(248.75deg, #3F2680 12.71%, #3F2680 108.63%)' : 'linear-gradient(248.75deg, #50A1FF 12.71%, #3F2680 108.63%)'}
+                  styles={{
+                    root: {
+                      borderRadius: '0px 5px 5px 0px',
+                      '&:hover': {
+                        background: sideButtons ? 'linear-gradient(248.75deg, #3F2680 12.71%, #3F2680 108.63%)' : 'linear-gradient(248.75deg, #50A1FF 12.71%, #3F2680 108.63%)',
+                      },
+                    },
+                  }}>
+                    <Dots size={34} />
+                </Button>
+              </Popover.Target>
+              <Popover.Dropdown>
+                  <Group align='center'>
+                    <Button bg={'#0076FF'} className="hover:bg-[#0076FF]" radius={27} mb={150} ml={-20} component={NextLink} href="/about" size="sm">
+                      About Us
+                    </Button>
+                    <Button className="text-top items-center hover:bg-[#0076FF]" bg={'#0076FF'} mt={-20} radius={35} ml={-90} component={NextLink} href="/contact" size="sm">
+                      Contact Us
+                    </Button>
+                    <Button bg={'#0076FF'} className="hover:bg-[#0076FF]" radius={36} mt={120} ml={-135} component={NextLink} href="/how-it-works" size="sm">
+                      How it works?
+                    </Button>
+                  </Group>
+              </Popover.Dropdown>
+            </Popover>
+          {/* </Grid.Col> */}
+        </Group>
+        ) : undefined}
+        <Container py={100} fluid ml={90} mr={69}>
             <Grid mt={57} align='center'>
                 <Image radius={'13px'} height='auto' width='100%' src='images/pages/blog-detail/heroSingleBlog.png' alt='heroSingleBlog' />
                 <Title mt={36} className='uppercase font-[900] text-[48px] leading-[56px] tracking-[-0.015em]'>

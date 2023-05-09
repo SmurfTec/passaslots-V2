@@ -181,7 +181,7 @@ export function HomeHero() {
             >
               <Popover.Target>
                 <Button
-                  className="absolute translate-y-1/2"
+                  className="absolute top-1/2 left-0"
                   onClick={() => setSideButtons(!sideButtons)}
                   h={70}
                   w={70}
