@@ -276,18 +276,18 @@ export function HiwStage() {
                   <Title className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
                     STAGE 3
                   </Title>
-                  <Text className="absolute mt-[275px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
-                    YOU'RE ALMOST DONE.
-                    <br />
-                    After you have filled out the registration
-                    <br />
-                    form and PASA browser app, You will
-                    <br />
-                    be contacted by one of the PA team
-                    <br />
-                    members with your credentials
-                    <br />
-                    (username and password)
+                  <Text maw={354} className="absolute mt-[275px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
+                    YOU'RE ALMOST DONE.{' '}
+                    {/* <br /> */}
+                    After you have filled out the registration{' '}
+                    {/* <br /> */}
+                    form and PASA browser app, You will{' '}
+                    {/* <br /> */}
+                    be contacted by one of the PA team{' '}
+                    {/* <br /> */}
+                    members with your credentials{' '}
+                    {/* <br /> */}
+                    (username and password){' '}
                   </Text>
                 </Grid>
                 <Grid mt={595} align="center">

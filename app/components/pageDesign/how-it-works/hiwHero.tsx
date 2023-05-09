@@ -32,7 +32,7 @@ export function HiwHero() {
           minHeight: '100vh',
         }} className='absolute opacity-21' src="/images/header/backgroundImage.png" >
       <Container fluid ml={90} mr={69} className="mb-[-150px] mt-[300px] sm:mb-[auto] relative">
-        <Stack h={matches ? '40vh' : '80vh'} justify="center">
+        <Stack justify="center">
           <Group align='center'>
             <Title className="font-[900] text-[#FFB800]" order={3} style={{textShadow: '0px 4px 33px #016BE6', lineHeight: '38px'}}>
               How it works?

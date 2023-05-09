@@ -34,16 +34,16 @@ export function Content() {
                   </span>{' '}
                   lifelong gamers
                 </Title>
-                <Text mt={20} className="text-[#ffffff] font-[400] text-[20px] leading-[38px]">
-                  To see what kind of winnings are in store for you on the games, Pasa
-                  <br />
-                  invites all our online and mobile players to launch into playing this slot
-                  <br />
-                  sensation the moment <span className="font-[700]">you’ve logged into your unique real money</span>
-                  <br />
-                  account. You never know, one spin is all it takes to potentially change
-                  <br />
-                  your life forever!
+                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] text-[20px] leading-[38px]">
+                  To see what kind of winnings are in store for you on the games, Pasa{' '}
+                  {/* <br /> */}
+                  invites all our online and mobile players to launch into playing this slot{' '}
+                  {/* <br /> */}
+                  sensation the moment <span className="font-[700]">you’ve logged into your unique real money</span>{' '}
+                  {/* <br /> */}
+                  account. You never know, one spin is all it takes to potentially change{' '}
+                  {/* <br /> */}
+                  your life forever!{' '}
                 </Text>
               </div>
             </Grid.Col>
@@ -59,12 +59,12 @@ export function Content() {
                   <br /> gaming
                 </span>
               </Title>
-              <Text mt={20} className="text-[#ffffff] font-[400] text-[20px] leading-[38px]">
-                Via your browser, laptop, PC, smartphone, or tablet, we promise one of
-                <br />
-                the most diverse <span className="font-[700]">selections of slot games, blackjack</span> and roulette
-                <br />
-                variations, and more to make your experience with us unforgettable.
+              <Text maw={619} mt={20} className="text-[#ffffff] font-[400] text-[20px] leading-[38px]">
+                Via your browser, laptop, PC, smartphone, or tablet, we promise one of{' '}
+                {/* <br /> */}
+                the most diverse <span className="font-[700]">selections of slot games, blackjack</span> and roulette{' '}
+                {/* <br /> */}
+                variations, and more to make your experience with us unforgettable.{' '}
               </Text>
               {/* </div> */}
             </Grid.Col>
@@ -83,12 +83,12 @@ export function Content() {
                   <br /> and accessible to
                   <br /> everyone
                 </Title>
-                <Text mt={20} className="text-[#ffffff] font-[400] text-[20px] leading-[38px]">
-                  We've removed the stress of finding, downloading, and registering for
-                  <br />
-                  games by doing it for you. All with one click. It's a simple, innovative
-                  <br />
-                  way to <span className="font-[700]">bring the joy of gaming to everyone,</span> anywhere, anytime.
+                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] text-[20px] leading-[38px]">
+                  We've removed the stress of finding, downloading, and registering for{' '}
+                  {/* <br /> */}
+                  games by doing it for you. All with one click. It's a simple, innovative{' '}
+                  {/* <br /> */}
+                  way to <span className="font-[700]">bring the joy of gaming to everyone,</span> anywhere, anytime.{' '}
                 </Text>
               </div>
             </Grid.Col>

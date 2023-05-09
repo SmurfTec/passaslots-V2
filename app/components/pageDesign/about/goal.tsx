@@ -18,8 +18,8 @@ export function Goal() {
       }}
     >
       <BackgroundImage
-        src="/images/pages/about/goalZeus.png"
-        style={{ backgroundRepeat: 'no-repeat', backgroundPosition: 'center center', backgroundPositionY: '735px' }}
+        src="/images/pages/about/goalZeus.png" className='xl:bg-[center_690px] lg:bg-[center_970px] md:bg-[center_1375px]'
+        style={{ backgroundRepeat: 'no-repeat'}}
         bgsz="auto"
       >
         <Container fluid mr={69} ml={90} py={100}>

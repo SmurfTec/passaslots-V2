@@ -28,18 +28,18 @@ export function Mission() {
                   >
                     OUR APPROACH
                   </Title>
-                  <Text className="absolute text-right mt-[170px] text-[#ffffff] font-[400] text-[16px] leading-[30px] tracking-[0.005em] opacity-80">
-                    We believe in putting players first, prefer quality over
-                    <br />
-                    quantity, offer a range of different games, protect
-                    <br />
-                    personal details of our players, and offer fair play. We
-                    <br />
-                    aim to always check those boxes, placing the brand
-                    <br />
-                    among the top online gaming platforms for players
-                    <br />
-                    all around the world.
+                  <Text maw={381} className="absolute text-right mt-[170px] text-[#ffffff] font-[400] text-[16px] leading-[30px] tracking-[0.005em] opacity-80">
+                    We believe in putting players first, prefer quality over{' '}
+                    {/* <br /> */}
+                    quantity, offer a range of different games, protect{' '}
+                    {/* <br /> */}
+                    personal details of our players, and offer fair play. We{' '}
+                    {/* <br /> */}
+                    aim to always check those boxes, placing the brand{' '}
+                    {/* <br /> */}
+                    among the top online gaming platforms for players{' '}
+                    {/* <br /> */}
+                    all around the world.{' '}
                   </Text>
                 </Grid>
                 <MImage className="ml-[43px] text-right" src="/images/pages/about/capitalT.png" />
@@ -118,16 +118,16 @@ export function Mission() {
                   >
                     OUR MISSION
                   </Title>
-                  <Text className="absolute mt-[120px] text-[#ffffff] font-[400] text-[16px] leading-[30px] tracking-[0.005em] opacity-80">
-                    Pasa slots was created with gamers' needs in mind
-                    <br />
-                    with a singular focus: to bring the real life sounds of
-                    <br />
-                    coins crashing, bells ringing, creating magical
-                    <br />
-                    moments, and winnings left to conquer in the power
-                    <br />
-                    of a finger tip on your device.
+                  <Text maw={372} className="absolute mt-[120px] text-[#ffffff] font-[400] text-[16px] leading-[30px] tracking-[0.005em] opacity-80">
+                    Pasa slots was created with gamers' needs in mind{' '}
+                    {/* <br /> */}
+                    with a singular focus: to bring the real life sounds of{' '}
+                    {/* <br /> */}
+                    coins crashing, bells ringing, creating magical{' '}
+                    {/* <br /> */}
+                    moments, and winnings left to conquer in the power{' '}
+                    {/* <br /> */}
+                    of a finger tip on your device.{' '}
                   </Text>
                 </Grid>
               </div>
@@ -140,16 +140,16 @@ export function Mission() {
                   >
                     OUR COMMITMENT
                   </Title>
-                  <Text className="absolute mt-[120px] text-[#ffffff] font-[400] text-[16px] leading-[30px] tracking-[0.005em] opacity-80">
-                    At Pasa slots, we value our players and take their
-                    <br />
-                    data seriously. Our online casino is safe, encrypted
-                    <br />
-                    with 128-bit SSL technology, and approved by
-                    <br />
-                    JaCOG. We never share or sell your data to third
-                    <br />
-                    parties or use it for advertising purposes.
+                  <Text maw={363} className="absolute mt-[120px] text-[#ffffff] font-[400] text-[16px] leading-[30px] tracking-[0.005em] opacity-80">
+                    At Pasa slots, we value our players and take their{' '}
+                    {/* <br /> */}
+                    data seriously. Our online casino is safe, encrypted{' '}
+                    {/* <br /> */}
+                    with 128-bit SSL technology, and approved by{' '}
+                    {/* <br /> */}
+                    JaCOG. We never share or sell your data to third{' '}
+                    {/* <br /> */}
+                    parties or use it for advertising purposes.{' '}
                   </Text>
                 </Grid>
               </div>

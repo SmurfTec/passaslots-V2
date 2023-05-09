@@ -94,11 +94,12 @@ export function NewsletterBlog() {
                   <Text
                     mt={33}
                     color="white"
+                    maw={900}
                     className=" font-[400] leading-[38px] text-center tracking-[0.005em] text-[20px]"
                   >
-                    Join our email newsletter "The High Roller Herald" to be the first to know about new things
-                    <br />
-                    happening at Pasa, from new games, winning tips, and oh, did we mention the occasional gift?
+                    Join our email newsletter "The High Roller Herald" to be the first to know about new things{' '} 
+                    {/* <br /> */}
+                     happening at Pasa, from new games, winning tips, and oh, did we mention the occasional gift?
                   </Text>
                 </div>
               </Grid>

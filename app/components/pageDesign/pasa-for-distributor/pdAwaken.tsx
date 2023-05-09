@@ -20,23 +20,25 @@ export function PDAwaken() {
         src="/images/header/backgroundImage.png"
       >
         <Grid pl={90} pr={69}>
-          <Grid.Col xs={6}>
+          <Grid.Col lg={6}>
             <Title className="uppercase text-[64px] font-[700] leading-[69px] tracking-[0.0125em]" color="white">
               Awaken the
               <br />
               <span style={{ color: '#50A1FF' }}>balance </span>
             </Title>
             <Text my={37} className="text-[20px] font-[400] leading-[38px] tracking-[0.0125em]" color="white">
-              Starting a home-based business also offers you the freedom to
-              <br />
-              create a work-life balance that <span className="font-[700]">works for you and your family</span>.<br />
-              Whether you're a stay-at-home parent or just looking for a change, a<br />
+              Starting a home-based business also offers you the freedom to{' '}
+              {/* <br /> */}
+              create a work-life balance that <span className="font-[700]">works for you and your family</span>.{' '}
+              {/* <br /> */}
+              Whether you're a stay-at-home parent or just looking for a change, a{' '}
+              {/* <br /> */}
               home-based business allows you to turn your passions into a high-
-              <br />
+              {/* <br /> */}
               income career.
             </Text>
           </Grid.Col>
-          <Grid.Col xs={6}>
+          <Grid.Col lg={6}>
             <Image
               height="auto"
               width="auto"
@@ -80,21 +82,23 @@ export function PDAwaken() {
                 </Title>
                 <Text
                   mt={37}
-                  className="text-[20px] font-[400] text-center leading-[38px] tracking-[0.0125em]"
+                  className="mx-auto text-[20px] font-[400] text-center leading-[38px] tracking-[0.0125em]"
                   color="white"
+                  maw={934}
                 >
                   With the rise of technology and the growing gig economy, there's never been a better time to start
-                  your
-                  <br />
+                  your{' '}
+                  {/* <br /> */}
                   own home-based business. The opportunities are endless, and the{' '}
-                  <span className="font-[700]">success is yours for the taking</span>. Say
-                  <br />
-                  goodbye to the daily commute and say hello to the comfort and flexibility of working from your own
-                  <br />
+                  <span className="font-[700]">success is yours for the taking</span>. Say{' '}
+                  {/* <br /> */}
+                  goodbye to the daily commute and say hello to the comfort and flexibility of working from your own{' '}
+                  {/* <br /> */}
                   home. You'll be in control of your schedule. So why wait? Unleash your entrepreneurial spirit and{' '}
                   <span className="font-[700]">
-                    start
-                    <br /> your home-based business
+                    start{' '}
+                    {/* <br />  */}
+                    your home-based business
                   </span>{' '}
                   today!
                 </Text>

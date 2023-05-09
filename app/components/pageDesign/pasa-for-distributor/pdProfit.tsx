@@ -17,9 +17,9 @@ export function PDProfit() {
       }}
       src="/images/pages/pasa-for-distributor/bgProfit.png"
     >
-      <Container fluid ml={90} mr={69} py={100}>
+      <Container fluid pl={90} pr={69} py={100}>
         <Grid m={0}>
-          <Grid.Col xs={6}>
+          <Grid.Col lg={6}>
             <Image
               src="/images/pages/pasa-for-distributor/Gold_Dollar_Coins_stack.png"
               alt="Gold_Dollar_Coins_stack"
@@ -27,7 +27,7 @@ export function PDProfit() {
               width="auto"
             />
           </Grid.Col>
-          <Grid.Col xs={6}>
+          <Grid.Col lg={6}>
             <div className="relative h-full">
               <Title color="white" className="font-[700] text-[48px] leading-[51px] tracking-[0.0125em] uppercase">
                 Profits with the Online

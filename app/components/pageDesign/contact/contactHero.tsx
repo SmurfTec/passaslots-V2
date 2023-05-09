@@ -89,22 +89,22 @@ export function ContactHero() {
         <Container fluid ml={90} mr={69} className="mb-[-150px] sm:mb-[auto] relative">
           <Grid>
             <Grid.Col md={6}>
-          <Stack h={matches ? "40vh" : "80vh"} justify='center'>
-            <Group align='center'>
-              <Title className="font-[900] text-[#FFB800]" order={3} style={{textShadow: '0px 4px 33px #016BE6', lineHeight: '38px'}}>
-                Contact Us
-              </Title>
-            </Group>
-            <Title order={1} mt={30} className="font-[700] uppercase text-[#FFF]" 
-            style={{
-              textShadow: '0px 4px 33px #016BE6',
-              letterSpacing: '-0.015em',
-              lineHeight: '112px',
-            }}>
-              More than just<br/> a platform
-            </Title>
-          </Stack>
-          </Grid.Col>
+              <Stack h={matches ? "40vh" : "80vh"} justify='center'>
+                <Group align='center'>
+                  <Title className="font-[900] text-[#FFB800]" order={3} style={{textShadow: '0px 4px 33px #016BE6', lineHeight: '38px'}}>
+                    Contact Us
+                  </Title>
+                </Group>
+                <Title order={1} mt={30} className="font-[700] uppercase text-[#FFF]" 
+                style={{
+                  textShadow: '0px 4px 33px #016BE6',
+                  letterSpacing: '-0.015em',
+                  lineHeight: '112px',
+                }}>
+                  More than just<br/> a platform
+                </Title>
+              </Stack>
+            </Grid.Col>
           <Grid.Col md={6}>
             <Image mb={67} mt={422} w={786} h={638} className='' src="/images/pages/contact/bull.png" alt='image' />
           </Grid.Col>

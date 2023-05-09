@@ -18,9 +18,9 @@ export function PDBusiness() {
       }}
       src="/images/header/backgroundImage.png"
     >
-      <Container fluid ml={90} mr={69} py={100}>
+      <Container fluid pl={90} pr={69} py={100}>
         <Grid m={0}>
-          <Grid.Col xs={6}>
+          <Grid.Col lg={6}>
             <Image
               src="/images/pages/pasa-for-distributor/machine-leprechaun.png"
               alt="machine-leprechaun"
@@ -28,7 +28,7 @@ export function PDBusiness() {
               width="auto"
             />
           </Grid.Col>
-          <Grid.Col xs={6}>
+          <Grid.Col lg={6}>
             <div className="relative h-full">
               <Text mb={18} color="white" className="uppercase font-[400] text-[20px] leading-[21px]">
                 Simplify Your Business

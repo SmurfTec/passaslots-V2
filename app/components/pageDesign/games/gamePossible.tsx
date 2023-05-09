@@ -1,5 +1,8 @@
-import { Button, Container, Image, Text, Title, Grid, BackgroundImage } from '@mantine/core';
+import { Button, Container, Image, Text, Title, Grid, BackgroundImage, Flex } from '@mantine/core';
 import { Carousel, useStylesCarousel } from '@pasa/customComponents';
+import { Embla } from '@mantine/carousel';
+import { useCallback, useEffect, useState } from 'react';
+
 
 const images = [
   '/images/pages/game/carousel1.png',
@@ -12,6 +15,21 @@ const images = [
 
 export function GamePossible() {
   const { classes } = useStylesCarousel();
+  const [slideProgress, setSlideProgress] = useState(1);
+  const [embla, setEmbla] = useState<Embla | null>(null);
+  const handleScroll = useCallback(() => {
+    if (!embla) return;
+    const progress = Math.min(2, Math.floor(Math.max(0, embla.scrollProgress() * 3)));
+    setSlideProgress(progress);
+    // console.log(progress);
+  }, [embla, setSlideProgress]);
+
+  useEffect(() => {
+    if (embla) {
+      embla.on('scroll', handleScroll);
+      handleScroll();
+    }
+  }, [embla]);
   return (
     <>
       <div
@@ -39,8 +57,6 @@ export function GamePossible() {
             <Grid align="center" justify="center">
               <div className="text-center">
                 <Image
-                  height="auto"
-                  width="auto"
                   className="mx-auto"
                   src="/images/pages/game/gamePossible.png"
                   alt="game"
@@ -54,11 +70,11 @@ export function GamePossible() {
                 >
                   A Sea of Possibilities Awaits
                 </Title>
-                <Text my={20} color="white" className="text-[24px] font-[400] leading-[28px] text-center">
-                  Just like the ocean's currents, our app's games are always in
-                  <br />
-                  motion and constantly changing, offering you an endless sea of
-                  <br />
+                <Text maw={705} my={20} color="white" className="text-[24px] font-[400] leading-[28px] text-center">
+                  Just like the ocean's currents, our app's games are always in{' '}
+                  {/* <br /> */}
+                  motion and constantly changing, offering you an endless sea of{' '}
+                  {/* <br /> */}
                   choices to explore!
                 </Text>
               </div>
@@ -87,7 +103,8 @@ export function GamePossible() {
           <Grid align="center" justify="center" py={80} px={0}>
             <Grid.Col px={0} sm={12}>
               <Carousel
-                withIndicators
+                // withIndicators
+                getEmblaApi={setEmbla}
                 align="center"
                 images={images}
                 slideSize="33.3333%"
@@ -109,6 +126,35 @@ export function GamePossible() {
                   },
                 }}
               />
+              <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: '50px' }}>
+                <Image
+                  height={15}
+                  width={15}
+                  src={
+                    slideProgress === 0
+                      ? '/images/scroll/carouselIndicatorSelect.png'
+                      : '/images/scroll/carouselIndicatorNotSelect.png'
+                  }
+                />
+                <Image
+                  height={15}
+                  width={15}
+                  src={
+                    slideProgress === 1
+                      ? '/images/scroll/carouselIndicatorSelect.png'
+                      : '/images/scroll/carouselIndicatorNotSelect.png'
+                  }
+                />
+                <Image
+                  height={15}
+                  width={15}
+                  src={
+                    slideProgress === 2
+                      ? '/images/scroll/carouselIndicatorSelect.png'
+                      : '/images/scroll/carouselIndicatorNotSelect.png'
+                  }
+                />
+              </Flex>
             </Grid.Col>
           </Grid>
           <Grid align="center" justify="center">

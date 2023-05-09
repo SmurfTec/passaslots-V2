@@ -30,9 +30,9 @@ export function AboutContact() {
               </Title>
             </Grid.Col>
             <Grid.Col mt={99} mb={78} span={12} md={8}>
-              <Text className="align-text-top font-[400] text-white text-lg leading-[188.69%] tracking-[0.005em]">
-                If you have any questions or need help, please fill out the form below. We do our best to
-                <br /> respond within 1 business day.
+              <Text maw={705} className="align-text-top font-[400] text-white text-lg leading-[188.69%] tracking-[0.005em]">
+                If you have any questions or need help, please fill out the form below. We do our best to{' '}
+                respond within 1 business day.
               </Text>
             </Grid.Col>
             <Grid.Col mb={76} sm={12}>

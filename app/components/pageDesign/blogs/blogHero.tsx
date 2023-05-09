@@ -35,9 +35,9 @@ export function BlogHero() {
         className="relative opacity-21"
         src="/images/header/backgroundImage.png"
       >
-        <Container fluid ml={90} mr={69} py={100} className="sm:mb-[auto] relative">
+        <Container fluid px={0} pt={100} className="sm:mb-[auto] relative">
           {/* <div className="absolute top-1/2 -translate-y-1/2"> */}
-          <Stack pt={400} h={matches ? '40vh' : '80vh'} justify="center">
+          <Stack pt={150} justify="center">
             <div className="text-center">
               <Title
                 className="uppercase font-[900] text-center text-[#FFB800]"

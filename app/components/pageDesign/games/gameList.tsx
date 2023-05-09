@@ -18,7 +18,7 @@ export function GameList() {
             </Title>
 
             <Grid justify='center'>
-              <Group align='center' pb={15}>
+              <Group align='center' className='flex flex-nowrap' pb={15}>
                 <Text
                 style={{border: '4px solid #016BE6', borderRadius: '50px', filter: 'drop-shadow(0px 11px 32px #016BE6)', padding: '15px 23px 15px 23px'}}
                 className="font-[700] text-center text-[24px] leading-[32px] tracking-[0.0125em] uppercase">
@@ -29,10 +29,8 @@ export function GameList() {
                 className="font-[700] text-center text-[18px] leading-[34px] tracking-[0.0125em]">
                   Imaginative themes: Be transported to a world of out-of-this-world graphics and dynamic audio.
                 </Text>
-                </Group>
-              </Grid>
-              <Grid justify='center'>
-              <Group align='center' py={15}>
+              </Group>
+              <Group align='center' className='flex flex-nowrap' py={15}>
                 <Text
                 style={{border: '4px solid #016BE6', borderRadius: '50px', filter: 'drop-shadow(0px 11px 32px #016BE6)', padding: '15px 23px 15px 23px'}}
                 className="font-[700] text-center text-[24px] leading-[32px] tracking-[0.0125em] uppercase">
@@ -44,7 +42,7 @@ export function GameList() {
                   High payout potential: Captivate yourself with the thrill of potentially life-changing winnings.
                 </Text>
               </Group>
-              <Group align='center' py={15}>
+              <Group align='center' className='flex flex-nowrap' py={15}>
                 <Text
                 style={{border: '4px solid #016BE6', borderRadius: '50px', filter: 'drop-shadow(0px 11px 32px #016BE6)', padding: '15px 23px 15px 23px'}}
                 className="font-[700] text-center text-[24px] leading-[32px] tracking-[0.0125em] uppercase">
@@ -56,7 +54,7 @@ export function GameList() {
                   Convenient access: Play from the comfort of your own home or on-the-go with our online and mobile.
                 </Text>
               </Group>
-              <Group align='center' py={15}>
+              <Group align='center' className='flex flex-nowrap' py={15}>
                 <Text
                 style={{border: '4px solid #016BE6', borderRadius: '50px', filter: 'drop-shadow(0px 11px 32px #016BE6)', padding: '15px 23px 15px 23px'}}
                 className="font-[700] text-center text-[24px] leading-[32px] tracking-[0.0125em] uppercase">

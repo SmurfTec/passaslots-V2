@@ -21,8 +21,6 @@ export function BlogDiscover() {
           <Grid align="center" justify="center">
             <Grid justify="center" align="center">
               <Image
-                height="auto"
-                width="auto"
                 className="mx-auto mb-[20px]"
                 src="/images/pages/blogs/mobileGame.png"
                 alt="mobile game"
@@ -37,21 +35,24 @@ export function BlogDiscover() {
               </Title>
             </Grid.Col>
             <Grid.Col sm={12}>
-              <Text
-                mt={25}
-                color="#FFFFFF"
-                className="text-center font-[400] tracking-[0.005em] leading-[38px] text-[20px]"
-              >
-                Experience ultimate online gaming at Pasa. Our renowned software developers bring you
-                <br />
-                incredible graphics, dynamic audio, and payout-packed symbols for a unique and thrilling
-                <br />
-                experience. We've got you covered on any device and in-browser with a wide range of
-                <br />
-                games, including multiplayer fishing, classic slots, Roulette, keno, and more. Join the fun
-                <br />
-                and hit the jackpot at Pasa!
-              </Text>
+              <Grid align='center' justify='center'>
+                <Text
+                  maw={845}
+                  mt={25}
+                  color="#FFFFFF"
+                  className="text-center font-[400] tracking-[0.005em] leading-[38px] text-[20px]"
+                >
+                  Experience ultimate online gaming at Pasa. Our renowned software developers bring you{' '}
+                  {/* <br /> */}
+                  incredible graphics, dynamic audio, and payout-packed symbols for a unique and thrilling{' '}
+                  {/* <br /> */}
+                  experience. We've got you covered on any device and in-browser with a wide range of{' '}
+                  {/* <br /> */}
+                  games, including multiplayer fishing, classic slots, Roulette, keno, and more. Join the fun{' '}
+                  {/* <br /> */}
+                  and hit the jackpot at Pasa!
+                </Text>
+              </Grid>
               <div className="text-center mt-10">
                 <Button
                   styles={{
