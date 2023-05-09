@@ -43,4 +43,5 @@ model blogs {
   description String @unique
   publishedOn String?
   isDeleted Boolean
+  image String
 }
