@@ -1,5 +1,7 @@
 import { Button, Container, Grid, Title } from '@mantine/core';
 import { SingleBlog, SingleBlogProps } from './singleBlog';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const blogData: Array<SingleBlogProps> = [
   {
@@ -41,6 +43,25 @@ const blogData: Array<SingleBlogProps> = [
 ];
 
 export function BlogLayout() {
+  const [blogsData, setBlogsData] = useState<SingleBlogProps[]>([]);
+
+  const getBlogs = () => {
+    const BASE_URL = process.env.BASE_URL as string;
+    const BLOGS_URL = process.env.BLOGS_URL as string;
+    axios
+      .get(BASE_URL + BLOGS_URL)
+      .then((res) => {
+        setBlogsData(res.data);
+      })
+      .catch((e) => {
+        setBlogsData([]);
+      });
+  };
+
+  useEffect(() => {
+    getBlogs();
+  }, []);
+
   return (
     <Container
       py={100}
@@ -56,11 +77,17 @@ export function BlogLayout() {
       </Grid>
 
       <Grid justify="space-between" py={100} grow gutter={30}>
-        {blogData.map((item, key) => (
+        {blogsData.length === 0 && <p className="font-[700] text-[24px] center">Data not available</p>}
+        {blogsData.map((item, key) => (
+          <Grid.Col className="flex justify-between" key={key + item.title} md={4}>
+            <SingleBlog author={item.author} date={item.publishedOn as string} image={item.image} title={item.title} />
+          </Grid.Col>
+        ))}
+        {/* {blogData.map((item, key) => (
           <Grid.Col className="flex justify-between" key={key + item.title} md={4}>
             <SingleBlog author={item.author} date={item.date} image={item.image} title={item.title} />
           </Grid.Col>
-        ))}
+        ))} */}
       </Grid>
       <Grid align="center" justify="center" className="text-center sm:text-center" p={0}>
         <Button

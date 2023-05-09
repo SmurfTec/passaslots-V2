@@ -5,6 +5,7 @@ export type SingleBlogProps = {
   date: string;
   title: string;
   author: string;
+  publishedOn?: string;
 };
 
 export function SingleBlog({ image, date, title, author }: SingleBlogProps) {
@@ -16,7 +17,9 @@ export function SingleBlog({ image, date, title, author }: SingleBlogProps) {
         border: '4px solid #016BE6',
         background: `linear-gradient(180deg, rgba(1, 107, 230, 0.2046) 53.23%, rgba(1, 107, 230, 0.93) 100%), url("${image}")`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'auto',
+        backgroundSize: 'contain',
+
+        backgroundPosition: 'center',
         // margin: 'auto',
         // justifyContent: 'space-between'
       }}
