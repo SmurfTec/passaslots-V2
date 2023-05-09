@@ -1,5 +1,5 @@
 import { Anchor, Burger, Button, Container, Flex, Group, Image, Menu, Text, createStyles } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { NextLink } from '@mantine/next';
 import { useBonusModal } from '@pasa/hooks';
 import { useRouter } from 'next/router';
@@ -53,6 +53,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function Header() {
+  const matches = useMediaQuery('(max-width: 1250px)');
   const [BonusModal, bonusOpen] = useBonusModal();
   const [opened, { toggle, close }] = useDisclosure(false);
   const { classes } = useStyles();
@@ -72,12 +73,12 @@ export function Header() {
   return (
     <header>
       <Container fluid className="bg-transparent z-50 relative">
-        <Group position="apart" spacing={40}>
+        <Group position="apart" spacing={matches ? 5 : 40}>
           <Anchor ml={79} mt={9} href="/" component={NextLink}>
             <Image className="cursor-pointer" alt="logo" src={'/images/modal/headerlogo.png'} height={80} width={114} />
           </Anchor>
           <div style={{ display: 'flex' }}>
-            <Group spacing={31} className={classes.group}>
+            <Group spacing={matches ? 10 : 31} className={classes.group}>
               <Text
                 color={'#fff'}
                 className="cursor-pointer font-[700] uppercase"
@@ -210,7 +211,7 @@ export function Header() {
                 <Menu.Item></Menu.Item>
               </Menu.Dropdown>
             </Menu>
-            <Group className={classes.group} spacing={10} mr={69}>
+            <Group className={classes.group} spacing={matches ? 5 : 10} mr={matches ? 10 : 69}>
               <Button
                 styles={{
                   label: {
@@ -227,7 +228,7 @@ export function Header() {
                     },
                   },
                 }}
-                w={180}
+                w={matches ? 120 : 180}
                 maw={180}
                 onClick={bonusOpen}
                 className="font-[500] text-base "
@@ -253,7 +254,7 @@ export function Header() {
                     },
                   },
                 }}
-                w={180}
+                w={matches ? 120 : 180}
                 maw={180}
                 onClick={bonusOpen}
                 style={{ border: 'none', marginLeft: '10px' }}
