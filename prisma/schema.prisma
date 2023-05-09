@@ -44,4 +44,5 @@ model blogs {
   publishedOn String?
   isDeleted Boolean
   image String
+  author String
 }

@@ -28,6 +28,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
               title: fields.title as string,
               description: fields.description as string,
               publishedOn: fields.publishedOn as string,
+              author: fields.author as string,
               isDeleted: false,
               image: fileName,
             },
