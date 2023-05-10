@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 export default async function BlogsHandler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { method, body } = req;
   switch (method) {
-    case 'GET':
+    case 'GET': {
       try {
         const blogs = await prisma.blogs.findMany({ where: { isDeleted: false } });
 
@@ -17,6 +17,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }
       break;
+    }
     case 'POST': {
       try {
         const form = new formidable.IncomingForm();
@@ -35,6 +36,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
       } catch (err) {
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }
+      break;
     }
   }
 }

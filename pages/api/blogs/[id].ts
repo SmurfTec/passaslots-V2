@@ -13,6 +13,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
       } catch (err) {
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }
+      break;
     }
     case 'PATCH': {
       try {
@@ -29,6 +30,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
       } catch (err) {
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }
+      break;
     }
     case 'DELETE': {
       try {
@@ -44,6 +46,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
       } catch (err) {
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }
+      break;
     }
     default:
       res.setHeader('Allow', 'POST');
