@@ -25,13 +25,10 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
           const fileName = await saveFile(files.image);
           const blogs = await prisma.blogs.create({
             data: {
-              title: fields.title as string,
-              description: fields.description as string,
-              publishedOn: fields.publishedOn as string,
-              author: fields.author as string,
+              ...fields,
               isDeleted: false,
               image: fileName,
-            },
+            } as any,
           });
           return res.status(200).json({ blogs });
         });
@@ -48,8 +45,11 @@ export const config = {
 };
 
 const saveFile = async (file: any) => {
+  const path = require('path');
+  const rootDir = path.resolve('/');
+  const filePath = path.join(rootDir, 'public', 'uploads', file.originalFilename.split(' ').join(''));
   const data = fs.readFileSync(file.filepath);
-  fs.writeFileSync(`./public/uploads/${file.originalFilename.split(' ').join('')}`, data);
+  fs.writeFileSync(filePath, data);
   await fs.unlinkSync(file.filepath);
   return `/uploads/${file.originalFilename.split(' ').join('')}`;
 };

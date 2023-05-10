@@ -16,20 +16,16 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
     }
     case 'PATCH': {
       try {
-        // const blog = await prisma.blogs.findUnique({ where: { id: query.id as string } });
-
-        // const updatedBlog = await prisma.blogs.update({
-        //   where: {
-        //     id: query.id as string,
-        //   },
-        //   data: {
-        //     title: body?.title ? body?.title : blog?.title,
-        //     description: body?.description ? body?.description : blog?.description,
-        //     publishedOn: body?.publishedOn ? body?.publishedOn : blog?.description,
-        //     isDeleted: false,
-        //   },
-        // });
-        res.status(200).json({ ERR: 'API Under Dev' } as any);
+        const updatedBlog = await prisma.blogs.update({
+          where: {
+            id: query.id as string,
+          },
+          data: {
+            ...body,
+            isDeleted: false,
+          },
+        });
+        res.status(200).json({ updatedBlog } as any);
       } catch (err) {
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }
