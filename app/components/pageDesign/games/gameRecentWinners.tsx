@@ -2,6 +2,7 @@ import { Button, Container, Image, Text, Title, Grid, BackgroundImage, SimpleGri
 import { CardData, WinnerCard } from '@pasa/components/card';
 import { Carousel, useStylesCarousel } from '@pasa/customComponents';
 import { recentWinners, topWinners } from '@pasa/public';
+import { useMediaQuery } from '@mantine/hooks';
 export async function getStaticProps() {
   return {
     props: {
@@ -16,13 +17,14 @@ type pageProps = {
 };
 
 export function GameRecentWinners() {
+  const matches = useMediaQuery('(max-width: 810px)');
   const { classes } = useStylesCarousel();
   return (
     <>
       <Container
         fluid
-        pl={90}
-        pr={69}
+        pl={matches? 50 : 90}
+        pr={matches? 50 : 69}
         pt={100}
         style={{ zIndex: 150, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
       >

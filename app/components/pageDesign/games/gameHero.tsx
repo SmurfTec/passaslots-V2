@@ -79,7 +79,7 @@ export function GameHero() {
         {/* </Grid.Col> */}
       </Group>
       ) : undefined}
-      <Container fluid pl={90} pr={69} py={100}>
+      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={100}>
         <Grid justify='center' align='center'>
           <Grid.Col sm={12}>
             <div className='text-center'>

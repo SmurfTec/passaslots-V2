@@ -60,7 +60,7 @@ export function GameCarousel() {
       backdropFilter: 'blur(20px)',
       backgroundSize: 'cover',
     }}>
-      <Container className="space-y-16" fluid pl={90} pr={69} py={100}>
+      <Container className="space-y-16" fluid pl={matches? 5 : 90} pr={matches? 5 : 69} py={100}>
         <Title className="font-[700] text-[48px] leading-[56px] tracking-[-0.015em] uppercase mb-[79px]">
           MULTIPLAYER FISHING
         </Title>
