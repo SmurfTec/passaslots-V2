@@ -4,9 +4,11 @@ import { NextLink } from '@mantine/next';
 import { useBonusModal } from '@pasa/hooks';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { ArrowRight } from 'tabler-icons-react';
 
 const useStyles = createStyles((theme) => ({
+  menu: {
+    backgroundColor: '#150B2E',
+  },
   burger: {
     marginTop: -20,
     [theme.fn.largerThan(809)]: {
@@ -135,65 +137,86 @@ export function Header() {
               keepMounted={false}
               classNames={classes}
               width="100%"
-              position="bottom-end"
+              position="top-start"
               offset={40}
               radius={0}
+              // ba='#150B2E'
             >
               <Menu.Target>
                 <Burger
                   opened={opened}
-                  color={router.pathname === '/' ? 'white' : 'black'}
+                  color={opened ? 'white' : '#FFB800'}
                   onClick={toggle}
                   className={classes.burger}
                   size="sm"
                 />
               </Menu.Target>
-              <Menu.Dropdown>
-                <Menu.Item onClick={bonusOpen} rightSection={<ArrowRight strokeWidth={0.8} size={30} />}>
-                  Sign up for Players
+              <Menu.Dropdown style={{textAlignLast: 'center'}} bg='#150B2E'>
+                <Menu.Item color='#fff !important' onClick={bonusOpen} >
+                  SIGNUP FOR PLAYERS
                 </Menu.Item>
-                <Menu.Divider />
+                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
                 <Menu.Item
-                  rightSection={<ArrowRight strokeWidth={0.8} size={30} />}
+                  color={router.pathname === '/pasa-for-distributor' ? '#FFB800 !important' : '#fff !important'}
                   component={NextLink}
                   href="/pasa-for-distributor"
                 >
-                  PASA for Distribution
+                  PASA FOR DISTRIBUTION
                 </Menu.Item>
-                <Menu.Divider />
-                <Menu.Item rightSection={<ArrowRight strokeWidth={0.8} size={30} />} component={NextLink} href="/games">
-                  Games
+                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
+                <Menu.Item 
+                  color={router.pathname === '/games' ? '#FFB800 !important' : '#fff !important'}
+                  component={NextLink} href="/games">
+                  GAMES
                 </Menu.Item>
-                <Menu.Divider />
-                <Menu.Item rightSection={<ArrowRight strokeWidth={0.8} size={30} />} component={NextLink} href="/blog">
-                  Blogs
+                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
+                <Menu.Item color={router.pathname === '/blog' ? '#FFB800 !important' : '#fff !important'} 
+                  component={NextLink} href="/blog">
+                  BLOGS
                 </Menu.Item>
-                <Menu.Divider />
+                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
                 <Menu.Item
-                  rightSection={<ArrowRight strokeWidth={0.8} size={30} />}
+                  color={router.pathname === '/how-it-works' ? '#FFB800 !important' : '#fff !important'}
                   component={NextLink}
                   href="/how-it-works"
                 >
-                  How does it work?
+                  HOW IT WORKS
                 </Menu.Item>
-                <Menu.Divider />
-                <Menu.Item rightSection={<ArrowRight strokeWidth={0.8} size={30} />} component={NextLink} href="/about">
-                  About
+                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
+                <Menu.Item 
+                  color={router.pathname === '/about' ? '#FFB800 !important' : '#fff !important'}
+                  component={NextLink} href="/about">
+                  ABOUT US
                 </Menu.Item>
-                <Menu.Divider />
+                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
                 <Menu.Item
-                  rightSection={<ArrowRight strokeWidth={0.8} size={30} />}
+                  color={router.pathname === '/contact' ? '#FFB800 !important' : '#fff !important'}
                   component={NextLink}
                   href="/contact"
                 >
-                  Contact Us
+                  CONTACT US
                 </Menu.Item>
                 <Button
                   fullWidth
                   maw={180}
                   onClick={bonusOpen}
                   size="lg"
-                  className="text-sm font-bold ml-8 mt-2"
+                  className="text-sm font-bold mx-auto mt-2"
+                  styles={{
+                    label: {
+                      color: 'white',
+                      '&:hover': {
+                        color: 'white',
+                      },
+                    },
+                    root: {
+                      background: 'linear-gradient(180deg, #016BE6 0%, rgba(246, 202, 167, 0.44) 100%)',
+  
+                      '&:hover': {
+                        background: 'linear-gradient(180deg, #016BE6 0%, rgba(246, 202, 167, 0.44) 100%)',
+                      },
+                    },
+                  }}
                   radius={50}
                 >
                   LOGIN
@@ -203,7 +226,22 @@ export function Header() {
                   maw={180}
                   onClick={bonusOpen}
                   size="lg"
-                  className="text-sm font-bold ml-8 mt-2"
+                  className="text-sm font-bold mx-auto mt-2"
+                  styles={{
+                    label: {
+                      color: 'white',
+                      '&:hover': {
+                        color: 'white',
+                      },
+                    },
+                    root: {
+                      background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
+  
+                      '&:hover': {
+                        background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
+                      },
+                    },
+                  }}
                   radius={50}
                 >
                   SIGN UP
