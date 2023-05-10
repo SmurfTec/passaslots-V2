@@ -78,13 +78,13 @@ export function DistributorHero() {
           {/* </Grid.Col> */}
         </Group>
         ) : undefined}
-        <Container fluid py={100} ml={90} mr={69} className="min-h-[65vh] sm:min-h-screen relative">
+        <Container fluid py={100} ml={matches_left ? 5 : 90} mr={matches_left ? 5 : 69} className="min-h-[65vh] sm:min-h-screen relative">
           <div className="text-center">
             <Image styles={{
               image:{
                 margin: 'auto'
               }
-            }} className='items-center pt-20' src="/images/pages/distribution/crown.png" alt="graph" height="auto" width="auto" />
+            }} className='items-center pt-20' src="/images/pages/distribution/crown.png" alt="graph" />
             <div className="text-center">
               <Title mt={30} className="font-[900] uppercase leading-[112px] tracking-[-0.015em] text-[96px]" color='white' style={{textShadow: '0px 4px 33px #016BE6'}}>
                 THE LEADING PARTNER<br/> GAMING PLATFORM
