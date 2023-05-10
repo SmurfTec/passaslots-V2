@@ -1,6 +1,8 @@
 import { Container, Grid, Text, Title, Button, Image, BackgroundImage } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function BlogDiscover() {
+  const matches = useMediaQuery('(max-width: 570px)');
   return (
     <div>
       <BackgroundImage
@@ -17,7 +19,7 @@ export function BlogDiscover() {
         src="/images/pages/blogs/mobilegamebg.png"
         bgsz="auto"
       >
-        <Container fluid pl={90} pr={69} py={100}>
+        <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={100}>
           <Grid align="center" justify="center">
             <Grid justify="center" align="center">
               <Image

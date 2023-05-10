@@ -1,5 +1,6 @@
 import { Container, Grid, Image, Title } from '@mantine/core';
 import { SingleArticle, SingleArticleProps } from './singleArticle';
+import { useMediaQuery } from '@mantine/hooks';
 
 const articleData: Array<SingleArticleProps> = [
   {
@@ -41,6 +42,7 @@ const articleData: Array<SingleArticleProps> = [
 ];
 
 export function BlogArticle() {
+  const matches = useMediaQuery('(max-width: 570px)');
   return (
     <div
       style={{
@@ -54,7 +56,7 @@ export function BlogArticle() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container py={100} fluid pl={90} pr={69}>
+      <Container py={100} fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
         <Grid>
           <Grid.Col sm={12}>
             <div className="text-center">

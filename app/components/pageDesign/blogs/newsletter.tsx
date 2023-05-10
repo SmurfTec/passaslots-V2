@@ -73,13 +73,11 @@ export function NewsletterBlog() {
         className="relative opacity-21"
         src="/images/header/backgroundImage.png"
       >
-        <Container fluid pl={90} pr={69} py={100}>
+        <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={100}>
           <Grid justify="center" align="center">
             <Grid.Col sm={12}>
               <Grid justify="center" align="center">
                 <Image
-                  height="auto"
-                  width="auto"
                   className="mx-auto my-auto"
                   src="/images/pages/blogs/addsomeluck.png"
                   alt="image"
@@ -114,7 +112,7 @@ export function NewsletterBlog() {
                       input: {
                         padding: '30px',
                         fontSize: '14px',
-                        width: '425px',
+                        width: matches ? '300px' : '425px',
                         borderRadius: '50px',
                         borderColor: '#016BE6',
                         ':focus': {

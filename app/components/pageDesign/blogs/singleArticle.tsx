@@ -15,8 +15,8 @@ export function SingleArticle({ author, date, image, title }: SingleArticleProps
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'auto',
       borderRadius: '18px',
-      width: '558px',
-      height: '163px'
+      maxWidth: '558px',
+      minHeight: '163px'
       // margin: 'auto',
       // justifyContent: 'space-between'
     }} align="top">
@@ -24,14 +24,14 @@ export function SingleArticle({ author, date, image, title }: SingleArticleProps
         <Image height='auto' width='auto' src={image} alt={image} />
       </Grid.Col>
       <Grid.Col xs={7} sm={9} className="space-y-4 px-[19px]">
-        <Title color='#EEEEEE' className="font-[700] leading-[30px] text-[22px] uppercase">
+        <Title color='#EEEEEE' className="font-[700] leading-[30px] !text-[22px] uppercase">
           {title}
         </Title>
         <div className='flex justify-between'>
-          <Text color='white' className="font-[400] text-[14px] leading-[20px] opacity-70 mt-[45px]">
+          <Text color='white' className="font-[400] !text-[14px] leading-[20px] opacity-70 mt-[45px]">
             By {author}
           </Text>
-          <Text color='white' className="font-[400] text-[14px] leading-[20px] opacity-70 mt-[45px]">
+          <Text color='white' className="font-[400] !text-[14px] leading-[20px] opacity-70 mt-[45px]">
             {date}
           </Text>
         </div>

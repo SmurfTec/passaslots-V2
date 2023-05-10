@@ -2,6 +2,7 @@ import { Button, Container, Grid, Title } from '@mantine/core';
 import { SingleBlog, SingleBlogProps } from './singleBlog';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useMediaQuery } from '@mantine/hooks';
 
 const blogData: Array<SingleBlogProps> = [
   {
@@ -44,6 +45,7 @@ const blogData: Array<SingleBlogProps> = [
 
 export function BlogLayout() {
   const [blogsData, setBlogsData] = useState<SingleBlogProps[]>([]);
+  const matches = useMediaQuery('(max-width: 810px)', true);
 
   const getBlogs = () => {
     const BASE_URL = process.env.BASE_URL as string;
@@ -66,8 +68,8 @@ export function BlogLayout() {
     <Container
       py={100}
       fluid
-      pl={100}
-      pr={69}
+      pl={matches ? 5 : 90}
+      pr={matches ? 5 : 69}
       style={{ zIndex: 150, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
     >
       <Grid>

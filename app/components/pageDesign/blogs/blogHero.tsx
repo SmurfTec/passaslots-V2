@@ -40,7 +40,7 @@ export function BlogHero() {
           backgroundPosition: 'center center',
           backgroundSize: '100% 100%',
           backgroundRepeat: 'no-repeat',
-          minHeight: '100vh',
+          // minHeight: '100vh',
         }}
         className="relative opacity-21"
         src="/images/header/backgroundImage.png"
@@ -71,8 +71,6 @@ export function BlogHero() {
               </Title>
             </div>
             <Image
-              width="auto"
-              height="auto"
               className="mx-auto my-auto pt-[35px]"
               src="/images/pages/blogs/bloghero.png"
               alt="image"
