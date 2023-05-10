@@ -1,7 +1,9 @@
 import { Button, Container, Grid, Image, Text, Title, BackgroundImage } from '@mantine/core';
 import { NextLink } from '@mantine/next';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function PDProfit() {
+  const matches = useMediaQuery('(max-width: 425px)', true);
   return (
     <BackgroundImage
       style={{
@@ -17,14 +19,12 @@ export function PDProfit() {
       }}
       src="/images/pages/pasa-for-distributor/bgProfit.png"
     >
-      <Container fluid pl={90} pr={69} py={100}>
+      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={100}>
         <Grid m={0}>
           <Grid.Col lg={6}>
             <Image
               src="/images/pages/pasa-for-distributor/Gold_Dollar_Coins_stack.png"
               alt="Gold_Dollar_Coins_stack"
-              height="auto"
-              width="auto"
             />
           </Grid.Col>
           <Grid.Col lg={6}>
@@ -33,28 +33,28 @@ export function PDProfit() {
                 Profits with the Online
                 <br /> Revolution
               </Title>
-              <Text mb={50} mt={35} color="white" className="font-[400] text-[20px] leading-[38px] tracking-[0.005em]">
-                Are you looking to take your gaming distribution to the next level?
-                <br />
-                Look no further than Pasa Online! As a distributor, you can buy
-                <br />
-                virtual credits with us and benefit from our ever-growing
-                <br />
-                platform. The more sales volumes and wider channels you have,
-                <br />
-                your distributor level will be higher. And the bigger your profit
-                <br />
-                space becomes! With the support of our top-notch app
-                <br />
-                development team, you'll never have to worry about a thing.
-                <br />
-                Become a part of our distribution network, reaching prominent
-                <br />
-                distributors and stores nationwide. We take the responsibility of
-                <br />
-                our platform seriously and will take legal action against any
-                <br />
-                misuse of our software.
+              <Text maw={585} mb={50} mt={35} color="white" className="font-[400] text-[20px] leading-[38px] tracking-[0.005em]">
+                Are you looking to take your gaming distribution to the next level?{' '}
+                {/* <br /> */}
+                Look no further than Pasa Online! As a distributor, you can buy{' '}
+                {/* <br /> */}
+                virtual credits with us and benefit from our ever-growing{' '}
+                {/* <br /> */}
+                platform. The more sales volumes and wider channels you have,{' '}
+                {/* <br /> */}
+                your distributor level will be higher. And the bigger your profit{' '}
+                {/* <br /> */}
+                space becomes! With the support of our top-notch app{' '}
+                {/* <br /> */}
+                development team, you'll never have to worry about a thing.{' '}
+                {/* <br /> */}
+                Become a part of our distribution network, reaching prominent{' '}
+                {/* <br /> */}
+                distributors and stores nationwide. We take the responsibility of{' '}
+                {/* <br /> */}
+                our platform seriously and will take legal action against any{' '}
+                {/* <br /> */}
+                misuse of our software.{' '}
               </Text>
 
               <Button

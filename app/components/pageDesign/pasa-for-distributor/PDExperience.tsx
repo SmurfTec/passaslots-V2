@@ -1,6 +1,8 @@
 import { Container, Grid, Image, Text, Title, Group, Button } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function PDExperience() {
+  const matches = useMediaQuery('(max-width: 700px)', true);
   return (
     <div
       style={{
@@ -13,19 +15,17 @@ export function PDExperience() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={90} mr={69} py={100}>
+      <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} py={100}>
         <Grid align="center" justify="center">
           <Image
             className="mx-auto my-auto"
-            height="auto"
-            width="auto"
             src="/images/pages/pasa-for-distributor/experience.png"
             alt="experience"
           />
         </Grid>
         <Title
           mt={37}
-          className="uppercase text-[48px] font-[700] leading-[61px] tracking-[0.0125em] text-center"
+          className="uppercase xs:!text-[40px] text-[48px] font-[700] leading-[61px] tracking-[0.0125em] text-center"
           color="white"
         >
           Pasa distributors{' '}
@@ -42,12 +42,13 @@ export function PDExperience() {
                 flexDirection: 'column',
                 gap: '30px',
                 alignItems: 'stretch',
+                whiteSpace: 'normal',
               },
             }}
             style={{
               border: '6px solid #016BE6',
-              width: '385px',
-              height: '382px',
+              maxWidth: '385px',
+              minHeight: '382px',
               flexDirection: 'column',
               background: 'transparent',
               padding: '34px 25px',
@@ -62,10 +63,10 @@ export function PDExperience() {
               src="/images/pages/pasa-for-distributor/experience1.png"
               alt=""
             />
-            EASY TO START - Start Offering
-            <br />
-            Promotional Games to You Customers
-            <br />
+            EASY TO START - Start Offering{' '}
+            {/* <br /> */}
+            Promotional Games to You Customers{' '}
+            {/* <br /> */}
             Same Day.
           </Button>
           <Button
@@ -74,12 +75,13 @@ export function PDExperience() {
                 flexDirection: 'column',
                 gap: '30px',
                 alignItems: 'stretch',
+                whiteSpace: 'normal',
               },
             }}
             style={{
               border: '6px solid #016BE6',
-              width: '385px',
-              height: '382px',
+              maxWidth: '385px',
+              minHeight: '382px',
               flexDirection: 'column',
               background: 'transparent',
               padding: '34px 25px',
@@ -94,10 +96,11 @@ export function PDExperience() {
               src="/images/pages/pasa-for-distributor/experience2.png"
               alt=""
             />
-            NO LARGE INVESTMENT REQUIRED -<br />
-            Contact Us Now and Get Your Agent
-            <br />
-            Account Today!
+            NO LARGE INVESTMENT REQUIRED -{' '}
+            {/* <br /> */}
+            Contact Us Now and Get Your Agent{' '}
+            {/* <br /> */}
+            Account Today!{' '}
           </Button>
           <Button
             styles={{
@@ -105,12 +108,13 @@ export function PDExperience() {
                 flexDirection: 'column',
                 gap: '30px',
                 alignItems: 'stretch',
+                whiteSpace: 'normal',
               },
             }}
             style={{
               border: '6px solid #016BE6',
-              width: '385px',
-              height: '382px',
+              maxWidth: '385px',
+              minHeight: '382px',
               flexDirection: 'column',
               background: 'transparent',
               padding: '34px 25px',
@@ -125,15 +129,15 @@ export function PDExperience() {
               src="/images/pages/pasa-for-distributor/experience3.png"
               alt=""
             />
-            #1 PLATFORM - Over 40 Top Performing
-            <br />
-            Promotional Games created with industry
-            <br />
-            leading experience. Always aiming for
-            <br />
-            growth and updates with your customers
-            <br />
-            in mind
+            #1 PLATFORM - Over 40 Top Performing{' '}
+            {/* <br /> */}
+            Promotional Games created with industry{' '}
+            {/* <br /> */}
+            leading experience. Always aiming for{' '}
+            {/* <br /> */}
+            growth and updates with your customers{' '}
+            {/* <br /> */}
+            in mind{' '}
           </Button>
         </Group>
       </Container>

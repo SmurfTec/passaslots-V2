@@ -65,11 +65,11 @@ export function PDHero() {
           {/* </Grid.Col> */}
         </Group>
         ) : undefined}
-      <Container fluid pl={90} pr={69} py={100}>
+      <Container fluid pl={matches? 2 : 90} pr={matches? 2 : 69} py={100}>
         <Grid justify='center' align='center' mb={500}>
           <Grid.Col sm={12}>
             <div className='text-center'>
-              <Title mt={150} color='white' className='uppercase text-[48px] font-[900] leading-[56px] tracking-[-0.015em] drop-shadow-[0_4px_33px_#016BE6] text-center'>
+              <Title mt={150} color='white' className='uppercase xs:!text-[40px] text-[48px] font-[900] leading-[56px] tracking-[-0.015em] drop-shadow-[0_4px_33px_#016BE6] text-center'>
                 Empower Your Organization With
               </Title>
               <Title mt={20} color='#FFB800' className='uppercase text-[96px] font-[900] leading-[112px] tracking-[-0.015em] text-center'>

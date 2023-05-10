@@ -1,7 +1,9 @@
 import { BackgroundImage, Button, Container, Grid, Image, Text, Title } from '@mantine/core';
 import { NextLink } from '@mantine/next';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function PDAwaken() {
+  const matches = useMediaQuery('(max-width: 810px)', true);
   return (
     <Container
       fluid
@@ -19,7 +21,7 @@ export function PDAwaken() {
         pt={100}
         src="/images/header/backgroundImage.png"
       >
-        <Grid pl={90} pr={69}>
+        <Grid pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
           <Grid.Col lg={6}>
             <Title className="uppercase text-[64px] font-[700] leading-[69px] tracking-[0.0125em]" color="white">
               Awaken the
@@ -40,8 +42,6 @@ export function PDAwaken() {
           </Grid.Col>
           <Grid.Col lg={6}>
             <Image
-              height="auto"
-              width="auto"
               src="/images/pages/pasa-for-distributor/awakenBalance.png"
               alt="awakenBalance"
             />
@@ -71,11 +71,11 @@ export function PDAwaken() {
           }}
           src="/images/pages/pasa-for-distributor/bgPowerOfTech.png"
         >
-          <Grid pt={150} pb={150} pl={90} pr={69} m={0} align="center" justify="center" gutterSm={50}>
+          <Grid pt={150} pb={150} pl={matches ? 5 : 90} pr={matches ? 5 : 69} m={0} align="center" justify="center" gutterSm={50}>
             <Grid.Col xs={12} sm={12}>
               <div className="text-center">
                 <Title
-                  className="uppercase text-[48px] text-center font-[700] leading-[51px] tracking-[0.0125em]"
+                  className="uppercase xs:!text-[44px] text-[48px] text-center font-[700] leading-[51px] tracking-[0.0125em]"
                   color="white"
                 >
                   Power of <span className="text-[#50A1FF]">Technology</span>

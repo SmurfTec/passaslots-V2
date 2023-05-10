@@ -1,7 +1,9 @@
 import { BackgroundImage, Button, Container, Grid, Text, Title, Image } from '@mantine/core';
 import { NextLink } from '@mantine/next';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function PDBusiness() {
+  const matches = useMediaQuery('(max-width: 810px)', true);
   return (
     <BackgroundImage
       style={{
@@ -18,14 +20,12 @@ export function PDBusiness() {
       }}
       src="/images/header/backgroundImage.png"
     >
-      <Container fluid pl={90} pr={69} py={100}>
+      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={100}>
         <Grid m={0}>
           <Grid.Col lg={6}>
             <Image
               src="/images/pages/pasa-for-distributor/machine-leprechaun.png"
               alt="machine-leprechaun"
-              height="auto"
-              width="auto"
             />
           </Grid.Col>
           <Grid.Col lg={6}>
@@ -33,7 +33,7 @@ export function PDBusiness() {
               <Text mb={18} color="white" className="uppercase font-[400] text-[20px] leading-[21px]">
                 Simplify Your Business
               </Text>
-              <Title color="white" className="font-[700] text-[48px] leading-[55px] uppercase" opacity={0.9}>
+              <Title color="white" className="font-[700] xs:!text-[44px] text-[48px] leading-[55px] uppercase" opacity={0.9}>
                 Effortless Business
                 <br /> Management with
                 <br />
