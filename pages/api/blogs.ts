@@ -5,6 +5,14 @@ import formidable from 'formidable';
 import path from 'path';
 import getConfig from 'next/config';
 
+const cloudinary = require('cloudinary').v2;
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
 const prisma = new PrismaClient();
 
 export default async function BlogsHandler(req: NextApiRequest, res: NextApiResponse<any>) {
@@ -50,10 +58,14 @@ export const config = {
 };
 
 const saveFile = async (file: any) => {
-  const data = fs.readFileSync(file.filepath);
-  const filePath = 'public/uploads/' + file.originalFilename.split(' ').join('');
-  const pathURL = path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, filePath);
-  fs.writeFileSync(pathURL, data);
-  await fs.unlinkSync(file.filepath);
-  return `/uploads/${file.originalFilename.split(' ').join('')}`;
+  let fileName = '';
+  await cloudinary.uploader
+    .upload(file.filepath, {
+      folder: 'uploads',
+      public_id: file.originalFilename.split(' ').join(''),
+    })
+    .then((res: any) => {
+      fileName = res.secure_url;
+    });
+  return fileName;
 };

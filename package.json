@@ -23,6 +23,7 @@
     "@tanstack/react-table": "^8.8.2",
     "@types/react-phone-number-input": "^3.0.14",
     "axios": "^1.4.0",
+    "cloudinary": "^1.36.4",
     "embla-carousel-autoplay": "^7.0.9",
     "embla-carousel-react": "^7.1.0",
     "formidable": "^2.1.1",
