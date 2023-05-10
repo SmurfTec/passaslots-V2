@@ -1,4 +1,5 @@
 import { Container, Flex, Text, Title, BackgroundImage, createStyles } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 const useStyles = createStyles((theme) => ({
   backdrop: {
@@ -17,12 +18,13 @@ const useStyles = createStyles((theme) => ({
 
 export const MiddleHeading = () => {
   const { classes } = useStyles();
+  const matches = useMediaQuery('(max-width: 770px)', true);
   return (
     <div
       className={classes.backdrop}
       style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
     >
-      <Container fluid ml={90} mr={69}>
+      <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69}>
         <Flex py={120} mih={50} gap="md" justify="center" align="flex-start" direction="column" wrap="wrap">
           <Title
             mb={50}

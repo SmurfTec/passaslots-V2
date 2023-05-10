@@ -1,5 +1,6 @@
 import { BackgroundImage, Button, Container, Grid, Group, Image, Text, Title, createStyles } from '@mantine/core';
 import { NextLink } from '@mantine/next';
+import { useMediaQuery } from '@mantine/hooks';
 import { useBonusModal } from '@pasa/hooks';
 import { HomeTopCarousel } from './hometopCarousel';
 
@@ -39,11 +40,17 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan(1400)]: {
       marginTop: '5px',
     },
+    [theme.fn.smallerThan(530)]: {
+      marginTop: '10px',
+    },
     marginTop: '100px',
   },
   rightPanel: {
     [theme.fn.smallerThan(1400)]: {
       width: '500px',
+    },
+    [theme.fn.smallerThan(530)]: {
+      width: '100%',
     },
     width: '50%',
   },
@@ -51,12 +58,16 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan(1400)]: {
       marginTop: '10px',
     },
+    [theme.fn.smallerThan(530)]: {
+      width: '100%',
+    },
     marginTop: '60px',
   },
 }));
 
 export function HighTideHome() {
   const [BonusModal, bonusOpen] = useBonusModal();
+  const matches = useMediaQuery('(max-width: 770px)', true);
   const { classes } = useStyles();
   return (
     <>
@@ -70,8 +81,8 @@ export function HighTideHome() {
           src="/images/pages/home/highTideImage.png"
         >
           <Container fluid py={50}>
-            <Grid ml={'90px'}>
-              <Grid.Col xs={6}>
+            <Grid pl={matches ? 2 : 90}>
+              <Grid.Col md={6}>
                 <Title
                   className="font-[700] tracking[-0.015em] w-400 md:w-500 lg:w-560"
                   color="white"
@@ -92,7 +103,7 @@ export function HighTideHome() {
                 >
                   To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
                   players to launch into playing this slot sensation the moment{' '}
-                  <span className="font-[700]">you’ve logged into your unique real money</span>
+                  <span className="font-[700]">you’ve logged into your unique real money</span>{' '}
                   account. You never know, one spin is all it takes to potentially change your life forever!
                 </Text>
                 <div className={classes.button}>
@@ -132,7 +143,7 @@ export function HighTideHome() {
         className={classes.backdrop2}
         style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
       >
-        <Container fluid ml={90} mr={69} h={120} pb={50}>
+        <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} h={120} pb={50}>
           {/* <Grid>
             <Grid.Col md={6}>
               <Image className='text-baseline left ' src="/images/pages/home/playdicewin.png" alt="home mobile" />
@@ -169,7 +180,7 @@ export function HighTideHome() {
                 <Button
                   component={NextLink}
                   href="games/#gameSlots"
-                  size="lg"
+                  size={matches ? "md" : "lg"}
                   bg="linear-gradient(to bottom, #2072D2, #A74C9A)"
                   className="font-[500] uppercase button"
                   radius={50}
@@ -177,11 +188,11 @@ export function HighTideHome() {
                     root: {
                       // borderColor: '#F6CAA7',
                       border: 'none',
-                      width: '315px',
-                      fontSize: '20px',
+                      width: matches ? '250px' : '315px',
+                      fontSize: matches ? '14px' : '20px',
                       fontStyle: 'normal',
                       color: '#FFFFFF',
-                      padding: '17px 53px',
+                      padding: matches ? '10px 25px' : '17px 53px',
                       gap: '10px',
                       '&:hover': {
                         background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',

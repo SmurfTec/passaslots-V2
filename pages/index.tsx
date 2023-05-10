@@ -30,8 +30,6 @@ export function Index() {
       <TestimonialCarousel />
       <BottomSubHeading2 />
       <BottomSubHeading />
-      {/* <Space h={100} /> */}
-      {/* <BottomHeading /> */}
     </div>
   );
 }

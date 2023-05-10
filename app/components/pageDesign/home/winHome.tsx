@@ -30,8 +30,6 @@ export function WinHome() {
             <Image
               className="text-center mx-auto"
               mb={58}
-              width={644}
-              height={363}
               src="/images/pages/home/winHomeImage.png"
               alt="image"
             />

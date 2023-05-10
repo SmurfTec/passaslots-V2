@@ -53,7 +53,7 @@ export function HomeCollection() {
         </Title>
         <Grid m={0} p={0} gutterMd={70}>
           {collectionData.map((item, key) => (
-            <Grid.Col px={0} sm={4} key={key + item.content}>
+            <Grid.Col px={0} md={4} key={key + item.content}>
               <SingleCollection button={item.button} title={item.title} content={item.content} image={item.image} />
             </Grid.Col>
           ))}

@@ -1,7 +1,9 @@
 import { Button, Container, Grid, Text, Title, Image } from '@mantine/core';
 import { NextLink } from '@mantine/next';
+import { useMediaQuery } from '@mantine/hooks';
 
 export const BottomSubHeading = () => {
+  const matches = useMediaQuery('(max-width: 700px)');
   return (
     <div
       className="bg-gradient-to-r from-blue-500 to-purple-600"
@@ -16,13 +18,11 @@ export const BottomSubHeading = () => {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={90} mr={69} py={50}>
+      <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} py={50}>
         <Grid align="top">
           <Grid.Col sm={12}>
             <Image
               className="mx-auto mb-10"
-              width={508}
-              height={545}
               src="/images/pages/home/cardsfalling.png"
               alt="image"
             />
