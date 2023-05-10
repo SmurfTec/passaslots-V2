@@ -2,6 +2,8 @@ import { PrismaClient, blogs } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import formidable from 'formidable';
+import path from 'path';
+import getConfig from 'next/config';
 
 const prisma = new PrismaClient();
 
@@ -49,7 +51,9 @@ export const config = {
 
 const saveFile = async (file: any) => {
   const data = fs.readFileSync(file.filepath);
-  fs.writeFileSync(`./public/uploads/${file.originalFilename.split(' ').join('')}`, data);
+  const filePath = 'public/uploads/' + file.originalFilename.split(' ').join('');
+  const pathURL = path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, filePath);
+  fs.writeFileSync(pathURL, data);
   await fs.unlinkSync(file.filepath);
   return `/uploads/${file.originalFilename.split(' ').join('')}`;
 };
