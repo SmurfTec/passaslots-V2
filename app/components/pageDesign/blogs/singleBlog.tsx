@@ -1,4 +1,5 @@
 import { Card, Image, Text, Title } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 export type SingleBlogProps = {
   image: string;
@@ -9,10 +10,11 @@ export type SingleBlogProps = {
 };
 
 export function SingleBlog({ image, date, title, author }: SingleBlogProps) {
+  const matches = useMediaQuery('(max-width: 500px)', true);
   return (
     <Card
-      h={450}
-      w={390}
+      h={matches ? 225 : 450}
+      w={matches ? 195 : 390}
       style={{
         border: '4px solid #016BE6',
         background: `linear-gradient(180deg, rgba(1, 107, 230, 0.2046) 53.23%, rgba(1, 107, 230, 0.93) 100%), url("${image}")`,

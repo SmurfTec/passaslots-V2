@@ -65,7 +65,7 @@ export function SingleBlogHero() {
           {/* </Grid.Col> */}
         </Group>
         ) : undefined}
-        <Container py={100} fluid ml={90} mr={69}>
+        <Container py={100} fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69}>
             <Grid mt={57} align='center'>
                 <Image radius={'13px'} height='auto' width='100%' src='images/pages/blog-detail/heroSingleBlog.png' alt='heroSingleBlog' />
                 <Title mt={36} className='uppercase font-[900] text-[48px] leading-[56px] tracking-[-0.015em]'>
@@ -94,8 +94,8 @@ export function SingleBlogHero() {
                 </Grid.Col>
                 <Grid.Col mt={72}>
                     <Group position='center'>
-                        <Image radius={'13px'} height='auto' width='auto' src='images/pages/blog-detail/NewCasino1.png' alt='NewCasino1' />
-                        <Image radius={'13px'} height='auto' width='auto' src='images/pages/blog-detail/NewCasino2.png' alt='NewCasino2' />
+                        <Image radius={'13px'} height={matches ? '100%' : 'auto'} width={matches ? '100%' : 'auto'} src='images/pages/blog-detail/NewCasino1.png' alt='NewCasino1' />
+                        <Image radius={'13px'} height={matches ? '100%' : 'auto'} width={matches ? '100%' : 'auto'} src='images/pages/blog-detail/NewCasino2.png' alt='NewCasino2' />
                     </Group>
                 </Grid.Col>
                 <Grid.Col mt={70}>
