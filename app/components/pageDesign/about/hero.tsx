@@ -91,7 +91,7 @@ export function Hero() {
                 About Us
               </Title>
             </Group>
-            <Image className='mx-auto' src="/images/pages/about/homeImage.png" width={551} height={523} alt="vector" />
+            <Image className='lg:!w-[551px] lg:!h-[523px] mx-auto' src="/images/pages/about/homeImage.png" alt="vector" />
             <Text color="black" className="font-[400] uppercase text-[#FFFFFF]" mt={0} size={24}>
               25+ full-time professionals, 1 goal:
             </Text>

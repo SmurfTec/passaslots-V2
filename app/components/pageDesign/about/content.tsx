@@ -1,6 +1,8 @@
 import { Container, Grid, Text, Title, Image } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function Content() {
+  const matches = useMediaQuery('(max-width: 810px)', true);
   return (
     <div
       style={{
@@ -18,7 +20,7 @@ export function Content() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={90} mr={69} py={100}>
+      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} py={100}>
         <div>
           <Grid className="space-y-24" align="center" gutter={50}>
             {/* 1st Row */}
@@ -26,8 +28,8 @@ export function Content() {
               <Image src="/images/pages/about/fun.png" alt="fun" className="block" />
             </Grid.Col>
             <Grid.Col className="relative" xs={12} sm={6}>
-              <div className="text-right md:text-left">
-                <Title className="uppercase text-[#ffffff] font-[700] text-[48px] leading-[51px] tracking-[0.0125em]">
+              <div className="text-center sm:text-left">
+                <Title className="uppercase text-[#ffffff] font-[700] text-[48px] xs:!text-[44px] leading-[51px] tracking-[0.0125em]">
                   <span className="text-[#50A1FF]">
                     Where gaming creators <br />
                     meet
@@ -50,23 +52,23 @@ export function Content() {
 
             {/* 2nd Row */}
             <Grid.Col className="relative" xs={12} sm={6}>
-              {/* <div className="absolute top-1/2 -translate-y-1/2 md:pr-32"> */}
-              <Title className="uppercase text-[#ffffff] font-[700] text-[48px] leading-[51px] tracking-[0.0125em]">
-                And, whether you're doing
-                <br /> your{' '}
-                <span className="text-[#50A1FF]">
-                  Pasa Casino online
-                  <br /> gaming
-                </span>
-              </Title>
-              <Text maw={619} mt={20} className="text-[#ffffff] font-[400] text-[20px] leading-[38px]">
-                Via your browser, laptop, PC, smartphone, or tablet, we promise one of{' '}
-                {/* <br /> */}
-                the most diverse <span className="font-[700]">selections of slot games, blackjack</span> and roulette{' '}
-                {/* <br /> */}
-                variations, and more to make your experience with us unforgettable.{' '}
-              </Text>
-              {/* </div> */}
+              <div className="text-center sm:text-left">
+                <Title className="uppercase text-[#ffffff] font-[700] text-[48px] xs:!text-[44px] leading-[51px] tracking-[0.0125em]">
+                  And, whether you're doing
+                  <br /> your{' '}
+                  <span className="text-[#50A1FF]">
+                    Pasa Casino online
+                    <br /> gaming
+                  </span>
+                </Title>
+                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] text-[20px] leading-[38px]">
+                  Via your browser, laptop, PC, smartphone, or tablet, we promise one of{' '}
+                  {/* <br /> */}
+                  the most diverse <span className="font-[700]">selections of slot games, blackjack</span> and roulette{' '}
+                  {/* <br /> */}
+                  variations, and more to make your experience with us unforgettable.{' '}
+                </Text>
+              </div>
             </Grid.Col>
             <Grid.Col className="text-right" xs={12} sm={6}>
               <Image src="/images/pages/about/casino.png" alt="casino" />
@@ -78,7 +80,7 @@ export function Content() {
             </Grid.Col>
             <Grid.Col className="relative" xs={12} sm={6}>
               <div className="text-center sm:text-left">
-                <Title className="uppercase text-[#ffffff] font-[700] text-[48px] leading-[51px] tracking-[0.0125em]">
+                <Title className="uppercase text-[#ffffff] font-[700] text-[48px] xs:!text-[44px] leading-[51px] tracking-[0.0125em]">
                   <span className="text-[#50A1FF]">We make gaming easy,</span> fun,
                   <br /> and accessible to
                   <br /> everyone

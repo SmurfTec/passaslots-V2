@@ -2,6 +2,7 @@ import { Button, Checkbox, Group, Text, TextInput, Textarea, createStyles, Grid 
 import { useForm } from '@mantine/form';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { useMediaQuery } from '@mantine/hooks';
 
 type ContactForm = {
   firstName: string;
@@ -17,6 +18,8 @@ export function ContactForm() {
   const router = useRouter();
   const { classes } = useStyles();
   const [message, setMessage] = useState(false);
+  const matches = useMediaQuery('(max-width: 810px)', true);
+
   const form = useForm({
     initialValues: {
       firstName: '',
@@ -125,7 +128,7 @@ export function ContactForm() {
           <Button
             type="submit"
             radius={50}
-            className="h-12 px-12 text-[20px] font-[400] w-[45%] lg:w-[auto]"
+            className="h-12 px-12 text-[20px] font-[400] w-[45%] lg:w-[auto] md:w-[45%] sm:w-[45%] xs:w-[80%]"
             styles={{
               root: {
                 background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',

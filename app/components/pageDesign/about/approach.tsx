@@ -1,6 +1,8 @@
 import { Container, Title, Image, Text, BackgroundImage, Grid } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function Approach() {
+  const matches = useMediaQuery('(max-width: 810px)', true);
   return (
     <div
       style={{
@@ -22,7 +24,7 @@ export function Approach() {
         src="/images/pages/about/approachbg.png"
         bgsz="auto"
       >
-        <Container fluid ml={90} mr={69} py={100}>
+        <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} py={100}>
           <Title className="uppercase text-[#ffffff] text-center font-[700] text-[48px] leading-[56px] tracking-[-0.015em]">
             OUR APPROACH
           </Title>
@@ -36,7 +38,9 @@ export function Approach() {
             mt={100}
             justify="center"
             align="center"
-            className="grid grid-items-center grid-rows-2 grid-flow-col gap-[80px]"
+            className={matches ? 
+              "grid grid-items-center grid-rows-3 grid-flow-col gap-[80px]"
+            : "grid grid-items-center grid-rows-2 grid-flow-col gap-[80px]"}
           >
             <Image h={211} w={211} src="/images/pages/about/approach1.png" />
             <Image h={177} w={177} src="/images/pages/about/approach4.png" />

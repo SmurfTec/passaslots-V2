@@ -1,5 +1,8 @@
 import { Image, Button, Container, Group, Text, Title, Grid, BackgroundImage } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
+
 export function Goal() {
+  const matches = useMediaQuery('(max-width: 810px)', true);
   return (
     <div
       style={{
@@ -18,11 +21,11 @@ export function Goal() {
       }}
     >
       <BackgroundImage
-        src="/images/pages/about/goalZeus.png" className='xl:bg-[center_690px] lg:bg-[center_970px] md:bg-[center_1375px]'
+        src="/images/pages/about/goalZeus.png" className='xl:bg-[center_690px] lg:bg-[center_970px] md:bg-[center_965px] sm:bg-[center_1310px] xs:bg-[center_2030px]'
         style={{ backgroundRepeat: 'no-repeat'}}
         bgsz="auto"
       >
-        <Container fluid mr={69} ml={90} py={100}>
+        <Container fluid mr={matches ? 5 : 69} ml={matches ? 5 : 90} py={100}>
           <div className="pb-20 space-y-4">
             <Group position="center">
               <Button
@@ -140,12 +143,13 @@ export function Goal() {
             </Title>
             <Text
               mt={20}
+              maw={700}
               color="white"
               className="font-[400] text-[20px] tracking-[0.005em] leading-[38px]"
               opacity={0.8}
             >
-              Our commitment to being No.1 drives us to constantly improve. We are <br /> always broadening our
-              community, enhancing our content, and finding <br /> new ways to provide value to our players.
+              Our commitment to being No.1 drives us to constantly improve. We are always broadening our{' '}
+              community, enhancing our content, and finding new ways to provide value to our players.
             </Text>
             {/* <Image className='mx-auto' width={478} height={565} src="/images/pages/about/goalZeus.png" /> */}
             <Title

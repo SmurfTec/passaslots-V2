@@ -1,9 +1,11 @@
 import { Button, Container, Grid, Image, Text, Title, BackgroundImage } from '@mantine/core';
 import { ContactForm } from '@pasa/components/form';
 import { useBonusModal } from '@pasa/hooks';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function AboutContact() {
   const [BonusModal, bonusOpen] = useBonusModal();
+  const matches = useMediaQuery('(max-width: 810px)', true);
   return (
     <div
       style={{
@@ -18,7 +20,7 @@ export function AboutContact() {
         bgsz="auto"
         src="/images/pages/contact/querygiant.png"
       >
-        <Container fluid mr={69} ml={90}>
+        <Container fluid mr={matches ? 5 : 69} ml={matches ? 5 : 90}>
           <Grid align="center">
             <Grid.Col md={4} mt={99} mb={78} span={12}>
               <Title order={2} className="font-[700] uppercase text-[#fff]">
