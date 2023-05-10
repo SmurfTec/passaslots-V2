@@ -1,7 +1,9 @@
 import { BackgroundImage, Button, Container, Grid, Text, Title, Image } from '@mantine/core';
 import { useBonusModal } from '@pasa/hooks';
+import { useMediaQuery } from '@mantine/hooks';
 
 export function HiwSignup() {
+  const matches = useMediaQuery('(max-width: 810px)', true);
   const [BonusModal, bonusOpen] = useBonusModal();
   return (
     <div
@@ -23,13 +25,11 @@ export function HiwSignup() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={90} mr={69} className="py-16 md:py-32">
+      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} className="py-16 md:py-32">
         <Grid justify="center" align="center">
           <Grid.Col sm={12}>
             <Image
-              w="562px !important"
-              h="562px !important"
-              className="mx-auto my-auto pt-[33px]"
+              className="lg:!w-[562px] lg:!h-[562px] mx-auto my-auto pt-[33px]"
               src="/images/pages/hiw/winnings.png"
               alt="image"
             />

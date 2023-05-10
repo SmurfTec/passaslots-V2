@@ -86,7 +86,7 @@ export function HiwHero() {
           {/* </Grid.Col> */}
         </Group>
         ) : undefined}
-      <Container fluid ml={90} mr={69} className="mb-[-150px] mt-[300px] sm:mb-[auto] relative">
+      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} className="mb-[-150px] mt-[300px] sm:mb-[auto] relative">
         <Stack justify="center">
           <Group align='center'>
             <Title className="font-[900] text-[#FFB800]" order={3} style={{textShadow: '0px 4px 33px #016BE6', lineHeight: '38px'}}>
@@ -104,7 +104,7 @@ export function HiwHero() {
           <Text color="#FFFFFF" className="font-[400] uppercase tracking-[0.005em] leading-6" size="20px">
             Experience the thrill of casino gaming from the comfort of your own home
           </Text>
-          <Image w="562px !important" h="562px !important" className="mx-auto my-auto pt-[33px]" src="/images/pages/hiw/herohiw.png" alt="image" />
+          <Image className="lg:!w-[562px] lg:!h-[562px] mx-auto my-auto pt-[33px]" src="/images/pages/hiw/herohiw.png" alt="image" />
         </Stack>
       </Container>
       </BackgroundImage>
