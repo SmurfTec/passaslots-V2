@@ -157,6 +157,7 @@ export function Header() {
                 </Menu.Item>
                 <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
                 <Menu.Item
+                  className='text-center'
                   color={router.pathname === '/pasa-for-distributor' ? '#FFB800 !important' : '#fff !important'}
                   component={NextLink}
                   href="/pasa-for-distributor"
