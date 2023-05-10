@@ -45,11 +45,15 @@ export const config = {
 };
 
 const saveFile = async (file: any) => {
-  const path = require('path');
-  const rootDir = path.resolve('/');
-  const filePath = path.join(rootDir, 'public', 'uploads', file.originalFilename.split(' ').join(''));
-  const data = fs.readFileSync(file.filepath);
-  fs.writeFileSync(filePath, data);
-  await fs.unlinkSync(file.filepath);
-  return `/uploads/${file.originalFilename.split(' ').join('')}`;
+  try {
+    const path = require('path');
+    const rootDir = path.resolve('/');
+    const filePath = path.join(rootDir, 'public', 'uploads', file.originalFilename.split(' ').join(''));
+    const data = fs.readFileSync(file.filepath);
+    fs.writeFileSync(filePath, data);
+    await fs.unlinkSync(file.filepath);
+    return `/uploads/${file.originalFilename.split(' ').join('')}`;
+  } catch (e) {
+    return '';
+  }
 };
