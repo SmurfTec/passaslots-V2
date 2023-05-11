@@ -46,7 +46,7 @@ const images = [
 
 export function HomeHero() {
   const matches = useMediaQuery('(max-width: 1000px)');
-  const matches_mobile = useMediaQuery('(max-width: 600px)');
+  const matches_mobile = useMediaQuery('(max-width: 640px)', true);
   const autoplay = useRef(Autoplay({ delay: 4000 }));
   // const { classes } = useStyles();
   const [BonusModal, bonusOpen] = useBonusModal();
@@ -134,9 +134,9 @@ export function HomeHero() {
           align="center"
           color={'#FFB800'}
           mt={27}
-          className="font-[900] text-center uppercase"
+          className="font-[900] text-center uppercase sm:text-[96px] xs:text-[46px]"
           order={1}
-          style={{ fontSize: '96px', lineHeight: '112.5px', letterSpacing: '-1.5%' }}
+          style={{ lineHeight: '112.5px', letterSpacing: '-1.5%' }}
         >
           Pasa SLOTS
         </Title>
@@ -144,8 +144,8 @@ export function HomeHero() {
           align="center"
           color={'#ffffff'}
           mt={13}
-          className="font-[700] text-center uppercase"
-          size={'md'}
+          className="font-[700] text-center uppercase sm:text-[32px] xs:text-[16px]"
+          // size={matches_mobile ? 'sm' : 'md'}
           order={2}
         >
           Seize Your $10 Sign up Fortune by the Seashore
