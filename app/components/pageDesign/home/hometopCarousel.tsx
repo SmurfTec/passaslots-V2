@@ -90,6 +90,7 @@ export const HomeTopCarousel = () => {
               marginBottom: '30px',
             },
           }}
+          withControls={false}
           align="center"
           className="flex justify-center align-middle items-center"
           slideSize="50%"
