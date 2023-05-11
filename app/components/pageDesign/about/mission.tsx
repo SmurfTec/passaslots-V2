@@ -2,6 +2,7 @@ import { Container, Grid, Group, Text, Title, Image as MImage } from '@mantine/c
 import { useMediaQuery } from '@mantine/hooks';
 
 export function Mission() {
+  const matches = useMediaQuery('(max-width: 1150px)', true);
   return (
     <div
       style={{
@@ -17,11 +18,89 @@ export function Mission() {
       }}
     >
       <Container fluid py={100} className="pt-50 md:pt-0">
-        <Grid>
-          <Grid.Col mt={318} sm={5} className="grid justify-items-end">
+        {/* {matches ? 
+        <Grid mt={350}>
+          <Grid.Col xs={3}>
             <Group className="flex flex-col">
-              <div className="flex mt-[390px]">
-                <Grid justify="flex-end" ml="auto" mr={43} align="center">
+              <Group position='center' spacing={33}>
+                <div
+                  style={{
+                    boxSizing: 'border-box',
+                    position: 'absolute',
+                    width: '36px',
+                    height: '36px',
+                    background: '#016BE6',
+                    border: '11px solid #FFB800',
+                    borderRadius: '50px',
+                    marginTop: '-60px',
+                  }}
+                />
+                <MImage className="ml-[180px] text-right" src="/images/pages/about/capitalT.png" />
+              </Group>
+              <div
+                style={{
+                  boxSizing: 'border-box',
+                  position: 'absolute',
+                  width: '337px',
+                  height: '0px',
+                  border: '4px dashed #FFFFFF',
+                  transform: 'rotate(90deg)',
+                  marginTop: '204.5px',
+                }}
+              />
+              <Group position='center' spacing={33} className='mt-[277px]'>
+                <div
+                  style={{
+                    boxSizing: 'border-box',
+                    position: 'absolute',
+                    width: '36px',
+                    height: '36px',
+                    background: '#016BE6',
+                    border: '11px solid #FFB800',
+                    borderRadius: '50px',
+                    marginTop: '-70px',
+                  }}
+                />
+                <MImage ml={180} src="/images/pages/about/capitalT.png" />
+              </Group>
+              <div
+                style={{
+                  boxSizing: 'border-box',
+                  position: 'absolute',
+                  width: '337px',
+                  height: '0px',
+                  border: '4px dashed #FFFFFF',
+                  transform: 'rotate(90deg)',
+                  marginTop: '589.5px',
+                }}
+              />
+              <Group position='center' spacing={33} className='mt-[270px]'>
+                <div
+                  style={{
+                    boxSizing: 'border-box',
+                    position: 'absolute',
+                    width: '36px',
+                    height: '36px',
+                    background: '#016BE6',
+                    border: '11px solid #FFB800',
+                    borderRadius: '50px',
+                    marginTop: '-60px',
+                  }}
+                />
+                <MImage ml={180} src="/images/pages/about/capitalT.png" />
+              </Group>
+            </Group>
+          </Grid.Col>
+          <Grid.Col xs={9}>
+
+          </Grid.Col>
+        </Grid>
+          : */}
+        <Grid>
+          <Grid.Col order={1} mt={318} md={4} className="grid justify-items-end">
+            <Group className="flex flex-col">
+              <div className="flex mt-[440px]">
+                <Grid justify="flex-end" ml="auto" align="center">
                   <Title
                     mb={70}
                     className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
@@ -42,23 +121,26 @@ export function Mission() {
                     all around the world.{' '}
                   </Text>
                 </Grid>
-                <MImage className="ml-[43px] text-right" src="/images/pages/about/capitalT.png" />
               </div>
             </Group>
           </Grid.Col>
-          <Grid.Col mt={318} sm={2}>
+          <Grid.Col order={2} mt={318} md={3}>
             <Group className="flex flex-col">
-              <div
-                style={{
-                  boxSizing: 'border-box',
-                  position: 'absolute',
-                  width: '36px',
-                  height: '36px',
-                  background: '#150B2E',
-                  border: '11px solid #FFB800',
-                  borderRadius: '50px',
-                }}
-              />
+              <Group position='center' spacing={33}>
+                <div
+                  style={{
+                    boxSizing: 'border-box',
+                    position: 'absolute',
+                    width: '36px',
+                    height: '36px',
+                    background: '#016BE6',
+                    border: '11px solid #FFB800',
+                    borderRadius: '50px',
+                    marginTop: '-60px',
+                  }}
+                />
+                <MImage className="ml-[180px] text-right" src="/images/pages/about/capitalT.png" />
+              </Group>
               <div
                 style={{
                   boxSizing: 'border-box',
@@ -70,18 +152,23 @@ export function Mission() {
                   marginTop: '204.5px',
                 }}
               />
-              <div
-                style={{
-                  boxSizing: 'border-box',
-                  position: 'absolute',
-                  width: '36px',
-                  height: '36px',
-                  background: '#150B2E',
-                  border: '11px solid #FFB800',
-                  borderRadius: '50px',
-                  marginTop: '385px',
-                }}
-              />
+              <Group position='center' spacing={33} className='mt-[277px]'>
+                <MImage mr={180} 
+                style={{ transform: "scaleX(-1)" }}
+                src="/images/pages/about/capitalT.png" />
+                <div
+                  style={{
+                    boxSizing: 'border-box',
+                    position: 'absolute',
+                    width: '36px',
+                    height: '36px',
+                    background: '#016BE6',
+                    border: '11px solid #FFB800',
+                    borderRadius: '50px',
+                    marginTop: '-70px',
+                  }}
+                />
+              </Group>
               <div
                 style={{
                   boxSizing: 'border-box',
@@ -93,25 +180,27 @@ export function Mission() {
                   marginTop: '589.5px',
                 }}
               />
-              <div
-                style={{
-                  boxSizing: 'border-box',
-                  position: 'absolute',
-                  width: '36px',
-                  height: '36px',
-                  background: '#150B2E',
-                  border: '11px solid #FFB800',
-                  borderRadius: '50px',
-                  marginTop: '767px',
-                }}
-              />
+              <Group position='center' spacing={33} className='mt-[270px]'>
+                <div
+                  style={{
+                    boxSizing: 'border-box',
+                    position: 'absolute',
+                    width: '36px',
+                    height: '36px',
+                    background: '#016BE6',
+                    border: '11px solid #FFB800',
+                    borderRadius: '50px',
+                    marginTop: '-60px',
+                  }}
+                />
+                <MImage ml={180} src="/images/pages/about/capitalT.png" />
+              </Group>
             </Group>
           </Grid.Col>
-          <Grid.Col mt={318} sm={5}>
+          <Grid.Col order={3} mt={318} md={4}>
             <Group className="flex flex-col content-start">
-              <div className="flex">
-                <MImage src="/images/pages/about/capitalT.png" />
-                <Grid ml={43} align="center">
+              <div className="flex mt-[50px]">
+                <Grid align="center">
                   <Title
                     mb={70}
                     className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
@@ -131,9 +220,8 @@ export function Mission() {
                   </Text>
                 </Grid>
               </div>
-              <div className="flex mt-[660px]">
-                <MImage src="/images/pages/about/capitalT.png" />
-                <Grid ml={43} align="center">
+              <div className="flex mt-[750px]">
+                <Grid align="center">
                   <Title
                     mb={70}
                     className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
@@ -156,6 +244,7 @@ export function Mission() {
             </Group>
           </Grid.Col>
         </Grid>
+        {/* } */}
       </Container>
     </div>
   );

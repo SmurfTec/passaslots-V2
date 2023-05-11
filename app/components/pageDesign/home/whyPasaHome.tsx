@@ -51,11 +51,11 @@ export function WhyPasaHome() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid pl={matches ? 2 : 79} pr={matches ? 2 :69} py={100}>
+      <Container fluid w={'95%'} py={100}>
         <Title
           color={'white'}
           order={3}
-          className="font-[700]"
+          className="font-[700] px-[15px]"
           style={{ fontSize: matches ? '24px' : '48px', lineHeight: '56.25px', letterSpacing: '-1.5%' }}
         >
           WHY PASA SLOTS?
@@ -66,7 +66,7 @@ export function WhyPasaHome() {
             controls: {
               position: 'relative',
               WebkitJustifyContent: 'end !important',
-              bottom: '600px',
+              bottom: matches ? '607px' : '600px',
             },
             control: {
               margin: '0 0 0 10px !important',

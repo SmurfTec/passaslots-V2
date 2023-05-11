@@ -2,6 +2,7 @@ import { Carousel, useStylesCarousel } from '@pasa/customComponents';
 import { BackgroundImage, Container, createStyles, Button, Group, Image, Flex } from '@mantine/core';
 import { Embla } from '@mantine/carousel';
 import { useCallback, useEffect, useState } from 'react';
+import { useMediaQuery } from '@mantine/hooks';
 
 const images = [
   '/images/carousel/phonecarousel4.png',
@@ -16,6 +17,8 @@ const images = [
 ];
 export const HomeBottomCarousel = () => {
   // const { classes } = useStyles();
+  const matches1 = useMediaQuery('(min-width: 1299px)');
+  const matches2 = useMediaQuery('(min-width: 800px)');
   const [slideProgress, setSlideProgress] = useState(1);
   const [embla, setEmbla] = useState<Embla | null>(null);
   const [focusSlide, setFocusSlide] = useState(0);
@@ -36,12 +39,15 @@ export const HomeBottomCarousel = () => {
   }, [embla]);
 
   return (
-    <Container size={1300} pt={20} mb={20} mt={30}>
+    <Container fluid px={0} pt={20} mb={20} mt={30}>
       <Carousel
         style={{ marginTop: '100px' }}
         getEmblaApi={setEmbla}
-        slideSize="20%"
-        initialSlide={1}
+        slideSize={"20%"}
+        align='center'
+        slidesToScroll={1}
+        initialSlide={3}
+        loop
         images={images}
         delay={4000}
         hC={493}

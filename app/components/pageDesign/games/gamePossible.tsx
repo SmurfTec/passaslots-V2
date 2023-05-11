@@ -66,11 +66,11 @@ export function GamePossible() {
               <div className="text-center">
                 <Title
                   color="white"
-                  className="uppercase text-[48px] font-[700] leading-[56px] tracking-[-0.015em] text-center"
+                  className="uppercase xs:!text-[44px] text-[48px] font-[700] leading-[56px] tracking-[-0.015em] text-center"
                 >
                   A Sea of Possibilities Awaits
                 </Title>
-                <Text maw={705} my={20} color="white" className="text-[24px] font-[400] leading-[28px] text-center">
+                <Text maw={705} my={20} color="white" className="xs:!text-[22px] text-[24px] font-[400] leading-[28px] text-center">
                   Just like the ocean's currents, our app's games are always in{' '}
                   {/* <br /> */}
                   motion and constantly changing, offering you an endless sea of{' '}

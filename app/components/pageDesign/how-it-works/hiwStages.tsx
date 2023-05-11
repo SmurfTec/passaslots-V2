@@ -1,6 +1,7 @@
 import { BackgroundImage, Container, Grid, Group, Image, Text, Title } from '@mantine/core';
 import { SingleStage, SingleStageProps } from './singleStage';
 import { useBonusModal } from '@pasa/hooks';
+import { useMediaQuery } from '@mantine/hooks';
 
 const stageData = [
   {
@@ -41,6 +42,8 @@ const stageData = [
 ];
 
 export function HiwStage() {
+  const matches = useMediaQuery('(max-width: 810px)', true);
+  const matches2 = useMediaQuery('(max-width: 767px)', true);
   const [BonusModal, bonusOpen] = useBonusModal();
   return (
     <div
@@ -62,7 +65,7 @@ export function HiwStage() {
         src="/images/pages/hiw/pasagamming.png"
         bgsz="auto"
       >
-        <Container className="mt-24 sm:mt-0" fluid ml={90} mr={69}>
+        <Container className="mt-24 sm:mt-0" fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69}>
           <Grid justify="center" align="center">
             <Grid.Col sm={12}>
               <Grid justify="center" align="center">
@@ -88,40 +91,41 @@ export function HiwStage() {
             </Grid.Col>
           </Grid>
           <Grid>
-            <Grid.Col mt={318} sm={5}>
+            <Grid.Col mt={318} xs={5}>
               <Group className="flex flex-col">
                 <Grid mt={246} justify="flex-end" ml="auto" align="center">
-                  <Title className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
+                  <Title style={{fontSize: matches2 ? '20px' : '32px'}} className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
                     STAGE 2
                   </Title>
-                  <Text className="absolute text-right mt-[120px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
-                    Visit your favorite gaming platform
-                    <br /> in browser or download the app
+                  <Text style={{fontSize: matches2 ? '12px' : '20px'}} maw={325} className="absolute text-right mt-[120px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
+                    Visit your favorite gaming platform{' '}
+                    {/* <br />  */}
+                    in browser or download the app{' '}
                   </Text>
                 </Grid>
                 <Grid mt={610} justify="flex-end" ml="auto" align="center">
-                  <Title className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
+                  <Title style={{fontSize: matches2 ? '20px' : '32px'}} className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
                     STAGE 4
                   </Title>
-                  <Text className="absolute text-right mt-20 text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
+                  <Text style={{fontSize: matches2 ? '12px' : '20px'}} className="absolute text-right mt-20 text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
                     Purchase first game credit
                   </Text>
                 </Grid>
                 <Grid mt={475} justify="flex-end" ml="auto" align="center">
-                  <Title className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
+                  <Title style={{fontSize: matches2 ? '20px' : '32px'}} className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
                     STAGE 6
                   </Title>
-                  <Text className="absolute text-right mt-[150px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
-                    If you want a $10 bonus for your new
-                    <br />
-                    account and stay connected to pasa
-                    <br />
-                    gaming.
+                  <Text style={{fontSize: matches2 ? '12px' : '20px'}} maw={331} className="absolute text-right mt-[150px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
+                    If you want a $10 bonus for your new{' '}
+                    {/* <br /> */}
+                    account and stay connected to pasa{' '}
+                    {/* <br /> */}
+                    gaming.{' '}
                   </Text>
                 </Grid>
               </Group>
             </Grid.Col>
-            <Grid.Col mt={318} sm={2}>
+            <Grid.Col mt={318} xs={2}>
               <Group className="flex flex-col">
                 <div
                   style={{
@@ -262,21 +266,21 @@ export function HiwStage() {
               </Group>
             </Grid.Col>
             {/* text-align-last-end */}
-            <Grid.Col mt={318} sm={5}>
+            <Grid.Col mt={318} xs={5}>
               <Group className="flex flex-col content-start">
                 <Grid align="center">
-                  <Title className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
+                  <Title style={{fontSize: matches2 ? '20px' : '32px'}} className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
                     STAGE 1
                   </Title>
-                  <Text className="absolute mt-20 text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
+                  <Text style={{fontSize: matches2 ? '12px' : '20px'}} className="absolute mt-20 text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
                     Complete the player registeration
                   </Text>
                 </Grid>
                 <Grid mt={482} align="center">
-                  <Title className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
+                  <Title style={{fontSize: matches2 ? '20px' : '32px'}} className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
                     STAGE 3
                   </Title>
-                  <Text maw={354} className="absolute mt-[275px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
+                  <Text style={{fontSize: matches2 ? '12px' : '20px'}} maw={354} className="absolute mt-[275px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
                     YOU'RE ALMOST DONE.{' '}
                     {/* <br /> */}
                     After you have filled out the registration{' '}
@@ -291,10 +295,10 @@ export function HiwStage() {
                   </Text>
                 </Grid>
                 <Grid mt={595} align="center">
-                  <Title className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
+                  <Title style={{fontSize: matches2 ? '20px' : '32px'}} className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]">
                     STAGE 5
                   </Title>
-                  <Text className="absolute mt-20 text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
+                  <Text style={{fontSize: matches2 ? '12px' : '20px'}} className="absolute mt-20 text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80">
                     Get your gaming on and enjoy
                   </Text>
                 </Grid>
