@@ -155,10 +155,10 @@ export function HighTideHome() {
               className="font-[700]"
               color="white"
               style={{
-                fontSize: '54px',
-                lineHeight: '69.39px',
+                fontSize: '32px !important',
+                lineHeight: '41.12px !important',
                 letterSpacing: '-1.5%',
-                width: '60%',
+                width: '70%',
               }}
             >
               RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
@@ -168,7 +168,11 @@ export function HighTideHome() {
               mt={50}
               className="font-[400] leading-10"
               size="md"
-              style={{ fontSize: '20px', lineHeight: '45px', width: '75%' }}
+              style={{
+                fontSize: '15px !important',
+                lineHeight: '28.3px !important',
+                width: '75%',
+              }}
             >
               To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
               players to launch into playing this slot sensation the moment{' '}
@@ -184,12 +188,10 @@ export function HighTideHome() {
                   root: {
                     marginTop: '40px',
                     border: 'none',
-                    fontSize: '20px',
+                    fontSize: '15px  !important',
                     fontStyle: 'medium',
                     fontWeight: 'normal',
                     color: 'white',
-
-                    // borderColor: '#F6CAA7',
                     '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
                   },
                 }}
@@ -201,7 +203,7 @@ export function HighTideHome() {
                 More on Slot Games
               </Button>
             </div>
-            <Image src={'/images/pages/home/highTideImage-large.png'} alt="hightide" width="100%" mt={100} />
+            <Image src={'/images/pages/home/highTideImageLarge.png'} alt="hightide" width="100%" mt={100} />
           </div>
         )}
       </div>
