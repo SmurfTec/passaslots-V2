@@ -192,8 +192,6 @@ export function HighTideHome() {
                     fontStyle: 'medium',
                     fontWeight: 'normal',
                     color: 'white',
-
-                    // borderColor: '#F6CAA7',
                     '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
                   },
                 }}
