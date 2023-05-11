@@ -12,12 +12,15 @@ import {
   Center,
   Container,
 } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { NextLink } from '@mantine/next';
-import { Carousel, ScrollButton } from '@pasa/customComponents';
+// import { Carousel, ScrollButton } from '@pasa/customComponents';
 import { useBonusModal } from '@pasa/hooks';
 import { useState } from 'react';
 import { ArrowRight, Dots } from 'tabler-icons-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { useRef } from 'react';
 
 // const useStyles = createStyles((theme) => ({
 //   backdrop: {
@@ -43,6 +46,8 @@ const images = [
 
 export function HomeHero() {
   const matches = useMediaQuery('(max-width: 1000px)');
+  const matches_mobile = useMediaQuery('(max-width: 600px)');
+  const autoplay = useRef(Autoplay({ delay: 4000 }));
   // const { classes } = useStyles();
   const [BonusModal, bonusOpen] = useBonusModal();
   const [sideButtons, setSideButtons] = useState(false);
@@ -93,6 +98,7 @@ export function HomeHero() {
       >
         <Center w={'100%'}>
           <Carousel
+            w="100%"
             styles={{
               indicator: {
                 width: '22px',
@@ -110,11 +116,18 @@ export function HomeHero() {
             withIndicators
             align="center"
             loop
-            images={images}
-            delay={5000}
-            hC={596}
-            wC={598}
-          />
+            plugins={[autoplay.current]}
+            // images={images}
+            // delay={5000}
+          >
+            {images.map((image, index) => {
+              return(
+              <Carousel.Slide key={index}>
+                <Image className='mx-auto' maw="598px" mah="596px" src={image} />
+              </Carousel.Slide>
+              )
+            })}
+          </Carousel>
         </Center>
 
         <Title
