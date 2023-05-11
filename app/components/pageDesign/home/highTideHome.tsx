@@ -18,6 +18,9 @@ const useStyles = createStyles((theme) => ({
     // height: '100vh',
   },
   backdrop2: {
+    [theme.fn.smallerThan(700)]: {
+      backgroundImage: "url('/images/header/backgroundImage.png')",
+    },
     backgroundColor: '#150B2E',
     backgroundImage: "url('/images/pages/home/playallday.png')",
     // backgroundImage: "url('/images/header/backgroundImage.png')",
@@ -215,8 +218,9 @@ export function HighTideHome() {
         className={classes.backdrop2}
         style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
       >
-        <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} h={120} pb={50}>
-          {/* <Grid>
+        {!matches && (
+          <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} h={120} pb={50}>
+            {/* <Grid>
             <Grid.Col md={6}>
               <Image className='text-baseline left ' src="/images/pages/home/playdicewin.png" alt="home mobile" />
             </Grid.Col>
@@ -224,60 +228,132 @@ export function HighTideHome() {
               
             </Grid.Col>
           </Grid> */}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-end',
+                alignItems: 'flex-end',
+                marginTop: '50px',
+              }}
+            >
+              <div className={classes.rightPanel}>
+                <div className="space-y-1">
+                  <Title color={'white'} order={3} className="font-[700] uppercase mt-16 lg:mt-0 leading-snug">
+                    Play all day long with slots at the
+                    <span className="text-[#50A1FF]"> forefront of our industry</span> leading gaming platform
+                  </Title>
+                </div>
+                <div className={classes.description}>
+                  <Text color={'white'} className="text-base font-[400] text-md leading-10" maw={600}>
+                    To see what kind of winnings are in store for you on the games, Pasa invites all our online and
+                    mobile players to launch into playing this slot sensation the moment{' '}
+                    <span className="font-[700]"> you've logged into your unique real money </span>
+                    account. You never know, one spin is all it takes to potentially change your life forever!
+                  </Text>
+                </div>
+                <div className={classes.button2}>
+                  <Button
+                    component={NextLink}
+                    href="games/#gameSlots"
+                    size={matches ? 'md' : 'lg'}
+                    bg="linear-gradient(to bottom, #2072D2, #A74C9A)"
+                    className="font-[500] uppercase button"
+                    radius={50}
+                    styles={{
+                      root: {
+                        // borderColor: '#F6CAA7',
+                        border: 'none',
+                        width: matches ? '250px' : '315px',
+                        fontSize: matches ? '14px' : '20px',
+                        fontStyle: 'normal',
+                        color: '#FFFFFF',
+                        padding: matches ? '10px 25px' : '17px 53px',
+                        gap: '10px',
+                        '&:hover': {
+                          background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
+                        },
+                      },
+                    }}
+                  >
+                    More on Slot Games
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Container>
+        )}
+        {matches && (
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'flex-end',
-              alignItems: 'flex-end',
-              marginTop: '50px',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginTop: '100px',
+              textAlign: 'center',
             }}
           >
-            <div className={classes.rightPanel}>
-              <div className="space-y-1">
-                <Title color={'white'} order={3} className="font-[700] uppercase mt-16 lg:mt-0 leading-snug">
-                  Play all day long with slots at the
-                  <span className="text-[#50A1FF]"> forefront of our industry</span> leading gaming platform
-                </Title>
-              </div>
-              <div className={classes.description}>
-                <Text color={'white'} className="text-base font-[400] text-md leading-10" maw={600}>
-                  To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
-                  players to launch into playing this slot sensation the moment{' '}
-                  <span className="font-[700]"> you've logged into your unique real money </span>
-                  account. You never know, one spin is all it takes to potentially change your life forever!
-                </Text>
-              </div>
-              <div className={classes.button2}>
-                <Button
-                  component={NextLink}
-                  href="games/#gameSlots"
-                  size={matches ? 'md' : 'lg'}
-                  bg="linear-gradient(to bottom, #2072D2, #A74C9A)"
-                  className="font-[500] uppercase button"
-                  radius={50}
-                  styles={{
-                    root: {
-                      // borderColor: '#F6CAA7',
-                      border: 'none',
-                      width: matches ? '250px' : '315px',
-                      fontSize: matches ? '14px' : '20px',
-                      fontStyle: 'normal',
-                      color: '#FFFFFF',
-                      padding: matches ? '10px 25px' : '17px 53px',
-                      gap: '10px',
-                      '&:hover': {
-                        background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
-                      },
-                    },
-                  }}
-                >
-                  More on Slot Games
-                </Button>
-              </div>
-            </div>
+            {' '}
+            <Title
+              color={'white'}
+              className="font-[700] uppercase"
+              style={{
+                fontSize: '24px !important',
+                lineHeight: '38.14px !important',
+                letterSpacing: '-1.5%',
+                width: '95%',
+              }}
+            >
+              Play all day long with slots at the
+              <span className="text-[#50A1FF]"> forefront of our industry</span> leading gaming platform
+            </Title>
+            <Text
+              mt={50}
+              color={'white'}
+              className="text-base font-[400]"
+              style={{
+                fontSize: '15px !important',
+                lineHeight: '28.13px !important',
+                letterSpacing: '-1.5%',
+                width: '90%',
+              }}
+            >
+              To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
+              players to launch into playing this slot sensation the moment{' '}
+              <span className="font-[700]"> you've logged into your unique real money </span>
+              account. You never know, one spin is all it takes to potentially change your life forever!
+            </Text>
+            <Button
+              mt={50}
+              component={NextLink}
+              href="games/#gameSlots"
+              size={matches ? 'md' : 'lg'}
+              bg="linear-gradient(to bottom, #2072D2, #A74C9A)"
+              className="font-[500] uppercase button"
+              radius={50}
+              mb={100}
+              styles={{
+                root: {
+                  // borderColor: '#F6CAA7',
+                  border: 'none',
+                  width: matches ? '250px' : '315px',
+                  fontSize: matches ? '14px' : '20px',
+                  fontStyle: 'normal',
+                  color: '#FFFFFF',
+                  padding: matches ? '10px 25px' : '17px 53px',
+                  gap: '10px',
+                  '&:hover': {
+                    background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
+                  },
+                },
+              }}
+            >
+              More on Slot Games
+            </Button>
+            <Image src={'/images/pages/home/playdicewin.png'} alt="hightidealt" width="100%" />
           </div>
-        </Container>
+        )}
       </div>
     </>
   );
