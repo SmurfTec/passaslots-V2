@@ -65,6 +65,7 @@ const comments = [
 
 export const TestimonialCarousel = () => {
   const matches = useMediaQuery('(max-width: 700px)');
+  const matches2 = useMediaQuery('(max-width: 1024px)');
   return (
     // <Flex className='py-16 sm:py-24' mb={80} bg="black" gap="md" align="center" direction="row" wrap="nowrap">
     <div
@@ -79,7 +80,7 @@ export const TestimonialCarousel = () => {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={90} mr={69} mt={50}>
+      <Container fluid ml={matches2 ? 0 : 90} mr={matches2 ? 0 : 69} mt={50}>
         <BackgroundImage
           className="mb-10"
           style={{ backgroundSize: 'cover', rotate: '-10deg' }}
@@ -114,10 +115,10 @@ export const TestimonialCarousel = () => {
                 <Carousel
                   align="start"
                   // maw={"90vw"}
-                  mr={'-20px'}
+                  mr={matches ? '0px' : '-20px'}
                   mt={'50px'}
                   mx="auto"
-                  p={10}
+                  p={matches ? '0' : 10}
                   styles={{
                     root: {
                       background: 'transparent',
@@ -145,7 +146,7 @@ export const TestimonialCarousel = () => {
                       },
                     },
                   }}
-                  slideSize={'33.333333%'}
+                  slideSize={matches ? '100%' : '33.333333%'}
                   withControls={false}
                   withIndicators={false}
                   slidesToScroll={matches ? 1 : 2}
