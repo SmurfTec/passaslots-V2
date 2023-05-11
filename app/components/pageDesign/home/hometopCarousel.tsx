@@ -1,7 +1,11 @@
 import { BackgroundImage, Container, createStyles, Button, Group, Image, Flex } from '@mantine/core';
-import { Carousel, useStylesCarousel } from '@pasa/customComponents';
+// import { Carousel, useStylesCarousel } from '@pasa/customComponents';
+import { Carousel } from '@mantine/carousel';
 import { Embla } from '@mantine/carousel';
+import { useMediaQuery } from '@mantine/hooks';
 import { useCallback, useEffect, useState } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
+import { useRef } from 'react';
 
 // const useStyles = createStyles((theme) => ({
 //   backdrop: {
@@ -25,8 +29,10 @@ const images = [
 ];
 export const HomeTopCarousel = () => {
   // const { classes } = useStyles();
+  const matches = useMediaQuery('(max-width: 770px)', true);
   const [slideProgress, setSlideProgress] = useState(1);
   const [embla, setEmbla] = useState<Embla | null>(null);
+  const autoplay = useRef(Autoplay({ delay: 4000 }));
 
   const handleScroll = useCallback(() => {
     if (!embla) return;
@@ -89,9 +95,18 @@ export const HomeTopCarousel = () => {
           slideSize="50%"
           loop
           initialSlide={3}
-          images={images}
-          delay={4000}
-        />
+          plugins={[autoplay.current]}
+          // images={images}
+          // delay={4000}
+        >
+          {images.map((image, index) => {
+            return(
+            <Carousel.Slide key={index}>
+              <Image className='mx-auto' maw="598px" mah="596px" src={image} />
+            </Carousel.Slide>
+            )
+          })}
+        </Carousel>
 
         <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: '50px' }}>
           <Image
