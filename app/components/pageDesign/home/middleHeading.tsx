@@ -88,7 +88,7 @@ export const MiddleHeading = () => {
           <Title
             color={'white'}
             className="font-bold uppercase"
-            style={{ fontWeight: '700', fontSize: '30px !important', width: '80%' }}
+            style={{ fontWeight: '700', fontSize: '24px !important', lineHeight: '30.84px !important', width: '80%' }}
           >
             More ACCESS from the touch of a finger
           </Title>
@@ -96,7 +96,7 @@ export const MiddleHeading = () => {
             color={'white'}
             className="leading-10 font[-400]"
             mt={40}
-            style={{ fontSize: '15px', fontWeight: '400', width: '75%', lineHeight: '30px' }}
+            style={{ fontSize: '15px !important', fontWeight: '400', width: '75%', lineHeight: '30px !important' }}
           >
             This is where gaming creators meet life-long gamers. So we understand your daily frustrations when it comes
             to payments above all. We offer a variety of safe and secure payment methods to choose
@@ -107,7 +107,7 @@ export const MiddleHeading = () => {
             be used in your region, and learn how to make deposits and withdrawals at Pasa Slots (as gamers ourselves
             being in the industry for 20+ years we built this on the forefront of customer satisfaction).
           </Text>
-          <Image src={'/images/pages/home/middleHeadingImg-large.png'} alt="hightide" width="100%" />
+          <Image src={'/images/pages/home/middleHeadingLarge.png'} alt="hightide" width="100%" />
         </div>
       )}
     </>
