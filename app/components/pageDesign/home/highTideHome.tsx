@@ -75,65 +75,135 @@ export function HighTideHome() {
         className={classes.backdrop}
         style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
       >
-        <BackgroundImage
-          className=""
-          style={{ backgroundSize: 'cover', backgroundPosition: 'center center', position: 'relative', width: '100%' }}
-          src="/images/pages/home/highTideImage.png"
-        >
-          <Container fluid py={50}>
-            <Grid pl={matches ? 2 : 90}>
-              <Grid.Col md={6}>
-                <Title
-                  className="font-[700] tracking[-0.015em] w-400 md:w-500 lg:w-560"
-                  color="white"
-                  order={2}
-                  mt={103}
-                  mb={100}
-                  style={{ fontSize: '54px', lineHeight: '69.39px', letterSpacing: '-1.5%' }}
-                >
-                  RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
-                </Title>
-                <Text
-                  color="white"
-                  mt={20}
-                  className="font-[400] leading-10"
-                  maw={628}
-                  size="md"
-                  style={{ fontSize: '20px', lineHeight: '37.74px' }}
-                >
-                  To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
-                  players to launch into playing this slot sensation the moment{' '}
-                  <span className="font-[700]">you’ve logged into your unique real money</span>{' '}
-                  account. You never know, one spin is all it takes to potentially change your life forever!
-                </Text>
-                <div className={classes.button}>
-                  <Button
-                    component={NextLink}
-                    href="games/#gameSlots"
-                    px={20}
-                    styles={{
-                      root: {
-                        border: 'none',
-                        fontSize: '20px',
-                        fontStyle: 'medium',
-                        fontWeight: 'normal',
-                        color: 'white',
-                        // borderColor: '#F6CAA7',
-                        '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
-                      },
-                    }}
-                    bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
-                    size="lg"
-                    radius={50}
-                    className="font-[500] uppercase"
+        {!matches && (
+          <BackgroundImage
+            style={{
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+              position: 'relative',
+              width: '100%',
+            }}
+            src="/images/pages/home/highTideImage.png"
+          >
+            <Container fluid py={50}>
+              <Grid pl={matches ? 2 : 90}>
+                <Grid.Col md={6}>
+                  <Title
+                    className="font-[700] tracking[-0.015em] w-400 md:w-500 lg:w-560"
+                    color="white"
+                    order={2}
+                    mt={103}
+                    mb={100}
+                    style={{ fontSize: '54px', lineHeight: '69.39px', letterSpacing: '-1.5%' }}
                   >
-                    More on Slot Games
-                  </Button>
-                </div>
-              </Grid.Col>
-            </Grid>
-          </Container>
-        </BackgroundImage>
+                    RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
+                  </Title>
+                  <Text
+                    color="white"
+                    mt={20}
+                    className="font-[400] leading-10"
+                    maw={628}
+                    size="md"
+                    style={{ fontSize: '20px', lineHeight: '37.74px' }}
+                  >
+                    To see what kind of winnings are in store for you on the games, Pasa invites all our online and
+                    mobile players to launch into playing this slot sensation the moment{' '}
+                    <span className="font-[700]">you’ve logged into your unique real money</span> account. You never
+                    know, one spin is all it takes to potentially change your life forever!
+                  </Text>
+                  <div className={classes.button}>
+                    <Button
+                      component={NextLink}
+                      href="games/#gameSlots"
+                      px={20}
+                      styles={{
+                        root: {
+                          border: 'none',
+                          fontSize: '20px',
+                          fontStyle: 'medium',
+                          fontWeight: 'normal',
+                          color: 'white',
+                          // borderColor: '#F6CAA7',
+                          '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
+                        },
+                      }}
+                      bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
+                      size="lg"
+                      radius={50}
+                      className="font-[500] uppercase"
+                    >
+                      More on Slot Games
+                    </Button>
+                  </div>
+                </Grid.Col>
+              </Grid>
+            </Container>
+          </BackgroundImage>
+        )}
+        {matches && (
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              marginTop: '100px',
+              textAlign: 'center',
+            }}
+          >
+            <Title
+              className="font-[700]"
+              color="white"
+              style={{
+                fontSize: '54px',
+                lineHeight: '69.39px',
+                letterSpacing: '-1.5%',
+                width: '60%',
+              }}
+            >
+              RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
+            </Title>
+            <Text
+              color="white"
+              mt={50}
+              className="font-[400] leading-10"
+              size="md"
+              style={{ fontSize: '20px', lineHeight: '45px', width: '75%' }}
+            >
+              To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
+              players to launch into playing this slot sensation the moment{' '}
+              <span className="font-[700]">you’ve logged into your unique real money</span> account. You never know, one
+              spin is all it takes to potentially change your life forever!
+            </Text>
+            <div className={classes.button}>
+              <Button
+                component={NextLink}
+                href="games/#gameSlots"
+                px={20}
+                styles={{
+                  root: {
+                    marginTop: '40px',
+                    border: 'none',
+                    fontSize: '20px',
+                    fontStyle: 'medium',
+                    fontWeight: 'normal',
+                    color: 'white',
+
+                    // borderColor: '#F6CAA7',
+                    '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
+                  },
+                }}
+                bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
+                size="xl"
+                radius={50}
+                className="font-[500] uppercase"
+              >
+                More on Slot Games
+              </Button>
+            </div>
+            <Image src={'/images/pages/home/highTideImage-large.png'} alt="hightide" width="100%" mt={100} />
+          </div>
+        )}
       </div>
       {BonusModal}
 
@@ -180,7 +250,7 @@ export function HighTideHome() {
                 <Button
                   component={NextLink}
                   href="games/#gameSlots"
-                  size={matches ? "md" : "lg"}
+                  size={matches ? 'md' : 'lg'}
                   bg="linear-gradient(to bottom, #2072D2, #A74C9A)"
                   className="font-[500] uppercase button"
                   radius={50}

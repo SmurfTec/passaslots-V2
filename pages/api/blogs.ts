@@ -1,9 +1,6 @@
-import { PrismaClient, blogs } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
 import formidable from 'formidable';
-import path from 'path';
-import getConfig from 'next/config';
 
 const cloudinary = require('cloudinary').v2;
 
