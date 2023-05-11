@@ -155,10 +155,10 @@ export function HighTideHome() {
               className="font-[700]"
               color="white"
               style={{
-                fontSize: '54px',
+                fontSize: '32px',
                 lineHeight: '69.39px',
                 letterSpacing: '-1.5%',
-                width: '60%',
+                width: '85%',
               }}
             >
               RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
