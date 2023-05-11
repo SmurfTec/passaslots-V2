@@ -37,7 +37,7 @@ export function WhyPasaHome() {
     },
   ];
 
-  const matches = useMediaQuery('(max-width: 460px)', true);
+  const matches = useMediaQuery('(max-width: 770px)', true);
   return (
     <div
       className="bg-gradient-to-r from-blue-500 to-purple-600"
@@ -51,12 +51,12 @@ export function WhyPasaHome() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid pl={79} pr={69} py={100}>
+      <Container fluid pl={matches ? 2 : 79} pr={matches ? 2 :69} py={100}>
         <Title
           color={'white'}
           order={3}
           className="font-[700]"
-          style={{ fontSize: '48px', lineHeight: '56.25px', letterSpacing: '-1.5%' }}
+          style={{ fontSize: matches ? '24px' : '48px', lineHeight: '56.25px', letterSpacing: '-1.5%' }}
         >
           WHY PASA SLOTS?
         </Title>
@@ -79,12 +79,12 @@ export function WhyPasaHome() {
               borderColor: 'transparent',
             },
           }}
-          slideSize={'25%'}
+          slideSize={matches ? '50%' : '25%'}
           pt={20}
           loop
           align="start"
           slidesToScroll={1}
-          slideGap={'md'}
+          slideGap={matches? 'md' : 'xl'}
           previousControlIcon={<ChevronLeft size={28} />}
           nextControlIcon={<ChevronRight size={28} />}
         >
