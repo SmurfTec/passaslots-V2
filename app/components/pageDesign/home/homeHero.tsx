@@ -113,6 +113,7 @@ export function HomeHero() {
                 },
               },
             }}
+            withControls={false}
             withIndicators
             align="center"
             loop

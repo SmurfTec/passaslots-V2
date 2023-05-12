@@ -33,7 +33,7 @@ export function WinHome() {
         <Container fluid pt={94}>
           <Grid align="center">
             <Grid.Col sm={12}>
-              <Image className="text-center mx-auto" mb={58} src="/images/pages/home/winHomeImage.png" alt="image" />
+              <Image maw={644} mah={363} className="text-center mx-auto" mb={58} src="/images/pages/home/winHomeImage.png" alt="image" />
               <Title
                 color={'#fff'}
                 mb={29}
@@ -91,7 +91,7 @@ export function WinHome() {
             textAlign: 'center',
           }}
         >
-          <Image className="text-center mx-auto" src="/images/pages/home/winHomeImage.png" alt="image" />
+          <Image maw={644} mah={363} className="text-center mx-auto" src="/images/pages/home/winHomeImage.png" alt="image" />
           <Title
             mt={50}
             color={'#fff'}
