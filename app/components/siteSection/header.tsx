@@ -52,6 +52,17 @@ const useStyles = createStyles((theme) => ({
   divider: {
     borderColor: '#E4E4E4',
   },
+  image: {
+    cursor: 'pointer',
+    [theme.fn.smallerThan(810)]: {
+      height: '44px !important',
+      width: '62px !important',
+    },
+    [theme.fn.largerThan(809)]: {
+      width: '114px !important',
+      height: '80px !important',
+    }
+  }
 }));
 
 export function Header() {
@@ -77,7 +88,7 @@ export function Header() {
       <Container fluid className="bg-transparent z-50 relative">
         <Group position="apart" spacing={matches ? 5 : 40}>
           <Anchor ml={79} mt={9} href="/" component={NextLink}>
-            <Image className="cursor-pointer" alt="logo" src={'/images/modal/headerlogo.png'} height={80} width={114} />
+            <Image className={classes.image} alt="logo" src={'/images/modal/headerlogo.png'} />
           </Anchor>
           <div style={{ display: 'flex' }}>
             <Group spacing={matches ? 10 : 31} className={classes.group}>
@@ -211,10 +222,10 @@ export function Header() {
                       },
                     },
                     root: {
-                      background: 'linear-gradient(180deg, #016BE6 0%, rgba(246, 202, 167, 0.44) 100%)',
+                      background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
   
                       '&:hover': {
-                        background: 'linear-gradient(180deg, #016BE6 0%, rgba(246, 202, 167, 0.44) 100%)',
+                        background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
                       },
                     },
                   }}
