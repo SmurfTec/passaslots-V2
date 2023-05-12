@@ -1,5 +1,6 @@
 import { Container, createStyles, Grid, Title } from '@mantine/core';
 import { SingleCollection, SingleCollectionProps } from './singleCollection';
+import { useMediaQuery } from '@mantine/hooks';
 
 const useStyles = createStyles((theme) => ({
   backdrop: {
@@ -41,14 +42,21 @@ const collectionData: SingleCollectionProps[] = [
 ];
 
 export function HomeCollection() {
+  const matches = useMediaQuery('(max-width: 770px)', true);
   const { classes } = useStyles();
   return (
     <div
       className={classes.backdrop}
       style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
     >
-      <Container pb={100} pt={100} fluid>
-        <Title color={'white'} mb={100} order={2} className="font-[700] text-center">
+      <Container pb={matches ? 50 : 100} pt={matches ? 70 : 100} fluid>
+        <Title
+          color={'white'}
+          mb={matches ? 50 : 100}
+          order={2}
+          className="font-[700] text-center"
+          style={matches ? { fontSize: '24px' } : {}}
+        >
           POPULAR COLLECTIONS
         </Title>
         <Grid m={0} p={0} gutterMd={70}>

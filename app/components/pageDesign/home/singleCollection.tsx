@@ -1,5 +1,6 @@
 import { Button, Card, Grid, Image, Text, Title } from '@mantine/core';
 import { NextLink } from '@mantine/next';
+import { useMediaQuery } from '@mantine/hooks';
 
 export type Link = {
   text: string;
@@ -14,6 +15,7 @@ export type SingleCollectionProps = {
 };
 
 export function SingleCollection({ button, content, image, title }: SingleCollectionProps) {
+  const matches = useMediaQuery('(max-width: 770px)', true);
   return (
     <Card p={10} m={0} radius="sm" bg={'transparent'}>
       <Card.Section>
@@ -31,12 +33,12 @@ export function SingleCollection({ button, content, image, title }: SingleCollec
             </Grid>
             <Grid className="my-5" justify={'center'}>
               <Button
-                size="lg"
+                size={matches ? 'md' : 'lg'}
                 radius={50}
-                py={15}
-                px={30}
+                py={matches ? 8 : 15}
+                px={matches ? 20 : 30}
                 styles={{
-                  label: { fontSize: '20px', fontWeight: 'bolder' },
+                  label: { fontSize: matches ? '15px' : '20px', fontWeight: matches ? 'normal' : 'bolder' },
                   root: {
                     border: 'none',
                     background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',

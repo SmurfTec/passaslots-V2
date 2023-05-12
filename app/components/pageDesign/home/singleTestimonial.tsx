@@ -15,12 +15,12 @@ export function SingleTestimonial({ description, image, name, rating, date }: Si
     <div>
       <Grid
         style={{
-          border: '2px solid #016BE6',
-          marginTop: '75px',
+          border: '3px solid #016BE6',
+          marginTop: matches_mobile ? '30px' : '75px',
           padding: '10px 20px 10px 20px',
           borderRadius: '50px',
-          width: matches_mobile ? '267px' : '400px',
-          minHeight: '449px',
+          width: matches_mobile ? '310px' : '400px',
+          minHeight: matches_mobile ? '200px' : '449px',
         }}
       >
         <Grid.Col order={2} orderSm={1} sm={12} className="flex flex-col space-y-8">
@@ -38,7 +38,7 @@ export function SingleTestimonial({ description, image, name, rating, date }: Si
               <Rating defaultValue={rating} readOnly style={{ marginTop: '10px' }} />
             </Grid.Col>
           </Group>
-          <Group style={{marginTop: matches_mobile ? "50px" : "auto"}}>
+          <Group style={{ marginTop: matches_mobile ? '50px' : 'auto' }}>
             <Text
               mb={25}
               h={150}
@@ -50,11 +50,11 @@ export function SingleTestimonial({ description, image, name, rating, date }: Si
               {description}
             </Text>
             <Text
-              mt={50}
+              mt={matches_mobile ? 'auto' : 50}
               color={'white'}
               pl={10}
               className="align-text-bottom textfont-[400] text-lg leading-8 align-end"
-              style={{ fontSize: matches_mobile ? '15px' :  '16px', lineHeight: '30.19px' }}
+              style={{ fontSize: matches_mobile ? '15px' : '16px', lineHeight: '30.19px' }}
             >
               {date}
             </Text>

@@ -150,7 +150,7 @@ export function HighTideHome() {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              marginTop: '100px',
+              marginTop: '70px',
               textAlign: 'center',
             }}
           >
@@ -168,13 +168,13 @@ export function HighTideHome() {
             </Title>
             <Text
               color="white"
-              mt={50}
+              mt={40}
               className="font-[400] leading-10"
               size="md"
               style={{
                 fontSize: '15px !important',
                 lineHeight: '28.3px !important',
-                width: '75%',
+                width: '90%',
               }}
             >
               To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
@@ -189,7 +189,7 @@ export function HighTideHome() {
                 px={20}
                 styles={{
                   root: {
-                    marginTop: '40px',
+                    marginTop: '10px',
                     border: 'none',
                     fontSize: '15px  !important',
                     fontStyle: 'medium',
@@ -199,14 +199,14 @@ export function HighTideHome() {
                   },
                 }}
                 bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
-                size="xl"
+                size="md"
                 radius={50}
                 className="font-[500] uppercase"
               >
                 More on Slot Games
               </Button>
             </div>
-            <Image src={'/images/pages/home/highTideImageLarge.png'} alt="hightide" width="100%" mt={100} />
+            <Image src={'/images/pages/home/highTideImageLarge.png'} alt="hightide" width="100%" mt={70} />
           </div>
         )}
       </div>
@@ -290,7 +290,7 @@ export function HighTideHome() {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              marginTop: '100px',
+              marginTop: '70px',
               textAlign: 'center',
             }}
           >
@@ -299,17 +299,17 @@ export function HighTideHome() {
               color={'white'}
               className="font-[700] uppercase"
               style={{
-                fontSize: '24px !important',
+                fontSize: '20px !important',
                 lineHeight: '38.14px !important',
                 letterSpacing: '-1.5%',
-                width: '95%',
+                width: '90%',
               }}
             >
               Play all day long with slots at the
               <span className="text-[#50A1FF]"> forefront of our industry</span> leading gaming platform
             </Title>
             <Text
-              mt={50}
+              mt={40}
               color={'white'}
               className="text-base font-[400]"
               style={{
