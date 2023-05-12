@@ -1,9 +1,15 @@
 import { PrismaClient, blogs } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import Cors from 'micro-cors';
+import { RequestHandler } from 'next/dist/server/next';
 
 const prisma = new PrismaClient();
 
-export default async function BlogsHandler(req: NextApiRequest, res: NextApiResponse<blogs | { message: string }>) {
+const cors = Cors({
+  allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+});
+
+async function BlogsHandler(req: NextApiRequest, res: NextApiResponse) {
   const { method, body, query } = req;
   switch (method) {
     case 'GET': {
@@ -52,3 +58,5 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
       res.status(405).end(`Method ${method} Not Allowed`);
   }
 }
+
+export default cors(BlogsHandler as RequestHandler);

@@ -39,10 +39,11 @@ enum purpose {
 
 model blogs {
   id    String @id @default(auto()) @map("_id") @db.ObjectId
-  title  String
-  description String @unique
+  title  String @unique
+  description String 
   publishedOn String?
   isDeleted Boolean
   image String
   author String
+  richText String
 }
