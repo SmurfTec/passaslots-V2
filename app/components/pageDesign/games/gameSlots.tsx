@@ -132,7 +132,7 @@ export function GameSlots() {
           )}
         </div>
         <Grid m={0} pb={0} pt={200} align="center" justify="center">
-          <Grid.Col className="relative" xs={12} sm={12}>
+          <Grid.Col style={{ textAlign: '-webkit-center' }} className="relative" xs={12} sm={12}>
             {/* <div className="absolute top-1/2 -translate-y-1/2 pr-32"> */}
             <Title
               color="#FFFFFF"

@@ -1,8 +1,8 @@
 import { Button, Container, Image, Text, Title, Grid, BackgroundImage, Flex } from '@mantine/core';
 import { Carousel, useStylesCarousel } from '@pasa/customComponents';
-import { Embla } from '@mantine/carousel';
-import { useCallback, useEffect, useState } from 'react';
-
+import { Embla, Carousel as MantineCarousel } from '@mantine/carousel';
+import { useCallback, useEffect, useState, useRef } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const images = [
   '/images/pages/game/carousel1.png',
@@ -17,6 +17,8 @@ export function GamePossible() {
   const { classes } = useStylesCarousel();
   const [slideProgress, setSlideProgress] = useState(1);
   const [embla, setEmbla] = useState<Embla | null>(null);
+  const autoplay = useRef(Autoplay({ delay: 4000 }));
+
   const handleScroll = useCallback(() => {
     if (!embla) return;
     const progress = Math.min(2, Math.floor(Math.max(0, embla.scrollProgress() * 3)));
@@ -103,15 +105,16 @@ export function GamePossible() {
           </Title>
           <Grid align="center" justify="center" py={80} px={0}>
             <Grid.Col px={0} sm={12}>
-              <Carousel
+              <MantineCarousel
                 // withIndicators
                 getEmblaApi={setEmbla}
                 align="center"
-                images={images}
-                slideSize="33.3333%"
+                // images={images}
+                slideSize="50%"
+                withControls={false}
                 loop
                 classNames={classes}
-                delay={4000}
+                // delay={4000}
                 styles={{
                   indicator: {
                     width: '10.87px',
@@ -126,7 +129,15 @@ export function GamePossible() {
                     },
                   },
                 }}
-              />
+              >
+                {images.map((image, index) => {
+                  return(
+                  <MantineCarousel.Slide key={index}>
+                    <Image className='mx-auto' maw="890px" mah="445px" src={image} />
+                  </MantineCarousel.Slide>
+                  )
+                })}
+              </MantineCarousel>
               <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: '50px' }}>
                 <Image
                   height={15}
