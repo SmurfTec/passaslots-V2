@@ -22,7 +22,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '80vh',
+    minHeight: '70vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -80,8 +80,11 @@ export const MiddleHeading = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            paddingTop: '100px',
+            paddingTop: '70px',
             textAlign: 'center',
+            zIndex: 50,
+            boxShadow: '-1px 0px 20px 3px #016BE6',
+            borderTop: '6px solid #016BE6',
           }}
         >
           {' '}
@@ -96,7 +99,7 @@ export const MiddleHeading = () => {
             color={'white'}
             className="leading-10 font[-400]"
             mt={40}
-            style={{ fontSize: '15px !important', fontWeight: '400', width: '75%', lineHeight: '30px !important' }}
+            style={{ fontSize: '15px !important', fontWeight: '400', width: '90%', lineHeight: '30px !important' }}
           >
             This is where gaming creators meet life-long gamers. So we understand your daily frustrations when it comes
             to payments above all. We offer a variety of safe and secure payment methods to choose
@@ -107,7 +110,7 @@ export const MiddleHeading = () => {
             be used in your region, and learn how to make deposits and withdrawals at Pasa Slots (as gamers ourselves
             being in the industry for 20+ years we built this on the forefront of customer satisfaction).
           </Text>
-          <Image src={'/images/pages/home/middleHeadingLarge.png'} alt="hightide" width="100%" />
+          <Image src={'/images/pages/home/middleHeadingLarge.png'} alt="hightide" width="100%" height="70%" />
         </div>
       )}
     </>

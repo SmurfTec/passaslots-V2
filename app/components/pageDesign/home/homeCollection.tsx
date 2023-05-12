@@ -52,7 +52,7 @@ export function HomeCollection() {
       <Container pb={matches ? 50 : 100} pt={matches ? 70 : 100} fluid>
         <Title
           color={'white'}
-          mb={matches ? 0 : 100}
+          mb={matches ? 50 : 100}
           order={2}
           className="font-[700] text-center"
           style={matches ? { fontSize: '24px' } : {}}
