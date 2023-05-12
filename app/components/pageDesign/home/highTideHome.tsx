@@ -290,7 +290,7 @@ export function HighTideHome() {
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              marginTop: '100px',
+              marginTop: '70px',
               textAlign: 'center',
             }}
           >
@@ -299,17 +299,17 @@ export function HighTideHome() {
               color={'white'}
               className="font-[700] uppercase"
               style={{
-                fontSize: '24px !important',
+                fontSize: '20px !important',
                 lineHeight: '38.14px !important',
                 letterSpacing: '-1.5%',
-                width: '95%',
+                width: '90%',
               }}
             >
               Play all day long with slots at the
               <span className="text-[#50A1FF]"> forefront of our industry</span> leading gaming platform
             </Title>
             <Text
-              mt={50}
+              mt={40}
               color={'white'}
               className="text-base font-[400]"
               style={{
