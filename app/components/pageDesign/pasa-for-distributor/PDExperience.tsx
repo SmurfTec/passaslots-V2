@@ -17,7 +17,7 @@ export function PDExperience() {
     >
       <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} py={100}>
         <Grid align="center" justify="center">
-          <Image
+          <Image maw={450} mah={450}
             className="mx-auto my-auto"
             src="/images/pages/pasa-for-distributor/experience.png"
             alt="experience"
@@ -54,7 +54,7 @@ export function PDExperience() {
               padding: '34px 25px',
               filter: 'drop-shadow(0px 11px 32px rgba(1, 107, 230, 0.76))',
             }}
-            className="rounded-[29px] text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
+            className="rounded-[29px] mx-auto text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
           >
             <Image
               pos="inherit"
@@ -87,7 +87,7 @@ export function PDExperience() {
               padding: '34px 25px',
               filter: 'drop-shadow(0px 11px 32px rgba(1, 107, 230, 0.76))',
             }}
-            className="rounded-[29px] text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
+            className="rounded-[29px] mx-auto text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
           >
             <Image
               pos="inherit"
@@ -120,7 +120,7 @@ export function PDExperience() {
               padding: '34px 25px',
               filter: 'drop-shadow(0px 11px 32px rgba(1, 107, 230, 0.76))',
             }}
-            className="rounded-[29px] text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
+            className="rounded-[29px] mx-auto text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
           >
             <Image
               pos="inherit"

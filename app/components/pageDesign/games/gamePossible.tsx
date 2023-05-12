@@ -57,6 +57,7 @@ export function GamePossible() {
             <Grid align="center" justify="center">
               <div className="text-center">
                 <Image
+                  maw={644} mah={363}
                   className="mx-auto"
                   src="/images/pages/game/gamePossible.png"
                   alt="game"

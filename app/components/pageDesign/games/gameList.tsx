@@ -13,7 +13,7 @@ export function GameList() {
         <Grid align='center' justify='center'>
           <Grid.Col sm={12}>
             <div className='flex justify-center'>
-              <Image className='mx-auto my-auto' src="/images/pages/game/egyptian.png" alt='egyptian'  />
+              <Image maw={507} mah={517} className='mx-auto my-auto' src="/images/pages/game/egyptian.png" alt='egyptian'  />
             </div>
             <Title className="font-[700] text-center text-[48px] leading-[63px] tracking-[0.0125em] uppercase my-[70px]">
               Gaming just got better for you
