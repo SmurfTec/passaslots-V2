@@ -63,8 +63,8 @@ export function ContactForm() {
   return (
     <form onSubmit={form.onSubmit(handleSubmit)}>
       <div className="space-y-6">
-        <Grid>
-          <Grid.Col md={6} className='space-y-[18px] space-x-37'>
+        <Grid px={0}>
+          <Grid.Col px={0} md={6} className='space-y-[18px] space-x-37'>
             <TextInput
               classNames={{ input: classes.input }}
               color="#F2F2F2"
@@ -90,7 +90,7 @@ export function ContactForm() {
               {...form.getInputProps('subject')}
             />
           </Grid.Col>
-          <Grid.Col md={6} className='space-y-[18px] space-x-37'>
+          <Grid.Col px={0} md={6} className='space-y-[18px] space-x-37'>
             <TextInput
               classNames={{ input: classes.input }}
               color="#F2F2F2"

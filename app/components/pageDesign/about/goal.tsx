@@ -20,11 +20,11 @@ export function Goal() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <BackgroundImage
-        src="/images/pages/about/goalZeus.png" className='xl:bg-[center_690px] lg:bg-[center_970px] md:bg-[center_965px] sm:bg-[center_1310px] xs:bg-[center_2030px]'
-        style={{ backgroundRepeat: 'no-repeat'}}
+      {/* <BackgroundImage
+        src="/images/pages/about/goalZeus.png" 
+        style={{ backgroundRepeat: 'no-repeat', backgroundPosition: 'center center'}}
         bgsz="auto"
-      >
+      > */}
         <Container fluid mr={matches ? 5 : 69} ml={matches ? 5 : 90} py={100}>
           <div className="pb-20 space-y-4">
             <Group position="center">
@@ -138,26 +138,26 @@ export function Goal() {
             </Group>
           </div>
           <div className="text-center">
-            <Title color="white" className="font-[700] text-[64px] leading-[68px] tracking-[0.0125em] uppercase">
-              Our goal is to aim <br /> without a limit
+            <Title maw={630} color="white" mx='auto' className="font-[700] sm:!text-[64px] xs:!text-[40px] leading-[68px] tracking-[0.0125em] uppercase">
+              Our goal is to aim without a limit
             </Title>
-            <div style={{display: 'content'}} className='text-center'>
+            <div className='text-center'>
               <Text
                 mt={20}
                 maw={700}
+                mx='auto'
                 color="white"
-                className="font-[400] text-[20px] text-center tracking-[0.005em] leading-[38px]"
+                className="font-[400] sm:text-[20px] xs:text-[15px] text-center tracking-[0.005em] leading-[38px]"
                 opacity={0.8}
               >
                 Our commitment to being No.1 drives us to constantly improve. We are always broadening our{' '}
                 community, enhancing our content, and finding new ways to provide value to our players.
               </Text>
             </div>
-            {/* <Image className='mx-auto' width={478} height={565} src="/images/pages/about/goalZeus.png" /> */}
+            <Image className='mx-auto' maw={478} mah={565} miw={280} mih={331} src="/images/pages/about/goalZeus.png" />
             <Title
               color="white"
-              mt={562}
-              className="font-[700] leading-[34px] tracking-[0.0125em] text-[32px] uppercase"
+              className="font-[700] leading-[34px] tracking-[0.0125em] sm:!text-[32px] xs:!text-[20px] uppercase"
             >
               Our goal is to be
             </Title>
@@ -165,7 +165,7 @@ export function Goal() {
               <Title
                 color="#50A1FF"
                 mt={0}
-                className="font-[900] leading-[68px] tracking-[0.0125em] text-[64px] uppercase"
+                className="font-[900] leading-[68px] tracking-[0.0125em] sm:!text-[64px] xs:!text-[40px] uppercase"
               >
                 World's No 1
               </Title>
@@ -178,14 +178,14 @@ export function Goal() {
                   marginTop: '24px',
                 }}
                 color="#1A0E37"
-                className="mx-auto font-[900] bg-[#FFB800] leading-[21px] justify-center tracking-[0.0125em] text-[20px] uppercase"
+                className="mx-auto font-[900] bg-[#FFB800] leading-[21px] justify-center tracking-[0.0125em] sm:text-[20px] xs:text-[16px] uppercase"
               >
                 by the end of 2023
               </Text>
             </div>
           </div>
         </Container>
-      </BackgroundImage>
+      {/* </BackgroundImage> */}
     </div>
   );
 }

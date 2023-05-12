@@ -22,6 +22,7 @@ export const BottomSubHeading = () => {
         <Grid align="top">
           <Grid.Col sm={12}>
             <Image
+              mah={545} maw={508} mih={303} miw={282}
               className="mx-auto mb-10"
               src="/images/pages/home/cardsfalling.png"
               alt="image"
