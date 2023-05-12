@@ -17,8 +17,7 @@ const images = [
 ];
 export const HomeBottomCarousel = () => {
   // const { classes } = useStyles();
-  const matches1 = useMediaQuery('(min-width: 1299px)');
-  const matches2 = useMediaQuery('(min-width: 800px)');
+  const matches = useMediaQuery('(max-width: 770px)', true);
   const [slideProgress, setSlideProgress] = useState(1);
   const [embla, setEmbla] = useState<Embla | null>(null);
   const [focusSlide, setFocusSlide] = useState(0);
@@ -40,6 +39,7 @@ export const HomeBottomCarousel = () => {
 
   return (
     <Container fluid px={0} pt={20} mb={20} mt={30}>
+      {!matches && (
       <Carousel
         style={{ marginTop: '100px' }}
         getEmblaApi={setEmbla}
@@ -56,7 +56,25 @@ export const HomeBottomCarousel = () => {
           setFocusSlide(number);
         }}
         focusedIndex={focusSlide}
-      />
+      />)}
+      {matches && (
+      <Carousel
+      style={{ marginTop: '100px' }}
+      getEmblaApi={setEmbla}
+      slideSize={"20%"}
+      align='center'
+      slidesToScroll={1}
+      initialSlide={1}
+      loop
+      images={images}
+      delay={4000}
+      hC={131}
+      wC={76}
+      onSlideChange={(number) => {
+        setFocusSlide(number);
+      }}
+      focusedIndex={focusSlide}
+      />)}
       <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: '50px' }}>
         <Image
           height={15}
