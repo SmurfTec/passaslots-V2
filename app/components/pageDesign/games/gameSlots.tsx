@@ -90,7 +90,7 @@ export function GameSlots() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid pl={matches? 5 : 90} pr={matches? 5 : 69} pt={100} pb={0}>
+      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} pt={100} pb={0}>
         <Title id="gameSlots" my={50} className="font-[700] uppercase leading-[56px] tracking-[-0.015em] text-[48px]">
           SLOTS
         </Title>
@@ -132,29 +132,36 @@ export function GameSlots() {
           )}
         </div>
         <Grid m={0} pb={0} pt={200} align="center" justify="center">
-          <Grid.Col style={{ textAlign: '-webkit-center' }} className="relative" xs={12} sm={12}>
+          <Grid.Col className="relative" xs={12} sm={12}>
             {/* <div className="absolute top-1/2 -translate-y-1/2 pr-32"> */}
-            <Title
-              color="#FFFFFF"
-              maw={850}
-              className="text-[700] text-[48px] leading-[63px] tracking-[0.0125em] text-center uppercase"
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+              }}
             >
-              Experience a world of variety,{' '}
-              {/* <br /> */}
-              right at your fingertips!
-            </Title>
-            <Text
-              mt={30}
-              maw={850}
-              color="#FFFFFF"
-              className="font-[400] text-[20px] text-center leading-[43px] tracking-[0.005em]"
-            >
-              With an ever-growing selection of popular games like Fire Kirin Plus, Dragon Slayer, and{' '}
-              {/* <br /> */}
-              Ocean King 5, you'll never get bored. And the best part? We add new games every{' '}
-              {/* <br /> */}
-              month, ensuring that you always have access to the latest and greatest in gaming.{' '}
-            </Text>
+              <Title
+                color="#FFFFFF"
+                maw={850}
+                className="text-[700] text-[48px] leading-[63px] tracking-[0.0125em] text-center uppercase"
+              >
+                Experience a world of variety, {/* <br /> */}
+                right at your fingertips!
+              </Title>
+              <Text
+                mt={30}
+                maw={850}
+                color="#FFFFFF"
+                className="font-[400] text-[20px] text-center leading-[43px] tracking-[0.005em]"
+              >
+                With an ever-growing selection of popular games like Fire Kirin Plus, Dragon Slayer, and {/* <br /> */}
+                Ocean King 5, you'll never get bored. And the best part? We add new games every {/* <br /> */}
+                month, ensuring that you always have access to the latest and greatest in gaming.{' '}
+              </Text>
+            </div>
             {/* </div> */}
           </Grid.Col>
           <Grid pb={0} align="center">
