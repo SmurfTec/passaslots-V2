@@ -15,7 +15,7 @@ const useStyles = createStyles((theme) => ({
     // width: '100%',
     // height: '100vh',
     [theme.fn.smallerThan(770)]: {
-      minHeight: '85vh',
+      minHeight: 'initial',
     },
   },
 }));
@@ -33,7 +33,14 @@ export function WinHome() {
         <Container fluid pt={94}>
           <Grid align="center">
             <Grid.Col sm={12}>
-              <Image maw={644} mah={363} className="text-center mx-auto" mb={58} src="/images/pages/home/winHomeImage.png" alt="image" />
+              <Image
+                maw={644}
+                mah={363}
+                className="text-center mx-auto"
+                mb={58}
+                src="/images/pages/home/winHomeImage.png"
+                alt="image"
+              />
               <Title
                 color={'#fff'}
                 mb={29}
@@ -87,16 +94,22 @@ export function WinHome() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: '100px',
+            marginTop: '70px',
             textAlign: 'center',
           }}
         >
-          <Image maw={644} mah={363} className="text-center mx-auto" src="/images/pages/home/winHomeImage.png" alt="image" />
+          <Image
+            maw={644}
+            mah={363}
+            className="text-center mx-auto"
+            src="/images/pages/home/winHomeImage.png"
+            alt="image"
+          />
           <Title
             mt={50}
             color={'#fff'}
             className="font-[700] uppercase "
-            style={{ fontSize: '25px !important', letterSpacing: '-1.5%', width: '80%' }}
+            style={{ fontSize: '25px !important', letterSpacing: '-1.5%', width: '90%' }}
           >
             Play on any device now
           </Title>
@@ -104,7 +117,7 @@ export function WinHome() {
             mt={25}
             color="#fff"
             className="font-[400] tracking-[0.005em] font-weight"
-            style={{ fontSize: '15px', letterSpacing: '-1.5%', lineHeight: '21.93px', width: '75%' }}
+            style={{ fontSize: '15px', letterSpacing: '-1.5%', lineHeight: '21.93px', width: '90%' }}
           >
             Every kind of game imaginable, a safe and secure environment to play in, and quick top-up{' '}
             <span className="font-[700]">solutions to fund your account</span> with.
@@ -113,6 +126,7 @@ export function WinHome() {
             <Button
               radius={50}
               w={176}
+              mb={70}
               styles={{
                 root: {
                   border: 'none',
@@ -125,7 +139,7 @@ export function WinHome() {
               }}
               onClick={bonusOpen}
               className="h-12 px-12 text-xl font-[500] "
-              style={{ fontSize: '20px', lineHeight: '23.44px', letterSpacing: '-1.5%' }}
+              style={{ fontSize: '16px', lineHeight: '23.44px', letterSpacing: '-1.5%' }}
             >
               SIGNUP
             </Button>
