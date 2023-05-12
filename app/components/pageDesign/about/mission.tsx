@@ -2,22 +2,22 @@ import { Container, Grid, Group, Text, Title, Image as MImage } from '@mantine/c
 import { useMediaQuery } from '@mantine/hooks';
 
 export function Mission() {
-  const matches = useMediaQuery('(max-width: 1150px)', true);
+  const matches = useMediaQuery('(max-width: 770px)', true);
   return (
     <div
       style={{
         backgroundImage: "url('/images/pages/about/missionbg.png')",
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
-        backgroundSize: 'cover',
-        minHeight: '200vh',
+        backgroundSize: '100% 100%',
+        // minHeight: '200vh',
         position: 'relative',
         zIndex: 50,
         boxShadow: '-1px 0px 20px 3px #016BE6',
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid py={100} className="pt-50 md:pt-0">
+      <Container fluid py={100} className="md:pt-0">
         {/* {matches ? 
         <Grid mt={350}>
           <Grid.Col xs={3}>
@@ -96,8 +96,8 @@ export function Mission() {
           </Grid.Col>
         </Grid>
           : */}
-        <Grid>
-          <Grid.Col order={1} mt={318} md={4} className="grid justify-items-end">
+        <Grid mb={100}>
+          <Grid.Col order={1} mt={100} md={4} className="grid justify-items-end">
             <Group className="flex flex-col">
               <div className="flex mt-[440px]">
                 <Grid justify="flex-end" ml="auto" align="center">
@@ -124,7 +124,7 @@ export function Mission() {
               </div>
             </Group>
           </Grid.Col>
-          <Grid.Col order={2} mt={318} md={3}>
+          <Grid.Col order={2} mt={100} md={4}>
             <Group className="flex flex-col">
               <Group position='center' spacing={33}>
                 <div
@@ -197,7 +197,7 @@ export function Mission() {
               </Group>
             </Group>
           </Grid.Col>
-          <Grid.Col order={3} mt={318} md={4}>
+          <Grid.Col order={3} mt={100} md={4}>
             <Group className="flex flex-col content-start">
               <div className="flex mt-[50px]">
                 <Grid align="center">

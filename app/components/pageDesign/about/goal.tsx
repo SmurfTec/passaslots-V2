@@ -141,16 +141,18 @@ export function Goal() {
             <Title color="white" className="font-[700] text-[64px] leading-[68px] tracking-[0.0125em] uppercase">
               Our goal is to aim <br /> without a limit
             </Title>
-            <Text
-              mt={20}
-              maw={700}
-              color="white"
-              className="font-[400] text-[20px] tracking-[0.005em] leading-[38px]"
-              opacity={0.8}
-            >
-              Our commitment to being No.1 drives us to constantly improve. We are always broadening our{' '}
-              community, enhancing our content, and finding new ways to provide value to our players.
-            </Text>
+            <div style={{display: 'content'}} className='text-center'>
+              <Text
+                mt={20}
+                maw={700}
+                color="white"
+                className="font-[400] text-[20px] text-center tracking-[0.005em] leading-[38px]"
+                opacity={0.8}
+              >
+                Our commitment to being No.1 drives us to constantly improve. We are always broadening our{' '}
+                community, enhancing our content, and finding new ways to provide value to our players.
+              </Text>
+            </div>
             {/* <Image className='mx-auto' width={478} height={565} src="/images/pages/about/goalZeus.png" /> */}
             <Title
               color="white"

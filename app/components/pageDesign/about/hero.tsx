@@ -12,7 +12,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '100vh', 
+    // minHeight: '100vh', 
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -22,6 +22,7 @@ const useStyles = createStyles((theme) => ({
 export function Hero() {
   const { classes } = useStyles();
   const matches = useMediaQuery('(max-width: 810px)', true);
+  const matches_mobile = useMediaQuery('(max-width: 770px)', true);
   const [sideButtons, setSideButtons] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
   const closesideMenu = () => {
@@ -84,19 +85,19 @@ export function Hero() {
         {/* </Grid.Col> */}
       </Group>
       ) : undefined}
-        <div className="pt-[163px] pb-[50px]">
+        <div className="pt-[163px] pb-[50px] xs:px-[5px]">
           <div className="text-center">
             <Group position='center'>
-              <Title className="font-[700] text-[#FFB800]" order={3}>
+              <Title className="font-[700] text-[#FFB800]" order={matches_mobile ? 6 : 3}>
                 About Us
               </Title>
             </Group>
-            <Image className='lg:!w-[551px] lg:!h-[523px] mx-auto' src="/images/pages/about/homeImage.png" alt="vector" />
-            <Text color="black" className="font-[400] uppercase text-[#FFFFFF]" mt={0} size={24}>
+            <Image maw={551} mah={523} className='mx-auto' src="/images/pages/about/homeImage.png" alt="vector" />
+            <Text color="black" className="font-[400] uppercase text-[#FFFFFF]" mt={0} size={matches_mobile ? 16 : 24}>
               25+ full-time professionals, 1 goal:
             </Text>
             <Grid justify='center' align='center'>
-              <Title color="white" size={36} mt={20} className="font-[500] justify-center text-center" order={3} maw={1000}>
+              <Title color="white" size={matches_mobile ? 18 : 36} mt={20} className="font-[500] justify-center text-center" order={matches_mobile ? 5 : 3} maw={1000}>
                 To create the world's most entertaining and user-friendly online game room platform.
               </Title>
             </Grid>
@@ -104,7 +105,7 @@ export function Hero() {
               <Title style={{
                 borderRadius: '50px',
                 border: '7px solid #016BE6',
-              }} p={10} px={50} mb={50} size={31} color="#FFFFFF" mt={31} className="font-[400]" order={4} maw={541}>
+              }} p={10} px={50} mb={50} size={matches_mobile ? 15 : 31} color="#FFFFFF" mt={31} className="font-[400]" order={matches_mobile ? 6 : 4} maw={541}>
                 How are we going to get there?
               </Title>
             </Grid>
