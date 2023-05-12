@@ -51,12 +51,16 @@ export function WhyPasaHome() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid w={'95%'} py={100}>
+      <Container fluid w={'90%'} pt={matches ? 70 : 100}>
         <Title
           color={'white'}
           order={3}
-          className="font-[700] px-[15px]"
-          style={{ fontSize: matches ? '24px' : '48px', lineHeight: '56.25px', letterSpacing: '-1.5%' }}
+          className="font-[700]"
+          style={{
+            fontSize: matches ? '21px' : '48px',
+            lineHeight: '56.25px',
+            letterSpacing: '-1.5%',
+          }}
         >
           WHY PASA SLOTS?
         </Title>
@@ -66,7 +70,7 @@ export function WhyPasaHome() {
             controls: {
               position: 'relative',
               WebkitJustifyContent: 'end !important',
-              bottom: matches ? '607px' : '600px',
+              bottom: matches ? '517px' : '600px',
             },
             control: {
               margin: '0 0 0 10px !important',
@@ -81,10 +85,9 @@ export function WhyPasaHome() {
           }}
           slideSize={matches ? '50%' : '25%'}
           pt={20}
-          loop
           align="start"
-          slidesToScroll={1}
-          slideGap={matches? 'md' : 'xl'}
+          slidesToScroll={'auto'}
+          slideGap={matches ? 'md' : 'xl'}
           previousControlIcon={<ChevronLeft size={28} />}
           nextControlIcon={<ChevronRight size={28} />}
         >
