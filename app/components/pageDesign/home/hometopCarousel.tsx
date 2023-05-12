@@ -63,7 +63,13 @@ export const HomeTopCarousel = () => {
       }}
     >
       {/* <div className={classes.backdrop}> */}
-      <Container fluid px={0} py={100} style={{ backgroundSize: 'cover', width: '100%' }}>
+      <Container
+        fluid
+        px={0}
+        pt={matches ? 70 : 100}
+        pb={matches ? 50 : 100}
+        style={{ backgroundSize: 'cover', width: '100%' }}
+      >
         <Carousel
           // styles={{
           //   indicator: {
@@ -96,23 +102,24 @@ export const HomeTopCarousel = () => {
           slideSize="50%"
           loop
           initialSlide={3}
+          slideGap={matches ? 'md' : 'xl'}
           plugins={[autoplay.current]}
           // images={images}
           // delay={4000}
         >
           {images.map((image, index) => {
-            return(
-            <Carousel.Slide key={index}>
-              <Image className='mx-auto' maw="598px" mah="596px" src={image} />
-            </Carousel.Slide>
-            )
+            return (
+              <Carousel.Slide key={index}>
+                <Image className="mx-auto" maw="598px" mah="596px" src={image} height={150} width={'auto'} />
+              </Carousel.Slide>
+            );
           })}
         </Carousel>
 
-        <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: '50px' }}>
+        <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: matches ? '10px' : '50px' }}>
           <Image
-            height={15}
-            width={15}
+            height={matches ? 10 : 15}
+            width={matches ? 10 : 15}
             src={
               slideProgress === 0
                 ? '/images/scroll/carouselIndicatorSelect.png'
@@ -120,8 +127,8 @@ export const HomeTopCarousel = () => {
             }
           />
           <Image
-            height={15}
-            width={15}
+            height={matches ? 10 : 15}
+            width={matches ? 10 : 15}
             src={
               slideProgress === 1
                 ? '/images/scroll/carouselIndicatorSelect.png'
@@ -129,8 +136,8 @@ export const HomeTopCarousel = () => {
             }
           />
           <Image
-            height={15}
-            width={15}
+            height={matches ? 10 : 15}
+            width={matches ? 10 : 15}
             src={
               slideProgress === 2
                 ? '/images/scroll/carouselIndicatorSelect.png'
@@ -146,10 +153,10 @@ export const HomeTopCarousel = () => {
             styles={{
               root: {
                 border: 'none',
-                fontSize: '20px',
+                fontSize: matches ? '16px' : '20px',
                 fontStyle: 'normal',
                 color: '#FFFFFF',
-                padding: '17px 53px',
+                padding: matches ? '9px 25px' : '17px 53px',
                 width: '203px',
                 gap: '10px',
                 // borderColor: '#F6CAA7',
@@ -158,7 +165,7 @@ export const HomeTopCarousel = () => {
             }}
             bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
             radius={50}
-            size="lg"
+            size={matches ? 'md' : 'lg'}
             variant="outline"
             component="a"
             href="http://Pasasweeps.net"
