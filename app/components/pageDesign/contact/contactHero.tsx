@@ -12,10 +12,10 @@ const useStyles = createStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     // position: 'relative',
     backgroundPosition: 'center center',
-    backgroundSize: 'cover',
-    minHeight: '130vh', 
+    backgroundSize: '100% 100%',
+    // minHeight: '130vh', 
     // height: '1127px',
-    position: 'relative',
+    // position: 'relative',
     marginTop: '-115px',
     // width: '100%',
     // height: '100vh',
@@ -25,6 +25,7 @@ const useStyles = createStyles((theme) => ({
 export function ContactHero() {
   const { classes } = useStyles();
   const matches = useMediaQuery('(max-width: 810px)', true);
+  const matches2 = useMediaQuery('(max-width: 770px)', true);
   const [sideButtons, setSideButtons] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
   const closesideMenu = () => {
@@ -39,8 +40,8 @@ export function ContactHero() {
           backgroundPosition: 'center center',
           backgroundSize: '100% 100%',
           backgroundRepeat: 'no-repeat',
-          minHeight: '130vh',
-        }} className='absolute opacity-21' src="/images/pages/contact/mainbanner.png" >
+          // minHeight: '130vh',
+        }} className='opacity-21' src="/images/pages/contact/mainbanner.png" >
         {!matches ? (
           <Group align={'center'} className=''>
             {/* <Grid.Col> */}
@@ -86,30 +87,27 @@ export function ContactHero() {
             {/* </Grid.Col> */}
           </Group>
           ) : undefined}
-        <Container fluid ml={90} mr={69} className="mb-[-150px] sm:mb-[auto] relative">
-          <Grid>
-            <Grid.Col md={6}>
-              <Stack h={matches ? "40vh" : "80vh"} justify='center'>
-                <Group align='center'>
-                  <Title className="font-[900] text-[#FFB800]" order={3} style={{textShadow: '0px 4px 33px #016BE6', lineHeight: '38px'}}>
-                    Contact Us
-                  </Title>
-                </Group>
-                <Title order={1} mt={30} className="font-[700] uppercase text-[#FFF]" 
-                style={{
-                  textShadow: '0px 4px 33px #016BE6',
-                  letterSpacing: '-0.015em',
-                  lineHeight: '112px',
-                }}>
-                  More than just<br/> a platform
+        <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pt={120} pb={matches ? 50 : 100}>
+          <Grid align='center'>
+            <Grid.Col xs={6}>
+              <Group align='center'>
+                <Title className="font-[900] text-[#FFB800] sm:!text-[32px] xs:!text-[16px]" style={{textShadow: '0px 4px 33px #016BE6', lineHeight: '38px'}}>
+                  Contact Us
                 </Title>
-              </Stack>
+              </Group>
+              <Title maw={790} mt={30} className="font-[700] lg:!leading-[112px] md:!leading-[56px] uppercase text-[#FFF] xl:!text-[96px] lg:!text-[48px] md:!text-[40px] sm:!text-[40px] xs:!text-[40px]" 
+              style={{
+                textShadow: '0px 4px 33px #016BE6',
+                letterSpacing: '-0.015em',
+              }}>
+                More than just a platform
+              </Title>
             </Grid.Col>
-          <Grid.Col md={6}>
-            <Image mb={67} mt={422} w={786} h={638} className='' src="/images/pages/contact/bull.png" alt='image' />
+          <Grid.Col xs={6}>
+            <Image mt={matches ? 0 : 50} maw={786} mah={638} className='mx-auto' src="/images/pages/contact/bull.png" alt='image' />
           </Grid.Col>
           </Grid>
-      </Container>
+        </Container>
       </BackgroundImage>
       </div>
   );
