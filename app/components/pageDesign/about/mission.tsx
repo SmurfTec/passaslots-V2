@@ -2,7 +2,7 @@ import { Container, Grid, Group, Text, Title, Image as MImage } from '@mantine/c
 import { useMediaQuery } from '@mantine/hooks';
 
 export function Mission() {
-  const matches = useMediaQuery('(max-width: 770px)', true);
+  const matches = useMediaQuery('(max-width: 1024px)', true);
   return (
     <div
       style={{
@@ -19,7 +19,7 @@ export function Mission() {
     >
       <Container fluid py={100} className="md:pt-0">
         {/* {matches ? 
-        <Grid mt={350}>
+        <Grid mt={150}>
           <Grid.Col xs={3}>
             <Group className="flex flex-col">
               <Group position='center' spacing={33}>
@@ -32,7 +32,7 @@ export function Mission() {
                     background: '#016BE6',
                     border: '11px solid #FFB800',
                     borderRadius: '50px',
-                    marginTop: '-60px',
+                    // marginTop: '-60px',
                   }}
                 />
                 <MImage className="ml-[180px] text-right" src="/images/pages/about/capitalT.png" />
@@ -103,11 +103,11 @@ export function Mission() {
                 <Grid justify="flex-end" ml="auto" align="center">
                   <Title
                     mb={70}
-                    className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
+                    className="absolute text-right uppercase text-[#ffffff] font-[700] sm:!text-[32px] xs:!text-[24px] leading-[38px] tracking-[-0.015em]"
                   >
                     OUR APPROACH
                   </Title>
-                  <Text maw={381} className="absolute text-right mt-[170px] text-[#ffffff] font-[400] text-[16px] leading-[30px] tracking-[0.005em] opacity-80">
+                  <Text maw={381} className="absolute text-right mt-[170px] text-[#ffffff] font-[400] sm:text-[16px] xs:text-[15px] leading-[30px] tracking-[0.005em] opacity-80">
                     We believe in putting players first, prefer quality over{' '}
                     {/* <br /> */}
                     quantity, offer a range of different games, protect{' '}
@@ -131,15 +131,15 @@ export function Mission() {
                   style={{
                     boxSizing: 'border-box',
                     position: 'absolute',
-                    width: '36px',
-                    height: '36px',
+                    width: matches ? '22px' : '36px',
+                    height: matches ? '22px' : '36px',
                     background: '#016BE6',
-                    border: '11px solid #FFB800',
+                    border: matches ? '5px solid #FFB800' : '11px solid #FFB800',
                     borderRadius: '50px',
                     marginTop: '-60px',
                   }}
                 />
-                <MImage className="ml-[180px] text-right" src="/images/pages/about/capitalT.png" />
+                <MImage height={matches ? 48 : 95} width={matches ? 42 : 84} className="ml-[180px] text-right" src="/images/pages/about/capitalT.png" />
               </Group>
               <div
                 style={{
@@ -147,23 +147,23 @@ export function Mission() {
                   position: 'absolute',
                   width: '337px',
                   height: '0px',
-                  border: '4px dashed #FFFFFF',
+                  border: matches ? '2px dashed #FFFFFF' : '4px dashed #FFFFFF',
                   transform: 'rotate(90deg)',
                   marginTop: '204.5px',
                 }}
               />
               <Group position='center' spacing={33} className='mt-[277px]'>
-                <MImage mr={180} 
+                <MImage height={matches ? 48 : 95} width={matches ? 42 : 84} mr={180} 
                 style={{ transform: "scaleX(-1)" }}
                 src="/images/pages/about/capitalT.png" />
                 <div
                   style={{
                     boxSizing: 'border-box',
                     position: 'absolute',
-                    width: '36px',
-                    height: '36px',
+                    width: matches ? '22px' : '36px',
+                    height: matches ? '22px' : '36px',
                     background: '#016BE6',
-                    border: '11px solid #FFB800',
+                    border: matches ? '5px solid #FFB800' : '11px solid #FFB800',
                     borderRadius: '50px',
                     marginTop: '-70px',
                   }}
@@ -175,7 +175,7 @@ export function Mission() {
                   position: 'absolute',
                   width: '337px',
                   height: '0px',
-                  border: '4px dashed #FFFFFF',
+                  border: matches ? '2px dashed #FFFFFF' : '4px dashed #FFFFFF',
                   transform: 'rotate(90deg)',
                   marginTop: '589.5px',
                 }}
@@ -185,15 +185,15 @@ export function Mission() {
                   style={{
                     boxSizing: 'border-box',
                     position: 'absolute',
-                    width: '36px',
-                    height: '36px',
+                    width: matches ? '22px' : '36px',
+                    height: matches ? '22px' : '36px',
                     background: '#016BE6',
-                    border: '11px solid #FFB800',
+                    border: matches ? '5px solid #FFB800' : '11px solid #FFB800',
                     borderRadius: '50px',
                     marginTop: '-60px',
                   }}
                 />
-                <MImage ml={180} src="/images/pages/about/capitalT.png" />
+                <MImage height={matches ? 48 : 95} width={matches ? 42 : 84} ml={180} src="/images/pages/about/capitalT.png" />
               </Group>
             </Group>
           </Grid.Col>
@@ -203,11 +203,11 @@ export function Mission() {
                 <Grid align="center">
                   <Title
                     mb={70}
-                    className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
+                    className="absolute uppercase text-[#ffffff] font-[700] sm:!text-[32px] xs:!text-[24px] leading-[38px] tracking-[-0.015em]"
                   >
                     OUR MISSION
                   </Title>
-                  <Text maw={372} className="absolute mt-[120px] text-[#ffffff] font-[400] text-[16px] leading-[30px] tracking-[0.005em] opacity-80">
+                  <Text maw={372} className="absolute mt-[120px] text-[#ffffff] font-[400] sm:text-[16px] xs:text-[15px] leading-[30px] tracking-[0.005em] opacity-80">
                     Pasa slots was created with gamers' needs in mind{' '}
                     {/* <br /> */}
                     with a singular focus: to bring the real life sounds of{' '}
@@ -224,11 +224,11 @@ export function Mission() {
                 <Grid align="center">
                   <Title
                     mb={70}
-                    className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
+                    className="absolute uppercase text-[#ffffff] font-[700] sm:!text-[32px] xs:!text-[24px] leading-[38px] tracking-[-0.015em]"
                   >
                     OUR COMMITMENT
                   </Title>
-                  <Text maw={363} className="absolute mt-[120px] text-[#ffffff] font-[400] text-[16px] leading-[30px] tracking-[0.005em] opacity-80">
+                  <Text maw={363} className="absolute mt-[120px] text-[#ffffff] font-[400] sm:text-[16px] xs:text-[15px] leading-[30px] tracking-[0.005em] opacity-80">
                     At Pasa slots, we value our players and take their{' '}
                     {/* <br /> */}
                     data seriously. Our online casino is safe, encrypted{' '}

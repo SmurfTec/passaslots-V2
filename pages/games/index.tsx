@@ -1,7 +1,5 @@
-import { Container, SimpleGrid, Title } from '@mantine/core';
 import {
   GameCarousel,
-  GameFooter,
   GameHero,
   GameList,
   GamePossible,
@@ -19,7 +17,6 @@ export default function Games() {
       <GameSlots />
       <GameCarousel />
       <GameList />
-      {/* <GameFooter /> */}
     </>
   );
 }
