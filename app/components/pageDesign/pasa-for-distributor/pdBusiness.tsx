@@ -12,7 +12,7 @@ export function PDBusiness() {
         backgroundPosition: 'center center',
         position: 'relative',
         backgroundSize: 'cover',
-        minHeight: '100vh',
+        // minHeight: '100vh',
         zIndex: 50,
         boxShadow: '-1px 0px 20px 3px #016BE6',
         borderTop: '6px solid #016BE6',
@@ -20,41 +20,43 @@ export function PDBusiness() {
       }}
       src="/images/header/backgroundImage.png"
     >
-      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={100}>
+      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 100}>
         <Grid m={0}>
-          <Grid.Col lg={6}>
+          <Grid.Col style={{alignSelf: 'center'}} md={6}>
             <Image
+              mah={638} maw={768}
+              className='mx-auto my-auto'
               src="/images/pages/pasa-for-distributor/machine-leprechaun.png"
               alt="machine-leprechaun"
             />
           </Grid.Col>
-          <Grid.Col lg={6}>
-            <div className="relative h-full">
-              <Text mb={18} color="white" className="uppercase font-[400] text-[20px] leading-[21px]">
+          <Grid.Col md={6}>
+            <div className="relative h-full text-center sm:text-left">
+              <Text mb={18} color="white" className="text-center sm:text-left uppercase font-[400] md:!text-[20px] xs:!text-[15px] sm:!text-[15px] leading-[21px]">
                 Simplify Your Business
               </Text>
-              <Title color="white" className="font-[700] xs:!text-[44px] text-[48px] leading-[55px] uppercase" opacity={0.9}>
-                Effortless Business
-                <br /> Management with
-                <br />
-                Pasa's Innovative User
-                <br /> and Gaming Insights
-                <br /> System
+              <Title maw={600} color="white" className="text-center sm:text-left font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[55px] sm:!leading-[30px] xs:!leading-[30px] uppercase" opacity={0.9}>
+                Effortless Business{' '}
+                Management with{' '}
+                {/* <br /> */}
+                Pasa's Innovative User{' '}
+                and Gaming Insights{' '}
+                System
               </Title>
-              <Text mb={50} mt={35} color="white" className="font-[400] text-[20px] leading-[38px]">
-                Pasa has everything you need to run your business smoothly. It
-                <br />
-                has an insights system that takes care of things like keeping
-                <br />
-                track of customers, giving you reports, and managing jackpots
-                <br />
-                and bonuses. Plus, it's safe and works on all types of devices
-                <br />
-                like computers, phones, tablets, and even special terminals you
-                <br />
-                can use on the go. So no matter where you are, you'll always
-                <br />
-                have everything you need!
+              <Text maw={560} mb={matches ? 20 : 50} mt={matches ? 15 : 35} color="white" className="text-center sm:text-left font-[400] md:!text-[20px] xs:!text-[15px] sm:!text-[15px] md:!leading-[38px] sm:!leading-[25px] xs:!leading-[25px]">
+                Pasa has everything you need to run your business smoothly. It{' '}
+                {/* <br /> */}
+                has an insights system that takes care of things like keeping{' '}
+                {/* <br /> */}
+                track of customers, giving you reports, and managing jackpots{' '}
+                {/* <br /> */}
+                and bonuses. Plus, it's safe and works on all types of devices{' '}
+                {/* <br /> */}
+                like computers, phones, tablets, and even special terminals you{' '}
+                {/* <br /> */}
+                can use on the go. So no matter where you are, you'll always{' '}
+                {/* <br /> */}
+                have everything you need!{' '}
               </Text>
 
               <Button
@@ -63,21 +65,21 @@ export function PDBusiness() {
                 styles={{
                   root: {
                     background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
-                    padding: '17px 53px',
+                    padding: matches ? '12px 35px' : '17px 53px',
                     letterSpacing: '-0.015em',
                     // boxShadow: 'inset 0 0 2px 2px #F6CAA7',
                     '&:hover': {
                       background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
                     },
-                    fontSize: '20px',
+                    fontSize: matches ? '15px' :'20px',
                     lineHeight: '23px',
                     textTransform: 'uppercase',
-                    height: '57px',
-                    width: '278px',
+                    height: matches ? '40px' : '57px',
+                    width: matches ? '220px' : '278px',
                   },
                   label: {
                     marginBottom: '-2px',
-                    fontSize: '20px',
+                    fontSize: matches ? '15px' :'20px',
                     lineHeight: '23px',
                   },
                 }}

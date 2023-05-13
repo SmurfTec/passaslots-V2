@@ -65,14 +65,14 @@ export function PDHero() {
           {/* </Grid.Col> */}
         </Group>
         ) : undefined}
-      <Container fluid pl={matches? 2 : 90} pr={matches? 2 : 69} py={100}>
+      <Container fluid pl={matches? 5 : 90} pr={matches? 5 : 69} pt={matches ? 50 : 100} pb={matches ? 0 : 50}>
         <Grid justify='center' align='center' mb={500}>
           <Grid.Col sm={12}>
             <div className='text-center'>
-              <Title mt={150} color='white' className='uppercase xs:!text-[40px] text-[48px] font-[900] leading-[56px] tracking-[-0.015em] drop-shadow-[0_4px_33px_#016BE6] text-center'>
+              <Title mt={matches ? 100 : 150} color='white' className='uppercase md:!text-[48px] sm:!text-[24px] xs:!text-[24px] font-[900] md:!leading-[56px] sm:!leading-[25px] xs:!leading-[25px] tracking-[-0.015em] drop-shadow-[0_4px_33px_#016BE6] text-center'>
                 Empower Your Organization With
               </Title>
-              <Title mt={20} color='#FFB800' className='uppercase text-[96px] font-[900] leading-[112px] tracking-[-0.015em] text-center'>
+              <Title mt={20} color='#FFB800' className='uppercase md:!text-[96px] sm:!text-[40px] xs:!text-[40px] font-[900] md:!leading-[112px] sm:!leading-[56px] xs:!leading-[56px] tracking-[-0.015em] text-center'>
                 PASA SLOTS
               </Title>
             </div>
@@ -89,27 +89,27 @@ export function PDHero() {
                   root: {
                     border: '1px solid #F6CAA7',
                     background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
-                    padding: '17px 53px',
+                    padding: matches ? '12px 35px' : '17px 53px',
                     letterSpacing: '-0.015em',
                     // boxShadow: 'inset 0 0 2px 2px #F6CAA7',
                     '&:hover': {
                       background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
                     },
-                    fontSize: '20px',
+                    fontSize: matches ? '15px' : '20px',
                     lineHeight: '23px',
                     textTransform: 'uppercase',
-                    height: '57px',
-                    width: '278px',
+                    height: matches ? '40px' : '57px',
+                    width: matches ? '220px' : '278px',
                   },
                   label: {
                     marginBottom: '-2px',
-                    fontSize: '20px',
+                    fontSize: matches ? '15px' : '20px',
                     lineHeight: '23px'
                   },
                 }}
                 radius={50}
                 className='font-[500]'
-                mt={30}
+                mt={matches ? 10 : 30}
                 // component="a"
                 // href="http://Pasasweeps.net"
               >

@@ -2,7 +2,7 @@ import { Container, Grid, Image, Text, Title, Group, Button } from '@mantine/cor
 import { useMediaQuery } from '@mantine/hooks';
 
 export function PDExperience() {
-  const matches = useMediaQuery('(max-width: 700px)', true);
+  const matches = useMediaQuery('(max-width: 770px)', true);
   return (
     <div
       style={{
@@ -15,7 +15,7 @@ export function PDExperience() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} py={100}>
+      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} py={matches ? 50 : 100}>
         <Grid align="center" justify="center">
           <Image maw={450} mah={450}
             className="mx-auto my-auto"
@@ -24,18 +24,18 @@ export function PDExperience() {
           />
         </Grid>
         <Title
-          mt={37}
-          className="uppercase xs:!text-[40px] text-[48px] font-[700] leading-[61px] tracking-[0.0125em] text-center"
+          mt={matches ? 10 : 37}
+          maw={890}
+          className="mx-auto uppercase xs:!text-[24px] sm:!text-[32px] md:!text-[48px] font-[700] md:!leading-[61px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em] text-center"
           color="white"
         >
           Pasa distributors{' '}
           <span className="text-[#50A1FF]">
-            experience
-            <br /> growth
+            experience growth
           </span>{' '}
           within their first month
         </Title>
-        <Group mt={110} position="apart">
+        <Group mt={matches ? 30 : 110} position="apart">
           <Button
             styles={{
               label: {
