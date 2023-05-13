@@ -56,21 +56,21 @@ export function BlogArticle() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container py={100} fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
+      <Container py={matches ? 50 : 100} fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
         <Grid>
           <Grid.Col sm={12}>
             <div className="text-center">
               <Title
                 color="white"
-                className="font-[700] text-center text-[48px] leading-[56px] tracking-[-0.015em] uppercase"
+                className="font-[700] text-center md:!text-[48px] sm:!text-[24px] xs:!text-[24px] leading-[56px] tracking-[-0.015em] uppercase"
               >
                 More articles
               </Title>
             </div>
           </Grid.Col>
-          <Grid justify="space-between" py={100} grow gutter={30}>
+          <Grid justify="space-between" py={matches ? 20 : 100} grow gutter={matches ? 10 : 30}>
             {articleData.map((article, key) => (
-              <Grid.Col className="flex justify-between" key={key + article.title} md={6}>
+              <Grid.Col className="flex justify-between" key={key + article.title} lg={6}>
                 <SingleArticle
                   author={article.author}
                   date={article.date}

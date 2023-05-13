@@ -2,7 +2,7 @@ import { Container, Grid, Text, Title, Button, Image, BackgroundImage } from '@m
 import { useMediaQuery } from '@mantine/hooks';
 
 export function BlogDiscover() {
-  const matches = useMediaQuery('(max-width: 570px)');
+  const matches = useMediaQuery('(max-width: 770px)');
   return (
     <div>
       <BackgroundImage
@@ -10,7 +10,7 @@ export function BlogDiscover() {
           backgroundPosition: 'center center',
           backgroundSize: '100% 100%',
           backgroundRepeat: 'no-repeat',
-          minHeight: '100vh',
+          // minHeight: '100vh',
           zIndex: 150,
           boxShadow: '-1px 0px 20px 3px #016BE6',
           borderTop: '6px solid #016BE6',
@@ -19,10 +19,11 @@ export function BlogDiscover() {
         src="/images/pages/blogs/mobilegamebg.png"
         bgsz="auto"
       >
-        <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={100}>
+        <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 100}>
           <Grid align="center" justify="center">
             <Grid justify="center" align="center">
               <Image
+                maw={1109} mah={623}
                 className="mx-auto mb-[20px]"
                 src="/images/pages/blogs/mobileGame.png"
                 alt="mobile game"
@@ -30,8 +31,8 @@ export function BlogDiscover() {
             </Grid>
             <Grid.Col sm={12}>
               <Title
-                mb={20}
-                className="text-center font-[700] text-[48px] leading-[51px] tracking-[0.0125em] uppercase text-[#FFFFFF]"
+                mb={matches ? 10 : 20}
+                className="text-center font-[700] md:!text-[48px] sm:!text-[24px] xs:!text-[24px] leading-[51px] tracking-[0.0125em] uppercase text-[#FFFFFF]"
               >
                 DISCOVER MORE WITH PASA
               </Title>
@@ -40,9 +41,9 @@ export function BlogDiscover() {
               <Grid align='center' justify='center'>
                 <Text
                   maw={845}
-                  mt={25}
+                  mt={matches ? 10 : 25}
                   color="#FFFFFF"
-                  className="text-center font-[400] tracking-[0.005em] leading-[38px] text-[20px]"
+                  className="text-center font-[400] tracking-[0.005em] leading-[38px] md:text-[20px] sm:text-[15px] xs:text-[15px]"
                 >
                   Experience ultimate online gaming at Pasa. Our renowned software developers bring you{' '}
                   {/* <br /> */}
@@ -67,7 +68,7 @@ export function BlogDiscover() {
                       '&:hover': {
                         background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
                       },
-                      fontSize: '20px',
+                      fontSize: matches ? '15px' : '20px',
                       lineHeight: '23px',
                       textTransform: 'uppercase',
                       height: '57px',

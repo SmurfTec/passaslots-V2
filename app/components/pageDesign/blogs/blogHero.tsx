@@ -14,7 +14,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '125vh',
+    // minHeight: '125vh',
     // height: '1127px',
     position: 'relative',
     marginTop: '-115px',
@@ -45,33 +45,36 @@ export function BlogHero() {
         className="relative opacity-21"
         src="/images/header/backgroundImage.png"
       >
-        <Container fluid px={0} pt={100} className="sm:mb-[auto] relative">
+        <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 100}>
           {/* <div className="absolute top-1/2 -translate-y-1/2"> */}
-          <Stack pt={150} justify="center">
+          <Stack pt={100} justify="center">
             <div className="text-center">
               <Title
                 className="uppercase font-[900] text-center text-[#FFB800]"
-                order={3}
-                style={{ textShadow: '0px 4px 33px #016BE6', lineHeight: '38px' }}
+                order={matches ? 6 : 3}
+                style={{ textShadow: '0px 4px 33px #016BE6', lineHeight: matches ? '19px' : '38px' }}
               >
                 Blogs
               </Title>
               <Title
-                order={1}
-                mt={30}
-                className="font-[700] uppercase text-[#FFF]"
+                order={matches ? 4 : 1}
+                mt={matches ? 10 : 30}
+                maw={matches ? 770 : 1130}
+                className="font-[700] uppercase text-[#FFF] text-center mx-auto"
                 style={{
                   textShadow: '0px 4px 33px #016BE6',
                   letterSpacing: '-0.015em',
-                  lineHeight: '112px',
+                  lineHeight: matches ? '42px' : '112px',
                 }}
               >
                 READ MORE ABOUT THE
-                <br /> PASA SLOTS COMMUNITY
+                 PASA SLOTS COMMUNITY
               </Title>
             </div>
             <Image
-              className="mx-auto my-auto pt-[35px]"
+              maw={942}
+              mah={573}
+              className="mx-auto my-auto"
               src="/images/pages/blogs/bloghero.png"
               alt="image"
             />

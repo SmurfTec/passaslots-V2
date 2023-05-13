@@ -74,19 +74,19 @@ export function BlogLayout() {
     >
       <Grid>
         <Grid.Col sm={12} className="text-center sm:text-left">
-          <Title className="font-[700] text-[48px] leading-[56px] tracking-[-0.015em] uppercase">FEATURED BLOGS</Title>
+          <Title className="font-[700] md:!text-[48px] sm:!text-[24px] xs:!text-[24px] leading-[56px] tracking-[-0.015em] uppercase">FEATURED BLOGS</Title>
         </Grid.Col>
       </Grid>
 
-      <Grid justify="space-between" py={100} grow gutter={30}>
+      <Grid justify="center" py={30} grow gutter={matches ? 10 : 30}>
         {blogsData.length === 0 && <p className="font-[700] text-[24px] center">Data not available</p>}
         {blogsData.map((item, key) => (
-          <Grid.Col className="flex justify-between" key={key + item.title} md={4}>
+          <Grid.Col className="flex justify-center" key={key + item.title} md={4} sm={6} xs={6}>
             <SingleBlog author={item.author} date={item.publishedOn as string} image={item.image} title={item.title} />
           </Grid.Col>
         ))}
         {/* {blogData.map((item, key) => (
-          <Grid.Col className="flex justify-between" key={key + item.title} md={4}>
+          <Grid.Col className="flex justify-center" key={key + item.title} md={4} sm={6} xs={6}>
             <SingleBlog author={item.author} date={item.date} image={item.image} title={item.title} />
           </Grid.Col>
         ))} */}

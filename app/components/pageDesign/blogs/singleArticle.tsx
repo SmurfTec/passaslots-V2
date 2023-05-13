@@ -20,18 +20,18 @@ export function SingleArticle({ author, date, image, title }: SingleArticleProps
       // margin: 'auto',
       // justifyContent: 'space-between'
     }} align="top">
-      <Grid.Col xs={5} sm={3}>
-        <Image height='auto' width='auto' src={image} alt={image} />
+      <Grid.Col span={3}>
+        <Image className='md:!h-[auto] md:!w-[auto] sm:!h-[93px] xs:!w-[93px] xs:!h-[93px] sm:!w-[93px]' src={image} alt={image} />
       </Grid.Col>
-      <Grid.Col xs={7} sm={9} className="space-y-4 px-[19px]">
-        <Title color='#EEEEEE' className="font-[700] leading-[30px] !text-[22px] uppercase">
+      <Grid.Col span={9} className="space-y-4 px-[19px]">
+        <Title color='#EEEEEE' className="font-[700] md:!leading-[30px] sm:!leading-[20px] xs:!leading-[20px] md:!text-[22px] sm:!text-[16px] xs:!text-[16px] uppercase">
           {title}
         </Title>
         <div className='flex justify-between'>
-          <Text color='white' className="font-[400] !text-[14px] leading-[20px] opacity-70 mt-[45px]">
+          <Text color='white' className="font-[400] md:!text-[14px] sm:!text-[10px] xs:!text-[10px] leading-[20px] opacity-70 mt-[45px]">
             By {author}
           </Text>
-          <Text color='white' className="font-[400] !text-[14px] leading-[20px] opacity-70 mt-[45px]">
+          <Text color='white' className="font-[400] md:!text-[14px] sm:!text-[10px] xs:!text-[10px] leading-[20px] opacity-70 mt-[45px]">
             {date}
           </Text>
         </div>

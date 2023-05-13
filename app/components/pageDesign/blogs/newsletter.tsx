@@ -26,7 +26,7 @@ export function NewsletterBlog() {
       email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
     },
   });
-  const matches = useMediaQuery('(max-width: 570px)');
+  const matches = useMediaQuery('(max-width: 770px)');
 
   const handleSubmit = ({ email }: { email: string }) => {
     fetch('/api/newsletter', {
@@ -53,7 +53,7 @@ export function NewsletterBlog() {
         // position: 'relative',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
-        minHeight: '100vh',
+        // minHeight: '100vh',
         // height: '1127px',
         position: 'relative',
         // width: '100%',
@@ -68,7 +68,7 @@ export function NewsletterBlog() {
           backgroundPosition: 'center center',
           backgroundSize: '100% 100%',
           backgroundRepeat: 'no-repeat',
-          minHeight: '100vh',
+          // minHeight: '100vh',
         }}
         className="relative opacity-21"
         src="/images/header/backgroundImage.png"
@@ -77,23 +77,25 @@ export function NewsletterBlog() {
           <Grid justify="center" align="center">
             <Grid.Col sm={12}>
               <Grid justify="center" align="center">
-                <Image
-                  className="mx-auto my-auto"
-                  src="/images/pages/blogs/addsomeluck.png"
-                  alt="image"
-                />
-                <div className="flex flex-col mt-[85px]">
+                <Grid.Col>
+                  <Image maw={912} mah={586}
+                    className="mx-auto my-auto"
+                    src="/images/pages/blogs/addsomeluck.png"
+                    alt="image"
+                  />
+                </Grid.Col>
+                <div className="flex flex-col md:mt-[85px] sm:mt-[20px] xs:mt-[20px]">
                   <Title
                     color="white"
-                    className="uppercase font-[700] leading-[51px] text-center tracking-[0.0125em] text-[48px]"
+                    className="uppercase font-[700] leading-[51px] text-center tracking-[0.0125em] md:!text-[48px] sm:!text-[24px] xs:!text-[24px]"
                   >
                     Add some luck to your inbox
                   </Title>
                   <Text
-                    mt={33}
+                    mt={matches ? 15 : 33}
                     color="white"
                     maw={900}
-                    className=" font-[400] leading-[38px] text-center tracking-[0.005em] text-[20px]"
+                    className=" font-[400] leading-[38px] text-center tracking-[0.005em] md:text-[20px] sm:text-[15px] xs:text-[15px]"
                   >
                     Join our email newsletter "The High Roller Herald" to be the first to know about new things{' '} 
                     {/* <br /> */}
@@ -110,9 +112,9 @@ export function NewsletterBlog() {
                     // p={10}
                     styles={{
                       input: {
-                        padding: '30px',
+                        padding: matches ? '18px' : '30px',
                         fontSize: '14px',
-                        width: matches ? '300px' : '425px',
+                        width: matches ? '270px' : '425px',
                         borderRadius: '50px',
                         borderColor: '#016BE6',
                         ':focus': {
@@ -129,9 +131,9 @@ export function NewsletterBlog() {
                     rightSection={
                       <ActionIcon
                         type="submit"
-                        size={56}
+                        size={matches ? 35 : 56}
                         bg="#FFB800"
-                        mr={10}
+                        mr={matches ? -5 : 10}
                         radius="xl"
                         variant="filled"
                         sx={{
@@ -148,7 +150,7 @@ export function NewsletterBlog() {
                     {...form.getInputProps('email')}
                   />
                   {message && (
-                    <Text color="green" size={14}>
+                    <Text color="green" size={matches ? 12 : 14}>
                       ✅ Successfully saved email
                     </Text>
                   )}
