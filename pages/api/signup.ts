@@ -1,21 +1,24 @@
 import { PlayerRegistration, PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import Cors from 'micro-cors';
+import { RequestHandler } from 'next/dist/server/next';
 
 const prisma = new PrismaClient();
 
-export default async function ContactHandler(
-  req: NextApiRequest,
-  res: NextApiResponse<PlayerRegistration | { message: string }>
-) {
+const cors = Cors({
+  allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+});
+
+async function ContactHandler(req: NextApiRequest, res: NextApiResponse<PlayerRegistration | { message: string }>) {
   const { method, body } = req;
   switch (method) {
     case 'POST':
       try {
         const contact = await prisma.playerRegistration.create({
           data: {
-            email:body.email,
-            name:body.name,
-            phone:body.phone
+            email: body.email,
+            name: body.name,
+            phone: body.phone,
           },
         });
         res.status(200).json(contact);
@@ -28,3 +31,5 @@ export default async function ContactHandler(
       res.status(405).end(`Method ${method} Not Allowed`);
   }
 }
+
+export default cors(ContactHandler as RequestHandler);

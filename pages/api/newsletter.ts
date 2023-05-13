@@ -1,12 +1,15 @@
 import { NewsLetter, PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import Cors from 'micro-cors';
+import { RequestHandler } from 'next/dist/server/next';
 
 const prisma = new PrismaClient();
 
-export default async function NewsLetterHandler(
-  req: NextApiRequest,
-  res: NextApiResponse<NewsLetter | { message: string }>
-) {
+const cors = Cors({
+  allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+});
+
+async function NewsLetterHandler(req: NextApiRequest, res: NextApiResponse<NewsLetter | { message: string }>) {
   const { method, body } = req;
   switch (method) {
     case 'POST':
@@ -26,3 +29,5 @@ export default async function NewsLetterHandler(
       res.status(405).end(`Method ${method} Not Allowed`);
   }
 }
+
+export default cors(NewsLetterHandler as RequestHandler);
