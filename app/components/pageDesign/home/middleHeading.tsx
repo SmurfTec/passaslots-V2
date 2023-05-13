@@ -39,7 +39,7 @@ export const MiddleHeading = () => {
           className={classes.backdrop}
           style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
         >
-          <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69}>
+          <Container fluid ml={matches ? 0 : 90} mr={matches ? 0 : 69} w={'90%'}>
             <Flex py={120} mih={50} gap="md" justify="center" align="flex-start" direction="column" wrap="wrap">
               <Title
                 mb={50}

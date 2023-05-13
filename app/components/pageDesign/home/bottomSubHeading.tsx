@@ -3,7 +3,7 @@ import { NextLink } from '@mantine/next';
 import { useMediaQuery } from '@mantine/hooks';
 
 export const BottomSubHeading = () => {
-  const matches = useMediaQuery('(max-width: 700px)');
+  const matches = useMediaQuery('(max-width: 700px)', true);
   return (
     <div
       className="bg-gradient-to-r from-blue-500 to-purple-600"
@@ -18,27 +18,33 @@ export const BottomSubHeading = () => {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} py={50}>
+      <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} py={70}>
         <Grid align="top">
           <Grid.Col sm={12}>
             <Image
-              mah={545} maw={508} mih={303} miw={282}
+              mah={545}
+              maw={508}
+              mih={303}
+              miw={282}
               className="mx-auto mb-10"
               src="/images/pages/home/cardsfalling.png"
               alt="image"
             />
             <div className="space-y-5 text-center">
-              <Title order={2} className="font-bold uppercase text-[#FFFFFF]">
+              <Title
+                order={2}
+                className="font-bold uppercase text-[#FFFFFF]"
+                style={{ fontSize: matches ? '27px !important' : 'inherit' }}
+              >
                 Sun, Sand, and Big Wins<br></br> Await You
               </Title>
               <Text
-                className="text-center text-[#FFFFFF] opacity-80"
-                size={'sm'}
+                className="text-center text-[#FFFFFF]"
                 style={{
                   fontWeight: '400',
-                  fontSize: '20px',
+                  fontSize: matches ? '15px' : '20px',
                   marginTop: '30px',
-                  lineHeight: '37.74px',
+                  lineHeight: matches ? '21.7[x' : '37.74px',
                   letterSpacing: '-1.5%',
                 }}
               >
@@ -49,8 +55,8 @@ export const BottomSubHeading = () => {
               <Button
                 mt={15}
                 w={150}
-                size="lg"
-                className="text-sm font-bold"
+                size={matches ? 'md' : 'lg'}
+                className="text-sm"
                 styles={{
                   root: {
                     fontSize: '16px',

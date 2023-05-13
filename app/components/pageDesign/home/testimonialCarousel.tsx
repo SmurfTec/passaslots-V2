@@ -65,11 +65,11 @@ const comments = [
 
 export const TestimonialCarousel = () => {
   const matches = useMediaQuery('(max-width: 700px)');
-  const matches2 = useMediaQuery('(max-width: 1024px)');
+  const matches2 = useMediaQuery('(max-width: 1024px)', true);
   return (
     // <Flex className='py-16 sm:py-24' mb={80} bg="black" gap="md" align="center" direction="row" wrap="nowrap">
     <div
-      className="bg-gradient-to-r from-blue-500 to-purple-600 py-20"
+      className="bg-gradient-to-r from-blue-500 to-purple-600 pb-20"
       style={{
         backgroundColor: '#150B2E',
         backgroundImage:
@@ -80,9 +80,9 @@ export const TestimonialCarousel = () => {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={matches2 ? 0 : 90} mr={matches2 ? 0 : 69} mt={50}>
+      <Container fluid ml={matches2 ? 0 : 90} mr={matches2 ? 0 : 69} mt={matches2 ? 70 : 50}>
         <BackgroundImage
-          className="mb-10"
+          className={matches2 ? 'mb-10' : ''}
           style={{ backgroundSize: 'cover', rotate: '-10deg' }}
           src="/images/pages/home/multicolorfall.png"
         >
@@ -91,19 +91,17 @@ export const TestimonialCarousel = () => {
               color={'white'}
               order={2}
               className="font-bold uppercase text-center"
-              style={{ fontWeight: '700', fontSize: '48px' }}
+              style={{
+                fontWeight: '700',
+                fontSize: matches2 ? '24px !important' : '48px',
+                margin: 'auto',
+                width: '80%',
+              }}
             >
-              What our community says
+              What our community says about us
             </Title>
-            <Title
-              color={'white'}
-              order={2}
-              className="font-bold uppercase text-center"
-              style={{ fontWeight: '700', fontSize: '48px' }}
-            >
-              about us
-            </Title>
-            <Grid m={0} mt={50}>
+
+            <Grid m={0} mt={matches2 ? 20 : 50}>
               {/* <Grid.Col md={3} className="relative">
                 <Center>
                   <Text color="white" size={'md'} className="absolute top-1/2 -translate-y-1/2">
@@ -118,7 +116,7 @@ export const TestimonialCarousel = () => {
                   mr={matches ? '0px' : '-20px'}
                   mt={'50px'}
                   mx="auto"
-                  p={matches ? '0' : 10}
+                  p={matches2 ? '0' : 10}
                   styles={{
                     root: {
                       background: 'transparent',

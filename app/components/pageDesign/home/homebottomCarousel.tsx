@@ -38,47 +38,49 @@ export const HomeBottomCarousel = () => {
   }, [embla]);
 
   return (
-    <Container fluid px={0} pt={20} mb={20} mt={30}>
+    <Container fluid px={0} pt={matches ? 0 : 20} mb={40} mt={matches ? 0 : 30}>
       {!matches && (
-      <Carousel
-        style={{ marginTop: '100px' }}
-        getEmblaApi={setEmbla}
-        slideSize={"20%"}
-        align='center'
-        slidesToScroll={1}
-        initialSlide={3}
-        loop
-        images={images}
-        delay={4000}
-        hC={493}
-        wC={285}
-        onSlideChange={(number) => {
-          setFocusSlide(number);
-        }}
-        focusedIndex={focusSlide}
-      />)}
+        <Carousel
+          style={{ marginTop: '100px' }}
+          getEmblaApi={setEmbla}
+          slideSize={'20%'}
+          align="center"
+          slidesToScroll={1}
+          initialSlide={3}
+          loop
+          images={images}
+          delay={4000}
+          hC={493}
+          wC={285}
+          onSlideChange={(number) => {
+            setFocusSlide(number);
+          }}
+          focusedIndex={focusSlide}
+        />
+      )}
       {matches && (
-      <Carousel
-      style={{ marginTop: '100px' }}
-      getEmblaApi={setEmbla}
-      slideSize={"20%"}
-      align='center'
-      slidesToScroll={1}
-      initialSlide={1}
-      loop
-      images={images}
-      delay={4000}
-      hC={131}
-      wC={76}
-      onSlideChange={(number) => {
-        setFocusSlide(number);
-      }}
-      focusedIndex={focusSlide}
-      />)}
+        <Carousel
+          style={{ marginTop: matches ? '70px' : '100px' }}
+          getEmblaApi={setEmbla}
+          slideSize={'20%'}
+          align="center"
+          slidesToScroll={1}
+          initialSlide={1}
+          loop
+          images={images}
+          delay={4000}
+          hC={131}
+          wC={76}
+          onSlideChange={(number) => {
+            setFocusSlide(number);
+          }}
+          focusedIndex={focusSlide}
+        />
+      )}
       <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: '50px' }}>
         <Image
-          height={15}
-          width={15}
+          height={matches ? 10 : 15}
+          width={matches ? 10 : 15}
           src={
             slideProgress === 0
               ? '/images/scroll/carouselIndicatorSelect.png'
@@ -86,8 +88,8 @@ export const HomeBottomCarousel = () => {
           }
         />
         <Image
-          height={15}
-          width={15}
+          height={matches ? 10 : 15}
+          width={matches ? 10 : 15}
           src={
             slideProgress === 1
               ? '/images/scroll/carouselIndicatorSelect.png'
@@ -95,8 +97,8 @@ export const HomeBottomCarousel = () => {
           }
         />
         <Image
-          height={15}
-          width={15}
+          height={matches ? 10 : 15}
+          width={matches ? 10 : 15}
           src={
             slideProgress === 2
               ? '/images/scroll/carouselIndicatorSelect.png'
