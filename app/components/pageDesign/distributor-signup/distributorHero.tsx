@@ -27,7 +27,7 @@ export function DistributorHero() {
       // position: 'relative',
       backgroundPosition: 'center center',
       backgroundSize: 'cover',
-      minHeight: '100vh', 
+      // minHeight: '100vh', 
       position: 'relative',
       marginTop: '-115px',
       // width: '100%',
@@ -78,18 +78,18 @@ export function DistributorHero() {
           {/* </Grid.Col> */}
         </Group>
         ) : undefined}
-        <Container fluid py={100} ml={matches_left ? 5 : 90} mr={matches_left ? 5 : 69} className="min-h-[65vh] sm:min-h-screen relative">
+        <Container fluid py={100} ml={matches_left ? 5 : 90} mr={matches_left ? 5 : 69}>
           <div className="text-center">
             <Image styles={{
               image:{
                 margin: 'auto'
               }
-            }} className='items-center pt-20' src="/images/pages/distribution/crown.png" alt="graph" />
+            }} mah={407} maw={608} className='mx-auto items-center pt-20' src="/images/pages/distribution/crown.png" alt="graph" />
             <div className="text-center">
-              <Title mt={30} className="font-[900] uppercase leading-[112px] tracking-[-0.015em] text-[96px]" color='white' style={{textShadow: '0px 4px 33px #016BE6'}}>
-                THE LEADING PARTNER<br/> GAMING PLATFORM
+              <Title maw={1030} mt={30} className="mx-auto font-[900] uppercase md:!leading-[112px] sm:!leading-[56px] xs:!leading-[56px] tracking-[-0.015em] md:!text-[96px] sm:!text-[48px] md:!text-[40px]" color='white' style={{textShadow: '0px 4px 33px #016BE6'}}>
+                THE LEADING PARTNER GAMING PLATFORM
               </Title>
-              <Title mt={20} className="font-[900] uppercase leading-[38px] tracking-[-0.015em] text-[32px] text-[#FFB800]">
+              <Title mt={20} className="font-[900] uppercase md:!leading-[38px] sm:!leading-[25px] xs:!leading-[25px] tracking-[-0.015em] md:!text-[32px] sm:!text-[28px] xs:!text-[24px] text-[#FFB800]">
                 Pasa Slots
               </Title>
             </div>
