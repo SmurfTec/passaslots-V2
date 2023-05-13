@@ -15,6 +15,9 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     // width: '100%',
     // height: '100vh',
+    [theme.fn.smallerThan(770)]: {
+      minHeight: '70vh',
+    },
   },
 }));
 
@@ -24,7 +27,7 @@ export const BottomSubHeading2 = () => {
   return (
     <div
       className={classes.backdrop}
-      style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
+      style={{ boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
     >
       {!matches && (
         <Container fluid ml={90} mr={69}>
@@ -96,14 +99,14 @@ export const BottomSubHeading2 = () => {
           <HomeBottomCarousel />
           <Title
             className="font-bold uppercase text-center text-[#FFFFFF]"
-            style={{ fontWeight: '700', fontSize: '24px !important', lineHeight: '25.68px !important', width: '85%' }}
+            style={{ fontWeight: '700', fontSize: '24px !important', lineHeight: '25.68px !important', width: '90%' }}
           >
             Where gaming creators meet life long gamers
           </Title>
 
           <Text
             className="text-center leading-10 text-base font-normal mt-10 text-[#FFFFFF]"
-            style={{ fontWeight: '400', fontSize: '15px !important', lineHeight: '28.13px !important', width: '85%' }}
+            style={{ fontWeight: '400', fontSize: '15px !important', lineHeight: '28.13px !important', width: '90%' }}
           >
             Designed by renowned software developers, and featuring incredible graphics and audio, as well as
             payout-packed symbols, no two gaming sessions will be the same, ensuring excitement at every spin.
@@ -120,12 +123,12 @@ export const BottomSubHeading2 = () => {
             bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
             radius={50}
             mt={50}
-            mb={100}
-            size="lg"
+            mb={matches ? 70 : 100}
+            size={matches ? 'sm' : 'lg'}
             className="text-sm font-bold"
             component={NextLink}
             href="/distributor-signup"
-            style={{ border: 'none', fontWeight: '500 !important', fontSize: '20px !important' }}
+            style={{ border: 'none', fontWeight: '500 !important', fontSize: matches ? '15px' : '20px !important' }}
           >
             FIND OUT MORE
           </Button>

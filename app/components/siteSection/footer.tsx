@@ -171,7 +171,7 @@ export function Footer() {
               </Group>
 
               <Button
-                className="w-[45%] lg:w-auto mt-5"
+                className="w-[auto] lg:w-auto mt-5"
                 // styles={{ label: { fontSize: '16px', fontWeight: 'lighter' } }}
                 styles={{
                   root: {
