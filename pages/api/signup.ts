@@ -9,7 +9,7 @@ const cors = Cors({
   allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
 });
 
-async function ContactHandler(req: NextApiRequest, res: NextApiResponse<PlayerRegistration | { message: string }>) {
+async function ContactHandler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { method, body } = req;
   switch (method) {
     case 'POST':
