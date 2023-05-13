@@ -60,15 +60,16 @@ export const HomeBottomCarousel = () => {
       )}
       {matches && (
         <Carousel
-          style={{ marginTop: matches ? '70px' : '100px' }}
+          style={{ marginTop: '70px' }}
           getEmblaApi={setEmbla}
-          slideSize={'20%'}
+          slideSize={'18%'}
           align="center"
           slidesToScroll={1}
           initialSlide={1}
           loop
+          gap={5}
           images={images}
-          delay={4000}
+          delay={40000000000}
           hC={131}
           wC={76}
           onSlideChange={(number) => {

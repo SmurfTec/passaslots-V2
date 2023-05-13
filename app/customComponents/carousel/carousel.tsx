@@ -1,13 +1,14 @@
 import { Carousel as MantineCarousel, CarouselProps as MantineCarouselProps } from '@mantine/carousel';
 import { Image, createStyles } from '@mantine/core';
 import Autoplay from 'embla-carousel-autoplay';
-import { ReactNode, useRef } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 type CarouselProps = MantineCarouselProps & {
   delay?: number;
   slides?: ReactNode[];
   images?: string[];
   hC?: number;
   wC?: number;
+  gap?: number;
   focusedIndex?: number;
 };
 
@@ -21,7 +22,7 @@ const getDynamicHeight = (focusedIndex: number, currentIndex: number, height: nu
   } else return height;
 };
 
-export const Carousel = ({ delay, images, hC, wC, slides, focusedIndex, ...rest }: CarouselProps) => {
+export const Carousel = ({ delay, images, hC, wC, slides, focusedIndex, gap = 50, ...rest }: CarouselProps) => {
   const autoplay = useRef(Autoplay({ delay: delay ?? 3000 }));
   return (
     <MantineCarousel
@@ -36,7 +37,7 @@ export const Carousel = ({ delay, images, hC, wC, slides, focusedIndex, ...rest 
         images.map((image, index) => (
           <MantineCarousel.Slide
             key={index}
-            gap={50}
+            gap={gap}
             style={focusedIndex !== undefined ? { display: 'flex', alignItems: 'center' } : {}}
           >
             <Image
