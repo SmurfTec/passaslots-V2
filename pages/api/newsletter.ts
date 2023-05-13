@@ -9,7 +9,7 @@ const cors = Cors({
   allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
 });
 
-async function NewsLetterHandler(req: NextApiRequest, res: NextApiResponse<NewsLetter | { message: string }>) {
+async function NewsLetterHandler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { method, body } = req;
   switch (method) {
     case 'POST':
