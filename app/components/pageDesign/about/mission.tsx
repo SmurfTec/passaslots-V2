@@ -5,9 +5,6 @@ import { useEffect } from 'react';
 export function Mission() {
   const matches = useMediaQuery('(max-width: 1024px)', true);
   const matches2 = useMediaQuery('(max-width: 767px)', true);
-  useEffect(() => {
-    window.scrollTo(0, 850);
-  }, []);
   return (
     <>
       {' '}
