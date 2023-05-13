@@ -110,8 +110,8 @@ export function PDHero() {
                 radius={50}
                 className='font-[500]'
                 mt={matches ? 10 : 30}
-                // component="a"
-                // href="http://Pasasweeps.net"
+                component={NextLink}
+                href="/distributor-signup"
               >
                 CONNECT WITH US
               </Button>
