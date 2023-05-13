@@ -9,13 +9,13 @@ export function GameList() {
       backdropFilter: 'blur(20px)',
       backgroundSize: 'cover',
     }}>
-      <Container fluid pl={matches? 5 : 90} pr={matches? 5 : 69} py={100}>
+      <Container fluid pl={matches? 5 : 90} pr={matches? 5 : 69} py={matches ? 50 : 100}>
         <Grid align='center' justify='center'>
           <Grid.Col sm={12}>
             <div className='flex justify-center'>
               <Image maw={507} mah={517} className='mx-auto my-auto' src="/images/pages/game/egyptian.png" alt='egyptian'  />
             </div>
-            <Title className="font-[700] text-center text-[48px] leading-[63px] tracking-[0.0125em] uppercase my-[70px]">
+            <Title my={matches ? 30 : 70} className="font-[700] text-center xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[63px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em] uppercase">
               Gaming just got better for you
             </Title>
 

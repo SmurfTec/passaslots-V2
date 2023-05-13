@@ -11,13 +11,24 @@ const useStyles = createStyles((theme) => ({
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    minHeight: '133vh',
+    [theme.fn.largerThan(767)]: {
+      minHeight: '100vh',
+    },
+    [theme.fn.smallerThan(768)]: {
+      minHeight: '60vh'
+    },
     filter: 'blur(16.5px)',
     marginTop: '-115px',
   },
   backdrop2: {
-    minHeight: '133vh',
-    marginTop: '-133vh',
+    [theme.fn.largerThan(767)]: {
+      minHeight: '100vh',
+      marginTop: '-105vh',
+    },
+    [theme.fn.smallerThan(768)]: {
+      minHeight: '60vh',
+      marginTop: '-63vh',
+    },
   },
 }));
 
@@ -79,21 +90,24 @@ export function GameHero() {
         {/* </Grid.Col> */}
       </Group>
       ) : undefined}
-      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={100}>
+      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 100 : 150}>
         <Grid justify='center' align='center'>
           <Grid.Col sm={12}>
             <div className='text-center'>
-              <Title mt={200} color='white' className='uppercase text-[96px] font-[900] leading-[112px] tracking-[-0.015em] drop-shadow-[0_4px_33px_#016BE6] text-center'>
-                <span className='text-[#FFB800]'>Endless Gaming</span><br/> Anytime & Anywhere
+              <Title mt={matches ? 100 : 150} color='white' className='uppercase md:!text-[96px] sm:!text-[40px] xs:!text-[40px] font-[900] md:!leading-[112px] sm:!leading-[56px] xs:!leading-[56px] tracking-[-0.015em] drop-shadow-[0_4px_33px_#016BE6] text-center'>
+                <span className='text-[#FFB800]'>Endless Gaming</span>
               </Title>
-              <Title mt={10} color='white' className='uppercase text-[36px] font-[600] leading-[68px] tracking-[0.005em] drop-shadow-[0_0_0_#FFFFFF] text-center'>
+              <Title color='white' className='uppercase md:!text-[96px] sm:!text-[40px] xs:!text-[40px] font-[900] md:!leading-[112px] sm:!leading-[56px] xs:!leading-[56px] tracking-[-0.015em] drop-shadow-[0_4px_33px_#016BE6] text-center'>
+                Anytime & Anywhere
+              </Title>
+              <Title mt={10} color='white' className='uppercase md:!text-[36px] sm:!text-[24px] xs:!text-[24px] font-[600] md:!leading-[68px] sm:!leading-[34px] xs:!leading-[34px] tracking-[0.005em] drop-shadow-[0_0_0_#FFFFFF] text-center'>
                 WITH
               </Title>
             </div>
           </Grid.Col>
           <Grid.Col sm={12} className='text-center'>
             <Anchor mt={60} href="/" component={NextLink}>
-              <Image height={140} width={199} alt="logo"  className='cursor-pointer mx-auto my-auto' src='/images/modal/headerlogo.png' />
+              <Image height={matches? 82 : 140} width={matches ? 114 : 199} alt="logo"  className='cursor-pointer mx-auto my-auto' src='/images/modal/headerlogo.png' />
             </Anchor>
           </Grid.Col>
         </Grid>

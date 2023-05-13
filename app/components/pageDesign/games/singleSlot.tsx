@@ -11,7 +11,7 @@ export function SingleSlot({ image, text }: SingleSlotProps) {
     <>
       <Image height={243} width={288} src={image} alt={image} />
       <div className='flex justify-between items-center w-[288px]'>
-        <Title mt={10} className='font-[600] !text-[24px] leading-[28px] tracking-[0.0125em]'>{text}</Title>
+        <Title mt={10} className='font-[600] md:!text-[24px] sm:!text-[16px] xs:!text-[16px] md:!leading-[28px] sm:!leading-[15px] xs:!leading-[15px] tracking-[0.0125em]'>{text}</Title>
         <Button mt={10} styles={{
           root: {
             border: 'none',

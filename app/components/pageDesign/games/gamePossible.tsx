@@ -3,6 +3,7 @@ import { Carousel, useStylesCarousel } from '@pasa/customComponents';
 import { Embla, Carousel as MantineCarousel } from '@mantine/carousel';
 import { useCallback, useEffect, useState, useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
+import { useMediaQuery } from '@mantine/hooks';
 
 const images = [
   '/images/pages/game/carousel1.png',
@@ -14,6 +15,7 @@ const images = [
 ];
 
 export function GamePossible() {
+  const matches = useMediaQuery('(max-width: 810px)');
   const { classes } = useStylesCarousel();
   const [slideProgress, setSlideProgress] = useState(1);
   const [embla, setEmbla] = useState<Embla | null>(null);
@@ -55,7 +57,7 @@ export function GamePossible() {
           src="/images/pages/game/ellipses.png"
           bgsz="auto"
         >
-          <Container fluid pl={90} pr={69} py={100}>
+          <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 100}>
             <Grid align="center" justify="center">
               <div className="text-center">
                 <Image
@@ -63,17 +65,17 @@ export function GamePossible() {
                   className="mx-auto"
                   src="/images/pages/game/gamePossible.png"
                   alt="game"
-                  my={100}
+                  my={matches ? 50 : 100}
                 />
               </div>
               <div className="text-center">
                 <Title
                   color="white"
-                  className="uppercase xs:!text-[44px] text-[48px] font-[700] leading-[56px] tracking-[-0.015em] text-center"
+                  className="uppercase xs:!text-[24px] sm:!text-[32px] md:!text-[48px] font-[700] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] text-center"
                 >
                   A Sea of Possibilities Awaits
                 </Title>
-                <Text maw={705} my={20} color="white" className="xs:!text-[22px] text-[24px] font-[400] leading-[28px] text-center">
+                <Text maw={705} my={20} color="white" className="xs:!text-[16px] sm:!text-[16px] md:!text-[24px] font-[400] md:!leading-[28px] sm:!leading-[20px] xs:!leading-[20px] text-center">
                   Just like the ocean's currents, our app's games are always in{' '}
                   {/* <br /> */}
                   motion and constantly changing, offering you an endless sea of{' '}
@@ -96,14 +98,14 @@ export function GamePossible() {
           borderTop: '6px solid #016BE6',
         }}
       >
-        <Container fluid py={100} px={0}>
+        <Container fluid py={matches? 50 : 100} px={0}>
           <Title
             color="white"
-            className="uppercase text-[48px] font-[700] leading-[51px] tracking-[0.0125em] text-center"
+            className="uppercase xs:!text-[24px] sm:!text-[32px] md:!text-[48px] font-[700] md:!leading-[51px] sm:!leading-[25px] xs:!leading-[25px] tracking-[0.0125em] text-center"
           >
             FEATURED SECTION OF GAMES
           </Title>
-          <Grid align="center" justify="center" py={80} px={0}>
+          <Grid align="center" justify="center" py={matches ? 40 : 80} px={0}>
             <Grid.Col px={0} sm={12}>
               <MantineCarousel
                 // withIndicators
@@ -138,7 +140,7 @@ export function GamePossible() {
                   )
                 })}
               </MantineCarousel>
-              <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: '50px' }}>
+              <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: matches ? '10px' : '50px' }}>
                 <Image
                   height={15}
                   width={15}
@@ -176,21 +178,21 @@ export function GamePossible() {
                   root: {
                     border: 'none',
                     background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
-                    padding: '17px 53px',
+                    padding: matches ? '12px 35px' : '17px 53px',
                     letterSpacing: '-0.015em',
                     // boxShadow: 'inset 0 0 2px 2px #F6CAA7',
                     '&:hover': {
                       background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
                     },
-                    fontSize: '20px',
+                    fontSize: matches ? '15px' : '20px',
                     lineHeight: '23px',
                     textTransform: 'uppercase',
-                    height: '57px',
-                    width: '203px',
+                    height: matches ? '40px' : '57px',
+                    width: matches ? '180px' : '203px',
                   },
                   label: {
                     marginBottom: '-2px',
-                    fontSize: '20px',
+                    fontSize: matches ? '15px' : '20px',
                     lineHeight: '23px',
                   },
                 }}

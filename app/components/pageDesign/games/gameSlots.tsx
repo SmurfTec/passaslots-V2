@@ -90,8 +90,8 @@ export function GameSlots() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} pt={100} pb={0}>
-        <Title id="gameSlots" my={50} className="font-[700] uppercase leading-[56px] tracking-[-0.015em] text-[48px]">
+      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} pt={matches ? 50 : 100} pb={0}>
+        <Title id="gameSlots" my={50} className="font-[700] uppercase md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] xs:!text-[24px] sm:!text-[32px] md:!text-[48px]">
           SLOTS
         </Title>
         <div className="flex flex-row justify-between">
@@ -131,7 +131,7 @@ export function GameSlots() {
             </div>
           )}
         </div>
-        <Grid m={0} pb={0} pt={200} align="center" justify="center">
+        <Grid m={0} pb={0} pt={matches ? 100 : 200} align="center" justify="center">
           <Grid.Col style={{ display: 'contents' }} className="relative" xs={12} sm={12}>
             {/* <div className="absolute top-1/2 -translate-y-1/2 pr-32"> */}
             <div
@@ -146,16 +146,16 @@ export function GameSlots() {
               <Title
                 color="#FFFFFF"
                 maw={850}
-                className="text-[700] text-[48px] leading-[63px] tracking-[0.0125em] text-center uppercase"
+                className="text-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[63px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em] text-center uppercase"
               >
                 Experience a world of variety, {/* <br /> */}
                 right at your fingertips!
               </Title>
               <Text
-                mt={30}
+                mt={matches ? 10 : 30}
                 maw={850}
                 color="#FFFFFF"
-                className="font-[400] text-[20px] text-center leading-[43px] tracking-[0.005em]"
+                className="font-[400] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] text-center md:!leading-[43px] sm:!leading-[20px] xs:!leading-[20px] tracking-[0.005em]"
               >
                 With an ever-growing selection of popular games like Fire Kirin Plus, Dragon Slayer, and {/* <br /> */}
                 Ocean King 5, you'll never get bored. And the best part? We add new games every {/* <br /> */}

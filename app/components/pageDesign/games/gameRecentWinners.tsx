@@ -23,12 +23,12 @@ export function GameRecentWinners() {
     <>
       <Container
         fluid
-        pl={matches? 50 : 90}
-        pr={matches? 50 : 69}
-        pt={100}
+        pl={matches? 5 : 90}
+        pr={matches? 5 : 69}
+        pt={matches ? 50 : 100}
         style={{ zIndex: 150, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
       >
-        <Title color="white" className="uppercase text-[48px] font-[700] leading-[56px] tracking-[-0.015em]" mb={50}>
+        <Title color="white" className="uppercase xs:!text-[24px] sm:!text-[32px] md:!text-[48px] font-[700] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em]" mb={50}>
           RECENT WINNERS
         </Title>
         <SimpleGrid
