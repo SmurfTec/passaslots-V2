@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => ({
     backgroundColor: '#150B2E',
   },
   burger: {
-    marginTop: -20,
+    marginTop: 5,
     [theme.fn.largerThan(809)]: {
       display: 'none',
     },
@@ -61,8 +61,8 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.largerThan(809)]: {
       width: '114px !important',
       height: '80px !important',
-    }
-  }
+    },
+  },
 }));
 
 export function Header() {
@@ -87,7 +87,7 @@ export function Header() {
     <header>
       <Container fluid className="bg-transparent z-50 relative">
         <Group position="apart" spacing={matches ? 5 : 40}>
-          <Anchor ml={79} mt={9} href="/" component={NextLink}>
+          <Anchor ml={matches ? 10 : 79} mt={matches ? 20 : 9} href="/" component={NextLink}>
             <Image className={classes.image} alt="logo" src={'/images/modal/headerlogo.png'} />
           </Anchor>
           <div style={{ display: 'flex' }}>
@@ -162,31 +162,36 @@ export function Header() {
                   size="sm"
                 />
               </Menu.Target>
-              <Menu.Dropdown style={{textAlignLast: 'center'}} bg='#150B2E'>
-                <Menu.Item color='#fff !important' onClick={bonusOpen} >
+              <Menu.Dropdown style={{ textAlignLast: 'center' }} bg="#150B2E">
+                <Menu.Item color="#fff !important" onClick={bonusOpen}>
                   SIGNUP FOR PLAYERS
                 </Menu.Item>
-                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
+                <Menu.Divider style={{ borderTopColor: 'rgba(80, 161, 255, 0.21)' }} />
                 <Menu.Item
-                  className='text-center'
+                  className="text-center"
                   color={router.pathname === '/pasa-for-distributor' ? '#FFB800 !important' : '#fff !important'}
                   component={NextLink}
                   href="/pasa-for-distributor"
                 >
                   PASA FOR DISTRIBUTION
                 </Menu.Item>
-                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
-                <Menu.Item 
+                <Menu.Divider style={{ borderTopColor: 'rgba(80, 161, 255, 0.21)' }} />
+                <Menu.Item
                   color={router.pathname === '/games' ? '#FFB800 !important' : '#fff !important'}
-                  component={NextLink} href="/games">
+                  component={NextLink}
+                  href="/games"
+                >
                   GAMES
                 </Menu.Item>
-                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
-                <Menu.Item color={router.pathname === '/blog' ? '#FFB800 !important' : '#fff !important'} 
-                  component={NextLink} href="/blog">
+                <Menu.Divider style={{ borderTopColor: 'rgba(80, 161, 255, 0.21)' }} />
+                <Menu.Item
+                  color={router.pathname === '/blog' ? '#FFB800 !important' : '#fff !important'}
+                  component={NextLink}
+                  href="/blog"
+                >
                   BLOGS
                 </Menu.Item>
-                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
+                <Menu.Divider style={{ borderTopColor: 'rgba(80, 161, 255, 0.21)' }} />
                 <Menu.Item
                   color={router.pathname === '/how-it-works' ? '#FFB800 !important' : '#fff !important'}
                   component={NextLink}
@@ -194,13 +199,15 @@ export function Header() {
                 >
                   HOW IT WORKS
                 </Menu.Item>
-                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
-                <Menu.Item 
+                <Menu.Divider style={{ borderTopColor: 'rgba(80, 161, 255, 0.21)' }} />
+                <Menu.Item
                   color={router.pathname === '/about' ? '#FFB800 !important' : '#fff !important'}
-                  component={NextLink} href="/about">
+                  component={NextLink}
+                  href="/about"
+                >
                   ABOUT US
                 </Menu.Item>
-                <Menu.Divider style={{borderTopColor: 'rgba(80, 161, 255, 0.21)'}} />
+                <Menu.Divider style={{ borderTopColor: 'rgba(80, 161, 255, 0.21)' }} />
                 <Menu.Item
                   color={router.pathname === '/contact' ? '#FFB800 !important' : '#fff !important'}
                   component={NextLink}
@@ -223,7 +230,7 @@ export function Header() {
                     },
                     root: {
                       background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
-  
+
                       '&:hover': {
                         background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
                       },
@@ -248,7 +255,7 @@ export function Header() {
                     },
                     root: {
                       background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
-  
+
                       '&:hover': {
                         background: 'linear-gradient(180deg, #016BE6 0%, #A74C9A 100%)',
                       },
