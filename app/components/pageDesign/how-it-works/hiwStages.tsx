@@ -393,16 +393,22 @@ export function HiwStage() {
           </div>
 
           <div style={{ width: '90%', margin: 'auto' }}>
-            <Timeline active={6} bulletSize={24} lineWidth={5} color="blue">
+            <Timeline
+              active={6}
+              bulletSize={24}
+              lineWidth={5}
+              color="blue"
+              styles={{ itemTitle: { fontSize: '20px' } }}
+            >
               <Timeline.Item
                 bullet={<Image src={'images/pages/hiw/timeline-yellow.png'} alt={'timeLine-yellow'} />}
                 title="STAGE 1"
                 align="right"
                 style={{ color: 'white' }}
                 tabIndex={0}
-                pb={30}
+                pb={20}
               >
-                <Text style={{ fontSize: '12px' }} className=" text-[#ffffff] font-[400] ">
+                <Text style={{ fontSize: '12px', marginTop: '10px' }} className=" text-[#ffffff] font-[400] ">
                   Complete the player registration
                 </Text>
               </Timeline.Item>
@@ -411,9 +417,9 @@ export function HiwStage() {
                 title="STAGE 2"
                 align="left"
                 style={{ color: 'white' }}
-                pb={30}
+                pb={20}
               >
-                <Text style={{ fontSize: '12px' }} className=" text-[#ffffff] font-[400] ">
+                <Text style={{ fontSize: '12px', marginTop: '10px' }} className=" text-[#ffffff] font-[400] ">
                   Visit your favorite gaming platform in browser or download the app
                 </Text>
               </Timeline.Item>
@@ -422,9 +428,9 @@ export function HiwStage() {
                 title="STAGE 3"
                 align="right"
                 style={{ color: 'white' }}
-                pb={30}
+                pb={20}
               >
-                <Text style={{ fontSize: '12px' }} className=" text-[#ffffff] font-[400] ">
+                <Text style={{ fontSize: '12px', marginTop: '10px' }} className=" text-[#ffffff] font-[400] ">
                   YOU'RE ALMOST DONE. After you have filled out the registration form and PASA browser app, You will be
                   contacted by one of the PA team members with your credentials (username and password)
                 </Text>
@@ -434,20 +440,20 @@ export function HiwStage() {
                 title="STAGE 4"
                 align="left"
                 style={{ color: 'white' }}
-                pb={30}
+                pb={20}
               >
-                <Text style={{ fontSize: '12px' }} className=" text-[#ffffff] font-[400] ">
+                <Text style={{ fontSize: '12px', marginTop: '10px' }} className=" text-[#ffffff] font-[400] ">
                   Purchase first game credit
                 </Text>
               </Timeline.Item>
               <Timeline.Item
-                bullet={<Image src={'images/pages/hiw/timeline-blue.png'} alt={'timeLine-yellow'} />}
+                bullet={<Image src={'images/pages/hiw/timeline-yellow.png'} alt={'timeLine-yellow'} />}
                 title="STAGE 5"
                 align="right"
                 style={{ color: 'white' }}
-                pb={30}
+                pb={20}
               >
-                <Text style={{ fontSize: '12px' }} className=" text-[#ffffff] font-[400] ">
+                <Text style={{ fontSize: '12px', marginTop: '10px' }} className=" text-[#ffffff] font-[400] ">
                   Get your gaming on and enjoy
                 </Text>
               </Timeline.Item>
@@ -458,7 +464,7 @@ export function HiwStage() {
                 style={{ color: 'white' }}
                 pb={180}
               >
-                <Text style={{ fontSize: '12px' }} className=" text-[#ffffff] font-[400] ">
+                <Text style={{ fontSize: '12px', marginTop: '10px' }} className=" text-[#ffffff] font-[400] ">
                   If you want a $10 bonus for your new account and stay connected to pasa gaming.
                 </Text>
               </Timeline.Item>
