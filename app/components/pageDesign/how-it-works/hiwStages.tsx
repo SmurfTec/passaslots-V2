@@ -47,9 +47,6 @@ export function HiwStage() {
   const matches2 = useMediaQuery('(max-width: 767px)', true);
   const [BonusModal, bonusOpen] = useBonusModal();
 
-  useEffect(() => {
-    window.scrollTo(0, 750);
-  }, []);
   return (
     <div
       style={{
