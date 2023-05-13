@@ -6,6 +6,7 @@ import { useMediaQuery } from '@mantine/hooks';
 export function AboutContact() {
   const [BonusModal, bonusOpen] = useBonusModal();
   const matches = useMediaQuery('(max-width: 810px)', true);
+  const matches2 = useMediaQuery('(max-width: 992px)', true);
   return (
     <div
       style={{
@@ -17,6 +18,7 @@ export function AboutContact() {
     >
       <BackgroundImage
         style={{ backgroundRepeat: 'no-repeat', backgroundPosition: 'bottom right' }}
+        className='bg-blend-overlay'
         bgsz="auto"
         src="/images/pages/contact/querygiant.png"
       >
@@ -31,7 +33,7 @@ export function AboutContact() {
                 </span>
               </Title>
             </Grid.Col>
-            <Grid.Col mt={matches ? 10 : 99} mb={matches ? 10 : 78} span={12} md={8}>
+            <Grid.Col mt={matches2 ? 10 : 99} mb={matches2 ? 10 : 78} span={12} md={8}>
               <Text maw={705} className="align-text-top font-[400] text-white text-lg leading-[188.69%] tracking-[0.005em]">
                 If you have any questions or need help, please fill out the form below. We do our best to{' '}
                 respond within 1 business day.

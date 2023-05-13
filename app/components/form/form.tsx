@@ -63,12 +63,12 @@ export function ContactForm() {
   return (
     <form onSubmit={form.onSubmit(handleSubmit)}>
       <div className="space-y-6">
-        <Grid px={0}>
-          <Grid.Col px={0} md={6} className='space-y-[18px] space-x-37'>
+        <Grid px={0} >
+          <Grid.Col md={6} className='space-y-[18px] space-x-37'>
             <TextInput
               classNames={{ input: classes.input }}
               color="#F2F2F2"
-              size="xl"
+              size={"xl"}
               placeholder="First Name"
               required
               {...form.getInputProps('firstName')}
@@ -90,7 +90,7 @@ export function ContactForm() {
               {...form.getInputProps('subject')}
             />
           </Grid.Col>
-          <Grid.Col px={0} md={6} className='space-y-[18px] space-x-37'>
+          <Grid.Col md={6} className='space-y-[18px] space-x-37'>
             <TextInput
               classNames={{ input: classes.input }}
               color="#F2F2F2"
@@ -110,9 +110,10 @@ export function ContactForm() {
           </Grid.Col>
         </Grid>
         <Textarea
+          p={8}
           classNames={{ input: classes.input }}
           color="#F2F2F2"
-          size="255px"
+          size={matches ? '221px' : "255px"}
           placeholder="Message"
           required
           {...form.getInputProps('message')}
@@ -159,15 +160,21 @@ export function ContactForm() {
   );
 }
 
-const useStyles = createStyles(() => ({
+const useStyles = createStyles((theme) => ({
   input: {
     border: '2px solid #016BE6',
     borderRadius: '16px',
     lineHeight: '188.69%',
     letterSpacing: '0.005em',
-    height: '105px',
     paddingLeft: '15px',
-    fontSize: '20px',
+    [theme.fn.smallerThan(810)]: {
+      fontSize: '15px',
+      height: '65px',
+    },
+    [theme.fn.largerThan(809)]: {
+      fontSize: '20px',
+      height: '105px',
+    },
     fontStyle: 'normal',
     ':focus': {
       border: '2px solid #016BE6',

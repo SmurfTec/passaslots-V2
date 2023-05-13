@@ -21,9 +21,9 @@ export function Content() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} py={100}>
+      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={100} pt={matches_mobile ? 50 : 100}>
         <div>
-          <Grid className="space-y-24" align="center" gutter={50}>
+          <Grid className={matches_mobile ? "space-y-5" : "space-y-24"} align="center" gutter={matches_mobile ? 10 : 50}>
             {/* 1st Row */}
             <Grid.Col order={1} className="text-left" xs={12} sm={6}>
               <Image mih={217} miw={259} mah={558} maw={669} src="/images/pages/about/fun.png" alt="fun" className="block" />
@@ -73,12 +73,12 @@ export function Content() {
               </div>
             </Grid.Col>
             <Grid.Col order={matches_mobile ? 3 : 4} className="text-right" xs={12} sm={6}>
-              <Image maw={767} mah={433} miw={298} mih={168} src="/images/pages/about/casino.png" alt="casino" />
+              <Image mt={matches_mobile ? 15 : 0} maw={767} mah={433} miw={298} mih={168} src="/images/pages/about/casino.png" alt="casino" />
             </Grid.Col>
 
             {/* 3rd Row */}
             <Grid.Col order={5} className="text-left" xs={12} sm={6}>
-              <Image mih={136} miw={263} mah={288} maw={557} src="/images/pages/about/gamingCreator.png" alt="gaming Creator" />
+              <Image mt={matches_mobile ? 15 : 0} mih={136} miw={263} mah={288} maw={557} src="/images/pages/about/gamingCreator.png" alt="gaming Creator" />
             </Grid.Col>
             <Grid.Col order={6} className="relative" xs={12} sm={6}>
               <div className="text-center sm:text-left">

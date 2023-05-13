@@ -35,11 +35,11 @@ export function Approach() {
             Let’s create the next generation of online game room platform
           </Text>
           <Grid
-            mt={100}
+            mt={matches ? 50 : 100}
             justify="center"
             align="center"
             className={matches ? 
-              "grid grid-items-center grid-rows-3 grid-flow-col gap-[80px]"
+              "grid grid-items-center grid-rows-2 grid-flow-col gap-[30px]"
             : "grid grid-items-center grid-rows-2 grid-flow-col gap-[80px]"}
           >
             <Image mah={211} maw={211} mih={99} miw={99} src="/images/pages/about/approach1.png" />

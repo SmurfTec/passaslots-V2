@@ -2,7 +2,7 @@ import { Image, Button, Container, Group, Text, Title, Grid, BackgroundImage } f
 import { useMediaQuery } from '@mantine/hooks';
 
 export function Goal() {
-  const matches = useMediaQuery('(max-width: 810px)', true);
+  const matches = useMediaQuery('(max-width: 768px)', true);
   return (
     <div
       style={{
@@ -35,19 +35,20 @@ export function Goal() {
                     justifyContent: 'center',
                     alignItems: 'center',
                     gap: '10',
+                    fontSize: matches ? '13px' : '16px',
                   },
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: '226px',
-                  height: '260px',
+                  width: matches ? '163px' : '226px',
+                  height: matches ? '187px' : '260px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
                 }}
-                className="text-center rounded-[29px] text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
+                className="text-center rounded-[29px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
               >
-                <img src="images/pages/about/🏆.svg" />
+                <img style={{maxHeight: ''}} src="images/pages/about/🏆.svg" />
                 Revolutionary Gaming
                 <br /> Platform of 2023
               </Button>
@@ -56,17 +57,18 @@ export function Goal() {
                   label: {
                     flexDirection: 'column',
                     justifyContent: 'center',
+                    fontSize: matches ? '13px' : '16px',
                   },
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: '226px',
-                  height: '260px',
+                  width: matches ? '163px' : '226px',
+                  height: matches ? '187px' : '260px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
                 }}
-                className="text-center rounded-[29px] text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
+                className="text-center rounded-[29px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
               >
                 <img src="images/pages/about/🎮.svg" />
                 Curated by
@@ -77,17 +79,18 @@ export function Goal() {
                   label: {
                     flexDirection: 'column',
                     justifyContent: 'center',
+                    fontSize: matches ? '13px' : '16px',
                   },
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: '226px',
-                  height: '260px',
+                  width: matches ? '163px' : '226px',
+                  height: matches ? '187px' : '260px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
                 }}
-                className="text-center rounded-[29px] text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
+                className="text-center rounded-[29px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
               >
                 <img src="images/pages/about/🌟.svg" />
                 Memorable
@@ -98,17 +101,18 @@ export function Goal() {
                   label: {
                     flexDirection: 'column',
                     justifyContent: 'center',
+                    fontSize: matches ? '13px' : '16px',
                   },
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: '226px',
-                  height: '260px',
+                  width: matches ? '163px' : '226px',
+                  height: matches ? '187px' : '260px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
                 }}
-                className="text-center rounded-[29px] text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
+                className="text-center rounded-[29px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
               >
                 <img src="images/pages/about/👨‍💻.svg" />
                 Timeless
@@ -119,17 +123,18 @@ export function Goal() {
                   label: {
                     flexDirection: 'column',
                     justifyContent: 'center',
+                    fontSize: matches ? '13px' : '16px',
                   },
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: '226px',
-                  height: '260px',
+                  width: matches ? '163px' : '226px',
+                  height: matches ? '187px' : '260px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
                 }}
-                className="text-center rounded-[29px] text-[16px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
+                className="text-center rounded-[29px] font-[700] text-[#EEEEEE] tracking-[0.0125em] leading-[23px]"
               >
                 <img src="images/pages/about/🍋.svg" />
                 Easy peasy one-click
