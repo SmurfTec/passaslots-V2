@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '130vh', 
+    // minHeight: '130vh', 
     // height: '1127px',
     position: 'relative',
     marginTop: '-115px',
@@ -39,8 +39,8 @@ export function HiwHero() {
           backgroundPosition: 'center center',
           backgroundSize: '100% 100%',
           backgroundRepeat: 'no-repeat',
-          minHeight: '100vh',
-        }} className='absolute opacity-21' src="/images/header/backgroundImage.png" >
+          // minHeight: '100vh',
+        }} className='opacity-21' src="/images/header/backgroundImage.png" >
         {!matches ? (
         <Group align={'center'} className=''>
           {/* <Grid.Col> */}
@@ -86,25 +86,25 @@ export function HiwHero() {
           {/* </Grid.Col> */}
         </Group>
         ) : undefined}
-      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} className="mb-[-150px] mt-[300px] sm:mb-[auto] relative">
+      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pt={150} pb={matches ? 50 : 100} >
         <Stack justify="center">
-          <Group align='center'>
-            <Title className="font-[900] text-[#FFB800]" order={3} style={{textShadow: '0px 4px 33px #016BE6', lineHeight: '38px'}}>
+          <Group style={{justifyContent: !matches ? 'left' : 'center'}} align='center'>
+            <Title className="font-[900] text-[#FFB800]" order={matches ? 5 : 3} style={{textShadow: '0px 4px 33px #016BE6', lineHeight: '38px'}}>
               How it works?
             </Title>
           </Group>
-          <Title order={1} mt={30} className="font-[700] uppercase text-[#FFF]" 
+          <Title order={matches ? 3 : 1} mt={30} className="font-[700] uppercase text-[#FFF] text-left md:text-left sm:text-center xs:text-center" 
           style={{
             textShadow: '0px 4px 33px #016BE6',
             letterSpacing: '-0.015em',
-            lineHeight: '112px',
+            lineHeight: matches ? '56px' : '112px',
           }}>
             HOW PASA WORKS
           </Title>
-          <Text color="#FFFFFF" className="font-[400] uppercase tracking-[0.005em] leading-6" size="20px">
+          <Text color="#FFFFFF" className="font-[400] uppercase tracking-[0.005em] leading-6 text-left md:text-left sm:text-center xs:text-center" size={matches ? 15 : 20}>
             Experience the thrill of casino gaming from the comfort of your own home
           </Text>
-          <Image className="lg:!w-[562px] lg:!h-[562px] mx-auto my-auto pt-[33px]" src="/images/pages/hiw/herohiw.png" alt="image" />
+          <Image mah={562} maw={562} className="mx-auto my-auto" src="/images/pages/hiw/herohiw.png" alt="image" />
         </Stack>
       </Container>
       </BackgroundImage>

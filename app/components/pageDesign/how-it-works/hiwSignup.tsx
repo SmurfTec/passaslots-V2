@@ -16,7 +16,7 @@ export function HiwSignup() {
         // position: 'relative',
         backgroundPosition: 'center center',
         backgroundSize: 'cover',
-        minHeight: '130vh',
+        // minHeight: '130vh',
         // height: '1127px',
         position: 'relative',
         marginTop: '-115px',
@@ -25,30 +25,34 @@ export function HiwSignup() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} className="py-16 md:py-32">
+      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} py={matches ? 50 : 100}>
         <Grid justify="center" align="center">
           <Grid.Col sm={12}>
             <Image
-              className="lg:!w-[562px] lg:!h-[562px] mx-auto my-auto pt-[33px]"
+              maw={562} mah={562}
+              className="mx-auto my-auto"
               src="/images/pages/hiw/winnings.png"
               alt="image"
             />
           </Grid.Col>
           <Grid.Col sm={12}>
             <Title
+              maw={820}
+              mx='auto'
               color="white"
-              className="text-center uppercase text-[64px] font-[700] leading-[68px] tracking-[0.0125em]"
+              className="text-center uppercase font-[700] md:!text-[64px] sm:!text-[32px] xs:!text-[32px] md:!leading-[68px] sm:!leading-[34px] xs:!leading-[34px] tracking-[0.0125em]"
             >
               Get a Taste of Paradise
-              <br /> with Your Wins
+               with Your Wins
             </Title>
           </Grid.Col>
           <Grid.Col sm={12}>
             <Text
               opacity={0.8}
               mt={25}
+              size={matches ? 15 : 20}
               color="white"
-              className="text-center font-[400] text-[20px] leading-[38px] tracking-[0.0125em]"
+              className="text-center font-[400] md:!leading-[38px] sm:!leading-[22px] xs:!leading-[22px] tracking-[0.0125em]"
             >
               Let's make things official, ride the Waves of Good Fortune, and become adventure buddies!
             </Text>
