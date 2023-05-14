@@ -62,16 +62,16 @@ export const HomeBottomCarousel = () => {
         <Carousel
           style={{ marginTop: '70px' }}
           getEmblaApi={setEmbla}
-          slideSize={'18%'}
+          slideSize={'23%'}
           align="center"
           slidesToScroll={1}
           initialSlide={1}
           loop
           gap={5}
           images={images}
-          delay={40000000000}
-          hC={131}
-          wC={76}
+          delay={4000}
+          hC={150}
+          wC={90}
           onSlideChange={(number) => {
             setFocusSlide(number);
           }}
