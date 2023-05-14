@@ -13,6 +13,7 @@ cloudinary.config({
 });
 
 const cors = Cors({
+  origin: '*',
   allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
 });
 

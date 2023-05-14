@@ -6,6 +6,7 @@ import { RequestHandler } from 'next/dist/server/next';
 const prisma = new PrismaClient();
 
 const cors = Cors({
+  origin: '*',
   allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
 });
 
