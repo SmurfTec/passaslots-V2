@@ -215,7 +215,7 @@ export function Header() {
                 >
                   CONTACT US
                 </Menu.Item>
-                <Button
+                {/* <Button
                   fullWidth
                   maw={180}
                   onClick={bonusOpen}
@@ -239,7 +239,7 @@ export function Header() {
                   radius={50}
                 >
                   LOGIN
-                </Button>
+                </Button> */}
                 <Button
                   fullWidth
                   maw={180}

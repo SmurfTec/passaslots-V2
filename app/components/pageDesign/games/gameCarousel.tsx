@@ -55,31 +55,40 @@ export function GameCarousel() {
   const autoplay2 = useRef(Autoplay({ delay: 2000 }));
   const matches = useMediaQuery('(max-width: 810px)', true);
   return (
-    <div style={{
-      backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
-      backdropFilter: 'blur(20px)',
-      backgroundSize: 'cover',
-    }}>
-      <Container className="space-y-16" fluid pl={matches? 5 : 90} pr={matches? 5 : 69} py={matches ? 50 : 100}>
-        <Title mb={matches ? 30 : 79} className="font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] uppercase">
+    <div
+      style={{
+        backgroundImage:
+          'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+        backdropFilter: 'blur(20px)',
+        backgroundSize: 'cover',
+      }}
+    >
+      <Container className="space-y-16" fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 100}>
+        <Title
+          mb={matches ? 30 : 79}
+          className="font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] uppercase"
+        >
           MULTIPLAYER FISHING
         </Title>
         <Carousel
-          slideSize='25%'
-          mx='auto'
-          height='auto'
+          slideSize="25%"
+          mx="auto"
+          height="auto"
           withControls
-          slideGap='md'
+          slideGap="md"
           loop
           plugins={[autoplay.current]}
           onMouseEnter={autoplay.current.stop}
           onMouseLeave={autoplay.current.reset}
-          align='start'
+          align="start"
           breakpoints={[
             { maxWidth: 'md', slideSize: '25%' },
             { maxWidth: 'sm', slideSize: '50%', slideGap: 0 },
           ]}
           styles={{
+            slide: {
+              marginRight: '15px',
+            },
             controls: {
               // top: '50%',
               transform: 'translateY(-50%) !important',
@@ -100,7 +109,7 @@ export function GameCarousel() {
               ':hover': {
                 background: '#FFB800',
                 color: '#FFFFFF',
-              }
+              },
             },
           }}
           nextControlIcon={<ChevronRight size={26} />}
@@ -109,29 +118,35 @@ export function GameCarousel() {
         >
           {multiFishing.map((slot, key) => (
             <Carousel.Slide key={key + slot.text}>
-              <SingleSlot image={slot.image} text={slot.text} />
+              <SingleSlot image={slot.image} text={slot.text} hc={matches ? 180 : 243} wc={matches ? 225 : 288} />
             </Carousel.Slide>
           ))}
         </Carousel>
-        <Title my={matches ? 30 : 79} className="font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] uppercase">
+        <Title
+          my={matches ? 30 : 79}
+          className="font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] uppercase"
+        >
           Classic casino collection
         </Title>
         <Carousel
-          slideSize='25%'
-          mx='auto'
-          height='auto'
+          slideSize="25%"
+          mx="auto"
+          height="auto"
           withControls
-          slideGap='md'
+          slideGap="md"
           loop
           plugins={[autoplay2.current]}
           onMouseEnter={autoplay2.current.stop}
           onMouseLeave={autoplay2.current.reset}
-          align='start'
+          align="start"
           breakpoints={[
             { maxWidth: 'md', slideSize: '25%' },
             { maxWidth: 'sm', slideSize: '50%', slideGap: 0 },
           ]}
           styles={{
+            slide: {
+              marginRight: '15px',
+            },
             controls: {
               // top: '50%',
               transform: 'translateY(-50%) !important',
@@ -152,7 +167,7 @@ export function GameCarousel() {
               ':hover': {
                 background: '#FFB800',
                 color: '#FFFFFF',
-              }
+              },
             },
           }}
           nextControlIcon={<ChevronRight size={26} />}
@@ -161,7 +176,7 @@ export function GameCarousel() {
         >
           {casinoCollection.map((slot, key) => (
             <Carousel.Slide key={key + slot.image}>
-              <SingleSlot image={slot.image} text={slot.text} />
+              <SingleSlot image={slot.image} text={slot.text} hc={matches ? 180 : 243} wc={matches ? 225 : 288} />
             </Carousel.Slide>
           ))}
         </Carousel>
