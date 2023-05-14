@@ -124,7 +124,7 @@ export function ContactForm() {
             backgroundColor: '#D9D9D934',
             borderRadius: '15px',
             margin: 'auto',
-            width: '95%',
+            width: matches ? '95%' : '99%',
             marginTop: '10px',
           }}
           {...form.getInputProps('message')}
@@ -133,7 +133,7 @@ export function ContactForm() {
           color="blue"
           classNames={{ label: classes.Checkbox }}
           styles={{
-            root: { width: '95%', margin: 'auto' },
+            root: { width: matches ? '95%' : '99%', margin: 'auto' },
             body: { display: 'flex', alignItems: 'center' },
             label: { fontSize: matches ? '9px !important' : 'inherit' },
           }}
