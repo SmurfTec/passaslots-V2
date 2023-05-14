@@ -132,6 +132,11 @@ export function ContactForm() {
         <Checkbox
           color="blue"
           classNames={{ label: classes.Checkbox }}
+          styles={{
+            root: { width: '95%', margin: 'auto' },
+            body: { display: 'flex', alignItems: 'center' },
+            label: { fontSize: matches ? '9px !important' : 'inherit' },
+          }}
           label={`I'd like to recieve more information tik mark here as well similar to the contact us page to get confirmation for emails and sms. `}
           {...form.getInputProps('check')}
         />
