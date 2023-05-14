@@ -63,14 +63,15 @@ export function ContactForm() {
   return (
     <form onSubmit={form.onSubmit(handleSubmit)}>
       <div className="space-y-6">
-        <Grid px={0} >
-          <Grid.Col md={6} className='space-y-[18px] space-x-37'>
+        <Grid px={0}>
+          <Grid.Col md={6} className="space-y-[18px] space-x-37">
             <TextInput
               classNames={{ input: classes.input }}
               color="#F2F2F2"
-              size={"xl"}
+              size={'xl'}
               placeholder="First Name"
               required
+              style={{ backgroundColor: '#D9D9D934', borderRadius: '15px' }}
               {...form.getInputProps('firstName')}
             />
             <TextInput
@@ -79,6 +80,7 @@ export function ContactForm() {
               size="xl"
               placeholder="Email Address"
               required
+              style={{ backgroundColor: '#D9D9D934', borderRadius: '15px' }}
               {...form.getInputProps('email')}
             />
             <TextInput
@@ -87,16 +89,18 @@ export function ContactForm() {
               size="xl"
               placeholder="Subject"
               required
+              style={{ backgroundColor: '#D9D9D934', borderRadius: '15px' }}
               {...form.getInputProps('subject')}
             />
           </Grid.Col>
-          <Grid.Col md={6} className='space-y-[18px] space-x-37'>
+          <Grid.Col md={6} className="space-y-[18px] space-x-37">
             <TextInput
               classNames={{ input: classes.input }}
               color="#F2F2F2"
               size="xl"
               placeholder="Last Name"
               required
+              style={{ backgroundColor: '#D9D9D934', borderRadius: '15px' }}
               {...form.getInputProps('lastName')}
             />
             <TextInput
@@ -105,22 +109,29 @@ export function ContactForm() {
               size="xl"
               placeholder="Phone Number"
               required
+              style={{ backgroundColor: '#D9D9D934', borderRadius: '15px' }}
               {...form.getInputProps('phone')}
             />
           </Grid.Col>
         </Grid>
         <Textarea
-          p={8}
           classNames={{ input: classes.input }}
           color="#F2F2F2"
-          size={matches ? '221px' : "255px"}
+          size={matches ? '200px' : '255px'}
           placeholder="Message"
           required
+          style={{
+            backgroundColor: '#D9D9D934',
+            borderRadius: '15px',
+            margin: 'auto',
+            width: '95%',
+            marginTop: '10px',
+          }}
           {...form.getInputProps('message')}
         />
         <Checkbox
-          color='blue'
-          classNames={{label: classes.Checkbox}}
+          color="blue"
+          classNames={{ label: classes.Checkbox }}
           label={`I'd like to recieve more information tik mark here as well similar to the contact us page to get confirmation for emails and sms. `}
           {...form.getInputProps('check')}
         />
@@ -152,7 +163,7 @@ export function ContactForm() {
         </Group>
         {message && (
           <Text color="green" size={15}>
-           ✅ Successfully sent
+            ✅ Successfully sent
           </Text>
         )}
       </div>
@@ -193,5 +204,5 @@ const useStyles = createStyles((theme) => ({
     fontSize: '16px',
     lineHeight: '188.7%',
     letterSpacing: '0.0125em',
-  }
+  },
 }));
