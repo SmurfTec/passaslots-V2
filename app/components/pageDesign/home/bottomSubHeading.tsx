@@ -31,20 +31,16 @@ export const BottomSubHeading = () => {
               alt="image"
             />
             <div className="space-y-5 text-center">
-              <Title
-                order={2}
-                className="font-bold uppercase text-[#FFFFFF]"
-                style={{ fontSize: matches ? '27px !important' : 'inherit' }}
+              <Title maw={360}
+                className="font-bold uppercase text-[#FFFFFF] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[51px] sm:!leading-[35px] xs:!leading-[25px]"
               >
-                Sun, Sand, and Big Wins<br></br> Await You
+                Sun, Sand, and Big Wins Await You
               </Title>
               <Text
-                className="text-center text-[#FFFFFF]"
+                className="text-center text-[#FFFFFF] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[30px] sm:!leading-[20px] xs:!leading-[20px]"
                 style={{
                   fontWeight: '400',
-                  fontSize: matches ? '15px' : '20px',
                   marginTop: '30px',
-                  lineHeight: matches ? '21.7[x' : '37.74px',
                   letterSpacing: '-1.5%',
                 }}
               >

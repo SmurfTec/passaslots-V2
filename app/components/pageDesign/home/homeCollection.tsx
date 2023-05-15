@@ -49,13 +49,11 @@ export function HomeCollection() {
       className={classes.backdrop}
       style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
     >
-      <Container pb={matches ? 50 : 100} pt={matches ? 70 : 100} fluid>
+      <Container pb={matches ? 50 : 100} pt={matches ? 50 : 100} pl={matches ? 5 : 90} pr={matches ? 5 : 69} fluid>
         <Title
           color={'white'}
           mb={matches ? 50 : 100}
-          order={2}
-          className="font-[700] text-center"
-          style={matches ? { fontSize: '24px' } : {}}
+          className="font-[700] text-center xs:!text-[24px] sm:!text-[24px] md:!text-[48px]"
         >
           POPULAR COLLECTIONS
         </Title>

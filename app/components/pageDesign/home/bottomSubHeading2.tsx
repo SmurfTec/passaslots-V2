@@ -36,25 +36,23 @@ export const BottomSubHeading2 = () => {
             <Grid.Col mt={20}>
               <div className="space-y-1 mt-10">
                 <Title
-                  order={2}
-                  className="font-bold uppercase text-center text-[#FFFFFF]"
-                  style={{ fontWeight: '700', fontSize: '48px' }}
+                  className="font-bold uppercase xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] text-center text-[#FFFFFF]"
+                  style={{ fontWeight: '700' }}
                 >
                   Where gaming creators meet life
                 </Title>
                 <Title
-                  order={2}
-                  className="font-bold uppercase text-center text-[#FFFFFF]"
-                  style={{ fontWeight: '700', fontSize: '48px' }}
+                  className="font-bold uppercase text-center text-[#FFFFFF] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px]"
+                  style={{ fontWeight: '700' }}
                 >
                   long gamers
                 </Title>
               </div>
               <Grid className="text-center" justify={'center'}>
                 <Text
-                  className="text-center leading-10 text-base font-normal mt-10 text-[#FFFFFF]"
+                  className="text-center xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[30px] sm:!leading-[20px] xs:!leading-[20px] font-normal mt-10 text-[#FFFFFF]"
                   maw={935}
-                  style={{ fontWeight: '400', fontSize: '20px' }}
+                  style={{ fontWeight: '400' }}
                 >
                   Designed by renowned software developers, and featuring incredible graphics and audio, as well as
                   payout-packed symbols, no two gaming sessions will be the same, ensuring excitement at every spin.
@@ -98,15 +96,15 @@ export const BottomSubHeading2 = () => {
         >
           <HomeBottomCarousel />
           <Title
-            className="font-bold uppercase text-center text-[#FFFFFF]"
-            style={{ fontWeight: '700', fontSize: '24px !important', lineHeight: '25.68px !important', width: '90%' }}
+            className="font-bold uppercase text-center text-[#FFFFFF] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px]"
+            style={{ fontWeight: '700', width: '90%' }}
           >
             Where gaming creators meet life long gamers
           </Title>
 
           <Text
-            className="text-center leading-10 text-base font-normal mt-10 text-[#FFFFFF]"
-            style={{ fontWeight: '400', fontSize: '15px !important', lineHeight: '28.13px !important', width: '90%' }}
+            className="text-center xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[30px] sm:!leading-[20px] xs:!leading-[20px] text-base font-normal mt-10 text-[#FFFFFF]"
+            style={{ fontWeight: '400', width: '90%' }}
           >
             Designed by renowned software developers, and featuring incredible graphics and audio, as well as
             payout-packed symbols, no two gaming sessions will be the same, ensuring excitement at every spin.

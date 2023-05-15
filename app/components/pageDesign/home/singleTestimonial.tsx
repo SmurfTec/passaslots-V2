@@ -10,7 +10,7 @@ export type SingleTestimonialProps = {
 };
 
 export function SingleTestimonial({ description, image, name, rating, date }: SingleTestimonialProps) {
-  const matches_mobile = useMediaQuery('(max-width: 600px)');
+  const matches_mobile = useMediaQuery('(max-width: 770px)');
   return (
     <div>
       <Grid

@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '100vh',
+    // minHeight: '100vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -29,123 +29,60 @@ export function WinHome() {
       className={classes.backdrop}
       style={{ zIndex: 2, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
     >
-      {!matches && (
-        <Container fluid pt={94}>
-          <Grid align="center">
-            <Grid.Col sm={12}>
-              <Image
-                maw={644}
-                mah={363}
-                className="text-center mx-auto"
-                mb={58}
-                src="/images/pages/home/winHomeImage.png"
-                alt="image"
-              />
-              <Title
-                color={'#fff'}
-                mb={29}
-                order={3}
-                className="font-[700] uppercase text-center"
-                style={{ fontSize: '48px', letterSpacing: '-1.5%', lineHeight: '56.2px' }}
-              >
-                Play on any device now
-              </Title>
-              <Text
-                mb={29}
-                color="#fff"
-                className="font-[400] tracking-[0.005em] font-weight text-2xl leading-6 text-center"
-                size="sm"
-                style={{ fontSize: '24px', letterSpacing: '-1.5%', lineHeight: '28.13px' }}
-              >
-                Every kind of game imaginable, a safe and secure environment <br /> to play in, and quick top-up{' '}
-                <span className="font-[700]">solutions to fund your account</span> with.
-              </Text>
-              <div className="text-center mt-8">
-                <Button
-                  radius={50}
-                  mb={86}
-                  w={176}
-                  styles={{
-                    root: {
-                      border: 'none',
-                      background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
-                      // borderColor: '#F6CAA7',
-                      '&:hover': {
-                        background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
-                      },
-                    },
-                  }}
-                  onClick={bonusOpen}
-                  className="h-12 px-12 text-xl font-[500] "
-                  style={{ fontSize: '20px', lineHeight: '23.44px', letterSpacing: '-1.5%', marginTop: '40px' }}
-                >
-                  SIGNUP
-                </Button>
-              </div>
-            </Grid.Col>
-          </Grid>
-          {BonusModal}
-        </Container>
-      )}
-      {matches && (
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            marginTop: '70px',
-            textAlign: 'center',
-          }}
-        >
-          <Image
-            maw={644}
-            mah={363}
-            className="text-center mx-auto"
-            src="/images/pages/home/winHomeImage.png"
-            alt="image"
-          />
-          <Title
-            mt={50}
-            color={'#fff'}
-            className="font-[700] uppercase "
-            style={{ fontSize: '25px !important', letterSpacing: '-1.5%', width: '90%' }}
-          >
-            Play on any device now
-          </Title>
-          <Text
-            mt={25}
-            color="#fff"
-            className="font-[400] tracking-[0.005em] font-weight"
-            style={{ fontSize: '15px', letterSpacing: '-1.5%', lineHeight: '21.93px', width: '90%' }}
-          >
-            Every kind of game imaginable, a safe and secure environment to play in, and quick top-up{' '}
-            <span className="font-[700]">solutions to fund your account</span> with.
-          </Text>
-          <div className="text-center mt-8">
-            <Button
-              radius={50}
-              w={176}
-              mb={70}
-              styles={{
-                root: {
-                  border: 'none',
-                  background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
-                  // borderColor: '#F6CAA7',
-                  '&:hover': {
-                    background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
-                  },
-                },
-              }}
-              onClick={bonusOpen}
-              className="h-12 px-12 text-xl font-[500] "
-              style={{ fontSize: '16px', lineHeight: '23.44px', letterSpacing: '-1.5%' }}
+      <Container fluid py={matches ? 50 : 100} pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
+        <Grid align="center">
+          <Grid.Col sm={12}>
+            <Image
+              maw={644}
+              mah={363}
+              className="text-center mx-auto"
+              mb={matches ? 30 : 58}
+              src="/images/pages/home/winHomeImage.png"
+              alt="image"
+            />
+            <Title
+              color={'#fff'}
+              mb={matches ? 20 : 30}
+              className="font-[700] uppercase text-center xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em]"
             >
-              SIGNUP
-            </Button>
-          </div>
-        </div>
-      )}
+              Play on any device now
+            </Title>
+            <Text
+              mb={29}
+              color="#fff"
+              mx='auto'
+              maw={690}
+              className="font-[400] tracking-[0.005em] font-weight xs:!text-[16px] sm:!text-[16px] md:!text-[24px] md:!leading-[28px] sm:!leading-[20px] xs:!leading-[20px] text-center"
+            >
+              Every kind of game imaginable, a safe and secure environment to play in, and quick top-up{' '}
+              <span className="font-[700]">solutions to fund your account</span> with.
+            </Text>
+            <div className="text-center mt-8">
+              <Button
+                radius={50}
+                mb={10}
+                w={matches ? 150 : 176}
+                styles={{
+                  root: {
+                    border: 'none',
+                    background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
+                    // borderColor: '#F6CAA7',
+                    '&:hover': {
+                      background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
+                    },
+                  },
+                }}
+                onClick={bonusOpen}
+                className="h-12 px-12 text-xl font-[500] "
+                style={{ fontSize: matches ? '15px' : '20px', lineHeight: '23.44px', letterSpacing: '-1.5%', marginTop: matches ? '10px' : '40px' }}
+              >
+                SIGNUP
+              </Button>
+            </div>
+          </Grid.Col>
+        </Grid>
+        {BonusModal}
+      </Container>
     </div>
   );
 }

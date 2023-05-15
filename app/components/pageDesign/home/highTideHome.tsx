@@ -88,26 +88,23 @@ export function HighTideHome() {
             }}
             src="/images/pages/home/highTideImage.png"
           >
-            <Container fluid py={50}>
-              <Grid pl={matches ? 2 : 90}>
+            <Container fluid py={matches ? 50 : 100} pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
+              <Grid>
                 <Grid.Col md={6}>
                   <Title
-                    className="font-[700] tracking[-0.015em] w-400 md:w-500 lg:w-560"
+                    className="font-[700] tracking[-0.015em] w-400 md:w-500 lg:w-560 xs:!text-[32px] sm:!text-[40px] md:!text-[54px] md:!leading-[70px] sm:!leading-[35px] xs:!leading-[35px]"
                     color="white"
-                    order={2}
-                    mt={103}
-                    mb={100}
-                    style={{ fontSize: '54px', lineHeight: '69.39px', letterSpacing: '-1.5%' }}
+                    mt={matches ? 50 : 100}
+                    mb={matches ? 50 : 100}
+                    style={{ letterSpacing: '-1.5%' }}
                   >
                     RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
                   </Title>
                   <Text
                     color="white"
                     mt={20}
-                    className="font-[400] leading-10"
+                    className="font-[400] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[40px] sm:!leading-[20px] xs:!leading-[20px]"
                     maw={628}
-                    size="md"
-                    style={{ fontSize: '20px', lineHeight: '37.74px' }}
                   >
                     To see what kind of winnings are in store for you on the games, Pasa invites all our online and
                     mobile players to launch into playing this slot sensation the moment{' '}
@@ -147,6 +144,8 @@ export function HighTideHome() {
           <div
             style={{
               display: 'flex',
+              marginRight: '5px',
+              marginLeft: '5px',
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
@@ -155,27 +154,18 @@ export function HighTideHome() {
             }}
           >
             <Title
-              className="font-[700]"
+              className="font-[700] tracking[-0.015em] w-400 md:w-500 lg:w-560 xs:!text-[32px] sm:!text-[40px] md:!text-[54px] md:!leading-[70px] sm:!leading-[35px] xs:!leading-[35px]"
               color="white"
-              style={{
-                fontSize: '32px !important',
-                lineHeight: '41.12px !important',
-                letterSpacing: '-1.5%',
-                width: '70%',
-              }}
+              mt={matches ? 50 : 100}
+              mb={matches ? 50 : 100}
+              style={{ letterSpacing: '-1.5%' }}
             >
               RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
             </Title>
             <Text
               color="white"
               mt={40}
-              className="font-[400] leading-10"
-              size="md"
-              style={{
-                fontSize: '15px !important',
-                lineHeight: '28.3px !important',
-                width: '90%',
-              }}
+              className="font-[400] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[40px] sm:!leading-[20px] xs:!leading-[20px]"
             >
               To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
               players to launch into playing this slot sensation the moment{' '}
@@ -219,15 +209,7 @@ export function HighTideHome() {
         style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
       >
         {!matches && (
-          <Container fluid ml={matches ? 2 : 90} mr={matches ? 2 : 69} h={120} pb={50}>
-            {/* <Grid>
-            <Grid.Col md={6}>
-              <Image className='text-baseline left ' src="/images/pages/home/playdicewin.png" alt="home mobile" />
-            </Grid.Col>
-            <Grid.Col md={6}>
-              
-            </Grid.Col>
-          </Grid> */}
+          <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} h={120} pb={50}>
             <div
               style={{
                 display: 'flex',
@@ -239,13 +221,13 @@ export function HighTideHome() {
             >
               <div className={classes.rightPanel}>
                 <div className="space-y-1">
-                  <Title color={'white'} order={3} className="font-[700] uppercase mt-16 lg:mt-0 leading-snug">
+                  <Title color={'white'} className="font-[700] uppercase mt-16 lg:mt-0 xs:!text-[20px] sm:!text-[20px] md:!text-[32px] md:!leading-[51px] sm:!leading-[25px] xs:!leading-[25px]">
                     Play all day long with slots at the
                     <span className="text-[#50A1FF]"> forefront of our industry</span> leading gaming platform
                   </Title>
                 </div>
                 <div className={classes.description}>
-                  <Text color={'white'} className="text-base font-[400] text-md leading-10" maw={600}>
+                  <Text color={'white'} className="text-base font-[400] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[50px] sm:!leading-[25px] xs:!leading-[25px]" maw={600}>
                     To see what kind of winnings are in store for you on the games, Pasa invites all our online and
                     mobile players to launch into playing this slot sensation the moment{' '}
                     <span className="font-[700]"> you've logged into your unique real money </span>
@@ -265,7 +247,7 @@ export function HighTideHome() {
                         // borderColor: '#F6CAA7',
                         border: 'none',
                         width: matches ? '250px' : '315px',
-                        fontSize: matches ? '14px' : '20px',
+                        fontSize: matches ? '15px' : '20px',
                         fontStyle: 'normal',
                         color: '#FFFFFF',
                         padding: matches ? '10px 25px' : '17px 53px',
@@ -292,17 +274,16 @@ export function HighTideHome() {
               alignItems: 'center',
               marginTop: '70px',
               textAlign: 'center',
+              marginRight: '5px',
+              marginLeft: '5px',
             }}
           >
             {' '}
             <Title
               color={'white'}
-              className="font-[700] uppercase"
+              className="font-[700] uppercase xs:!text-[20px] sm:!text-[20px] md:!text-[32px] md:!leading-[51px] sm:!leading-[25px] xs:!leading-[25px]"
               style={{
-                fontSize: '20px !important',
-                lineHeight: '38.14px !important',
                 letterSpacing: '-1.5%',
-                width: '90%',
               }}
             >
               Play all day long with slots at the
@@ -311,12 +292,9 @@ export function HighTideHome() {
             <Text
               mt={40}
               color={'white'}
-              className="text-base font-[400]"
+              className="text-base font-[400] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[50px] sm:!leading-[25px] xs:!leading-[25px]"
               style={{
-                fontSize: '15px !important',
-                lineHeight: '28.13px !important',
                 letterSpacing: '-1.5%',
-                width: '90%',
               }}
             >
               To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
@@ -338,7 +316,7 @@ export function HighTideHome() {
                   // borderColor: '#F6CAA7',
                   border: 'none',
                   width: matches ? '250px' : '315px',
-                  fontSize: matches ? '14px' : '20px',
+                  fontSize: matches ? '15px' : '20px',
                   fontStyle: 'normal',
                   color: '#FFFFFF',
                   padding: matches ? '10px 25px' : '17px 53px',

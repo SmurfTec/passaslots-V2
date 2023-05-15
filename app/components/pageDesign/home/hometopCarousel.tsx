@@ -110,7 +110,7 @@ export const HomeTopCarousel = () => {
           {images.map((image, index) => {
             return (
               <Carousel.Slide key={index}>
-                <Image className="mx-auto" maw="598px" mah="596px" src={image} height={150} width={'auto'} />
+                <Image className="mx-auto" maw="598px" mah="596px" src={image} />
               </Carousel.Slide>
             );
           })}

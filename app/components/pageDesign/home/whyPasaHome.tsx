@@ -51,14 +51,12 @@ export function WhyPasaHome() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid w={'90%'} pt={matches ? 70 : 100}>
+      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 100}>
         <Title
           color={'white'}
-          order={3}
-          className="font-[700]"
+          // order={3}
+          className="font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px]"
           style={{
-            fontSize: matches ? '21px' : '48px',
-            lineHeight: '56.25px',
             letterSpacing: '-1.5%',
           }}
         >
@@ -70,7 +68,7 @@ export function WhyPasaHome() {
             controls: {
               position: 'relative',
               WebkitJustifyContent: 'end !important',
-              bottom: matches ? '517px' : '600px',
+              bottom: matches ? '500px' : '600px',
             },
             control: {
               margin: '0 0 0 10px !important',

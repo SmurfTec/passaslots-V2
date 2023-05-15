@@ -89,11 +89,8 @@ export const TestimonialCarousel = () => {
           <div style={{ rotate: '10deg' }}>
             <Title
               color={'white'}
-              order={2}
-              className="font-bold uppercase text-center"
+              className="font-[700] uppercase text-center xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px]"
               style={{
-                fontWeight: '700',
-                fontSize: matches2 ? '24px !important' : '48px',
                 margin: 'auto',
                 width: '80%',
               }}

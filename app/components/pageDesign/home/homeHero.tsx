@@ -45,8 +45,7 @@ const images = [
 ];
 
 export function HomeHero() {
-  const matches = useMediaQuery('(max-width: 1000px)');
-  const matches_mobile = useMediaQuery('(max-width: 640px)', true);
+  const matches = useMediaQuery('(max-width: 810px)', true);
   const autoplay = useRef(Autoplay({ delay: 4000 }));
   // const { classes } = useStyles();
   const [BonusModal, bonusOpen] = useBonusModal();
@@ -96,147 +95,97 @@ export function HomeHero() {
           paddingTop: '120px',
         }}
       >
-        <Center w={!matches_mobile ? '100%' : '90%'}>
-          <Carousel
-            w="100%"
-            styles={{
-              indicator: {
-                width: !matches_mobile ? '22px' : '10px',
-                height: !matches_mobile ? '22px' : '10px',
-                transition: 'width 250ms ease',
-                backgroundColor: '#D9D9D9',
-                gap: !matches_mobile ? '21px' : '10px',
+        <Center w={!matches ? '100%' : '90%'}>
+          <Grid align='center' justify='center'>
+            <Grid.Col>
+              <Carousel
+                w="100%"
+                styles={{
+                  indicator: {
+                    width: !matches ? '22px' : '10px',
+                    height: !matches ? '22px' : '10px',
+                    transition: 'width 250ms ease',
+                    backgroundColor: '#D9D9D9',
+                    gap: !matches ? '21px' : '10px',
 
-                '&[data-active]': {
-                  width: '22px',
-                  backgroundColor: '#016BE6',
-                },
-              },
-            }}
-            withControls={false}
-            withIndicators
-            align="center"
-            loop
-            plugins={[autoplay.current]}
-            // images={images}
-            // delay={5000}
-          >
-            {images.map((image, index) => {
-              return (
-                <Carousel.Slide key={index}>
-                  <Image className="mx-auto" maw="598px" mah="596px" src={image} />
-                </Carousel.Slide>
-              );
-            })}
-          </Carousel>
+                    '&[data-active]': {
+                      width: '22px',
+                      backgroundColor: '#016BE6',
+                    },
+                  },
+                }}
+                withControls={false}
+                withIndicators
+                align="center"
+                loop
+                plugins={[autoplay.current]}
+                // images={images}
+                // delay={5000}
+              >
+                {images.map((image, index) => {
+                  return (
+                    <Carousel.Slide key={index}>
+                      <Image className="mx-auto" maw="598px" mah="596px" src={image} />
+                    </Carousel.Slide>
+                  );
+                })}
+              </Carousel>
+            </Grid.Col>
+            <Grid.Col>
+              <Title
+                align="center"
+                color={'#FFB800'}
+                mt={matches ? 10 : 30}
+                className="font-[900] text-center uppercase md:!text-[96px] sm:!text-[40px] xs:!text-[40px] md:!leading-[112px] sm:!leading-[56px] xs:!leading-[56px]"
+                style={{ letterSpacing: '-1.5%' }}
+              >
+                Pasa SLOTS
+              </Title>
+            </Grid.Col>
+            <Grid.Col>
+              <Title
+                align="center"
+                color={'#ffffff'}
+                mt={13}
+                className="font-[700] text-center uppercase md:!text-[32px] sm:!text-[20px] xs:!text-[20px] md:!leading-[51px] sm:!leading-[30px] xs:!leading-[30px]"
+                // size={matches ? 'sm' : 'md'}
+                // order={2}
+              >
+                Seize Your $10 Sign up Fortune by the Seashore
+              </Title>
+            </Grid.Col>
+            <Grid.Col className='text-center'>
+              <Button
+                mt={matches ? 25 : 58}
+                radius={50}
+                mb={matches ? 50 : 100}
+                className="font-[500] mx-auto"
+                styles={{
+                  root: {
+                    border: 'none',
+                    background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
+                    padding: matches ? '12px 35px' : '17px 53px',
+                    // boxShadow: 'inset 0 0 2px 2px #F6CAA7',
+                    '&:hover': {
+                      background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
+                    },
+                    fontSize: matches ? '15px' : '17px',
+                    height: matches ? '40px' : '57px',
+                    width: matches ? '180px' : '203px',
+                  },
+                  label: {
+                    marginBottom: '-2px',
+                  },
+                }}
+                // size="xl"
+                component="a"
+                href="http://Pasasweeps.net"
+              >
+                PLAY NOW
+              </Button>
+            </Grid.Col>
+          </Grid>
         </Center>
-
-        {!matches_mobile && (
-          <>
-            {' '}
-            <Title
-              align="center"
-              color={'#FFB800'}
-              mt={27}
-              className="font-[900] text-center uppercase sm:text-[96px] xs:text-[40px]"
-              order={1}
-              style={{ lineHeight: '112.5px', letterSpacing: '-1.5%' }}
-            >
-              Pasa SLOTS
-            </Title>
-            <Title
-              align="center"
-              color={'#ffffff'}
-              mt={13}
-              className="font-[700] text-center uppercase sm:text-[32px] xs:text-[16px]"
-              // size={matches_mobile ? 'sm' : 'md'}
-              order={2}
-            >
-              Seize Your $10 Sign up Fortune by the Seashore
-            </Title>
-            <Button
-              mt={58}
-              radius={50}
-              w={203}
-              mb={106}
-              className="font-[500]"
-              styles={{
-                root: {
-                  border: 'none',
-                  background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
-                  padding: '15px 53px',
-                  // boxShadow: 'inset 0 0 2px 2px #F6CAA7',
-                  '&:hover': {
-                    background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
-                  },
-                  fontSize: '17px',
-                },
-                label: {
-                  marginBottom: '-2px',
-                },
-              }}
-              size="xl"
-              component="a"
-              href="http://Pasasweeps.net"
-            >
-              PLAY NOW
-            </Button>
-          </>
-        )}
-
-        {matches_mobile && (
-          <>
-            {' '}
-            <Title
-              align="center"
-              color={'#FFB800'}
-              mt={27}
-              className="font-[900] text-center uppercase"
-              order={1}
-              style={{ lineHeight: '112.5px', letterSpacing: '-1.5%', fontSize: '40px !important' }}
-            >
-              Pasa SLOTS
-            </Title>
-            <Title
-              align="center"
-              color={'#ffffff'}
-              mt={13}
-              className="font-[700] text-center uppercase"
-              // size={matches_mobile ? 'sm' : 'md'}
-              order={2}
-              style={{ fontSize: '16px !important', lineHeight: '18.75px !important' }}
-            >
-              Seize Your $10 Sign up Fortune by the Seashore
-            </Title>
-            <Button
-              mt={40}
-              radius={50}
-              w={203}
-              mb={40}
-              className="font-[500]"
-              styles={{
-                root: {
-                  border: 'none',
-                  background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
-                  padding: '15px 53px',
-                  // boxShadow: 'inset 0 0 2px 2px #F6CAA7',
-                  '&:hover': {
-                    background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',
-                  },
-                  fontSize: '16px',
-                },
-                label: {
-                  marginBottom: '-2px',
-                },
-              }}
-              size="md"
-              component="a"
-              href="http://Pasasweeps.net"
-            >
-              PLAY NOW
-            </Button>
-          </>
-        )}
 
         {!matches ? (
           <Group align={'center'} className="">
