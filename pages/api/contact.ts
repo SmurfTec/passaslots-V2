@@ -24,9 +24,6 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }
       break;
-    default:
-      res.setHeader('Allow', 'POST');
-      res.status(405).end(`Method ${method} Not Allowed`);
   }
 }
 

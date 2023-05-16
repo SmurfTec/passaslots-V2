@@ -7,9 +7,6 @@ export default async function Version(req: NextApiRequest, res: NextApiResponse<
     case 'GET':
       res.status(200).json({ version: '0.1' });
       break;
-    default:
-      res.setHeader('Allow', 'POST');
-      res.status(405).end(`Method ${method} Not Allowed`);
   }
 }
 
