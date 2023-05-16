@@ -1,16 +1,10 @@
-import { PlayerRegistration, PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import Cors from 'micro-cors';
-import { RequestHandler } from 'next/dist/server/next';
+import * as corsMiddleware from '../../middlewares';
 
 const prisma = new PrismaClient();
 
-const cors = Cors({
-  origin: '*',
-  allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-});
-
-async function ContactHandler(req: NextApiRequest, res: NextApiResponse<any>) {
+export default async function ContactHandler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { method, body } = req;
   switch (method) {
     case 'POST':
@@ -33,4 +27,10 @@ async function ContactHandler(req: NextApiRequest, res: NextApiResponse<any>) {
   }
 }
 
-export default cors(ContactHandler as RequestHandler);
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
+export const middleware = [corsMiddleware];

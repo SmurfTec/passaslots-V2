@@ -1,8 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import formidable from 'formidable';
-import { RequestHandler } from 'next/dist/server/next';
-import Cors from 'micro-cors';
+import * as corsMiddleware from '../../middlewares';
 
 const cloudinary = require('cloudinary').v2;
 
@@ -12,14 +11,9 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-const cors = Cors({
-  origin: '*',
-  allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-});
-
 const prisma = new PrismaClient();
 
-async function BlogsHandler(req: NextApiRequest, res: NextApiResponse<any>) {
+export default async function BlogsHandler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { method, body } = req;
   switch (method) {
     case 'GET':
@@ -75,4 +69,4 @@ const saveFile = async (file: any) => {
   return fileName;
 };
 
-export default cors(BlogsHandler as RequestHandler);
+export const middleware = [corsMiddleware];
