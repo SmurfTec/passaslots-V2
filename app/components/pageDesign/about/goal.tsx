@@ -143,7 +143,7 @@ export function Goal() {
             </Group>
           </div>
           <div className="text-center">
-            <Title maw={630} color="white" mx='auto' className="font-[700] sm:!text-[64px] xs:!text-[40px] leading-[68px] tracking-[0.0125em] uppercase">
+            <Title maw={630} color="white" mx='auto' className="font-[700] sm:!text-[64px] xs:!text-[40px] sm:!leading-[68px] xs:!leading-[44px] tracking-[0.0125em] uppercase">
               Our goal is to aim without a limit
             </Title>
             <div className='text-center'>

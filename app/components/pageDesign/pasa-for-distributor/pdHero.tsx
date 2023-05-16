@@ -65,8 +65,8 @@ export function PDHero() {
           {/* </Grid.Col> */}
         </Group>
         ) : undefined}
-      <Container fluid pl={matches? 5 : 90} pr={matches? 5 : 69} pt={matches ? 50 : 100} pb={matches ? 0 : 50}>
-        <Grid justify='center' align='center' mb={500}>
+      <Container fluid pl={matches? 5 : 90} pr={matches? 5 : 69} pt={matches ? 50 : 100} pb={matches ? 50 : 100}>
+        <Grid justify='center' align='center'>
           <Grid.Col sm={12}>
             <div className='text-center'>
               <Title mt={matches ? 100 : 150} color='white' className='uppercase md:!text-[48px] sm:!text-[24px] xs:!text-[24px] font-[900] md:!leading-[56px] sm:!leading-[25px] xs:!leading-[25px] tracking-[-0.015em] drop-shadow-[0_4px_33px_#016BE6] text-center'>
@@ -77,12 +77,7 @@ export function PDHero() {
               </Title>
             </div>
           </Grid.Col>
-          <Grid.Col sm={12} mb={-500}>
-            <Grid align='center' justify='center' className='text-center'>
-              <Image height='auto' width='auto' alt="logo"  className='mx-auto my-auto' src='/images/pages/pasa-for-distributor/lepriconhero.png' />
-            </Grid>
-          </Grid.Col>
-          <Grid mt={-420} align='center' justify='center'>
+          <Grid.Col >
             <div className="relative text-center">
               <Button
                 styles={{
@@ -116,7 +111,12 @@ export function PDHero() {
                 CONNECT WITH US
               </Button>
             </div>
-          </Grid>
+          </Grid.Col>
+          <Grid.Col sm={12}>
+            <Grid align='center' justify='center' className='text-center'>
+              <Image mah='785px' maw='666px' alt="logo"  className='mx-auto my-auto' src='/images/pages/pasa-for-distributor/lepriconhero.png' />
+            </Grid>
+          </Grid.Col>
         </Grid>
       </Container>
     </div>

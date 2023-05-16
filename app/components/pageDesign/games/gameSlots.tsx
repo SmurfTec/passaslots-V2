@@ -1,8 +1,11 @@
 import { ActionIcon, Container, Grid, Image, Text, Title } from '@mantine/core';
+import { Carousel } from '@mantine/carousel';
 import { ChevronLeft, ChevronRight } from 'tabler-icons-react';
 import { SingleSlot, SingleSlotProps } from './singleSlot';
 import { useState } from 'react';
 import { useMediaQuery } from '@mantine/hooks';
+import Autoplay from 'embla-carousel-autoplay';
+import { useRef } from 'react';
 
 const slotData: SingleSlotProps[] = [
   {
@@ -75,6 +78,7 @@ export function GameSlots() {
   const matches = useMediaQuery('(max-width: 810px)');
   const matches2 = useMediaQuery('(max-width: 370px)');
   const [showGames, setShowGames] = useState(false);
+  const autoplay = useRef(Autoplay({ delay: 2000 }));
   return (
     <div
       style={{
@@ -94,45 +98,60 @@ export function GameSlots() {
         <Title id="gameSlots" my={50} className="font-[700] uppercase md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] xs:!text-[24px] sm:!text-[32px] md:!text-[48px]">
           SLOTS
         </Title>
-        <div className="flex flex-row justify-between">
-          {!matches2 && showGames && (
-            <div className="basis-[0.5%] my-auto mr-20">
-              <ActionIcon
-                onClick={() => setShowGames(!showGames)}
-                bg="#FFB800"
-                size={58}
-                radius={50}
-                className="drop_shadow_[0px_4px_32px_rgba(0, 0, 0, 0.11)] hover:bg-[#FFB800]"
-              >
-                <ChevronLeft color="#FFFFFF" />
-              </ActionIcon>
-            </div>
-          )}
-          <div className="basis-[99.5%]">
-            <Grid m={0} grow gutterSm={40}>
-              {slotData.slice(matches2 ? 0 : showGames ? 8 : 0, matches2 ? 16 : showGames ? 16 : 8).map((slot, key) => (
-                <Grid.Col key={key + slot.text} sm={3}>
-                  <SingleSlot image={slot.image} text={slot.text} />
-                </Grid.Col>
-              ))}
-            </Grid>
-          </div>
-          {!matches2 && !showGames && (
-            <div className="basis-[0.5%] my-auto">
-              <ActionIcon
-                onClick={() => setShowGames(!showGames)}
-                bg="#FFB800"
-                size={58}
-                radius={50}
-                className="drop_shadow_[0px_4px_32px_rgba(0, 0, 0, 0.11)] hover:bg-[#FFB800]"
-              >
-                <ChevronRight color="#FFFFFF" />
-              </ActionIcon>
-            </div>
-          )}
-        </div>
-        <Grid m={0} pb={0} pt={matches ? 100 : 200} align="center" justify="center">
-          <Grid.Col style={{ display: 'contents' }} className="relative" xs={12} sm={12}>
+        <Carousel
+          slideSize="25%"
+          mx="auto"
+          height="auto"
+          withControls
+          slideGap="md"
+          loop
+          plugins={[autoplay.current]}
+          onMouseEnter={autoplay.current.stop}
+          onMouseLeave={autoplay.current.reset}
+          align="start"
+          breakpoints={[
+            { maxWidth: 'md', slideSize: '25%' },
+            { maxWidth: 'sm', slideSize: '50%', slideGap: 0 },
+          ]}
+          styles={{
+            slide: {
+              marginRight: '15px',
+            },
+            controls: {
+              // top: '50%',
+              transform: 'translateY(-50%) !important',
+            },
+            control: {
+              color: '#FFFFFF',
+              background: '#FFB800',
+              height: '58px',
+              width: '58px',
+              border: '0px',
+              // alignItems: 'center',
+              // marginTop: '-15px',
+
+              '&[data-inactive]': {
+                opacity: 0,
+                cursor: 'default',
+              },
+              ':hover': {
+                background: '#FFB800',
+                color: '#FFFFFF',
+              },
+            },
+          }}
+          nextControlIcon={<ChevronRight size={26} />}
+          previousControlIcon={<ChevronLeft size={26} />}
+          controlsOffset={'-250px'}
+        >
+          {slotData.map((slot, key) => (
+            <Carousel.Slide key={key + slot.text}>
+              <SingleSlot image={slot.image} text={slot.text} hc={matches ? 180 : 243} wc={matches ? 225 : 288} />
+            </Carousel.Slide>
+          ))}
+        </Carousel>
+        <Grid m={0} pb={0} pt={matches ? 50 : 100} align="center" justify="center">
+          <Grid.Col style={{ display: 'contents' }} className="relative">
             {/* <div className="absolute top-1/2 -translate-y-1/2 pr-32"> */}
             <div
               style={{
@@ -164,15 +183,16 @@ export function GameSlots() {
             </div>
             {/* </div> */}
           </Grid.Col>
-          <Grid pb={0} align="center">
+          <Grid.Col pb={0}>
             <Image
               // mb={'0px !important'}
               mx="auto !important"
-              className="mx-auto lg:mb[-85px] md:mb-[-65px] sm:mb-[-35px] xs:mb-[-25px]"
+              maw={876} mah={562}
+              className="mx-auto"
               src="/images/pages/game/gameCouch.png"
               alt="gaming creator"
             />
-          </Grid>
+          </Grid.Col>
         </Grid>
       </Container>
     </div>

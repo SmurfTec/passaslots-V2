@@ -46,7 +46,7 @@ const images = [
 
 export function HomeHero() {
   const matches = useMediaQuery('(max-width: 810px)', true);
-  const autoplay = useRef(Autoplay({ delay: 4000 }));
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
   // const { classes } = useStyles();
   const [BonusModal, bonusOpen] = useBonusModal();
   const [sideButtons, setSideButtons] = useState(false);
@@ -95,7 +95,7 @@ export function HomeHero() {
           paddingTop: '120px',
         }}
       >
-        <Center w={!matches ? '100%' : '90%'}>
+        <Center w={'90%'}>
           <Grid align='center' justify='center'>
             <Grid.Col>
               <Carousel

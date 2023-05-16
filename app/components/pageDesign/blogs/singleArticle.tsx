@@ -9,7 +9,7 @@ export type SingleArticleProps = {
 
 export function SingleArticle({ author, date, image, title }: SingleArticleProps) {
   return (
-    <Grid style={{ 
+    <Grid justify='center' style={{ 
       border: '2px solid #016BE6',
       background: `rgba(217, 217, 217, 0.04)`,
       backgroundRepeat: 'no-repeat',
@@ -19,7 +19,7 @@ export function SingleArticle({ author, date, image, title }: SingleArticleProps
       minHeight: '163px'
       // margin: 'auto',
       // justifyContent: 'space-between'
-    }} align="top">
+    }} align="center">
       <Grid.Col span={3}>
         <Image className='md:!h-[auto] md:!w-[auto] sm:!h-[93px] xs:!w-[93px] xs:!h-[93px] sm:!w-[93px]' src={image} alt={image} />
       </Grid.Col>

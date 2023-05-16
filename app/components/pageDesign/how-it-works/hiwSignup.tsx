@@ -40,7 +40,7 @@ export function HiwSignup() {
               maw={820}
               mx='auto'
               color="white"
-              className="text-center uppercase font-[700] md:!text-[64px] sm:!text-[32px] xs:!text-[32px] md:!leading-[68px] sm:!leading-[34px] xs:!leading-[34px] tracking-[0.0125em]"
+              className="text-center uppercase font-[700] md:!text-[64px] sm:!text-[32px] xs:!text-[28px] md:!leading-[68px] sm:!leading-[34px] xs:!leading-[34px] tracking-[0.0125em]"
             >
               Get a Taste of Paradise
                with Your Wins
@@ -92,7 +92,7 @@ export function HiwSignup() {
                   <Text className="text-center font-[400] leading-[17px] tracking-[0.005em] text-[13px]" color="white">
                     Get your sign up bonus + updates on new
                     <br /> games and VIP offers that arrive by the
-                    <br /> seashore.
+                     seashore.
                   </Text>
                 </div>
               </Grid.Col>

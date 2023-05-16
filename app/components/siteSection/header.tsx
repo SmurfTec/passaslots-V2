@@ -149,7 +149,7 @@ export function Header() {
               classNames={classes}
               width="100%"
               position="top-start"
-              offset={40}
+              offset={20}
               radius={0}
               // ba='#150B2E'
             >
@@ -162,7 +162,7 @@ export function Header() {
                   size="sm"
                 />
               </Menu.Target>
-              <Menu.Dropdown style={{ textAlignLast: 'center' }} bg="#150B2E">
+              <Menu.Dropdown style={{ textAlignLast: 'center', height: '100vh' }} bg="#150B2E">
                 <Menu.Item color="#fff !important" onClick={bonusOpen}>
                   SIGNUP FOR PLAYERS
                 </Menu.Item>
