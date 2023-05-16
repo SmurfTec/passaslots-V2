@@ -43,6 +43,8 @@ const blogData: Array<SingleBlogProps> = [
 
 export function MoreBlogs() {
   const matches = useMediaQuery('(max-width: 810px)', true);
+  const matches2 = useMediaQuery('(max-width: 768px)', true);
+
   return (
     <Container py={100} fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69}>
       <Grid>
@@ -55,7 +57,7 @@ export function MoreBlogs() {
 
       <Grid justify='space-between' py={100} grow gutter={30}>
         {blogData.map((item, key) => (
-          <Grid.Col className='flex md:justify-between sm:justify-center xs:justify-center' key={key + item.title} md={4}>
+          <Grid.Col maw={matches2 ? '172px' : 'auto'} className='flex md:justify-between sm:justify-center xs:justify-center' key={key + item.title} md={4} sm={4} xs={4}>
             <SingleBlog author={item.author} date={item.date} image={item.image} title={item.title} />
           </Grid.Col>
         ))}

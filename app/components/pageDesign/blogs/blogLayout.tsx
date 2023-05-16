@@ -46,6 +46,7 @@ const blogData: Array<SingleBlogProps> = [
 export function BlogLayout() {
   const [blogsData, setBlogsData] = useState<SingleBlogProps[]>([]);
   const matches = useMediaQuery('(max-width: 810px)', true);
+  const matches2 = useMediaQuery('(max-width: 768px)', true);
 
   const getBlogs = () => {
     const BASE_URL = process.env.BASE_URL as string;
@@ -66,7 +67,7 @@ export function BlogLayout() {
 
   return (
     <Container
-      py={100}
+      py={matches ? 50 : 100}
       fluid
       pl={matches ? 5 : 90}
       pr={matches ? 5 : 69}
@@ -78,10 +79,10 @@ export function BlogLayout() {
         </Grid.Col>
       </Grid>
 
-      <Grid justify="center" py={30} grow gutter={matches ? 10 : 30}>
+      <Grid justify="center" align='center' py={30} grow gutter={matches ? 10 : 30}>
         {blogsData.length === 0 && <p className="font-[700] text-[24px] center">Data not available</p>}
         {blogsData.map((item, key) => (
-          <Grid.Col className="flex justify-center" key={key + item.title} md={4} sm={6} xs={6}>
+          <Grid.Col p={0} maw={matches2 ? '172px' : 'auto'} className="grid justify-center" key={key + item.title} md={4} sm={6} xs={6}>
             <SingleBlog author={item.author} date={item.publishedOn as string} image={item.image} title={item.title} />
           </Grid.Col>
         ))}
