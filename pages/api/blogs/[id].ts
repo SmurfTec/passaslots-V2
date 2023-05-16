@@ -1,6 +1,6 @@
 import { PrismaClient, blogs } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import * as corsMiddleware from '../../../middlewares';
+import NextCors from 'nextjs-cors';
 
 const prisma = new PrismaClient();
 
@@ -9,8 +9,12 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
   switch (method) {
     case 'GET': {
       try {
+        await NextCors(req, res, {
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          origin: '*',
+          optionsSuccessStatus: 200,
+        });
         const blog = await prisma.blogs.findUnique({ where: { id: query.id as string } });
-        res.setHeader('Access-Control-Allow-Origin', '*');
         res.status(200).json({ blog } as any);
       } catch (err) {
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
@@ -19,6 +23,11 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
     }
     case 'PATCH': {
       try {
+        await NextCors(req, res, {
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          origin: '*',
+          optionsSuccessStatus: 200,
+        });
         const updatedBlog = await prisma.blogs.update({
           where: {
             id: query.id as string,
@@ -35,6 +44,11 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
     }
     case 'DELETE': {
       try {
+        await NextCors(req, res, {
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          origin: '*',
+          optionsSuccessStatus: 200,
+        });
         const deletedBlog = await prisma.blogs.update({
           where: {
             id: query.id as string,
@@ -57,5 +71,3 @@ export const config = {
     bodyParser: false,
   },
 };
-
-export const middleware = [corsMiddleware];

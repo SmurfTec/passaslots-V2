@@ -1,11 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import * as corsMiddleware from '../../middlewares';
+import NextCors from 'nextjs-cors';
 
 export default async function Version(req: NextApiRequest, res: NextApiResponse<any>) {
   const { method } = req;
   switch (method) {
     case 'GET':
-      res.status(200).json({ version: '0.1.2' });
+      await NextCors(req, res, {
+        methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+        origin: '*',
+        optionsSuccessStatus: 200,
+      });
+      res.status(200).json({ version: '0.1.3' });
       break;
   }
 }
@@ -15,5 +20,3 @@ export const config = {
     bodyParser: false,
   },
 };
-
-export const middleware = [corsMiddleware];

@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import * as corsMiddleware from '../../middlewares';
+import NextCors from 'nextjs-cors';
 
 const prisma = new PrismaClient();
 
@@ -9,6 +9,11 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
   switch (method) {
     case 'POST':
       try {
+        await NextCors(req, res, {
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          origin: '*',
+          optionsSuccessStatus: 200,
+        });
         const contact = await prisma.signup_Contact.create({
           data: {
             firstName: body.firstName,
@@ -32,5 +37,3 @@ export const config = {
     bodyParser: false,
   },
 };
-
-export const middleware = [corsMiddleware];
