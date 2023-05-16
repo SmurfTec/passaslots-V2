@@ -1,16 +1,10 @@
 import { PrismaClient, blogs } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import Cors from 'micro-cors';
-import { RequestHandler } from 'next/dist/server/next';
+import * as corsMiddleware from '../../../middlewares';
 
 const prisma = new PrismaClient();
 
-const cors = Cors({
-  origin: '*',
-  allowMethods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-});
-
-async function BlogsHandler(req: NextApiRequest, res: NextApiResponse) {
+export default async function BlogsHandler(req: NextApiRequest, res: NextApiResponse) {
   const { method, body, query } = req;
   switch (method) {
     case 'GET': {
@@ -60,4 +54,10 @@ async function BlogsHandler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default cors(BlogsHandler as RequestHandler);
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
+export const middleware = [corsMiddleware];
