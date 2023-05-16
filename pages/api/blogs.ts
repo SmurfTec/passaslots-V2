@@ -19,7 +19,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
     case 'GET':
       try {
         await NextCors(req, res, {
-          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
           origin: '*',
           optionsSuccessStatus: 200,
         });
@@ -33,7 +33,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
     case 'POST': {
       try {
         await NextCors(req, res, {
-          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
           origin: '*',
           optionsSuccessStatus: 200,
         });

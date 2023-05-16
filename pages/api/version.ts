@@ -6,11 +6,11 @@ export default async function Version(req: NextApiRequest, res: NextApiResponse<
   switch (method) {
     case 'GET':
       await NextCors(req, res, {
-        methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+        methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
         origin: '*',
         optionsSuccessStatus: 200,
       });
-      res.status(200).json({ version: '0.2.1' });
+      res.status(200).json({ version: '0.2.2' });
       break;
   }
 }
