@@ -10,6 +10,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
     case 'GET': {
       try {
         const blog = await prisma.blogs.findUnique({ where: { id: query.id as string } });
+        res.setHeader('Access-Control-Allow-Origin', '*');
         res.status(200).json({ blog } as any);
       } catch (err) {
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });

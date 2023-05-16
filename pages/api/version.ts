@@ -5,7 +5,7 @@ export default async function Version(req: NextApiRequest, res: NextApiResponse<
   const { method } = req;
   switch (method) {
     case 'GET':
-      res.status(200).json({ version: '0.1.1' });
+      res.status(200).json({ version: '0.1.2' });
       break;
   }
 }
