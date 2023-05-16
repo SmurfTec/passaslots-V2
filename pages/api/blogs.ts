@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import formidable from 'formidable';
-import * as corsMiddleware from '../../middlewares';
+import NextCors from 'nextjs-cors';
 
 const cloudinary = require('cloudinary').v2;
 
@@ -18,6 +18,11 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
   switch (method) {
     case 'GET':
       try {
+        await NextCors(req, res, {
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          origin: '*',
+          optionsSuccessStatus: 200,
+        });
         const blogs = await prisma.blogs.findMany({ where: { isDeleted: false } });
 
         res.status(200).json(blogs as any);
@@ -27,6 +32,11 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
       break;
     case 'POST': {
       try {
+        await NextCors(req, res, {
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          origin: '*',
+          optionsSuccessStatus: 200,
+        });
         const form = new formidable.IncomingForm();
 
         await form.parse(req, async function (err, fields, files: formidable.Files) {
@@ -68,5 +78,3 @@ const saveFile = async (file: any) => {
     });
   return fileName;
 };
-
-export const middleware = [corsMiddleware];

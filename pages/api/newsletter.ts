@@ -1,7 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import * as corsMiddleware from '../../middlewares';
-
+import NextCors from 'nextjs-cors';
 const prisma = new PrismaClient();
 
 export default async function NewsLetterHandler(req: NextApiRequest, res: NextApiResponse<any>) {
@@ -9,6 +8,11 @@ export default async function NewsLetterHandler(req: NextApiRequest, res: NextAp
   switch (method) {
     case 'POST':
       try {
+        await NextCors(req, res, {
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          origin: '*',
+          optionsSuccessStatus: 200,
+        });
         const newsLetter = await prisma.newsLetter.create({
           data: {
             email: body.email,
@@ -27,5 +31,3 @@ export const config = {
     bodyParser: false,
   },
 };
-
-export const middleware = [corsMiddleware];
