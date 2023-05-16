@@ -16,7 +16,7 @@ export function PDBusiness() {
         zIndex: 50,
         boxShadow: '-1px 0px 20px 3px #016BE6',
         borderTop: '6px solid #016BE6',
-        marginTop: '25px',
+        // marginTop: '25px',
       }}
       src="/images/header/backgroundImage.png"
     >
@@ -86,7 +86,7 @@ export function PDBusiness() {
                 radius={50}
                 className="font-[500]"
               >
-                Contect With Us
+                Connect With Us
               </Button>
             </div>
           </Grid.Col>

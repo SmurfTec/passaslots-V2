@@ -30,7 +30,7 @@ export function Content() {
             </Grid.Col>
             <Grid.Col order={2} className="relative" xs={12} sm={6}>
               <div className="text-center sm:text-left">
-                <Title maw={575} className="uppercase text-[#ffffff] font-[700] sm:!text-[48px] xs:!text-[24px] leading-[51px] tracking-[0.0125em]">
+                <Title maw={575} className="uppercase text-[#ffffff] font-[700] sm:!text-[48px] xs:!text-[24px] sm:!leading-[51px] xs:!leading-[30px] tracking-[0.0125em]">
                   <span className="text-[#50A1FF]">
                     Where gaming creators{' '}
                     {/* <br /> */}
@@ -38,7 +38,7 @@ export function Content() {
                   </span>{' '}
                   lifelong gamers
                 </Title>
-                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] sm:text-[20px] xs:text-[15px] leading-[38px]">
+                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] sm:text-[20px] xs:text-[15px] sm:leading-[38px] xs:leading-[25px]">
                   To see what kind of winnings are in store for you on the games, Pasa{' '}
                   {/* <br /> */}
                   invites all our online and mobile players to launch into playing this slot{' '}
@@ -55,7 +55,7 @@ export function Content() {
             {/* 2nd Row */}
             <Grid.Col order={matches_mobile ? 4 : 3} className="relative" xs={12} sm={6}>
               <div className="text-center sm:text-left">
-                <Title maw={630} className="uppercase text-[#ffffff] font-[700] sm:!text-[48px] xs:!text-[24px] leading-[51px] tracking-[0.0125em]">
+                <Title maw={630} className="uppercase text-[#ffffff] font-[700] sm:!text-[48px] xs:!text-[24px] sm:!leading-[51px] xs:!leading-[30px] tracking-[0.0125em]">
                   And, whether you're doing{' '}
                   your{' '}
                   <span className="text-[#50A1FF]">
@@ -63,7 +63,7 @@ export function Content() {
                     gaming{' '}
                   </span>
                 </Title>
-                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] sm:text-[20px] xs:text-[15px] leading-[38px]">
+                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] sm:text-[20px] xs:text-[15px] sm:leading-[38px] xs:leading-[25px]">
                   Via your browser, laptop, PC, smartphone, or tablet, we promise one of{' '}
                   {/* <br /> */}
                   the most diverse <span className="font-[700]">selections of slot games, blackjack</span> and roulette{' '}
@@ -82,14 +82,14 @@ export function Content() {
             </Grid.Col>
             <Grid.Col order={6} className="relative" xs={12} sm={6}>
               <div className="text-center sm:text-left">
-                <Title maw={625} className="uppercase text-[#ffffff] font-[700] sm:!text-[48px] xs:!text-[24px] leading-[51px] tracking-[0.0125em]">
+                <Title maw={625} className="uppercase text-[#ffffff] font-[700] sm:!text-[48px] xs:!text-[24px] sm:!leading-[51px] xs:!leading-[30px] tracking-[0.0125em]">
                   <span className="text-[#50A1FF]">We make gaming easy,</span> fun,{' '}
                   {/* <br />  */}
                   and accessible to{' '}
                   {/* <br />  */}
                   everyone{' '}
                 </Title>
-                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] sm:text-[20px] xs:text-[15px] leading-[38px]">
+                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] sm:text-[20px] xs:text-[15px] sm:leading-[38px] xs:leading-[25px]">
                   We've removed the stress of finding, downloading, and registering for{' '}
                   {/* <br /> */}
                   games by doing it for you. All with one click. It's a simple, innovative{' '}

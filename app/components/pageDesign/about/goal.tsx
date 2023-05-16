@@ -152,7 +152,7 @@ export function Goal() {
                 maw={700}
                 mx='auto'
                 color="white"
-                className="font-[400] sm:text-[20px] xs:text-[15px] text-center tracking-[0.005em] leading-[38px]"
+                className="font-[400] sm:text-[20px] xs:text-[15px] text-center tracking-[0.005em] sm:leading-[38px] xs:leading-[20px]"
                 opacity={0.8}
               >
                 Our commitment to being No.1 drives us to constantly improve. We are always broadening our{' '}

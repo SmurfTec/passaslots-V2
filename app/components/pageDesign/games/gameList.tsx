@@ -35,7 +35,7 @@ export function GameList() {
             </Title>
 
             <Grid justify="center">
-              <Group align="center" className="flex flex-nowrap place-content-between" pb={15} w={'97%'}>
+              <Group align="center" className="flex flex-nowrap place-content-between" pb={15}>
                 <Text
                   style={{
                     border: '4px solid #016BE6',

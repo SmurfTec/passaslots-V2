@@ -81,8 +81,8 @@ export const MiddleHeading = () => {
             zIndex: 50,
             boxShadow: '-1px 0px 20px 3px #016BE6',
             borderTop: '6px solid #016BE6',
-            marginLeft: '5px',
-            marginRight: '5px',
+            // marginLeft: '5px',
+            // marginRight: '5px',
           }}
         >
           {' '}
