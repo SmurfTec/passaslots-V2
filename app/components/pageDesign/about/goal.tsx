@@ -159,7 +159,7 @@ export function Goal() {
                 community, enhancing our content, and finding new ways to provide value to our players.
               </Text>
             </div>
-            <Image className='mx-auto' maw={478} mah={565} miw={280} mih={331} src="/images/pages/about/goalZeus.png" />
+            <Image mb={matches ? 10 : 30} className='mx-auto' maw={478} mah={565} miw={280} mih={331} src="/images/pages/about/goalZeus.png" />
             <Title
               color="white"
               className="font-[700] leading-[34px] tracking-[0.0125em] sm:!text-[32px] xs:!text-[20px] uppercase"

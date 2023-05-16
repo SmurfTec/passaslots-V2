@@ -16,6 +16,7 @@ export type SingleCollectionProps = {
 
 export function SingleCollection({ button, content, image, title }: SingleCollectionProps) {
   const matches = useMediaQuery('(max-width: 770px)', true);
+  const matches2 = useMediaQuery('(max-width: 1200px)', true);
   return (
     <Card p={10} m={0} radius="sm" bg={'transparent'}>
       <Card.Section>
@@ -25,7 +26,7 @@ export function SingleCollection({ button, content, image, title }: SingleCollec
             <Title color="white" order={4} className="font-[500] text-center">
               {title}
             </Title>
-            <Text color="white" mt={5} size="sm" className="font-[300] opacity-70 text-center">
+            <Text maw={275} color="white" mt={5} size="sm" className="mx-auto font-[300] opacity-70 text-center">
               {content}
             </Text>
             <Grid className="my-5" justify={'center'}>
@@ -38,7 +39,7 @@ export function SingleCollection({ button, content, image, title }: SingleCollec
                 py={matches ? 8 : 15}
                 px={matches ? 20 : 30}
                 styles={{
-                  label: { fontSize: matches ? '15px' : '20px', fontWeight: matches ? 'normal' : 'bolder' },
+                  label: { fontSize: matches2 ? '15px' : '20px', fontWeight: 'normal' },
                   root: {
                     border: 'none',
                     background: 'linear-gradient(to bottom, #2072D2, #A74C9A)',
@@ -46,7 +47,7 @@ export function SingleCollection({ button, content, image, title }: SingleCollec
                     '&:hover': { background: 'linear-gradient(to bottom, #2072D2, #A74C9A)' },
                   },
                 }}
-                className="text-center"
+                className="text-center uppercase"
                 component={NextLink}
                 href={button.path}
               >

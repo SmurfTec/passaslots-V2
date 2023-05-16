@@ -151,7 +151,7 @@ export function HomeHero() {
                 // size={matches ? 'sm' : 'md'}
                 // order={2}
               >
-                Seize Your $10 Sign up Fortune by the Seashore
+                Seize Your $13 Sign up Fortune by the Seashore
               </Title>
             </Grid.Col>
             <Grid.Col className='text-center'>

@@ -40,7 +40,7 @@ export function Approach() {
             align="center"
             className={matches ? 
               "grid grid-items-center grid-rows-2 grid-flow-col gap-[30px]"
-            : "grid grid-items-center grid-rows-2 grid-flow-col gap-[80px]"}
+            : "grid grid-items-center grid-rows-2 grid-flow-col gap-[50px]"}
           >
             <Image mah={211} maw={211} mih={99} miw={99} src="/images/pages/about/approach1.png" />
             <Image mah={177} maw={177} mih={99} miw={99} src="/images/pages/about/approach4.png" />

@@ -62,21 +62,21 @@ export function HiwStage() {
             backgroundPosition: 'center center',
             backgroundSize: '100% 100%',
             backgroundRepeat: 'no-repeat',
-            minHeight: '315vh',
+            // minHeight: '180vh',
           }}
           className=""
           src="/images/pages/hiw/pasagamming.png"
-          bgsz="auto"
+          // bgsz="auto"
         >
-          <Container className="mt-24 sm:mt-0" fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69}>
+          <Container className="mt-24 sm:mt-0" fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={matches ? 0 : 300}>
             <Grid justify="center" align="center">
               <Grid.Col sm={12}>
                 <Grid justify="center" align="center">
                   <Grid.Col sm={12}>
                     <Title
-                      mt={109}
+                      mt={50}
                       color="white"
-                      className="uppercase text-center text-[48px] leading-[56px] tracking-[-0.015em] font-[700] mb-0"
+                      className="uppercase text-center !text-[48px] leading-[56px] tracking-[-0.015em] font-[700] mb-0"
                     >
                       JOIN
                       <span className="text-[#50A1FF]"> PASA </span>
@@ -94,12 +94,12 @@ export function HiwStage() {
               </Grid.Col>
             </Grid>
             <Grid>
-              <Grid.Col mt={318} xs={5}>
+              <Grid.Col mt={50} xs={5}>
                 <Group className="flex flex-col">
-                  <Grid mt={246} justify="flex-end" ml="auto" align="center">
+                  <Grid mt={196} justify="flex-end" ml="auto" align="center">
                     <Title
                       style={{ fontSize: matches2 ? '20px' : '32px' }}
-                      className="absolute text-right uppercase text-[#50A1FF] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
+                      className="absolute text-right uppercase text-[#FFFFFF] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
                     >
                       STAGE 2
                     </Title>
@@ -112,7 +112,7 @@ export function HiwStage() {
                       in browser or download the app{' '}
                     </Text>
                   </Grid>
-                  <Grid mt={610} justify="flex-end" ml="auto" align="center">
+                  <Grid mt={524} justify="flex-end" ml="auto" align="center">
                     <Title
                       style={{ fontSize: matches2 ? '20px' : '32px' }}
                       className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
@@ -126,7 +126,7 @@ export function HiwStage() {
                       Purchase first game credit
                     </Text>
                   </Grid>
-                  <Grid mt={475} justify="flex-end" ml="auto" align="center">
+                  <Grid mt={388} justify="flex-end" ml="auto" align="center">
                     <Title
                       style={{ fontSize: matches2 ? '20px' : '32px' }}
                       className="absolute text-right uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
@@ -145,7 +145,7 @@ export function HiwStage() {
                   </Grid>
                 </Group>
               </Grid.Col>
-              <Grid.Col mt={318} xs={2}>
+              <Grid.Col mt={50} xs={2}>
                 <Group className="flex flex-col">
                   <div
                     style={{
@@ -162,13 +162,13 @@ export function HiwStage() {
                     style={{
                       boxSizing: 'border-box',
                       position: 'absolute',
-                      width: '205px',
+                      width: '160px',
                       height: '0px',
                       border: '4px solid #50A1FF',
                       boxShadow: '-1px 1px 6px #016BE6',
                       filter: 'blur(1px)',
                       transform: 'rotate(90deg)',
-                      marginTop: '138.5px',
+                      marginTop: '115.5px',
                     }}
                   />
                   <div
@@ -180,20 +180,20 @@ export function HiwStage() {
                       background: '#8FC3FF',
                       border: '11px solid #016BE6',
                       borderRadius: '50px',
-                      marginTop: '246px',
+                      marginTop: '201px',
                     }}
                   />
                   <div
                     style={{
                       boxSizing: 'border-box',
                       position: 'absolute',
-                      width: '205px',
+                      width: '160px',
                       height: '0px',
                       border: '4px solid #50A1FF',
                       boxShadow: '-1px 1px 6px #016BE6',
                       filter: 'blur(1px)',
                       transform: 'rotate(90deg)',
-                      marginTop: '384.5px',
+                      marginTop: '318.5px',
                     }}
                   />
                   <div
@@ -205,20 +205,20 @@ export function HiwStage() {
                       background: '#150B2E',
                       border: '11px solid #FFB800',
                       borderRadius: '50px',
-                      marginTop: '492px',
+                      marginTop: '405px',
                     }}
                   />
                   <div
                     style={{
                       boxSizing: 'border-box',
                       position: 'absolute',
-                      width: '342px',
+                      width: '280px',
                       height: '0px',
                       border: '4px solid #50A1FF',
                       boxShadow: '-1px 1px 6px #016BE6',
                       filter: 'blur(1px)',
                       transform: 'rotate(90deg)',
-                      marginTop: '699px',
+                      marginTop: '580px',
                     }}
                   />
                   <div
@@ -230,20 +230,20 @@ export function HiwStage() {
                       background: '#8FC3FF',
                       border: '11px solid #016BE6',
                       borderRadius: '50px',
-                      marginTop: '870px',
+                      marginTop: '725px',
                     }}
                   />
                   <div
                     style={{
                       boxSizing: 'border-box',
                       position: 'absolute',
-                      width: '205px',
+                      width: '160px',
                       height: '0px',
                       border: '4px solid #50A1FF',
                       boxShadow: '-1px 1px 6px #016BE6',
                       filter: 'blur(1px)',
                       transform: 'rotate(90deg)',
-                      marginTop: '1007px',
+                      marginTop: '842px',
                     }}
                   />
                   <div
@@ -255,20 +255,20 @@ export function HiwStage() {
                       background: '#150B2E',
                       border: '11px solid #FFB800',
                       borderRadius: '50px',
-                      marginTop: '1108px',
+                      marginTop: '930px',
                     }}
                   />
                   <div
                     style={{
                       boxSizing: 'border-box',
                       position: 'absolute',
-                      width: '205px',
+                      width: '160px',
                       height: '0px',
                       border: '4px solid #50A1FF',
                       boxShadow: '-1px 1px 6px #016BE6',
                       filter: 'blur(1px)',
                       transform: 'rotate(90deg)',
-                      marginTop: '1246.5px',
+                      marginTop: '1045.5px',
                     }}
                   />
                   <div
@@ -280,13 +280,13 @@ export function HiwStage() {
                       background: '#8FC3FF',
                       border: '11px solid #016BE6',
                       borderRadius: '50px',
-                      marginTop: '1353.5px',
+                      marginTop: '1131.5px',
                     }}
                   />
                 </Group>
               </Grid.Col>
               {/* text-align-last-end */}
-              <Grid.Col mt={318} xs={5}>
+              <Grid.Col mt={50} xs={5}>
                 <Group className="flex flex-col content-start">
                   <Grid align="center">
                     <Title
@@ -302,7 +302,7 @@ export function HiwStage() {
                       Complete the player registeration
                     </Text>
                   </Grid>
-                  <Grid mt={482} align="center">
+                  <Grid mt={388} align="center">
                     <Title
                       style={{ fontSize: matches2 ? '20px' : '32px' }}
                       className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
@@ -322,7 +322,7 @@ export function HiwStage() {
                       (username and password){' '}
                     </Text>
                   </Grid>
-                  <Grid mt={595} align="center">
+                  <Grid mt={510} align="center">
                     <Title
                       style={{ fontSize: matches2 ? '20px' : '32px' }}
                       className="absolute uppercase text-[#ffffff] font-[700] text-[32px] leading-[38px] tracking-[-0.015em]"
@@ -363,20 +363,19 @@ export function HiwStage() {
         <BackgroundImage
           style={{
             backgroundPosition: 'center center',
-            backgroundSize: '135%',
+            backgroundSize: '100% 100%',
             backgroundRepeat: 'no-repeat',
             // minHeight: '130vh',
           }}
           className=""
           src="/images/pages/hiw/pasagamming.png"
-          bgsz="auto"
+          // bgsz="auto"
         >
           <div>
             <Title
               mt={70}
               color="white"
-              className="uppercase text-center font-[700]"
-              style={{ lineHeight: '28.13px', fontSize: '28.13px !important' }}
+              className="uppercase text-center font-[700] text-[28px] leading-[30px]"
             >
               JOIN
               <span className="text-[#50A1FF]"> PASA </span>

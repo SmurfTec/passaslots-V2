@@ -12,13 +12,13 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '70vh',
+    // minHeight: '70vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
   },
   backdrop2: {
-    [theme.fn.smallerThan(700)]: {
+    [theme.fn.smallerThan(771)]: {
       backgroundImage: "url('/images/header/backgroundImage.png')",
     },
     backgroundColor: '#150B2E',
@@ -28,7 +28,7 @@ const useStyles = createStyles((theme) => ({
     // position: 'relative',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    minHeight: '90vh',
+    // minHeight: '90vh',
     position: 'relative',
     // width: '100%',
     // height: '100vh',
@@ -37,7 +37,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan(1200)]: {
       marginTop: '20px',
     },
-    marginTop: '150px',
+    marginTop: '50px',
   },
   button2: {
     [theme.fn.smallerThan(1400)]: {
@@ -94,8 +94,8 @@ export function HighTideHome() {
                   <Title
                     className="font-[700] tracking[-0.015em] w-400 md:w-500 lg:w-560 xs:!text-[32px] sm:!text-[40px] md:!text-[54px] md:!leading-[70px] sm:!leading-[35px] xs:!leading-[35px]"
                     color="white"
-                    mt={matches ? 50 : 100}
-                    mb={matches ? 50 : 100}
+                    mt={matches ? 20 : 0}
+                    mb={matches ? 20 : 50}
                     style={{ letterSpacing: '-1.5%' }}
                   >
                     RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
@@ -156,8 +156,8 @@ export function HighTideHome() {
             <Title
               className="font-[700] tracking[-0.015em] w-400 md:w-500 lg:w-560 xs:!text-[32px] sm:!text-[40px] md:!text-[54px] md:!leading-[70px] sm:!leading-[35px] xs:!leading-[35px]"
               color="white"
-              mt={matches ? 50 : 100}
-              mb={matches ? 50 : 100}
+              mt={matches ? 20 : 0}
+              mb={matches ? 10 : 50}
               style={{ letterSpacing: '-1.5%' }}
             >
               RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
@@ -209,7 +209,7 @@ export function HighTideHome() {
         style={{ zIndex: 50, boxShadow: '-1px 0px 20px 3px #016BE6', borderTop: '6px solid #016BE6' }}
       >
         {!matches && (
-          <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} h={120} pb={50}>
+          <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} py={50}>
             <div
               style={{
                 display: 'flex',
@@ -221,7 +221,7 @@ export function HighTideHome() {
             >
               <div className={classes.rightPanel}>
                 <div className="space-y-1">
-                  <Title color={'white'} className="font-[700] uppercase mt-16 lg:mt-0 xs:!text-[20px] sm:!text-[20px] md:!text-[32px] md:!leading-[51px] sm:!leading-[25px] xs:!leading-[25px]">
+                  <Title maw={900} color={'white'} className="font-[700] uppercase mt-16 lg:mt-0 xs:!text-[20px] sm:!text-[20px] md:!text-[32px] md:!leading-[51px] sm:!leading-[25px] xs:!leading-[25px]">
                     Play all day long with slots at the
                     <span className="text-[#50A1FF]"> forefront of our industry</span> leading gaming platform
                   </Title>
@@ -246,7 +246,7 @@ export function HighTideHome() {
                       root: {
                         // borderColor: '#F6CAA7',
                         border: 'none',
-                        width: matches ? '250px' : '315px',
+                        width: matches ? '250px' : '325px',
                         fontSize: matches ? '15px' : '20px',
                         fontStyle: 'normal',
                         color: '#FFFFFF',
@@ -285,6 +285,7 @@ export function HighTideHome() {
               style={{
                 letterSpacing: '-1.5%',
               }}
+              maw={900}
             >
               Play all day long with slots at the
               <span className="text-[#50A1FF]"> forefront of our industry</span> leading gaming platform
@@ -315,7 +316,7 @@ export function HighTideHome() {
                 root: {
                   // borderColor: '#F6CAA7',
                   border: 'none',
-                  width: matches ? '250px' : '315px',
+                  width: matches ? '250px' : '325px',
                   fontSize: matches ? '15px' : '20px',
                   fontStyle: 'normal',
                   color: '#FFFFFF',

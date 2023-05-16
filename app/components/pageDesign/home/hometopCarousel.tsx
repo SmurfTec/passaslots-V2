@@ -66,8 +66,8 @@ export const HomeTopCarousel = () => {
       <Container
         fluid
         px={0}
-        pt={matches ? 70 : 100}
-        pb={matches ? 50 : 100}
+        pt={matches ? 20 : 50}
+        pb={matches ? 20 : 50}
         style={{ backgroundSize: 'cover', width: '100%' }}
       >
         <Carousel
@@ -110,7 +110,7 @@ export const HomeTopCarousel = () => {
           {images.map((image, index) => {
             return (
               <Carousel.Slide key={index}>
-                <Image className="mx-auto" maw="598px" mah="596px" src={image} />
+                <Image className="mx-auto" maw="449px" mah="447px" src={image} />
               </Carousel.Slide>
             );
           })}

@@ -98,7 +98,7 @@ export const TestimonialCarousel = () => {
               What our community says about us
             </Title>
 
-            <Grid m={0} mt={matches2 ? 20 : 50}>
+            <Grid m={0} my={matches2 ? 20 : 70}>
               {/* <Grid.Col md={3} className="relative">
                 <Center>
                   <Text color="white" size={'md'} className="absolute top-1/2 -translate-y-1/2">

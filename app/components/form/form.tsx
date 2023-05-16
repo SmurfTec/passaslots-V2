@@ -189,7 +189,7 @@ const useStyles = createStyles((theme) => ({
     },
     [theme.fn.largerThan(809)]: {
       fontSize: '20px',
-      height: '105px',
+      height: '80px',
     },
     fontStyle: 'normal',
     ':focus': {

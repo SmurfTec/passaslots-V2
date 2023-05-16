@@ -23,14 +23,14 @@ export function Content() {
     >
       <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={100} pt={matches_mobile ? 50 : 100}>
         <div>
-          <Grid className={matches_mobile ? "space-y-5" : "space-y-24"} align="center" gutter={matches_mobile ? 10 : 50}>
+          <Grid className={matches_mobile ? "space-y-5" : "space-y-24"} align="center" gutter={matches_mobile ? 10 : 20}>
             {/* 1st Row */}
             <Grid.Col order={1} className="text-left" xs={12} sm={6}>
-              <Image mih={217} miw={259} mah={558} maw={669} src="/images/pages/about/fun.png" alt="fun" className="block" />
+              <Image mih={217} miw={259} mah={502} maw={602} src="/images/pages/about/fun.png" alt="fun" className="block" />
             </Grid.Col>
             <Grid.Col order={2} className="relative" xs={12} sm={6}>
               <div className="text-center sm:text-left">
-                <Title maw={575} className="uppercase text-[#ffffff] font-[700] sm:!text-[48px] xs:!text-[24px] sm:!leading-[51px] xs:!leading-[30px] tracking-[0.0125em]">
+                <Title maw={630} className="uppercase text-[#ffffff] font-[700] md:!text-[48px] sm:!text-[24px] xs:!text-[24px] md:!leading-[51px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em]">
                   <span className="text-[#50A1FF]">
                     Where gaming creators{' '}
                     {/* <br /> */}
@@ -38,7 +38,7 @@ export function Content() {
                   </span>{' '}
                   lifelong gamers
                 </Title>
-                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] sm:text-[20px] xs:text-[15px] sm:leading-[38px] xs:leading-[25px]">
+                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] md:text-[20px] sm:text-[15px] xs:text-[15px] md:leading-[38px] sm:leading-[25px] xs:leading-[25px]">
                   To see what kind of winnings are in store for you on the games, Pasa{' '}
                   {/* <br /> */}
                   invites all our online and mobile players to launch into playing this slot{' '}
@@ -55,7 +55,7 @@ export function Content() {
             {/* 2nd Row */}
             <Grid.Col order={matches_mobile ? 4 : 3} className="relative" xs={12} sm={6}>
               <div className="text-center sm:text-left">
-                <Title maw={630} className="uppercase text-[#ffffff] font-[700] sm:!text-[48px] xs:!text-[24px] sm:!leading-[51px] xs:!leading-[30px] tracking-[0.0125em]">
+                <Title maw={830} className="uppercase text-[#ffffff] font-[700] md:!text-[48px] sm:!text-[24px] xs:!text-[24px] md:!leading-[51px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em]">
                   And, whether you're doing{' '}
                   your{' '}
                   <span className="text-[#50A1FF]">
@@ -63,7 +63,7 @@ export function Content() {
                     gaming{' '}
                   </span>
                 </Title>
-                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] sm:text-[20px] xs:text-[15px] sm:leading-[38px] xs:leading-[25px]">
+                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] md:text-[20px] sm:text-[15px] xs:text-[15px] md:leading-[38px] sm:leading-[25px] xs:leading-[25px]">
                   Via your browser, laptop, PC, smartphone, or tablet, we promise one of{' '}
                   {/* <br /> */}
                   the most diverse <span className="font-[700]">selections of slot games, blackjack</span> and roulette{' '}
@@ -73,7 +73,7 @@ export function Content() {
               </div>
             </Grid.Col>
             <Grid.Col order={matches_mobile ? 3 : 4} className="text-right" xs={12} sm={6}>
-              <Image mt={matches_mobile ? 15 : 0} maw={767} mah={433} miw={298} mih={168} src="/images/pages/about/casino.png" alt="casino" />
+              <Image mt={matches_mobile ? 15 : 0} maw={613} mah={346} miw={298} mih={168} src="/images/pages/about/casino.png" alt="casino" />
             </Grid.Col>
 
             {/* 3rd Row */}
@@ -82,14 +82,14 @@ export function Content() {
             </Grid.Col>
             <Grid.Col order={6} className="relative" xs={12} sm={6}>
               <div className="text-center sm:text-left">
-                <Title maw={625} className="uppercase text-[#ffffff] font-[700] sm:!text-[48px] xs:!text-[24px] sm:!leading-[51px] xs:!leading-[30px] tracking-[0.0125em]">
+                <Title maw={750} className="uppercase text-[#ffffff] font-[700] md:!text-[48px] sm:!text-[24px] xs:!text-[24px] md:!leading-[51px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em]">
                   <span className="text-[#50A1FF]">We make gaming easy,</span> fun,{' '}
                   {/* <br />  */}
                   and accessible to{' '}
                   {/* <br />  */}
                   everyone{' '}
                 </Title>
-                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] sm:text-[20px] xs:text-[15px] sm:leading-[38px] xs:leading-[25px]">
+                <Text maw={619} mt={20} className="text-[#ffffff] font-[400] md:text-[20px] sm:text-[15px] xs:text-[15px] md:leading-[38px] sm:leading-[25px] xs:leading-[25px]">
                   We've removed the stress of finding, downloading, and registering for{' '}
                   {/* <br /> */}
                   games by doing it for you. All with one click. It's a simple, innovative{' '}
