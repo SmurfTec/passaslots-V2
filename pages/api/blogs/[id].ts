@@ -42,32 +42,5 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
       }
       break;
     }
-    case 'DELETE': {
-      try {
-        await NextCors(req, res, {
-          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-          origin: '*',
-          optionsSuccessStatus: 200,
-        });
-        const deletedBlog = await prisma.blogs.update({
-          where: {
-            id: query.id as string,
-          },
-          data: {
-            isDeleted: true,
-          },
-        });
-        res.status(200).json(deletedBlog);
-      } catch (err) {
-        res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
-      }
-      break;
-    }
   }
 }
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};

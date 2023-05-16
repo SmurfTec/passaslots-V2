@@ -31,9 +31,3 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
       break;
   }
 }
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
