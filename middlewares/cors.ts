@@ -3,7 +3,6 @@ import Cors from 'cors';
 
 // Initializing the cors middleware
 const cors = Cors({
-  origin: ['https://passadmin.netlify.app/', 'https://passadmin.netlify.app'],
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
 });
 
@@ -13,7 +12,6 @@ function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
       if (result instanceof Error) {
         return reject(result);
       }
-      res.setHeader('Access-Control-Allow-Origin', '*');
       return resolve(result);
     });
   });
