@@ -3,7 +3,7 @@ import Cors from 'cors';
 
 // Initializing the cors middleware
 const cors = Cors({
-  origin: '*',
+  origin: 'https://passadmin.netlify.app',
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
 });
 
