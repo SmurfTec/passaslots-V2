@@ -11,6 +11,14 @@ const nextConfig = {
   serverRuntimeConfig: {
     PROJECT_ROOT: __dirname,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://passaslots.netlify.app/:path*',
+      },
+    ];
+  },
   async headers() {
     return [
       {
