@@ -13,6 +13,7 @@ function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
       if (result instanceof Error) {
         return reject(result);
       }
+      res.setHeader('Access-Control-Allow-Origin', '*');
       return resolve(result);
     });
   });
