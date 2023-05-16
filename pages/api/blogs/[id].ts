@@ -48,9 +48,6 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
       }
       break;
     }
-    default:
-      res.setHeader('Allow', 'POST');
-      res.status(405).end(`Method ${method} Not Allowed`);
   }
 }
 
