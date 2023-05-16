@@ -9,7 +9,7 @@ export default async function NewsLetterHandler(req: NextApiRequest, res: NextAp
     case 'POST':
       try {
         await NextCors(req, res, {
-          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
           origin: '*',
           optionsSuccessStatus: 200,
         });
@@ -26,7 +26,7 @@ export default async function NewsLetterHandler(req: NextApiRequest, res: NextAp
     case 'GET':
       try {
         await NextCors(req, res, {
-          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
           origin: '*',
           optionsSuccessStatus: 200,
         });

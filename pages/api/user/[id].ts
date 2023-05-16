@@ -10,7 +10,7 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
     case 'GET':
       try {
         await NextCors(req, res, {
-          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
           origin: '*',
           optionsSuccessStatus: 200,
         });
@@ -23,7 +23,7 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
     case 'PATCH': {
       try {
         await NextCors(req, res, {
-          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
           origin: '*',
           optionsSuccessStatus: 200,
         });
