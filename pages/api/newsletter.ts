@@ -23,5 +23,18 @@ export default async function NewsLetterHandler(req: NextApiRequest, res: NextAp
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }
       break;
+    case 'GET':
+      try {
+        await NextCors(req, res, {
+          methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+          origin: '*',
+          optionsSuccessStatus: 200,
+        });
+        const allNewsLetters = await prisma.newsLetter.findMany();
+        res.status(200).json(allNewsLetters);
+      } catch (err) {
+        res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
+      }
+      break;
   }
 }
