@@ -3,7 +3,7 @@ import { useBonusModal } from '@pasa/hooks';
 import { useMediaQuery } from '@mantine/hooks';
 
 export function HiwSignup() {
-  const matches = useMediaQuery('(max-width: 810px)', true);
+  const matches = useMediaQuery('(max-width: 770px)', true);
   const [BonusModal, bonusOpen] = useBonusModal();
   return (
     <div
@@ -25,12 +25,12 @@ export function HiwSignup() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} py={matches ? 50 : 100}>
+      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={matches ? 50 : 100}>
         <Grid justify="center" align="center">
           <Grid.Col sm={12}>
             <Image
-              maw={562} mah={562}
-              className="mx-auto my-auto"
+              maw={530} mah={530}
+              className="mx-auto"
               src="/images/pages/hiw/winnings.png"
               alt="image"
             />
@@ -40,7 +40,7 @@ export function HiwSignup() {
               maw={820}
               mx='auto'
               color="white"
-              className="text-center uppercase font-[700] md:!text-[64px] sm:!text-[32px] xs:!text-[28px] md:!leading-[68px] sm:!leading-[34px] xs:!leading-[34px] tracking-[0.0125em]"
+              className="text-center uppercase font-[700] md:!text-[60px] sm:!text-[32px] xs:!text-[28px] md:!leading-[64px] sm:!leading-[34px] xs:!leading-[34px] tracking-[0.0125em]"
             >
               Get a Taste of Paradise
                with Your Wins
@@ -52,7 +52,7 @@ export function HiwSignup() {
               mt={25}
               size={matches ? 15 : 20}
               color="white"
-              className="text-center font-[400] md:!leading-[38px] sm:!leading-[22px] xs:!leading-[22px] tracking-[0.0125em]"
+              className="text-center font-[400] md:!leading-[30px] sm:!leading-[22px] xs:!leading-[22px] tracking-[0.0125em]"
             >
               Let's make things official, ride the Waves of Good Fortune, and become adventure buddies!
             </Text>

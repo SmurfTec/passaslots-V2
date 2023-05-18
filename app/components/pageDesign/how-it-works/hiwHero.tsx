@@ -93,7 +93,7 @@ export function HiwHero() {
               How it works?
             </Title>
           </Group>
-          <Title order={matches ? 3 : 1} mt={30} className="font-[700] uppercase text-[#FFF] text-left md:text-left sm:text-center xs:text-center" 
+          <Title order={matches ? 3 : 1} mt={20} className="font-[700] uppercase text-[#FFF] text-left md:text-left sm:text-center xs:text-center" 
           style={{
             textShadow: '0px 4px 33px #016BE6',
             letterSpacing: '-0.015em',
@@ -104,7 +104,7 @@ export function HiwHero() {
           <Text color="#FFFFFF" className="font-[400] uppercase tracking-[0.005em] leading-6 text-left md:text-left sm:text-center xs:text-center" size={matches ? 15 : 20}>
             Experience the thrill of casino gaming from the comfort of your own home
           </Text>
-          <Image mah={562} maw={562} className="mx-auto my-auto" src="/images/pages/hiw/herohiw.png" alt="image" />
+          <Image mah={450} maw={450} className="mx-auto my-auto" src="/images/pages/hiw/herohiw.png" alt="image" />
         </Stack>
       </Container>
       </BackgroundImage>
