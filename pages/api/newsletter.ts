@@ -5,6 +5,10 @@ const prisma = new PrismaClient();
 
 export default async function NewsLetterHandler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { method, body } = req;
+  if (req.method == 'OPTIONS') {
+    res.setHeader('Allow', 'POST');
+    return res.status(202).json({});
+  }
   switch (method) {
     case 'POST':
       try {
