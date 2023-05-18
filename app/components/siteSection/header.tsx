@@ -269,7 +269,7 @@ export function Header() {
               </Menu.Dropdown>
             </Menu>
             <Group className={classes.group} spacing={matches ? 5 : 10} mr={matches ? 10 : 69}>
-              <Button
+              {/* <Button
                 styles={{
                   label: {
                     color: 'white',
@@ -294,7 +294,7 @@ export function Header() {
                 radius={50}
               >
                 LOGIN
-              </Button>
+              </Button> */}
               <Button
                 styles={{
                   label: {

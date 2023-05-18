@@ -23,7 +23,8 @@ export function BlogDiscover() {
           <Grid align="center" justify="center">
             <Grid justify="center" align="center">
               <Image
-                maw={1109} mah={623}
+                maw={850}
+                mah={623}
                 className="mx-auto mb-[20px]"
                 src="/images/pages/blogs/mobileGame.png"
                 alt="mobile game"
@@ -38,19 +39,17 @@ export function BlogDiscover() {
               </Title>
             </Grid.Col>
             <Grid.Col sm={12}>
-              <Grid align='center' justify='center'>
+              <Grid align="center" justify="center">
                 <Text
                   maw={845}
                   mt={matches ? 10 : 25}
                   color="#FFFFFF"
                   className="text-center font-[400] tracking-[0.005em] leading-[38px] md:text-[20px] sm:text-[15px] xs:text-[15px]"
                 >
-                  Experience ultimate online gaming at Pasa. Our renowned software developers bring you{' '}
-                  {/* <br /> */}
+                  Experience ultimate online gaming at Pasa. Our renowned software developers bring you {/* <br /> */}
                   incredible graphics, dynamic audio, and payout-packed symbols for a unique and thrilling{' '}
                   {/* <br /> */}
-                  experience. We've got you covered on any device and in-browser with a wide range of{' '}
-                  {/* <br /> */}
+                  experience. We've got you covered on any device and in-browser with a wide range of {/* <br /> */}
                   games, including multiplayer fishing, classic slots, Roulette, keno, and more. Join the fun{' '}
                   {/* <br /> */}
                   and hit the jackpot at Pasa!

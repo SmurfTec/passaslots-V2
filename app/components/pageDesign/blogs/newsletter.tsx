@@ -78,7 +78,9 @@ export function NewsletterBlog() {
             <Grid.Col sm={12}>
               <Grid justify="center" align="center">
                 <Grid.Col>
-                  <Image maw={912} mah={586}
+                  <Image
+                    maw={500}
+                    mah={500}
                     className="mx-auto my-auto"
                     src="/images/pages/blogs/addsomeluck.png"
                     alt="image"
@@ -97,9 +99,9 @@ export function NewsletterBlog() {
                     maw={900}
                     className=" font-[400] leading-[38px] text-center tracking-[0.005em] md:text-[20px] sm:text-[15px] xs:text-[15px]"
                   >
-                    Join our email newsletter "The High Roller Herald" to be the first to know about new things{' '} 
+                    Join our email newsletter "The High Roller Herald" to be the first to know about new things{' '}
                     {/* <br /> */}
-                     happening at Pasa, from new games, winning tips, and oh, did we mention the occasional gift?
+                    happening at Pasa, from new games, winning tips, and oh, did we mention the occasional gift?
                   </Text>
                 </div>
               </Grid>

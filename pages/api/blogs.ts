@@ -14,7 +14,7 @@ cloudinary.config({
 const prisma = new PrismaClient();
 
 export default async function BlogsHandler(req: NextApiRequest, res: NextApiResponse<any>) {
-  const { method, body } = req;
+  const { method, body, query } = req;
   switch (method) {
     case 'GET':
       try {
@@ -23,7 +23,11 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
           origin: '*',
           optionsSuccessStatus: 200,
         });
-        const blogs = await prisma.blogs.findMany({ where: { isDeleted: false } });
+        const blogs = await prisma.blogs.findMany({
+          where: { isDeleted: false },
+          take: query.take ? +query.take : undefined,
+          skip: query.skip ? +query.skip : 0,
+        });
 
         res.status(200).json(blogs as any);
       } catch (err) {
