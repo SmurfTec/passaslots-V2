@@ -4,6 +4,7 @@ import { useMediaQuery } from '@mantine/hooks';
 
 export function PDBusiness() {
   const matches = useMediaQuery('(max-width: 810px)', true);
+  const matches2 = useMediaQuery('(max-width: 767px)', true);
   return (
     <BackgroundImage
       style={{
@@ -16,7 +17,7 @@ export function PDBusiness() {
         zIndex: 50,
         boxShadow: '-1px 0px 20px 3px #016BE6',
         borderTop: '6px solid #016BE6',
-        // marginTop: '25px',
+        marginTop: matches2 ? '0px' : '25px',
       }}
       src="/images/header/backgroundImage.png"
     >
@@ -35,7 +36,7 @@ export function PDBusiness() {
               <Text mb={18} color="white" className="text-center sm:text-left uppercase font-[400] md:!text-[20px] xs:!text-[15px] sm:!text-[15px] leading-[21px]">
                 Simplify Your Business
               </Text>
-              <Title maw={600} color="white" className="text-center sm:text-left font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[55px] sm:!leading-[30px] xs:!leading-[30px] uppercase" opacity={0.9}>
+              <Title maw={900} color="white" className="text-center sm:text-left font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[55px] sm:!leading-[30px] xs:!leading-[30px] uppercase" opacity={0.9}>
                 Effortless Business{' '}
                 Management with{' '}
                 {/* <br /> */}

@@ -17,7 +17,7 @@ export function PDExperience() {
     >
       <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} py={matches ? 50 : 100}>
         <Grid align="center" justify="center">
-          <Image maw={450} mah={450}
+          <Image maw={350} mah={350}
             className="mx-auto my-auto"
             src="/images/pages/pasa-for-distributor/experience.png"
             alt="experience"
@@ -26,7 +26,7 @@ export function PDExperience() {
         <Title
           mt={matches ? 10 : 37}
           maw={890}
-          className="mx-auto uppercase xs:!text-[24px] sm:!text-[32px] md:!text-[48px] font-[700] md:!leading-[61px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em] text-center"
+          className="mx-auto uppercase xs:!text-[24px] sm:!text-[30px] md:!text-[40px] font-[700] md:!leading-[50px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em] text-center"
           color="white"
         >
           Pasa distributors{' '}
@@ -35,7 +35,7 @@ export function PDExperience() {
           </span>{' '}
           within their first month
         </Title>
-        <Group mt={matches ? 30 : 110} position="apart">
+        <Group mt={matches ? 30 : 50} position="apart">
           <Button
             styles={{
               label: {
@@ -47,8 +47,8 @@ export function PDExperience() {
             }}
             style={{
               border: '6px solid #016BE6',
-              maxWidth: '385px',
-              minHeight: '382px',
+              maxWidth: '365px',
+              minHeight: '315px',
               flexDirection: 'column',
               background: 'transparent',
               padding: '34px 25px',
@@ -80,8 +80,8 @@ export function PDExperience() {
             }}
             style={{
               border: '6px solid #016BE6',
-              maxWidth: '385px',
-              minHeight: '382px',
+              maxWidth: '365px',
+              minHeight: '315px',
               flexDirection: 'column',
               background: 'transparent',
               padding: '34px 25px',
@@ -113,8 +113,8 @@ export function PDExperience() {
             }}
             style={{
               border: '6px solid #016BE6',
-              maxWidth: '385px',
-              minHeight: '382px',
+              maxWidth: '365px',
+              minHeight: '315px',
               flexDirection: 'column',
               background: 'transparent',
               padding: '34px 25px',

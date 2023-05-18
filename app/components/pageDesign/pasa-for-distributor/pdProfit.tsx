@@ -74,6 +74,8 @@ export function PDProfit() {
                     textTransform: 'uppercase',
                     height: matches ? '40px' : '57px',
                     width: matches ? '220px' : '278px',
+                    marginLeft: matches ? 'auto' : '',
+                    marginRight: matches ? 'auto' : '', 
                   },
                   label: {
                     marginBottom: '-2px',
@@ -82,7 +84,7 @@ export function PDProfit() {
                   },
                 }}
                 radius={50}
-                className="sm:mx-auto font-[500]"
+                className="block font-[500]"
               >
                 Contact Us
               </Button>

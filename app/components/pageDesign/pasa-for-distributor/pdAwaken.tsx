@@ -18,10 +18,10 @@ export function PDAwaken() {
           position: 'relative',
           backgroundSize: 'cover',
         }}
-        pt={matches ? 50 : 100}
+        pt={matches ? 50 : 50}
         src="/images/header/backgroundImage.png"
       >
-        <Grid pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
+        <Grid align='center' pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
           <Grid.Col order={!matches ? 1 : 2} md={6}>
             <Title className="text-center sm:text-left uppercase md:!text-[64px] sm:!text-[40px] xs:!text-[32px] font-[700] md:!leading-[69px] sm:!leading-[35px] xs:!leading-[35px] tracking-[0.0125em]" color="white">
               Awaken the
@@ -73,7 +73,7 @@ export function PDAwaken() {
           }}
           src="/images/pages/pasa-for-distributor/bgPowerOfTech.png"
         >
-          <Grid pt={matches ? 50 : 150} pb={matches ? 50 : 150} pl={matches ? 5 : 90} pr={matches ? 5 : 69} m={0} align="center" justify="center" gutterSm={50}>
+          <Grid pt={matches ? 50 : 100} pb={matches ? 50 : 100} pl={matches ? 5 : 90} pr={matches ? 5 : 69} m={0} align="center" justify="center" gutterSm={50}>
             <Grid.Col xs={12} sm={12}>
               <div className="text-center">
                 <Title
