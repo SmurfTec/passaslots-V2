@@ -19,6 +19,7 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
             email: body.email,
             name: body.name,
             phone: body.phone,
+            unlockMyBonusCheck: body.unlockMyBonusCheck,
           },
         });
         res.status(200).json(contact);

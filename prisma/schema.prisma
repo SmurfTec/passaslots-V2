@@ -22,6 +22,7 @@ model Signup_Contact {
   message   String?
   email     String
   createdAt DateTime @default(now())
+  checkUpdatesReceived Boolean @default(false)
 }
 
 model PlayerRegistration {
@@ -29,6 +30,7 @@ model PlayerRegistration {
   name  String
   email String @unique
   phone String?
+  unlockMyBonusCheck Boolean @default(false)
   createdAt DateTime @default(now())
 }
 
