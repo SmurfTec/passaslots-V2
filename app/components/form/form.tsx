@@ -19,7 +19,7 @@ export function ContactForm() {
   const { classes } = useStyles();
   const [message, setMessage] = useState(false);
   const matches = useMediaQuery('(max-width: 810px)', true);
-
+  const matches2 = useMediaQuery('(max-width: 991px)', true);
   const form = useForm({
     initialValues: {
       firstName: '',
@@ -64,7 +64,7 @@ export function ContactForm() {
     <form onSubmit={form.onSubmit(handleSubmit)}>
       <div className="space-y-6">
         <Grid px={0}>
-          <Grid.Col md={6} className="space-y-[18px] space-x-37">
+          <Grid.Col pl={0} pr={matches2 ? 0 : 8} md={6} className="space-y-[18px] space-x-37">
             <TextInput
               classNames={{ input: classes.input }}
               color="#F2F2F2"
@@ -93,7 +93,7 @@ export function ContactForm() {
               {...form.getInputProps('subject')}
             />
           </Grid.Col>
-          <Grid.Col md={6} className="space-y-[18px] space-x-37">
+          <Grid.Col pr={0} pl={matches2 ? 0 : 8} md={6} className="space-y-[18px] space-x-37">
             <TextInput
               classNames={{ input: classes.input }}
               color="#F2F2F2"
@@ -124,7 +124,7 @@ export function ContactForm() {
             backgroundColor: '#D9D9D934',
             borderRadius: '15px',
             margin: 'auto',
-            width: matches ? '95%' : '99%',
+            // width: matches ? '95%' : '99%',
             marginTop: '10px',
           }}
           {...form.getInputProps('message')}
@@ -133,7 +133,9 @@ export function ContactForm() {
           color="blue"
           classNames={{ label: classes.Checkbox }}
           styles={{
-            root: { width: matches ? '95%' : '99%', margin: 'auto' },
+            root: { 
+              // width: matches ? '95%' : '99%', 
+            margin: 'auto' },
             body: { display: 'flex', alignItems: 'center' },
             label: { fontSize: matches ? '9px !important' : 'inherit' },
           }}
@@ -145,7 +147,7 @@ export function ContactForm() {
           <Button
             type="submit"
             radius={50}
-            className="h-12 px-12 text-[20px] font-[400] w-[45%] lg:w-[auto] md:w-[45%] sm:w-[45%] xs:w-[80%]"
+            className="h-12 text-[20px] font-[400] w-[45%] lg:w-[auto] md:w-[45%] sm:w-[45%] xs:w-[80%]"
             styles={{
               root: {
                 background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',

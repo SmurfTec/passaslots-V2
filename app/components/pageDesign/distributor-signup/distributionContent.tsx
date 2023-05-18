@@ -66,7 +66,7 @@ export function DistributionContent() {
             </Grid.Col>
           </Grid>
           <Grid pt={matches ? 20 : 50} align='center'>
-            <Grid.Col sm={12}>
+            <Grid.Col px={0} sm={12}>
               <Text maw={1185} color='#FFB800' mb={matches ? 10 : 30} className='font-[400] leading-[25px] text-[13px]'>
                 Please fill out the form below with your valid information and best understanding of the inquiry in the
                 "message" section. We do our best to respond within one business day. Thank you for contacting us, and{' '} we
