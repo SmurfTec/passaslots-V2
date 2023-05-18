@@ -117,7 +117,7 @@ export function ContactForm() {
         <Textarea
           classNames={{ input: classes.input }}
           color="#F2F2F2"
-          size={matches ? '200px' : '255px'}
+          size={matches ? '180px' : '220px'}
           placeholder="Message"
           required
           style={{
@@ -187,11 +187,11 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: '15px',
     [theme.fn.smallerThan(810)]: {
       fontSize: '15px',
-      height: '65px',
+      height: '45px',
     },
     [theme.fn.largerThan(809)]: {
       fontSize: '20px',
-      height: '80px',
+      height: '70px',
     },
     fontStyle: 'normal',
     ':focus': {
