@@ -14,7 +14,7 @@ export function Mission() {
             backgroundImage: "url('/images/pages/about/missionbg.png')",
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center',
-            backgroundSize: '100% 100%',
+            backgroundSize: 'auto 100%',
             // minHeight: '200vh',
             position: 'relative',
             zIndex: 50,

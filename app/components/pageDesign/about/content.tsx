@@ -21,12 +21,12 @@ export function Content() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={100} pt={matches_mobile ? 50 : 100}>
+      <Container fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={100} pt={matches_mobile ? 50 : 50}>
         <div>
           <Grid className={matches_mobile ? "space-y-5" : "space-y-24"} align="center" gutter={matches_mobile ? 10 : 20}>
             {/* 1st Row */}
             <Grid.Col order={1} className="text-left" xs={12} sm={6}>
-              <Image mih={217} miw={259} mah={502} maw={602} src="/images/pages/about/fun.png" alt="fun" className="block" />
+              <Image mih={217} miw={259} mah={452} maw={542} src="/images/pages/about/fun.png" alt="fun" className="block" />
             </Grid.Col>
             <Grid.Col order={2} className="relative" xs={12} sm={6}>
               <div className="text-center sm:text-left">

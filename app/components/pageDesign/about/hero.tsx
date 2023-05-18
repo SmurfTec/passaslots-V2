@@ -1,4 +1,4 @@
-import { BackgroundImage, Group, Text, Title, Image, createStyles, Grid, Popover, Button} from '@mantine/core';
+import { Group, Text, Title, Image, createStyles, Grid, Popover, Button} from '@mantine/core';
 import { useMediaQuery, useDisclosure } from '@mantine/hooks';
 import { NextLink } from '@mantine/next';
 import { useState } from 'react';
@@ -88,16 +88,16 @@ export function Hero() {
         <div className="pt-[120px] pb-[50px] xs:px-[5px]">
           <div className="text-center">
             <Group position='center'>
-              <Title className="font-[700] text-[#FFB800]" order={matches_mobile ? 6 : 4}>
+              <Title className="font-[700] text-[#FFB800]" order={matches_mobile ? 5 : 3}>
                 About Us
               </Title>
             </Group>
-            <Image maw={413} mah={392} className='mx-auto' src="/images/pages/about/homeImage.png" alt="vector" />
-            <Text className="font-[400] uppercase text-[#FFFFFF]" mt={0} size={matches_mobile ? 16 : 24}>
+            <Image mt={15} maw={421} mah={400} className='mx-auto' src="/images/pages/about/homeImage.png" alt="vector" />
+            <Text className="font-[400] uppercase text-[#FFFFFF]" mt={15} size={matches_mobile ? 20 : 28}>
               25+ full-time professionals, 1 goal:
             </Text>
             <Grid justify='center' align='center'>
-              <Title color="white" size={matches_mobile ? 18 : 32} mt={20} className="font-[500] justify-center text-center" order={matches_mobile ? 5 : 3} maw={1000}>
+              <Title color="white" size={matches_mobile ? 20 : 36} mt={31} className="font-[500] justify-center text-center" order={matches_mobile ? 4 : 2} maw={1000}>
                 To create the world's most entertaining and user-friendly online game room platform.
               </Title>
             </Grid>
@@ -105,13 +105,12 @@ export function Hero() {
               <Title style={{
                 borderRadius: '50px',
                 border: '7px solid #016BE6',
-              }} p={10} px={50} mb={50} size={matches_mobile ? 15 : 28} color="#FFFFFF" mt={31} className="font-[400]" order={matches_mobile ? 6 : 4} maw={541}>
+              }} p={10} px={matches_mobile ? 25 : 50} mb={50} size={matches_mobile ? 16 : 28} color="#FFFFFF" mt={31} className="font-[400]" order={matches_mobile ? 5 : 3} maw={541}>
                 How are we going to get there?
               </Title>
             </Grid>
           </div>
         </div>
-          {/* <ScrollButton pointerPosition='DOWN' className='bottom-20 left-1/2 absolute' /> */}
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export function Approach() {
       <BackgroundImage
         style={{
           backgroundPosition: 'center center',
-          backgroundSize: '100% 100%',
+          backgroundSize: 'auto 100%',
           backgroundRepeat: 'no-repeat',
           // minHeight: '108vh',
         }}

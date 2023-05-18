@@ -40,8 +40,8 @@ export function Goal() {
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: matches ? '163px' : '226px',
-                  height: matches ? '187px' : '260px',
+                  width: matches ? '163px' : '200px',
+                  height: matches ? '187px' : '225px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
@@ -62,8 +62,8 @@ export function Goal() {
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: matches ? '163px' : '226px',
-                  height: matches ? '187px' : '260px',
+                  width: matches ? '163px' : '200px',
+                  height: matches ? '187px' : '225px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
@@ -84,8 +84,8 @@ export function Goal() {
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: matches ? '163px' : '226px',
-                  height: matches ? '187px' : '260px',
+                  width: matches ? '163px' : '200px',
+                  height: matches ? '187px' : '225px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
@@ -106,8 +106,8 @@ export function Goal() {
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: matches ? '163px' : '226px',
-                  height: matches ? '187px' : '260px',
+                  width: matches ? '163px' : '200px',
+                  height: matches ? '187px' : '225px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
@@ -128,8 +128,8 @@ export function Goal() {
                 }}
                 style={{
                   border: '4px solid #016BE6',
-                  width: matches ? '163px' : '226px',
-                  height: matches ? '187px' : '260px',
+                  width: matches ? '163px' : '200px',
+                  height: matches ? '187px' : '225px',
                   flexDirection: 'column',
                   background: 'transparent',
                   alignItems: 'center',
