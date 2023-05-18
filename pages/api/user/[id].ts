@@ -6,6 +6,10 @@ const prisma = new PrismaClient();
 
 export default async function ContactHandler(req: NextApiRequest, res: NextApiResponse<any>) {
   const { method, body, query } = req;
+  if (req.method == 'OPTIONS') {
+    res.setHeader('Allow', 'PATCH');
+    return res.status(202).json({});
+  }
   switch (method) {
     case 'GET':
       try {
