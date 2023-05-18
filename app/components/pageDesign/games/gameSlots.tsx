@@ -86,7 +86,7 @@ export function GameSlots() {
           'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
         backdropFilter: 'blur(20px)',
         backgroundSize: 'cover',
-        borderBottom: '7px solid #016BE6',
+
         // borderBottomLeftRadius: '240px',
         // borderBottomRightRadius: '240px',
         zIndex: 150,
@@ -94,11 +94,16 @@ export function GameSlots() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} pt={matches ? 50 : 100} pb={0}>
-        <Title id="gameSlots" my={50} className="font-[700] uppercase md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] xs:!text-[24px] sm:!text-[32px] md:!text-[48px]">
+      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 70}>
+        <Title
+          id="gameSlots"
+          mb={50}
+          className="font-[700] uppercase md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] xs:!text-[24px] sm:!text-[32px] md:!text-[48px]"
+        >
           SLOTS
         </Title>
         <Carousel
+          mb={!matches ? 50 : 0}
           slideSize="25%"
           mx="auto"
           height="auto"
@@ -150,50 +155,6 @@ export function GameSlots() {
             </Carousel.Slide>
           ))}
         </Carousel>
-        <Grid m={0} pb={0} pt={matches ? 50 : 100} align="center" justify="center">
-          <Grid.Col style={{ display: 'contents' }} className="relative">
-            {/* <div className="absolute top-1/2 -translate-y-1/2 pr-32"> */}
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-              }}
-            >
-              <Title
-                color="#FFFFFF"
-                maw={850}
-                className="text-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[63px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em] text-center uppercase"
-              >
-                Experience a world of variety, {/* <br /> */}
-                right at your fingertips!
-              </Title>
-              <Text
-                mt={matches ? 10 : 30}
-                maw={850}
-                color="#FFFFFF"
-                className="font-[400] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] text-center md:!leading-[43px] sm:!leading-[20px] xs:!leading-[20px] tracking-[0.005em]"
-              >
-                With an ever-growing selection of popular games like Fire Kirin Plus, Dragon Slayer, and {/* <br /> */}
-                Ocean King 5, you'll never get bored. And the best part? We add new games every {/* <br /> */}
-                month, ensuring that you always have access to the latest and greatest in gaming.{' '}
-              </Text>
-            </div>
-            {/* </div> */}
-          </Grid.Col>
-          <Grid.Col pb={0}>
-            <Image
-              // mb={'0px !important'}
-              mx="auto !important"
-              maw={876} mah={562}
-              className="mx-auto"
-              src="/images/pages/game/gameCouch.png"
-              alt="gaming creator"
-            />
-          </Grid.Col>
-        </Grid>
       </Container>
     </div>
   );

@@ -57,15 +57,16 @@ export function GamePossible() {
           src="/images/pages/game/ellipses.png"
           bgsz="auto"
         >
-          <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 100}>
-            <Grid align="center" justify="center">
+          <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={50}>
+            <div className="text-center flex flex-col items-center">
               <div className="text-center">
                 <Image
-                  maw={644} mah={363}
+                  maw={644}
+                  mah={363}
                   className="mx-auto"
                   src="/images/pages/game/gamePossible.png"
                   alt="game"
-                  my={matches ? 50 : 100}
+                  my={50}
                 />
               </div>
               <div className="text-center">
@@ -75,15 +76,18 @@ export function GamePossible() {
                 >
                   A Sea of Possibilities Awaits
                 </Title>
-                <Text maw={705} my={20} color="white" className="xs:!text-[16px] sm:!text-[16px] md:!text-[24px] font-[400] md:!leading-[28px] sm:!leading-[20px] xs:!leading-[20px] text-center">
-                  Just like the ocean's currents, our app's games are always in{' '}
-                  {/* <br /> */}
-                  motion and constantly changing, offering you an endless sea of{' '}
-                  {/* <br /> */}
+                <Text
+                  maw={705}
+                  my={20}
+                  color="white"
+                  className="xs:!text-[16px] sm:!text-[16px] md:!text-[24px] font-[400] md:!leading-[28px] sm:!leading-[20px] xs:!leading-[20px] text-center"
+                >
+                  Just like the ocean's currents, our app's games are always in {/* <br /> */}
+                  motion and constantly changing, offering you an endless sea of {/* <br /> */}
                   choices to explore!
                 </Text>
               </div>
-            </Grid>
+            </div>
           </Container>
         </BackgroundImage>
       </div>
@@ -98,21 +102,21 @@ export function GamePossible() {
           borderTop: '6px solid #016BE6',
         }}
       >
-        <Container fluid py={matches? 50 : 100} px={0}>
+        <Container fluid py={matches ? 50 : 70} px={0}>
           <Title
             color="white"
             className="uppercase xs:!text-[24px] sm:!text-[32px] md:!text-[48px] font-[700] md:!leading-[51px] sm:!leading-[25px] xs:!leading-[25px] tracking-[0.0125em] text-center"
           >
             FEATURED SECTION OF GAMES
           </Title>
-          <Grid align="center" justify="center" py={matches ? 40 : 80} px={0}>
+          <Grid align="center" justify="center" py={matches ? 40 : 50} px={0}>
             <Grid.Col px={0} sm={12}>
               <MantineCarousel
                 // withIndicators
                 getEmblaApi={setEmbla}
                 align="center"
                 // images={images}
-                slideSize="50%"
+                slideSize="45%"
                 withControls={false}
                 loop
                 classNames={classes}
@@ -133,14 +137,20 @@ export function GamePossible() {
                 }}
               >
                 {images.map((image, index) => {
-                  return(
-                  <MantineCarousel.Slide key={index}>
-                    <Image className='mx-auto' maw="890px" mah="445px" src={image} />
-                  </MantineCarousel.Slide>
-                  )
+                  return (
+                    <MantineCarousel.Slide key={index}>
+                      <Image className="mx-auto" maw="650px" mah="325px" src={image} />
+                    </MantineCarousel.Slide>
+                  );
                 })}
               </MantineCarousel>
-              <Flex gap={5} justify="center" align="center" className="mt-5" style={{ marginTop: matches ? '10px' : '50px' }}>
+              <Flex
+                gap={5}
+                justify="center"
+                align="center"
+                className="mt-5"
+                style={{ marginTop: matches ? '10px' : '30px' }}
+              >
                 <Image
                   height={15}
                   width={15}

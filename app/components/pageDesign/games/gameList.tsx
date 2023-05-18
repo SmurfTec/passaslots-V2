@@ -20,8 +20,8 @@ export function GameList() {
           <Grid.Col sm={12}>
             <div className="flex justify-center">
               <Image
-                maw={matches ? 300 : 507}
-                mah={517}
+                maw={300}
+                mah={417}
                 className="mx-auto my-auto"
                 src="/images/pages/game/egyptian.png"
                 alt="egyptian"
@@ -29,7 +29,7 @@ export function GameList() {
             </div>
             <Title
               my={matches ? 30 : 70}
-              className="font-[700] text-center xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[63px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em] uppercase"
+              className="font-[700] text-center xs:!text-[24px] sm:!text-[32px] md:!text-[40px] md:!leading-[63px] sm:!leading-[30px] xs:!leading-[30px] tracking-[0.0125em] uppercase"
             >
               Gaming just got better for you
             </Title>
