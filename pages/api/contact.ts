@@ -22,6 +22,7 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
             message: body.message,
             email: body.email,
             phone: body.phone,
+            checkUpdatesReceived: body.checkUpdatesReceived,
           },
         });
         res.status(200).json(contact);
