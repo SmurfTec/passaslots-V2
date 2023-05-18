@@ -17,8 +17,8 @@ export function DistributionContent() {
             </Grid.Col>
           </Grid>
 
-          <Grid pt={matches ? 50: 100} align='center' grow gutterSm={100}>
-            <Grid.Col sm={6} pt={matches ? 20 : 80}>
+          <Grid pt={matches ? 20: 50} grow gutterSm={100}>
+            <Grid.Col sm={6} pt={20}>
               <Text maw={575} color="#FFFFFF" className="font-[400] md:!leading-[38px] sm:!leading-[25px] xs:!leading-[25px] tracking-[0.005em] xs:!text-[15px] sm:!text-[15px] md:!text-[20px]" opacity={0.8}>
                 Transform yourself, embrace responsibility, and drive Your{' '} 
                 Success forward. PASA builds gaming technology that powers{' '}
@@ -29,7 +29,7 @@ export function DistributionContent() {
                 your <span className="font-[700]">business to the NEXT LEVEL.</span>{' '}
               </Text>
             </Grid.Col>
-            <Grid.Col sm={6} pt={ matches ? 30 : 80}>
+            <Grid.Col sm={6} pt={20}>
               <List styles={{
                 item: {
                   'color': 'white',
@@ -65,7 +65,7 @@ export function DistributionContent() {
               </List>
             </Grid.Col>
           </Grid>
-          <Grid pt={matches ? 30 : 100} align='center'>
+          <Grid pt={matches ? 20 : 50} align='center'>
             <Grid.Col sm={12}>
               <Text maw={1185} color='#FFB800' mb={matches ? 10 : 30} className='font-[400] leading-[25px] text-[13px]'>
                 Please fill out the form below with your valid information and best understanding of the inquiry in the
@@ -73,7 +73,7 @@ export function DistributionContent() {
                 are looking forward to doing business with you in the future.
               </Text>
               <ContactForm />
-              <Text color='#FFFFFF' opacity={0.8} mt={matches ? 10 : 30} className='font-[400] leading-[23px] tracking-[0.0125em] text-[12px]'>
+              <Text maw={1100} color='#FFFFFF' opacity={0.8} mt={matches ? 10 : 30} className='font-[400] leading-[23px] tracking-[0.0125em] text-[12px]'>
                 Disclaimer: Hey there, just a heads up that we can't help with forgotten passwords, 
                 player accounts, or cashing out. We have distributors all over the world, but we don't 
                 screen or monitor all of them. So, if you have any{' '} payment disputes, you'll need to sort 
