@@ -45,25 +45,30 @@ const blogData: Array<SingleBlogProps> = [
 
 export function BlogLayout() {
   const [blogsData, setBlogsData] = useState<SingleBlogProps[]>([]);
+  const [paginationData, setPaginationData] = useState({ take: 4, skip: 0 });
+  const [loading, setLoading] = useState(false);
   const matches = useMediaQuery('(max-width: 810px)', true);
   const matches2 = useMediaQuery('(max-width: 768px)', true);
 
   const getBlogs = () => {
     const BASE_URL = process.env.BASE_URL as string;
     const BLOGS_URL = process.env.BLOGS_URL as string;
+    setLoading(true);
     axios
-      .get(BASE_URL + BLOGS_URL)
+      .get(BASE_URL + BLOGS_URL, { params: { take: paginationData.take, skip: paginationData.skip } })
       .then((res) => {
         setBlogsData(res.data);
+        setLoading(false);
       })
       .catch((e) => {
         setBlogsData([]);
+        setLoading(false);
       });
   };
 
   useEffect(() => {
     getBlogs();
-  }, []);
+  }, [paginationData]);
 
   return (
     <Container
@@ -75,14 +80,26 @@ export function BlogLayout() {
     >
       <Grid>
         <Grid.Col sm={12} className="text-center sm:text-left">
-          <Title className="font-[700] md:!text-[48px] sm:!text-[24px] xs:!text-[24px] leading-[56px] tracking-[-0.015em] uppercase">FEATURED BLOGS</Title>
+          <Title className="font-[700] md:!text-[48px] sm:!text-[24px] xs:!text-[24px] leading-[56px] tracking-[-0.015em] uppercase">
+            FEATURED BLOGS
+          </Title>
         </Grid.Col>
       </Grid>
 
-      <Grid justify="center" align='center' py={30} grow gutter={matches ? 10 : 30}>
+      <Grid justify="center" align="center" py={30} grow gutter={matches ? 10 : 30}>
         {blogsData.length === 0 && <p className="font-[700] text-[24px] center">Data not available</p>}
         {blogsData.map((item, key) => (
-          <Grid.Col p={0} maw={matches2 ? '172px' : 'auto'} className="grid justify-center" key={key + item.title} md={4} sm={6} xs={6}>
+          <Grid.Col
+            p={0}
+            maw={matches2 ? '172px' : 'auto'}
+            className="grid justify-center"
+            key={key + item.title}
+            xl={3}
+            lg={4}
+            md={4}
+            sm={6}
+            xs={6}
+          >
             <SingleBlog author={item.author} date={item.publishedOn as string} image={item.image} title={item.title} />
           </Grid.Col>
         ))}
@@ -108,7 +125,7 @@ export function BlogLayout() {
               lineHeight: '23px',
               textTransform: 'uppercase',
               height: '57px',
-              width: '212px',
+              width: '240px',
             },
             label: {
               marginBottom: '-2px',
@@ -118,8 +135,12 @@ export function BlogLayout() {
           }}
           radius={50}
           className="font-[500]"
+          onClick={() => {
+            setPaginationData({ ...paginationData, take: paginationData.take + 4 });
+          }}
+          loading={loading}
         >
-          LOAD MORE
+          {loading ? 'LOADING' : 'LOAD MORE'}
         </Button>
       </Grid>
     </Container>

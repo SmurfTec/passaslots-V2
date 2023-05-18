@@ -56,7 +56,7 @@ export function BlogArticle() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container py={matches ? 50 : 100} fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
+      <Container w={'80%'} py={matches ? 50 : 100} fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69}>
         <Grid>
           <Grid.Col sm={12}>
             <div className="text-center">
@@ -70,7 +70,7 @@ export function BlogArticle() {
           </Grid.Col>
           <Grid justify="space-between" py={matches ? 20 : 100} grow gutter={matches ? 10 : 30}>
             {articleData.map((article, key) => (
-              <Grid.Col className="flex justify-between" key={key + article.title} lg={6}>
+              <Grid.Col className="flex justify-center" key={key + article.title} lg={6}>
                 <SingleArticle
                   author={article.author}
                   date={article.date}

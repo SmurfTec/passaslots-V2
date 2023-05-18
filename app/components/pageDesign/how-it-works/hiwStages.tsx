@@ -60,12 +60,12 @@ export function HiwStage() {
         <BackgroundImage
           style={{
             backgroundPosition: 'center center',
-            backgroundSize: '100% 100%',
+            backgroundSize: '50%',
             backgroundRepeat: 'no-repeat',
             // minHeight: '180vh',
           }}
           className=""
-          src="/images/pages/hiw/pasagamming.png"
+          src="/images/pages/hiw/pasagamming.jpg"
           // bgsz="auto"
         >
           <Container className="mt-24 sm:mt-0" fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={matches ? 0 : 300}>
@@ -372,11 +372,7 @@ export function HiwStage() {
           // bgsz="auto"
         >
           <div>
-            <Title
-              mt={70}
-              color="white"
-              className="uppercase text-center font-[700] text-[28px] leading-[30px]"
-            >
+            <Title mt={70} color="white" className="uppercase text-center font-[700] text-[28px] leading-[30px]">
               JOIN
               <span className="text-[#50A1FF]"> PASA </span>
               GAMING
