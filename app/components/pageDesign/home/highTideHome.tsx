@@ -22,12 +22,12 @@ const useStyles = createStyles((theme) => ({
       backgroundImage: "url('/images/header/backgroundImage.png')",
     },
     backgroundColor: '#150B2E',
-    backgroundImage: "url('/images/pages/home/playallday.png')",
+    backgroundImage: "url('/images/pages/home/playdicewin.png')",
     // backgroundImage: "url('/images/header/backgroundImage.png')",
-    backgroundRepeat: 'no-repeat',
     // position: 'relative',
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center left',
+    backgroundSize: '50% 100%',
     // minHeight: '90vh',
     position: 'relative',
     // width: '100%',
@@ -237,6 +237,7 @@ export function HighTideHome() {
                     color={'white'}
                     className="text-base font-[400] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[50px] sm:!leading-[25px] xs:!leading-[25px]"
                     maw={600}
+                    pl={2}
                   >
                     To see what kind of winnings are in store for you on the games, Pasa invites all our online and
                     mobile players to launch into playing this slot sensation the moment{' '}
@@ -252,6 +253,8 @@ export function HighTideHome() {
                     bg="linear-gradient(to bottom, #2072D2, #A74C9A)"
                     className="font-[500] uppercase button"
                     radius={50}
+                    mb={50}
+                    ml={2}
                     styles={{
                       root: {
                         // borderColor: '#F6CAA7',
