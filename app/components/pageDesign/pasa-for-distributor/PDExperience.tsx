@@ -65,7 +65,7 @@ export function PDExperience() {
             />
             EASY TO START - Start Offering{' '}
             {/* <br /> */}
-            Promotional Games to You Customers{' '}
+            Promotional Games to Your Customers{' '}
             {/* <br /> */}
             Same Day.
           </Button>
