@@ -1,14 +1,16 @@
-import { Button, Container, Grid, Group, Image as MImage, Modal, ScrollArea, Stack, Text, Title, createStyles } from '@mantine/core';
+import { Button, Container, Grid, Group, Image as MImage, Modal, ScrollArea, Stack, Text, Title, createStyles, Checkbox, Anchor } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useDisclosure, useLocalStorage } from '@mantine/hooks';
 import { NextLink } from '@mantine/next';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useThankModal } from './useThankModal';
+import { useMediaQuery } from '@mantine/hooks';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
 export const useSignUpModal = (): [JSX.Element, () => void] => {
+  const matches = useMediaQuery('(max-width: 810px)', true);
   const [bonusValues] = useLocalStorage<{ name: string; email: string }>({
     key: 'bonus',
   });
@@ -146,16 +148,21 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
                   
                 </form>
                 
-                <Text size={'md'} component={NextLink} href="/terms-and-conditions" color="white">
-                  Aye, Aye your code will be sent to your phone number too.
-                </Text>
                 <Group>
-                  <Text size={'sm'} component={NextLink} href="/terms-and-conditions" color="white">
-                    Terms and Conditions
-                  </Text>
-                  <Text size={'sm'} component={NextLink} href="/privacy-policy" color="white">
-                    Privacy Policy
-                  </Text>
+                  <Checkbox
+                    color="blue"
+                    classNames={{ label: classes.Checkbox }}
+                    styles={{
+                      root: {
+                        // width: matches ? '95%' : '99%',
+                        margin: 'auto',
+                      },
+                      body: { display: 'flex', alignItems: 'center' },
+                      label: { fontSize: matches ? '9px !important' : 'inherit' },
+                    }}
+                    label={<>I accept the <Anchor href="/terms-and-conditions" className='underline' color='white' target="_blank">Terms of Use</Anchor> Of <Anchor className='underline' href="privacy-policy" color='white' target="_blank">Privacy Policy</Anchor> and acknowledge that I have reached the age of 18.</>}
+                    {...form.getInputProps('check')}
+                  />
                 </Group>
               </Stack>
             </Grid.Col>
@@ -174,5 +181,13 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
 const useStyles = createStyles((theme) => ({
   phoneinput: {
     color:'white',
+  },
+  Checkbox: {
+    color: '#FFFFFF',
+    fontStyle: 'normal',
+    // fontWeight: '400',
+    fontSize: '16px',
+    lineHeight: '188.7%',
+    letterSpacing: '0.0125em',
   },
 }));

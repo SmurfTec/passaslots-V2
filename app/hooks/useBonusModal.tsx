@@ -9,6 +9,7 @@ import {
   Stack,
   Text,
   TextInput,
+  Checkbox,
   Title,
   createStyles,
 } from '@mantine/core';
@@ -17,10 +18,12 @@ import { useDisclosure, useLocalStorage } from '@mantine/hooks';
 import { NextLink } from '@mantine/next';
 import { useSignUpModal } from './useSignUpModal';
 import Image from 'next/image';
+import { useMediaQuery } from '@mantine/hooks';
 import GoogleReCaptcha from '@pasa/components/reCaptcha/GoogleReCaptcha';
 import { useState } from 'react';
 
 export const useBonusModal = (): [React.ReactNode, () => void] => {
+  const matches = useMediaQuery('(max-width: 810px)', true);
   const [value, setValue] = useLocalStorage<{ name: string; email: string }>({
     key: 'bonus',
     defaultValue: { name: '', email: '' },
@@ -133,9 +136,20 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
                 </form>
 
                 <Group>
-                  <Text size={'sm'} component={NextLink} href="/terms-and-conditions" color="white">
-                    Aye, Aye your code will be sent to your email address.
-                  </Text>
+                <Checkbox
+                  color="blue"
+                  classNames={{ label: classes.Checkbox }}
+                  styles={{
+                    root: {
+                      // width: matches ? '95%' : '99%',
+                      margin: 'auto',
+                    },
+                    body: { display: 'flex', alignItems: 'center' },
+                    label: { fontSize: matches ? '9px !important' : 'inherit' },
+                  }}
+                  label={`I agree to receive special offers by email.`}
+                  {...form.getInputProps('check')}
+                />
                 </Group>
               </Stack>
             </Grid.Col>
@@ -160,5 +174,13 @@ const useStyles = createStyles((theme) => ({
     '::placeholder': {
       color: '#ffffff',
     },
+  },
+  Checkbox: {
+    color: '#FFFFFF',
+    fontStyle: 'normal',
+    // fontWeight: '400',
+    fontSize: '16px',
+    lineHeight: '188.7%',
+    letterSpacing: '0.0125em',
   },
 }));
