@@ -99,7 +99,7 @@ export function HomeHero() {
           <Grid align="center" justify="center">
             <Grid.Col>
               <Carousel
-                w="100%"
+                w="90%"
                 styles={{
                   indicator: {
                     width: !matches ? '22px' : '10px',
