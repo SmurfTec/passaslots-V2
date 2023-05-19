@@ -22,19 +22,16 @@ export const BottomSubHeading = () => {
         <Grid align="top">
           <Grid.Col sm={12}>
             <Image
-              mah={545}
-              maw={508}
-              mih={303}
-              miw={282}
+              mah={400}
+              maw={300}
               className="mx-auto mb-10"
               src="/images/pages/home/cardsfalling.png"
               alt="image"
             />
             <div className="space-y-5 text-center">
               <Title
-                pt={matches ? 0 : 130}
                 maw={360}
-                className="font-bold text-center mx-auto uppercase text-[#FFFFFF] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[51px] sm:!leading-[35px] xs:!leading-[25px]"
+                className="font-bold text-center mx-auto uppercase text-[#FFFFFF] xs:!text-[24px] sm:!text-[32px] md:!text-[35px] md:!leading-[51px] sm:!leading-[35px] xs:!leading-[25px]"
               >
                 Sun, Sand, and Big Wins Await You
               </Title>
