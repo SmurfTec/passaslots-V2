@@ -61,6 +61,63 @@ const comments = [
     message:
       "PASA's looking out for serious gamers, they took the platform very seriously when creating it. It’s been nothing but fun playing the games you can’t get on all the platforms at once, well I never thought that would happen but they made it happen",
   },
+  {
+    thumbnail: '/images/carousel/person1.png',
+    name: 'Nick C',
+    rating: 5,
+    description: 'Pasa Slots Community Member',
+    message:
+      "Can't keep my phone down! The variety of features keeps me entertained and the graphics are excellent. You get a varied amount through the daily lucky wheel and level up credits on each level. It runs very smoothly with very few glitches. If you enjoy slots you will likely enjoy this game!",
+  },
+  {
+    thumbnail: '/images/carousel/person2.png',
+    name: 'Heather W',
+    rating: 5,
+    description: 'Pasa Slots Community Member',
+    message:
+      'Super fun games, I very much like the different challenges aspect which is a refreshing change from the usual games. There are alternate ways to earn credits or perks. It runs very smoothly on my Android 11 with the in-browser option instead of downloading apps. I like it!',
+  },
+  {
+    thumbnail: '/images/carousel/person1.png',
+    name: 'Allison P',
+    rating: 5,
+    description: 'Pasa Slots Community Member',
+    message:
+      'With day to day waiting and opportunity to kill time, I always depend on this platform with amazing support and very few glitches',
+  },
+  {
+    thumbnail: '/images/carousel/person2.png',
+    name: 'Christian C',
+    rating: 5,
+    description: 'Pasa Slots Community Member',
+    message:
+      'Having the ability to play on-browser with new games every month, I think that’s a huge advantage when it comes to platforms giving variety for the players',
+  },
+  {
+    thumbnail: '/images/carousel/person2.png',
+    name: 'Matt P',
+    rating: 5,
+    description: 'Pasa Slots Community Member',
+    message:
+      "Never A Dull Moment. The biggest feature, the constant stream of new slot games. 98% of the time I never play the same slot over and over again. The release of the Life of Luxury was hands down the best. Didn't have tons of issues, especially with payments, getting bonuses, the play during bonus, and the Keno edition are totally unusual and imaginative. Great freakin' app!",
+  },
+  {
+    thumbnail: '/images/carousel/person2.png',
+    name: 'Steve C',
+    rating: 5,
+    description: 'Pasa Slots Community Member',
+    message:
+      "If you like slots as much as I do, but always end up finding what you thought to be a great slot game, then it turns out to be nothing but scams after scams on accounts, one spin, then back to zeros. Well look no further cause you found the complete opposite of that, a platform, not a zero’s game, lol if that's a thing but the variety of games are really fun, and you actually get to play slots this is the platform to play on!!",
+  },
+  ,
+  {
+    thumbnail: '/images/carousel/person2.png',
+    name: 'Mary M',
+    rating: 5,
+    description: 'Pasa Slots Community Member',
+    message:
+      "PASA's looking out for serious gamers, they took the platform very seriously when creating it. It’s been nothing but fun playing the games you can’t get on all the platforms at once, well I never thought that would happen but they made it happen",
+  },
 ];
 
 export const TestimonialCarousel = () => {
@@ -80,7 +137,7 @@ export const TestimonialCarousel = () => {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid ml={matches2 ? 0 : 90} mr={matches2 ? 0 : 69} mt={matches2 ? 70 : 50}>
+      <Container fluid ml={matches2 ? 0 : 90} mr={matches2 ? 0 : 69} mt={80}>
         <BackgroundImage
           className={matches2 ? 'mb-10' : ''}
           style={{ backgroundSize: 'cover', rotate: '-10deg' }}
@@ -98,7 +155,7 @@ export const TestimonialCarousel = () => {
               What our community says about us
             </Title>
 
-            <Grid m={0} my={matches2 ? 20 : 70}>
+            <Grid m={0} my={20}>
               {/* <Grid.Col md={3} className="relative">
                 <Center>
                   <Text color="white" size={'md'} className="absolute top-1/2 -translate-y-1/2">

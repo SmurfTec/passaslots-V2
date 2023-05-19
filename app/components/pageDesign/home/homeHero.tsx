@@ -96,7 +96,7 @@ export function HomeHero() {
         }}
       >
         <Center w={'90%'}>
-          <Grid align='center' justify='center'>
+          <Grid align="center" justify="center">
             <Grid.Col>
               <Carousel
                 w="100%"
@@ -151,10 +151,10 @@ export function HomeHero() {
                 // size={matches ? 'sm' : 'md'}
                 // order={2}
               >
-                Seize Your $13 Sign up Fortune by the Seashore
+                Seize Your $3 Sign up Fortune by the Seashore
               </Title>
             </Grid.Col>
-            <Grid.Col className='text-center'>
+            <Grid.Col className="text-center">
               <Button
                 mt={matches ? 25 : 58}
                 radius={50}
