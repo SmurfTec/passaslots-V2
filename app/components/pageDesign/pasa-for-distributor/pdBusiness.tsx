@@ -25,7 +25,7 @@ export function PDBusiness() {
         <Grid m={0}>
           <Grid.Col style={{alignSelf: 'center'}} md={6}>
             <Image
-              mah={638} maw={768}
+              mah={510} maw={614}
               className='mx-auto my-auto'
               src="/images/pages/pasa-for-distributor/machine-leprechaun.png"
               alt="machine-leprechaun"
