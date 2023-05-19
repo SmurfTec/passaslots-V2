@@ -17,6 +17,8 @@ import { useDisclosure, useLocalStorage } from '@mantine/hooks';
 import { NextLink } from '@mantine/next';
 import { useSignUpModal } from './useSignUpModal';
 import Image from 'next/image';
+import GoogleReCaptcha from '@pasa/components/reCaptcha/GoogleReCaptcha';
+import { useState } from 'react';
 
 export const useBonusModal = (): [React.ReactNode, () => void] => {
   const [value, setValue] = useLocalStorage<{ name: string; email: string }>({
@@ -24,6 +26,7 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
     defaultValue: { name: '', email: '' },
   });
   const [signupModal, signupOpen] = useSignUpModal();
+  const [allowSubmit, setAllowSubmit] = useState(false);
   const form = useForm({
     initialValues: {
       email: '',
@@ -39,6 +42,11 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
     signupOpen();
     close();
   };
+
+  const handleRecaptchaChange = (token: any) => {
+    setAllowSubmit(!allowSubmit);
+  };
+
   const { classes } = useStyles();
   const [opened, { open, close }] = useDisclosure(false);
   const modal = (
@@ -91,7 +99,14 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
                 </Text>
                 <form onSubmit={form.onSubmit(handleSubmit)}>
                   <TextInput placeholder="NAME" mb={20} classNames={classes} required {...form.getInputProps('name')} />
-                  <TextInput placeholder="EMAIL" classNames={classes} required {...form.getInputProps('email')} />
+                  <TextInput
+                    placeholder="EMAIL"
+                    classNames={classes}
+                    required
+                    {...form.getInputProps('email')}
+                    mb={20}
+                  />
+                  <GoogleReCaptcha handleRecaptchaChange={handleRecaptchaChange} />
                   <Group spacing={50} mt={50}>
                     <Button
                       styles={{
@@ -107,18 +122,19 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
                       className="text-base font-light"
                       type="submit"
                       size="lg"
+                      disabled={!allowSubmit}
                     >
-                      UNLOCK MY BONUS
+                      {allowSubmit ? 'UNLOCK MY BONUS' : 'Verify captcha'}
                     </Button>
                     <Text color={'white'} className="underline text-base font-bold cursor-pointer" onClick={close}>
                       No thanks, I'll play without it.
                     </Text>
                   </Group>
                 </form>
-                
+
                 <Group>
                   <Text size={'sm'} component={NextLink} href="/terms-and-conditions" color="white">
-                  Aye, Aye your code will be sent to your email address.
+                    Aye, Aye your code will be sent to your email address.
                   </Text>
                 </Group>
               </Stack>
@@ -139,7 +155,7 @@ const useStyles = createStyles((theme) => ({
     border: '1px solid #016BE6 !important',
     height: '60px',
     width: '100%',
-    color:'white',
+    color: 'white',
     backgroundColor: 'transparent',
     '::placeholder': {
       color: '#ffffff',
