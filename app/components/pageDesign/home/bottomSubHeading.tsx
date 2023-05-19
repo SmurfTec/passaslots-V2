@@ -31,7 +31,9 @@ export const BottomSubHeading = () => {
               alt="image"
             />
             <div className="space-y-5 text-center">
-              <Title maw={360}
+              <Title
+                pt={matches ? 0 : 130}
+                maw={360}
                 className="font-bold text-center mx-auto uppercase text-[#FFFFFF] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[51px] sm:!leading-[35px] xs:!leading-[25px]"
               >
                 Sun, Sand, and Big Wins Await You
