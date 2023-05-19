@@ -60,7 +60,7 @@ export function HiwStage() {
         <BackgroundImage
           style={{
             backgroundPosition: 'center center',
-            backgroundSize: '50%',
+            backgroundSize: 'auto 100%',
             backgroundRepeat: 'no-repeat',
             // minHeight: '180vh',
           }}
