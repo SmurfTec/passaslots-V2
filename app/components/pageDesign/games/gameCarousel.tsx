@@ -11,83 +11,59 @@ const multiFishing: SingleSlotProps[] = [
     text: 'Crab Avengers',
   },
   {
-    image: '/images/pages/game/game1.png',
-    text: 'Life of Luxury',
-  },
-  {
-    image: '/images/pages/game/game3.png',
-    text: 'Multiplayer Roulette',
-  },
-  {
-    image: '/images/pages/game/game4.png',
-    text: 'BUFFALO 777',
-  },
-  {
     image: '/images/pages/game/game5.png',
-    text: 'Thunder Dragon Deluxe',
+    text: 'Thunder Dragon Deluxe: Ocean King 2',
   },
   {
-    image: '/images/pages/game/game2.png',
-    text: 'Crab Avengers',
+    image: '/images/pages/game/game14.png',
+    text: 'Fortune Kings Plus: Ocean King 3 Plus',
   },
   {
-    image: '/images/pages/game/game1.png',
-    text: 'Life of Luxury',
+    image: '/images/pages/game/game8.png',
+    text: 'Monster Frenzy: Ocean King 3 Plus',
   },
   {
-    image: '/images/pages/game/game3.png',
-    text: 'Multiplayer Roulette',
+    image: '/images/pages/game/zombieawaken.png',
+    text: 'Zombie Awaken: Ocean King 3 Plus',
   },
   {
-    image: '/images/pages/game/game4.png',
-    text: 'BUFFALO 777',
-  },
-  {
-    image: '/images/pages/game/game5.png',
-    text: 'Thunder Dragon Deluxe',
+    image: '/images/pages/game/bird_king.png',
+    text: 'Bird King Paradise',
   },
 ];
 
 const casinoCollection: SingleSlotProps[] = [
   {
-    image: '/images/pages/game/game8.png',
-    text: 'Monster Frenzy',
+    image: '/images/pages/game/game3.png',
+    text: 'Multiplayer Roulette',
   },
   {
-    image: '/images/pages/game/game9.png',
-    text: 'Super Ball Keno',
-  },
-  {
-    image: '/images/pages/game/game10.png',
-    text: 'Cash Spin',
-  },
-  {
-    image: '/images/pages/game/game11.png',
-    text: 'Twin Spin',
+    image: '/images/pages/game/game6.png',
+    text: 'HEXA KENO',
   },
   {
     image: '/images/pages/game/game15.png',
     text: 'Turbo Keno',
   },
   {
-    image: '/images/pages/game/game8.png',
-    text: 'Monster Frenzy',
-  },
-  {
     image: '/images/pages/game/game9.png',
     text: 'Super Ball Keno',
   },
   {
-    image: '/images/pages/game/game10.png',
-    text: 'Cash Spin',
+    image: '/images/pages/game/game3.png',
+    text: 'Multiplayer Roulette',
   },
   {
-    image: '/images/pages/game/game11.png',
-    text: 'Twin Spin',
+    image: '/images/pages/game/game6.png',
+    text: 'HEXA KENO',
   },
   {
     image: '/images/pages/game/game15.png',
     text: 'Turbo Keno',
+  },
+  {
+    image: '/images/pages/game/game9.png',
+    text: 'Super Ball Keno',
   },
 ];
 export function GameCarousel() {
@@ -226,11 +202,12 @@ export function GameCarousel() {
           Classic casino collection
         </Title>
         <Carousel
-          slideSize="20%"
+          slideSize="25%"
           mx="auto"
           height="auto"
           withControls
           slideGap="md"
+          slidesToScroll={1}
           loop
           plugins={[autoplay2.current]}
           onMouseEnter={autoplay2.current.stop}

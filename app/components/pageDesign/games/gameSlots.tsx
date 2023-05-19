@@ -13,64 +13,140 @@ const slotData: SingleSlotProps[] = [
     text: 'Life of Luxury',
   },
   {
-    image: '/images/pages/game/game2.png',
-    text: 'Crab Avengers ',
+    image: '/images/pages/game/game12.png',
+    text: 'Life of Luxury 2',
   },
   {
-    image: '/images/pages/game/game3.png',
-    text: 'Multiplayer Roulette',
+    image: '/images/pages/game/colorfulorchard.png',
+    text: 'Colorful Orchard',
+  },
+  {
+    image: '/images/pages/game/safariheat.png',
+    text: 'Safari Heat',
+  },
+  {
+    image: '/images/pages/game/GlacierGold.png',
+    text: 'Ultimate Fire Link - Glacier Gold',
+  },
+  {
+    image: '/images/pages/game/777.png',
+    text: '777',
   },
   {
     image: '/images/pages/game/game4.png',
     text: 'Buffalo 777',
   },
   {
-    image: '/images/pages/game/game5.png',
-    text: 'Thunder Dragon Deluxe',
-  },
-  {
-    image: '/images/pages/game/game6.png',
-    text: 'HEXA KENO',
-  },
-  {
     image: '/images/pages/game/game7.png',
     text: "Stinkin' Rich",
-  },
-  {
-    image: '/images/pages/game/game8.png',
-    text: 'Monster Frenzy',
-  },
-  {
-    image: '/images/pages/game/game9.png',
-    text: 'Super Ball KENO',
   },
   {
     image: '/images/pages/game/game10.png',
     text: 'Cash Spin',
   },
   {
-    image: '/images/pages/game/game11.png',
-    text: 'Twin Spin',
+    image: '/images/pages/game/diamonds.png',
+    text: 'Diamonds - Lock It Link',
   },
   {
-    image: '/images/pages/game/game12.png',
-    text: 'Life of Luxury 2',
+    image: '/images/pages/game/game11.png',
+    text: 'Twin $pin',
   },
   {
     image: '/images/pages/game/game13.png',
     text: 'Mustang Money',
   },
   {
-    image: '/images/pages/game/game14.png',
-    text: 'Fortune Kings Plus',
+    image: '/images/pages/game/game17.png',
+    text: 'Wolf Run',
   },
   {
-    image: '/images/pages/game/game15.png',
-    text: 'TURBO KENO',
+    image: '/images/pages/game/gorillachief2.png',
+    text: 'Gorilla Chief 2',
+  },
+  {
+    image: '/images/pages/game/game18.png',
+    text: 'Walking Dead',
+  },
+  {
+    image: '/images/pages/game/game19.png',
+    text: 'Thunder Zeus',
+  },
+  {
+    image: '/images/pages/game/merrychristmas.png',
+    text: 'Merry Christmas',
+  },
+  {
+    image: '/images/pages/game/Thegoodlife.png',
+    text: 'The Good Life',
+  },
+  {
+    image: '/images/pages/game/Happy&Prosperous.png',
+    text: 'Happy & Prosperous',
   },
   {
     image: '/images/pages/game/game16.png',
     text: '88 Fortunes',
+  },
+  {
+    image: '/images/pages/game/Paydirt.png',
+    text: 'PAY DIRT',
+  },
+  {
+    image: '/images/pages/game/HAPPYDUCK.png',
+    text: 'Happy Duck',
+  },
+  {
+    image: '/images/pages/game/UFLCHINASTREET.png',
+    text: 'Ultimate FIre Link - China Street',
+  },
+  {
+    image: '/images/pages/game/CA$HMACHINE.png',
+    text: 'CA$H MACHINE',
+  },
+  {
+    image: '/images/pages/game/KirinlinkChinatown.png',
+    text: 'KIRINKINK - CHINATOWN',
+  },
+  {
+    image: '/images/pages/game/invaders.png',
+    text: 'Planet Moolah',
+  },
+  {
+    image: '/images/pages/game/UFLOLIVERASTREET.png',
+    text: 'Ultimate FIre Link - Olivera Street',
+  },
+  {
+    image: '/images/pages/game/GameOfThrones.png',
+    text: 'Game Of Thrones',
+  },
+  {
+    image: '/images/pages/game/Stpatricksday.png',
+    text: 'St. Patricks Day',
+  },
+  {
+    image: '/images/pages/game/UFLriverwalk.png',
+    text: 'Ultimate FIre Link - River Walk',
+  },
+  {
+    image: '/images/pages/game/crazy7.png',
+    text: 'Crazy 7',
+  },
+  {
+    image: '/images/pages/game/godofforturn.png',
+    text: 'God Of Fortune',
+  },
+  {
+    image: '/images/pages/game/legendofzroro.png',
+    text: 'The Legend Of Zorro',
+  },
+  {
+    image: '/images/pages/game/wheeloffortune.png',
+    text: 'Wheel Of Fortune',
+  },
+  {
+    image: '/images/pages/game/pandafortune.png',
+    text: 'Panda Fortune',
   },
 ];
 

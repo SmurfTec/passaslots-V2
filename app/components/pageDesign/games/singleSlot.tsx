@@ -45,6 +45,8 @@ export function SingleSlot({ image, text, hc = 243, wc = 288 }: SingleSlotProps)
           }}
           radius={41}
           className="font-[500]"
+          component="a"
+          href="http://Pasasweeps.net"
         >
           Play
         </Button>
