@@ -3,6 +3,7 @@ import { useForm } from '@mantine/form';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useMediaQuery } from '@mantine/hooks';
+import GoogleReCaptcha from '../reCaptcha/GoogleReCaptcha';
 
 type ContactForm = {
   firstName: string;
@@ -18,6 +19,7 @@ export function ContactForm() {
   const router = useRouter();
   const { classes } = useStyles();
   const [message, setMessage] = useState(false);
+  const [allowSubmit, setAllowSubmit] = useState(false);
   const matches = useMediaQuery('(max-width: 810px)', true);
   const matches2 = useMediaQuery('(max-width: 991px)', true);
   const form = useForm({
@@ -60,6 +62,10 @@ export function ContactForm() {
         console.log(e);
       });
   };
+  const handleRecaptchaChange = (token: any) => {
+    setAllowSubmit(!allowSubmit);
+  };
+
   return (
     <form onSubmit={form.onSubmit(handleSubmit)}>
       <div className="space-y-6">
@@ -133,9 +139,10 @@ export function ContactForm() {
           color="blue"
           classNames={{ label: classes.Checkbox }}
           styles={{
-            root: { 
-              // width: matches ? '95%' : '99%', 
-            margin: 'auto' },
+            root: {
+              // width: matches ? '95%' : '99%',
+              margin: 'auto',
+            },
             body: { display: 'flex', alignItems: 'center' },
             label: { fontSize: matches ? '9px !important' : 'inherit' },
           }}
@@ -146,16 +153,17 @@ export function ContactForm() {
           color="blue"
           classNames={{ label: classes.Checkbox }}
           styles={{
-            root: { 
-              // width: matches ? '95%' : '99%', 
-            margin: 'auto' },
+            root: {
+              // width: matches ? '95%' : '99%',
+              margin: 'auto',
+            },
             body: { display: 'flex', alignItems: 'center' },
             label: { fontSize: matches ? '9px !important' : 'inherit' },
           }}
           label={`I accept the Terms of Use Of Privacy Policy and acknowledge that I have reached the age of 18.`}
           {...form.getInputProps('check')}
         />
-
+        <GoogleReCaptcha handleRecaptchaChange={handleRecaptchaChange} />
         <Group>
           <Button
             type="submit"
@@ -177,8 +185,9 @@ export function ContactForm() {
                 marginBottom: '-2px',
               },
             }}
+            disabled={!allowSubmit}
           >
-            SUBMIT
+            {allowSubmit ? 'SUBMIT' : 'Verify Captcha'}
           </Button>
         </Group>
         {message && (
