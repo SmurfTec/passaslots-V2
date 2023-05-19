@@ -26,6 +26,9 @@ const images = [
   '/images/carousel/newcarousel1.png',
   '/images/carousel/newcarousel2.png',
   '/images/carousel/newcarousel3.png',
+  '/images/carousel/newcarousel1.png',
+  '/images/carousel/newcarousel2.png',
+  '/images/carousel/newcarousel3.png',
 ];
 export const HomeTopCarousel = () => {
   // const { classes } = useStyles();
@@ -76,6 +79,7 @@ export const HomeTopCarousel = () => {
           //     backgroundImage: 'url("images/scroll/carouselIndicatiorSelect.png")'
           //   }
           // }}
+
           getEmblaApi={setEmbla}
           styles={{
             indicator: {
@@ -99,7 +103,7 @@ export const HomeTopCarousel = () => {
           withControls={false}
           align="center"
           className="flex justify-center align-middle items-center"
-          slideSize="50%"
+          slideSize="35%"
           loop
           initialSlide={3}
           slideGap={matches ? 'md' : 'xl'}
