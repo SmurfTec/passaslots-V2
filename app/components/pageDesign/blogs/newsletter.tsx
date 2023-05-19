@@ -139,16 +139,16 @@ export function NewsletterBlog() {
                     // size="lg"
                     rightSection={
                       <ActionIcon
-                        disabled={allowSubmit}
+                        disabled={!allowSubmit}
                         type="submit"
                         size={matches ? 35 : 56}
-                        bg={allowSubmit ? '#FFB800' : 'grey'}
+                        bg="#FFB800"
                         mr={matches ? -5 : 10}
                         radius="xl"
                         variant="filled"
                         sx={{
                           ':hover': {
-                            background: allowSubmit ? '#FFB800' : 'grey',
+                            background: '#FFB800',
                           },
                         }}
                       >
