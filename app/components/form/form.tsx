@@ -139,7 +139,20 @@ export function ContactForm() {
             body: { display: 'flex', alignItems: 'center' },
             label: { fontSize: matches ? '9px !important' : 'inherit' },
           }}
-          label={`I'd like to recieve more information tik mark here as well similar to the contact us page to get confirmation for emails and sms. `}
+          label={`I agree to receive special offers by email.`}
+          {...form.getInputProps('check')}
+        />
+        <Checkbox
+          color="blue"
+          classNames={{ label: classes.Checkbox }}
+          styles={{
+            root: { 
+              // width: matches ? '95%' : '99%', 
+            margin: 'auto' },
+            body: { display: 'flex', alignItems: 'center' },
+            label: { fontSize: matches ? '9px !important' : 'inherit' },
+          }}
+          label={`I accept the Terms of Use Of Privacy Policy and acknowledge that I have reached the age of 18.`}
           {...form.getInputProps('check')}
         />
 
