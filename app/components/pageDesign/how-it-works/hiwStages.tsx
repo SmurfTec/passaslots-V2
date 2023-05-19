@@ -36,7 +36,8 @@ const stageData = [
   {
     image: '/images/pages/hiw/stage6.png',
     title: 'Stage 6',
-    content: 'If you want a $3 bonus for your new account and stay connected to Pasa Slots then click the unlock bonus below and sign up.',
+    content:
+      'If you want a $3 bonus for your new account and stay connected to Pasa Slots then click the unlock bonus below and sign up.',
     button: 'UNLOCK YOUR BONUS',
     link: 'SIGN UP FOR PROMOTIONS',
   },
@@ -65,7 +66,7 @@ export function HiwStage() {
             // minHeight: '180vh',
           }}
           className=""
-          src="/images/pages/hiw/pasagamming.jpg"
+          src="/images/pages/hiw/pasagamming.png"
           // bgsz="auto"
         >
           <Container className="mt-24 sm:mt-0" fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={matches ? 0 : 350}>
@@ -138,8 +139,8 @@ export function HiwStage() {
                       maw={331}
                       className="absolute text-right mt-[180px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80"
                     >
-                      If you want a $3 bonus for your new account and stay
-                       connected to Pasa Slots then click the unlock bonus below and sign up.{' '}
+                      If you want a $3 bonus for your new account and stay connected to Pasa Slots then click the unlock
+                      bonus below and sign up.{' '}
                     </Text>
                   </Grid>
                 </Group>
@@ -459,8 +460,8 @@ export function HiwStage() {
                 pb={180}
               >
                 <Text style={{ fontSize: '12px', marginTop: '10px' }} className=" text-[#ffffff] font-[400] ">
-                If you want a $3 bonus for your new account and stay
-                 connected to Pasa Slots then click the unlock bonus below and sign up.
+                  If you want a $3 bonus for your new account and stay connected to Pasa Slots then click the unlock
+                  bonus below and sign up.
                 </Text>
               </Timeline.Item>
             </Timeline>
