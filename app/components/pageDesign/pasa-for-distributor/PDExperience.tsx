@@ -67,7 +67,7 @@ export function PDExperience() {
             {/* <br /> */}
             Promotional Games to Your Customers{' '}
             {/* <br /> */}
-            Same Day.
+            The Same Day.
           </Button>
           <Button
             styles={{

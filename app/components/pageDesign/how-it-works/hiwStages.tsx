@@ -36,7 +36,7 @@ const stageData = [
   {
     image: '/images/pages/hiw/stage6.png',
     title: 'Stage 6',
-    content: 'If you want a $3 bonus for your new account and stay connected to pasa gaming.',
+    content: 'If you want a $3 bonus for your new account and stay connected to Pasa Slots then click the unlock bonus below and sign up.',
     button: 'UNLOCK YOUR BONUS',
     link: 'SIGN UP FOR PROMOTIONS',
   },
@@ -68,7 +68,7 @@ export function HiwStage() {
           src="/images/pages/hiw/pasagamming.jpg"
           // bgsz="auto"
         >
-          <Container className="mt-24 sm:mt-0" fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={matches ? 0 : 300}>
+          <Container className="mt-24 sm:mt-0" fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69} pb={matches ? 0 : 350}>
             <Grid justify="center" align="center">
               <Grid.Col sm={12}>
                 <Grid justify="center" align="center">
@@ -136,11 +136,10 @@ export function HiwStage() {
                     <Text
                       style={{ fontSize: matches2 ? '12px' : '20px' }}
                       maw={331}
-                      className="absolute text-right mt-[150px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80"
+                      className="absolute text-right mt-[180px] text-[#ffffff] font-[400] text-[20px] leading-[38px] tracking-[0.005em] opacity-80"
                     >
-                      If you want a $3 bonus for your new {/* <br /> */}
-                      account and stay connected to pasa {/* <br /> */}
-                      gaming.{' '}
+                      If you want a $3 bonus for your new account and stay
+                       connected to Pasa Slots then click the unlock bonus below and sign up.{' '}
                     </Text>
                   </Grid>
                 </Group>
@@ -460,7 +459,8 @@ export function HiwStage() {
                 pb={180}
               >
                 <Text style={{ fontSize: '12px', marginTop: '10px' }} className=" text-[#ffffff] font-[400] ">
-                  If you want a $3 bonus for your new account and stay connected to pasa gaming.
+                If you want a $3 bonus for your new account and stay
+                 connected to Pasa Slots then click the unlock bonus below and sign up.
                 </Text>
               </Timeline.Item>
             </Timeline>
