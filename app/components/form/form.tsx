@@ -1,4 +1,4 @@
-import { Button, Checkbox, Group, Text, TextInput, Textarea, createStyles, Grid } from '@mantine/core';
+import { Button, Checkbox, Group, Text, TextInput, Textarea, createStyles, Grid, Anchor } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -160,7 +160,7 @@ export function ContactForm() {
             body: { display: 'flex', alignItems: 'center' },
             label: { fontSize: matches ? '9px !important' : 'inherit' },
           }}
-          label={`I accept the Terms of Use Of Privacy Policy and acknowledge that I have reached the age of 18.`}
+          label={<>I accept the <Anchor href="/terms-and-conditions" className='underline' color='white' target="_blank">Terms of Use</Anchor> Of <Anchor className='underline' href="privacy-policy" color='white' target="_blank">Privacy Policy</Anchor> and acknowledge that I have reached the age of 18.</>}
           {...form.getInputProps('check')}
         />
         <GoogleReCaptcha handleRecaptchaChange={handleRecaptchaChange} />
