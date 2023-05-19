@@ -12,11 +12,13 @@ import {
 } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { useMediaQuery } from '@mantine/hooks';
+import GoogleReCaptcha from '@pasa/components/reCaptcha/GoogleReCaptcha';
 import { useState } from 'react';
 import { ChevronRight } from 'tabler-icons-react';
 
 export function NewsletterBlog() {
   const [message, setMessage] = useState(false);
+  const [allowSubmit, setAllowSubmit] = useState(false);
   const form = useForm({
     initialValues: {
       email: '',
@@ -28,19 +30,24 @@ export function NewsletterBlog() {
   });
   const matches = useMediaQuery('(max-width: 770px)');
 
+  const handleRecaptchaChange = (token: any) => {
+    setAllowSubmit(!allowSubmit);
+  };
+
   const handleSubmit = ({ email }: { email: string }) => {
-    fetch('/api/newsletter', {
-      method: 'POST',
-      body: JSON.stringify({ email }),
-      headers: { 'Content-Type': 'application/json' },
-    })
-      .then((res) => {
-        setMessage(true);
+    allowSubmit &&
+      fetch('/api/newsletter', {
+        method: 'POST',
+        body: JSON.stringify({ email }),
+        headers: { 'Content-Type': 'application/json' },
       })
-      .catch((e) => {
-        setMessage(false);
-        console.log(e);
-      });
+        .then((res) => {
+          setMessage(true);
+        })
+        .catch((e) => {
+          setMessage(false);
+          console.log(e);
+        });
   };
   return (
     <div
@@ -132,15 +139,16 @@ export function NewsletterBlog() {
                     // size="lg"
                     rightSection={
                       <ActionIcon
+                        disabled={allowSubmit}
                         type="submit"
                         size={matches ? 35 : 56}
-                        bg="#FFB800"
+                        bg={allowSubmit ? '#FFB800' : 'grey'}
                         mr={matches ? -5 : 10}
                         radius="xl"
                         variant="filled"
                         sx={{
                           ':hover': {
-                            background: '#FFB800',
+                            background: allowSubmit ? '#FFB800' : 'grey',
                           },
                         }}
                       >
@@ -157,6 +165,10 @@ export function NewsletterBlog() {
                     </Text>
                   )}
                 </form>
+              </Grid>
+              <Grid align="center" justify="center" mt={20}>
+                {' '}
+                <GoogleReCaptcha handleRecaptchaChange={handleRecaptchaChange} />
               </Grid>
             </Grid.Col>
           </Grid>
