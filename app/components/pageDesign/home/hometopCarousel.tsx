@@ -66,13 +66,7 @@ export const HomeTopCarousel = () => {
       }}
     >
       {/* <div className={classes.backdrop}> */}
-      <Container
-        fluid
-        px={0}
-        pt={matches ? 20 : 50}
-        pb={matches ? 20 : 50}
-        style={{ backgroundSize: 'cover', width: '100%' }}
-      >
+      <Container fluid px={0} pt={50} pb={50} style={{ backgroundSize: 'cover', width: '100%' }}>
         <Carousel
           // styles={{
           //   indicator: {

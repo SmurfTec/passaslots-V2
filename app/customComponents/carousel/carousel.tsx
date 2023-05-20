@@ -17,8 +17,8 @@ const getDynamicHeight = (focusedIndex: number, currentIndex: number, height: nu
     if (currentIndex === focusedIndex) {
       return height;
     } else if (currentIndex - 1 === focusedIndex || currentIndex + 1 === focusedIndex) {
-      return height * 0.7;
-    } else return height * 0.5;
+      return height * 0.8;
+    } else return height * 0.6;
   } else return height;
 };
 

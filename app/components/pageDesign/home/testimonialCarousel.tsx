@@ -140,10 +140,10 @@ export const TestimonialCarousel = () => {
       <Container fluid ml={matches2 ? 0 : 90} mr={matches2 ? 0 : 69} mt={80}>
         <BackgroundImage
           className={matches2 ? 'mb-10' : ''}
-          style={{ backgroundSize: 'cover', rotate: '-10deg' }}
+          style={{ backgroundSize: 'cover' }}
           src="/images/pages/home/multicolorfall.png"
         >
-          <div style={{ rotate: '10deg' }}>
+          <div>
             <Title
               color={'white'}
               className="font-[700] uppercase text-center xs:!text-[24px] sm:!text-[32px] md:!text-[48px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px]"
