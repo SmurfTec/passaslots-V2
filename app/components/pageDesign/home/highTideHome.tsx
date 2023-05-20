@@ -160,7 +160,7 @@ export function HighTideHome() {
               color="white"
               mt={matches ? 20 : 0}
               mb={matches ? 10 : 50}
-              style={{ letterSpacing: '-1.5%' }}
+              style={{ letterSpacing: '-1.5%', marginLeft: '12px', marginRight: '12px' }}
             >
               RIDE THE HIGH <span className="text-[#50A1FF]">TIDE OF LUCK</span>
             </Title>
@@ -168,6 +168,7 @@ export function HighTideHome() {
               color="white"
               mt={40}
               className="font-[400] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[40px] sm:!leading-[20px] xs:!leading-[20px]"
+              style={{ marginLeft: '12px', marginRight: '12px' }}
             >
               To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile
               players to launch into playing this slot sensation the moment{' '}
@@ -287,8 +288,6 @@ export function HighTideHome() {
               alignItems: 'center',
               marginTop: '70px',
               textAlign: 'center',
-              marginRight: '5px',
-              marginLeft: '5px',
             }}
           >
             {' '}
@@ -297,6 +296,8 @@ export function HighTideHome() {
               className="font-[700] uppercase xs:!text-[20px] sm:!text-[20px] md:!text-[32px] md:!leading-[51px] sm:!leading-[25px] xs:!leading-[25px]"
               style={{
                 letterSpacing: '-1.5%',
+                marginLeft: '12px',
+                marginRight: '12px',
               }}
               maw={900}
             >
@@ -309,6 +310,8 @@ export function HighTideHome() {
               className="text-base font-[400] xs:!text-[15px] sm:!text-[15px] md:!text-[20px] md:!leading-[50px] sm:!leading-[25px] xs:!leading-[25px]"
               style={{
                 letterSpacing: '-1.5%',
+                marginLeft: '12px',
+                marginRight: '12px',
               }}
             >
               To see what kind of winnings are in store for you on the games, Pasa invites all our online and mobile

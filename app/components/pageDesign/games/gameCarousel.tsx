@@ -139,7 +139,7 @@ export function GameCarousel() {
       <Container className="space-y-16" fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 100}>
         <Title
           mb={matches ? 30 : 79}
-          className="font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[40px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] uppercase"
+          className="font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[40px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] uppercase xs:ml-[12px] md:ml-[0px]"
         >
           MULTIPLAYER FISHING
         </Title>
@@ -197,7 +197,7 @@ export function GameCarousel() {
         </Carousel>
         <Title
           my={matches ? 30 : 79}
-          className="font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[40px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] uppercase"
+          className="font-[700] xs:!text-[24px] sm:!text-[32px] md:!text-[40px] md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] uppercase xs:ml-[12px] md:ml-[0px]"
         >
           Classic casino collection
         </Title>
