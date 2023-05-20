@@ -160,15 +160,27 @@ export function ContactForm() {
             body: { display: 'flex', alignItems: 'center' },
             label: { fontSize: matches ? '9px !important' : 'inherit' },
           }}
-          label={<>I accept the <Anchor href="/terms-and-conditions" className='underline' color='white' target="_blank">Terms of Use</Anchor> Of <Anchor className='underline' href="privacy-policy" color='white' target="_blank">Privacy Policy</Anchor> and acknowledge that I have reached the age of 18.</>}
+          label={
+            <>
+              I accept the{' '}
+              <Anchor href="/terms-and-conditions" className="underline" color="white" target="_blank">
+                Terms of Use
+              </Anchor>{' '}
+              Of{' '}
+              <Anchor className="underline" href="privacy-policy" color="white" target="_blank">
+                Privacy Policy
+              </Anchor>{' '}
+              and acknowledge that I have reached the age of 18.
+            </>
+          }
           {...form.getInputProps('check')}
         />
         <GoogleReCaptcha handleRecaptchaChange={handleRecaptchaChange} />
-        <Group>
+        <Group w={'100%'}>
           <Button
             type="submit"
             radius={50}
-            className="h-12 text-[20px] font-[400] w-[45%] lg:w-[auto] md:w-[45%] sm:w-[45%] xs:w-[80%]"
+            className="h-12 text-[20px] font-[400] w-[45%] xl:w-[18%] lg:w-[40%] md:w-[45%] sm:w-[45%] xs:w-[92%]"
             styles={{
               root: {
                 background: 'linear-gradient(182.04deg, #2072D2 1.72%, #A74C9A 86.43%)',

@@ -13,8 +13,8 @@ export default function Blogs() {
       <BlogLayout />
       <NewsletterBlog />
       <BlogDiscover />
-      <BlogArticle />
-      <BottomSubHeading/>
+      {/* <BlogArticle /> */}
+      <BottomSubHeading />
     </>
   );
 }

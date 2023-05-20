@@ -136,20 +136,20 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
                 </form>
 
                 <Group>
-                <Checkbox
-                  color="blue"
-                  classNames={{ label: classes.Checkbox }}
-                  styles={{
-                    root: {
-                      // width: matches ? '95%' : '99%',
-                      margin: 'auto',
-                    },
-                    body: { display: 'flex', alignItems: 'center' },
-                    label: { fontSize: matches ? '9px !important' : 'inherit' },
-                  }}
-                  label={`I agree to receive special offers by email.`}
-                  {...form.getInputProps('check')}
-                />
+                  <Checkbox
+                    color="blue"
+                    classNames={{ label: classes.Checkbox }}
+                    styles={{
+                      root: {
+                        // width: matches ? '95%' : '99%',
+                        margin: 'auto',
+                      },
+                      body: { display: 'flex', alignItems: 'center' },
+                      label: { fontSize: matches ? '9px !important' : 'inherit' },
+                    }}
+                    label={`I agree to receive special offers by email.`}
+                    {...form.getInputProps('check')}
+                  />
                 </Group>
               </Stack>
             </Grid.Col>
