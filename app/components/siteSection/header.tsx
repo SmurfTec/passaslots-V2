@@ -55,8 +55,8 @@ const useStyles = createStyles((theme) => ({
   image: {
     cursor: 'pointer',
     [theme.fn.smallerThan(810)]: {
-      height: '44px !important',
-      width: '62px !important',
+      height: '70px !important',
+      width: '90px !important',
     },
     [theme.fn.largerThan(809)]: {
       width: '114px !important',

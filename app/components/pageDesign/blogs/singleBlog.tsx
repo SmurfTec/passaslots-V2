@@ -30,38 +30,34 @@ export function SingleBlog({ image, date, title, author }: SingleBlogProps) {
         // justifyContent: 'space-between'
       }}
       radius={30}
-      mt={50}
+      mt={matches ? 20 : 50}
     >
-      <Card.Section
-        style={{
-          borderTop: '1px solid white',
-          // borderRadius: '0 0 10px 10px',
-          marginTop: matches ? '100px' : '264px',
-        }}
-      >
-        <div className="px-4">
-          <Title
-            color="white"
-            className="font-[700] md:!leading-[40px] sm:!leading-[20px] xs:!leading-[20px] md:!text-[24px] sm:!text-[13px] xs:!text-[13px]"
-          >
-            {title}
-          </Title>
-          <div className="flex justify-between">
-            <Text
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: '100%' }}>
+        <Card.Section
+          style={{
+            borderTop: '1px solid white',
+            // borderRadius: '0 0 10px 10px',
+            // marginTop: matches ? '100px' : '264px',
+          }}
+        >
+          <div className="px-4">
+            <Title
               color="white"
-              className="font-[400] md:text-[14px] sm:text-[8px] xs:text-[8px] leading-[20px] opacity-70"
+              className="font-[700] md:!leading-[40px] sm:!leading-[20px] xs:!leading-[20px] md:!text-[24px] sm:!text-[13px] xs:!text-[13px]"
             >
-              By: {author}
-            </Text>
-            <Text
-              color="white"
-              className="font-[400] md:text-[14px] sm:text-[8px] xs:text-[8px] leading-[20px] opacity-70"
-            >
-              {date}
-            </Text>
+              {title}
+            </Title>
+            <div className="flex justify-between">
+              <Text color="white" className="font-[400] md:text-[14px] sm:text-[8px] xs:text-[8px] leading-[20px]">
+                By: {author}
+              </Text>
+              <Text color="white" className="font-[400] md:text-[14px] sm:text-[8px] xs:text-[8px] leading-[20px]">
+                {date}
+              </Text>
+            </div>
           </div>
-        </div>
-      </Card.Section>
+        </Card.Section>
+      </div>
     </Card>
   );
 }

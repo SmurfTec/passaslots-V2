@@ -121,9 +121,9 @@ export function NewsletterBlog() {
                     // p={10}
                     styles={{
                       input: {
-                        padding: matches ? '18px' : '30px',
+                        padding: matches ? '25px' : '30px',
                         fontSize: '14px',
-                        width: matches ? '270px' : '425px',
+                        width: matches ? '300px' : '425px',
                         borderRadius: '50px',
                         borderColor: '#016BE6',
                         ':focus': {
@@ -141,7 +141,7 @@ export function NewsletterBlog() {
                       <ActionIcon
                         disabled={!allowSubmit}
                         type="submit"
-                        size={matches ? 35 : 56}
+                        size={matches ? 45 : 56}
                         bg="#FFB800"
                         mr={matches ? -5 : 10}
                         radius="xl"
@@ -168,7 +168,7 @@ export function NewsletterBlog() {
               </Grid>
               <Grid align="center" justify="center" mt={20}>
                 {' '}
-                <GoogleReCaptcha handleRecaptchaChange={handleRecaptchaChange} />
+                <GoogleReCaptcha size={matches ? 'compact' : 'normal'} handleRecaptchaChange={handleRecaptchaChange} />
               </Grid>
             </Grid.Col>
           </Grid>

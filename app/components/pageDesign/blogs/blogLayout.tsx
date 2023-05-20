@@ -3,6 +3,7 @@ import { SingleBlog, SingleBlogProps } from './singleBlog';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useMediaQuery } from '@mantine/hooks';
+import { Loader } from 'tabler-icons-react';
 
 const blogData: Array<SingleBlogProps> = [
   {
@@ -86,8 +87,14 @@ export function BlogLayout() {
         </Grid.Col>
       </Grid>
 
-      <Grid justify="center" align="center" py={30} grow gutter={matches ? 10 : 30}>
-        {blogsData.length === 0 && <p className="font-[700] text-[24px] center">Data not available</p>}
+      <Grid justify="center" align="center" pb={30} pt={matches ? 0 : 30} grow gutter={matches ? 10 : 30}>
+        {blogData.length === 0 && loading ? (
+          <Loader />
+        ) : blogData.length === 0 ? (
+          <p className="font-[700] text-[24px] center">Data not available</p>
+        ) : (
+          <></>
+        )}
         {blogsData.map((item, key) => (
           <Grid.Col
             p={0}
@@ -133,6 +140,8 @@ export function BlogLayout() {
               lineHeight: '23px',
             },
           }}
+          mt={15}
+          mb={matches ? 15 : 0}
           radius={50}
           className="font-[500]"
           onClick={() => {
