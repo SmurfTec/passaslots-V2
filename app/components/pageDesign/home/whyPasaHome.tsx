@@ -51,7 +51,13 @@ export function WhyPasaHome() {
         borderTop: '6px solid #016BE6',
       }}
     >
-      <Container fluid pl={matches ? 5 : 90} pr={matches ? 5 : 69} py={matches ? 50 : 100}>
+      <Container
+        fluid
+        pl={matches ? 5 : 90}
+        pr={matches ? 5 : 69}
+        py={matches ? 50 : 100}
+        className=" w-[100%] xs:w-[95%]"
+      >
         <Title
           color={'white'}
           // order={3}

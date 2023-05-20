@@ -174,7 +174,7 @@ export function GameSlots() {
         <Title
           id="gameSlots"
           mb={50}
-          className="font-[700] uppercase md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] xs:!text-[24px] sm:!text-[32px] md:!text-[48px]"
+          className="font-[700] uppercase md:!leading-[56px] sm:!leading-[30px] xs:!leading-[30px] tracking-[-0.015em] xs:!text-[24px] sm:!text-[32px] md:!text-[48px] xs:ml-[12px] md:ml-[0px]"
         >
           SLOTS
         </Title>
