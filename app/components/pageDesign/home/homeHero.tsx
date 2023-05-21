@@ -118,11 +118,12 @@ export function HomeHero() {
                 plugins={[autoplay.current]}
                 // images={images}
                 // delay={5000}
+                slidesToScroll={'auto'}
               >
                 {images.map((image, index) => {
                   return (
-                    <Carousel.Slide key={index}>
-                      <Image className="mx-auto" maw="598px" mah="596px" src={image} />
+                    <Carousel.Slide key={index} className="flex justify-center">
+                      <Image maw="598px" mah="596px" src={image} />
                     </Carousel.Slide>
                   );
                 })}
