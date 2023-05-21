@@ -3,108 +3,140 @@ import { useMediaQuery, useDisclosure } from '@mantine/hooks';
 import { NextLink } from '@mantine/next';
 import { useState } from 'react';
 import { Dots } from 'tabler-icons-react';
+import { Blog, BlogComponentInterface } from '../../../../types';
 
-export function SingleBlogHero() {
+export function SingleBlogHero({ blogData }: BlogComponentInterface) {
   const matches = useMediaQuery('(max-width: 810px)', true);
   const [sideButtons, setSideButtons] = useState(false);
   const [opened, { open, close }] = useDisclosure(false);
   const closesideMenu = () => {
-    if(sideButtons) {
+    if (sideButtons) {
       setSideButtons(false);
     }
   };
   return (
-    <div onClick={closesideMenu} style={{
-        backgroundImage: 'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
+    <div
+      onClick={closesideMenu}
+      style={{
+        backgroundImage:
+          'radial-gradient(at 20% 25%, hsla(212,98%,45%,0.4) 0px, transparent 50%), radial-gradient(at 78% 26%, hsla(287,50%,40%,0.78) 0px, transparent 50%), radial-gradient(at 51% 68%, hsla(308,37%,47%,0.57) 0px, transparent 50%)',
         backdropFilter: 'blur(20px)',
         backgroundSize: 'cover',
         marginTop: '-115px',
-    }}>
-        {!matches ? (
-        <Group align={'center'} className=''>
+      }}
+    >
+      {!matches ? (
+        <Group align={'center'} className="">
           {/* <Grid.Col> */}
-            <Popover
-              opened={sideButtons}
-              onClose={close}
-              position="right"
-              styles={{
-                dropdown: {
-                  background: 'transparent',
-                  border: '0px',
+          <Popover
+            opened={sideButtons}
+            onClose={close}
+            position="right"
+            styles={{
+              dropdown: {
+                background: 'transparent',
+                border: '0px',
+              },
+            }}
+          >
+            <Popover.Target>
+              <Button
+                className="absolute top-1/4"
+                onClick={() => setSideButtons(!sideButtons)}
+                h={70}
+                w={70}
+                bg={
+                  sideButtons
+                    ? 'linear-gradient(248.75deg, #3F2680 12.71%, #3F2680 108.63%)'
+                    : 'linear-gradient(248.75deg, #50A1FF 12.71%, #3F2680 108.63%)'
                 }
-              }}
-            >
-              <Popover.Target>
-                <Button className='absolute top-1/4' onClick={() => setSideButtons(!sideButtons)} h={70} w={70} 
-                  bg={sideButtons ? 'linear-gradient(248.75deg, #3F2680 12.71%, #3F2680 108.63%)' : 'linear-gradient(248.75deg, #50A1FF 12.71%, #3F2680 108.63%)'}
-                  styles={{
-                    root: {
-                      borderRadius: '0px 5px 5px 0px',
-                      '&:hover': {
-                        background: sideButtons ? 'linear-gradient(248.75deg, #3F2680 12.71%, #3F2680 108.63%)' : 'linear-gradient(248.75deg, #50A1FF 12.71%, #3F2680 108.63%)',
-                      },
+                styles={{
+                  root: {
+                    borderRadius: '0px 5px 5px 0px',
+                    '&:hover': {
+                      background: sideButtons
+                        ? 'linear-gradient(248.75deg, #3F2680 12.71%, #3F2680 108.63%)'
+                        : 'linear-gradient(248.75deg, #50A1FF 12.71%, #3F2680 108.63%)',
                     },
-                  }}>
-                    <Dots size={34} />
+                  },
+                }}
+              >
+                <Dots size={34} />
+              </Button>
+            </Popover.Target>
+            <Popover.Dropdown>
+              <Group align="center">
+                <Button
+                  bg={'#0076FF'}
+                  className="hover:bg-[#0076FF]"
+                  radius={27}
+                  mb={150}
+                  ml={-20}
+                  component={NextLink}
+                  href="/about"
+                  size="sm"
+                >
+                  About Us
                 </Button>
-              </Popover.Target>
-              <Popover.Dropdown>
-                  <Group align='center'>
-                    <Button bg={'#0076FF'} className="hover:bg-[#0076FF]" radius={27} mb={150} ml={-20} component={NextLink} href="/about" size="sm">
-                      About Us
-                    </Button>
-                    <Button className="text-top items-center hover:bg-[#0076FF]" bg={'#0076FF'} mt={-20} radius={35} ml={-90} component={NextLink} href="/contact" size="sm">
-                      Contact Us
-                    </Button>
-                    <Button bg={'#0076FF'} className="hover:bg-[#0076FF]" radius={36} mt={120} ml={-135} component={NextLink} href="/how-it-works" size="sm">
-                      How it works?
-                    </Button>
-                  </Group>
-              </Popover.Dropdown>
-            </Popover>
+                <Button
+                  className="text-top items-center hover:bg-[#0076FF]"
+                  bg={'#0076FF'}
+                  mt={-20}
+                  radius={35}
+                  ml={-90}
+                  component={NextLink}
+                  href="/contact"
+                  size="sm"
+                >
+                  Contact Us
+                </Button>
+                <Button
+                  bg={'#0076FF'}
+                  className="hover:bg-[#0076FF]"
+                  radius={36}
+                  mt={120}
+                  ml={-135}
+                  component={NextLink}
+                  href="/how-it-works"
+                  size="sm"
+                >
+                  How it works?
+                </Button>
+              </Group>
+            </Popover.Dropdown>
+          </Popover>
           {/* </Grid.Col> */}
         </Group>
-        ) : undefined}
-        <Container py={100} fluid ml={matches ? 5 : 90} mr={matches ? 5 : 69}>
-            <Grid mt={57} align='center'>
-                <Image radius={'13px'} height='auto' width='100%' src='images/pages/blog-detail/heroSingleBlog.png' alt='heroSingleBlog' />
-                <Title mt={36} className='uppercase font-[900] text-[48px] leading-[56px] tracking-[-0.015em]'>
-                    NEW CASINO TRENDS 2023
-                </Title>
-                <Grid.Col>
-                    <div className='flex flex-none items-baseline mt-[-10px]'>
-                        <Text color='#B3B3B3' mt={36} className='font-[400] text-[16px] leading-[19px] tracking-[-0.015em]'>
-                            Published By <span style={{color: '#FFB800'}}>John Smith</span>
-                        </Text>
-                        <div style={{background: '#D9D9D9', width: '9px', height: '9px', marginLeft: '21px', marginRight: '21px'}}></div>
-                        <Text color='#B3B3B3' mt={36} className='font-[400] text-[16px] leading-[19px] tracking-[-0.015em]'>
-                            Published on <span style={{color: '#FFB800'}}>22 Aug,2022</span>
-                        </Text>
-                    </div>
-                </Grid.Col>
-                <Grid.Col mt={60}>
-                    <Text className='font-[400] text-[20px] leading-[38px] tracking-[0.005em]' opacity={0.8}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis nibh non augue malesuada iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor velit eget arcu convallis pulvinar. Aenean scelerisque eros non luctus pretium. Sed sollicitudin elit sit amet nunc tempus aliquet id eu quam. Proin ligula felis, iaculis vitae mauris in, porta placerat elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    </Text>
-                </Grid.Col>
-                <Grid.Col mt={40}>
-                    <Text className='font-[700] text-[20px] leading-[38px] tracking-[0.005em]' opacity={0.8}>
-                        consectetur adipiscing elit. Sed venenatis nibh non augue malesuada iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor velit eget arcu convallis pulvinar. Aenean scelerisque eros non luctus pretium. Sed sollicitudin elit sit amet nunc tempus aliquet id eu quam. Proin ligula felis, iaculis vitae mauris in, porta placerat elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    </Text>
-                </Grid.Col>
-                <Grid.Col mt={72}>
-                    <Group position='center'>
-                        <Image radius={'13px'} height={matches ? '100%' : 'auto'} width={matches ? '100%' : 'auto'} src='images/pages/blog-detail/NewCasino1.png' alt='NewCasino1' />
-                        <Image radius={'13px'} height={matches ? '100%' : 'auto'} width={matches ? '100%' : 'auto'} src='images/pages/blog-detail/NewCasino2.png' alt='NewCasino2' />
-                    </Group>
-                </Grid.Col>
-                <Grid.Col mt={70}>
-                    <Text className='font-[400] text-[20px] leading-[38px] tracking-[0.005em]' opacity={0.8}>
-                        Sed euismod lacus eu rutrum viverra.<span className='font-[700]'> Mauris tincidunt accumsan venenatis. Quisque ultrices facilisis eros et iaculis.</span> Donec pretium lacus et placerat dictum. Ut at consectetur mauris. Pellentesque mattis lacus at fringilla mattis. Sed egestas eleifend quam, malesuada luctus sapien varius eu. Vivamus in quam in dui eleifend dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-                    </Text>
-                </Grid.Col>
-            </Grid>
-        </Container>
+      ) : undefined}
+      <div className="py-[100px] ml-5 lg:ml-[90px] mr-5 lg:mr-[90px] pt-[150px]">
+        <Image radius={'13px'} width={'100%'} height={'60%'} src={blogData.image} alt="heroSingleBlog" />
+        <Title mt={50} className="uppercase font-[900] text-[48px] leading-[56px] tracking-[-0.015em]">
+          {/* NEW CASINO TRENDS 2023 */}
+          {blogData.title}
+        </Title>
+
+        <div className="flex flex-none items-baseline mt-[-10px]">
+          <Text color="#B3B3B3" mt={36} className="font-[400] text-[16px] leading-[19px] tracking-[-0.015em]">
+            Published By <span style={{ color: '#FFB800' }}>{blogData.author}</span>
+          </Text>
+          <div
+            style={{ background: '#D9D9D9', width: '9px', height: '9px', marginLeft: '21px', marginRight: '21px' }}
+          ></div>
+          <Text color="#B3B3B3" mt={36} className="font-[400] text-[16px] leading-[19px] tracking-[-0.015em]">
+            Published on <span style={{ color: '#FFB800' }}>{blogData.publishedOn}</span>
+          </Text>
+        </div>
+
+        <Text className="font-[400] text-[20px] leading-[38px] tracking-[0.005em] mt-[100px]" opacity={0.8}>
+          {blogData.description}
+        </Text>
+
+        <Text
+          className="font-[700] text-[20px] leading-[38px] tracking-[0.005em] mt-[100px]"
+          opacity={0.8}
+          dangerouslySetInnerHTML={{ __html: blogData.richText }}
+        ></Text>
+      </div>
     </div>
   );
 }
