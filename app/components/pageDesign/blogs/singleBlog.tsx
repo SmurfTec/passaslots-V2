@@ -8,14 +8,15 @@ export type SingleBlogProps = {
   title: string;
   author: string;
   publishedOn?: string;
+  id: string;
 };
 
-export function SingleBlog({ image, date, title, author }: SingleBlogProps) {
+export function SingleBlog({ image, date, title, author, id }: SingleBlogProps) {
   const matches = useMediaQuery('(max-width: 768px)');
   return (
     <Card
       component={NextLink}
-      href="/single-blog"
+      href={'/single-blog/' + id}
       h={matches ? 188 : 346}
       w={matches ? 167 : 300}
       style={{

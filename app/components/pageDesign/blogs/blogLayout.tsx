@@ -5,45 +5,6 @@ import axios from 'axios';
 import { useMediaQuery } from '@mantine/hooks';
 import { Loader } from 'tabler-icons-react';
 
-const blogData: Array<SingleBlogProps> = [
-  {
-    image: '/images/pages/blogs/game1.png',
-    author: 'Adam Smith',
-    title: 'Top Games 2023',
-    date: '15 Feb 2023',
-  },
-  {
-    image: '/images/pages/blogs/game2.png',
-    author: 'Adam Smith',
-    title: 'Online Casino Platforms',
-    date: '15 Feb 2023',
-  },
-  {
-    image: '/images/pages/blogs/game3.png',
-    author: 'Adam Smith',
-    title: 'Grand Wheel',
-    date: '15 Feb 2023',
-  },
-  {
-    image: '/images/pages/blogs/game1.png',
-    author: 'Adam Smith',
-    title: 'Top Games 2023',
-    date: '15 Feb 2023',
-  },
-  {
-    image: '/images/pages/blogs/game2.png',
-    author: 'Adam Smith',
-    title: 'Online Casino Platforms',
-    date: '15 Feb 2023',
-  },
-  {
-    image: '/images/pages/blogs/game3.png',
-    author: 'Adam Smith',
-    title: 'Grand Wheel',
-    date: '15 Feb 2023',
-  },
-];
-
 export function BlogLayout() {
   const [blogsData, setBlogsData] = useState<SingleBlogProps[]>([]);
   const [paginationData, setPaginationData] = useState({ take: 4, skip: 0 });
@@ -88,9 +49,9 @@ export function BlogLayout() {
       </Grid>
 
       <Grid justify="center" align="center" pb={30} pt={matches ? 0 : 30} grow gutter={matches ? 10 : 30}>
-        {blogData.length === 0 && loading ? (
+        {blogsData.length === 0 && loading ? (
           <Loader />
-        ) : blogData.length === 0 ? (
+        ) : blogsData.length === 0 ? (
           <p className="font-[700] text-[24px] center">Data not available</p>
         ) : (
           <></>
@@ -107,7 +68,13 @@ export function BlogLayout() {
             sm={6}
             xs={6}
           >
-            <SingleBlog author={item.author} date={item.publishedOn as string} image={item.image} title={item.title} />
+            <SingleBlog
+              author={item.author}
+              date={item.publishedOn as string}
+              image={item.image}
+              title={item.title}
+              id={item.id}
+            />
           </Grid.Col>
         ))}
         {/* {blogData.map((item, key) => (
