@@ -99,15 +99,12 @@ export function HomeHero() {
           <Grid align="center" justify="center">
             <Grid.Col>
               <Carousel
-                w="90%"
                 styles={{
                   indicator: {
                     width: !matches ? '22px' : '10px',
                     height: !matches ? '22px' : '10px',
                     transition: 'width 250ms ease',
                     backgroundColor: '#D9D9D9',
-                    gap: !matches ? '21px' : '10px',
-
                     '&[data-active]': {
                       width: '22px',
                       backgroundColor: '#016BE6',
