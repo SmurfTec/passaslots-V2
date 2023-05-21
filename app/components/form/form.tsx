@@ -144,7 +144,7 @@ export function ContactForm() {
               margin: 'auto',
             },
             body: { display: 'flex', alignItems: 'center' },
-            label: { fontSize: matches ? '9px !important' : 'inherit' },
+            label: { fontSize: matches ? '15px !important' : 'inherit' },
           }}
           label={`I agree to receive special offers by email.`}
           {...form.getInputProps('check')}
@@ -158,7 +158,7 @@ export function ContactForm() {
               margin: 'auto',
             },
             body: { display: 'flex', alignItems: 'center' },
-            label: { fontSize: matches ? '9px !important' : 'inherit' },
+            label: { fontSize: matches ? '15px !important' : 'inherit' },
           }}
           label={
             <>
