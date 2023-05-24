@@ -111,7 +111,7 @@ const getPlayersGraphData = async (days: number) => {
 function getCountByMonth(data: any) {
   const finalData = [];
   const countByMonth = data.reduce((acc: any, obj: any) => {
-    const month = obj.createdAt.getMonth() + 1; // Adding 1 because getMonth() returns a zero-based index
+    const month = obj.createdAt.toLocaleString('default', { month: 'long' });
     const year = obj.createdAt.getFullYear();
     const key = `${year}-${month}`;
 
@@ -128,7 +128,7 @@ function getCountByMonth(data: any) {
     if (countByMonth.hasOwnProperty(key)) {
       const [year, month] = key.split('-');
       const count = countByMonth[key];
-      finalData.push({ month: `Month: ${month}/${year}`, count });
+      finalData.push({ month: `${month}/${year}`, count });
     }
   }
   return finalData;
