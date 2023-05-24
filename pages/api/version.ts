@@ -10,7 +10,7 @@ export default async function Version(req: NextApiRequest, res: NextApiResponse<
         origin: '*',
         optionsSuccessStatus: 200,
       });
-      res.status(200).json({ version: '0.3.1' });
+      res.status(200).json({ version: '0.3.2' });
       break;
   }
 }

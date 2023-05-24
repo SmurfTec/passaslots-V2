@@ -8,6 +8,9 @@ const nextConfig = {
     CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
     CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
     GOOGLE_CAPTCHA_CLIENT_KEY: process.env.GOOGLE_CAPTCHA_CLIENT_KEY,
+    JWT_EXPIRATION_TIME: process.env.JWT_EXPIRATION_TIME,
+    JWT_SECRET_KEY: process.env.JWT_SECRET_KEY,
+    RETRY_ATTEMPTS: process.env.RETRY_ATTEMPTS,
   },
   serverRuntimeConfig: {
     PROJECT_ROOT: __dirname,
