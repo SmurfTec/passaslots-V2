@@ -1,8 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import NextCors from 'nextjs-cors';
-import { generateJWT } from '../../../../utils';
-const bcrypt = require('bcrypt');
+import { comparePasswords, generateJWT } from '../../../../utils';
 const prisma = new PrismaClient();
 
 export default async function SignIn(req: NextApiRequest, res: NextApiResponse<any>) {
@@ -53,9 +52,4 @@ export default async function SignIn(req: NextApiRequest, res: NextApiResponse<a
       }
     }
   }
-}
-
-async function comparePasswords(enteredPassword: string, storedPassword: string) {
-  const isMatch = await bcrypt.compare(enteredPassword, storedPassword);
-  return isMatch;
 }

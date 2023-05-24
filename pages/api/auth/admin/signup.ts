@@ -6,7 +6,7 @@ import { bcryptPassword, generateJWT } from '../../../../utils';
 const prisma = new PrismaClient();
 
 export default async function SignUp(req: NextApiRequest, res: NextApiResponse<any>) {
-  const { method, body, query } = req;
+  const { method } = req;
   if (req.method == 'OPTIONS') {
     res.setHeader('Allow', 'POST');
     return res.status(202).json({});
