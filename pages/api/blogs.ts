@@ -27,13 +27,30 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
           origin: '*',
           optionsSuccessStatus: 200,
         });
-        const blogs = await prisma.blogs.findMany({
-          where: { isDeleted: false },
-          take: query.take ? +query.take : undefined,
-          skip: query.skip ? +query.skip : 0,
-        });
+        if (query.keyword) {
+          const blogs = await prisma.blogs.findMany({
+            where: {
+              isDeleted: false,
+              OR: [
+                { title: { contains: query.keyword as string } },
+                { description: { contains: query.keyword as string } },
+                { publishedOn: { contains: query.keyword as string } },
+              ],
+            },
+            take: query.take ? +query.take : undefined,
+            skip: query.skip ? +query.skip : 0,
+          });
 
-        res.status(200).json(blogs as any);
+          res.status(200).json(blogs as any);
+        } else {
+          const blogs = await prisma.blogs.findMany({
+            where: { isDeleted: false },
+            take: query.take ? +query.take : undefined,
+            skip: query.skip ? +query.skip : 0,
+          });
+
+          res.status(200).json(blogs as any);
+        }
       } catch (err) {
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }
