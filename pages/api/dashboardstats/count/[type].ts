@@ -6,6 +6,10 @@ const prisma = new PrismaClient();
 
 export default async function dashboard(req: NextApiRequest, res: NextApiResponse<any>) {
   const { method, query } = req;
+  if (req.method == 'OPTIONS') {
+    res.setHeader('Allow', 'GET');
+    return res.status(202).json({});
+  }
   switch (method) {
     case 'GET':
       await NextCors(req, res, {
