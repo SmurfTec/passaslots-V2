@@ -137,7 +137,7 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
                     className="text-base font-[400]"
                     size="lg"
                     color={'white'}
-                    bg={'#016BE6'}
+                    bg={'linear-gradient(to bottom, #2072D2, #A74C9A)'}
                   >
                     SIGN UP FOR SMS UPDATES NOW
                   </Button>
