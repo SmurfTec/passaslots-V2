@@ -204,7 +204,7 @@ export function ContactForm() {
         </Group>
         {message && (
           <Text color="green" size={15}>
-            ✅ Successfully sent
+            ✅ Thankyou for subscribing
           </Text>
         )}
       </div>
