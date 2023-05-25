@@ -49,7 +49,6 @@ export function ContactForm() {
     })
       .then((res) => {
         setMessage(true);
-        form.reset();
         if (check) {
           fetch('/api/newsletter', {
             method: 'POST',
@@ -57,6 +56,15 @@ export function ContactForm() {
             headers: { 'Content-Type': 'application/json' },
           });
         }
+        //reset to initial values of form
+        form.reset();
+        // After 5000 ms (5 seconds), set the message back to false
+        const timer = setTimeout(() => {
+          setMessage(false);
+        }, 5000);
+
+        // Clean up the timer when the component is unmounted or the dependency changes
+        return () => clearTimeout(timer);
       })
       .catch((e) => {
         setMessage(false);

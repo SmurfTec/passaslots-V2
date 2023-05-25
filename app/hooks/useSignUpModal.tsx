@@ -43,7 +43,15 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
     })
       .then((res) => {
         setMessage(true);
+        //reset to initial values of form
         form.reset();
+        // After 5000 ms (5 seconds), set the message back to false
+        const timer = setTimeout(() => {
+          setMessage(false);
+        }, 5000);
+
+        // Clean up the timer when the component is unmounted or the dependency changes
+        return () => clearTimeout(timer);
         thankYouOpen();
         close();
       })
