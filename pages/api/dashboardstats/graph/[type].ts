@@ -17,8 +17,8 @@ export default async function dashboardGraph(req: NextApiRequest, res: NextApiRe
         origin: '*',
         optionsSuccessStatus: 200,
       });
-      const data = await returnCountForDashboardStats(query.type as string, query.days ? +query.days : 0);
-      if (typeof data === 'number') res.status(200).json({ count: data } as any);
+      const data = (await returnCountForDashboardStats(query.type as string, query.days ? +query.days : 0)) as any;
+      if (data.error === undefined) res.status(200).json(data as any);
       else res.status(400).json(data as any);
       break;
   }
@@ -52,7 +52,6 @@ const returnCountForDashboardStats = async (type: string, days: number) => {
 };
 
 const getSubscribersGraphData = async (days: number) => {
-  const finalData = [];
   const currentDate = new Date();
   const currentMonth = currentDate.getMonth() + 1; // Adding 1 because getMonth() returns a zero-based index
 
@@ -72,7 +71,6 @@ const getSubscribersGraphData = async (days: number) => {
 };
 
 const getDistributerGraphData = async (days: number) => {
-  const finalData = [];
   const currentDate = new Date();
   const currentMonth = currentDate.getMonth() + 1; // Adding 1 because getMonth() returns a zero-based index
 
@@ -93,7 +91,6 @@ const getDistributerGraphData = async (days: number) => {
 };
 
 const getPlayersGraphData = async (days: number) => {
-  const finalData = [];
   const currentDate = new Date();
   const currentMonth = currentDate.getMonth() + 1; // Adding 1 because getMonth() returns a zero-based index
 
