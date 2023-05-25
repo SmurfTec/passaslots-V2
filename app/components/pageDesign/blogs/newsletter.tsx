@@ -161,7 +161,7 @@ export function NewsletterBlog() {
                   />
                   {message && (
                     <Text color="green" size={matches ? 12 : 14}>
-                      ✅ Successfully saved email
+                      ✅ Thankyou for subscribing
                     </Text>
                   )}
                 </form>

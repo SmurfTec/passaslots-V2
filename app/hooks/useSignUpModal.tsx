@@ -142,7 +142,7 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
                   </Button>
                   {message && (
                     <Text color="green" size={14}>
-                      ✅ Successfully saved email
+                      ✅ Thankyou for subscribing
                     </Text>
                   )}
                   
