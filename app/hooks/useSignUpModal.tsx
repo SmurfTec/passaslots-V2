@@ -43,6 +43,7 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
     })
       .then((res) => {
         setMessage(true);
+        form.reset();
         thankYouOpen();
         close();
       })

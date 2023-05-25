@@ -43,6 +43,7 @@ export function NewsletterBlog() {
       })
         .then((res) => {
           setMessage(true);
+          form.reset();
         })
         .catch((e) => {
           setMessage(false);

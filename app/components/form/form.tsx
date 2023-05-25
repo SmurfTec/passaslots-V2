@@ -49,6 +49,7 @@ export function ContactForm() {
     })
       .then((res) => {
         setMessage(true);
+        form.reset();
         if (check) {
           fetch('/api/newsletter', {
             method: 'POST',
