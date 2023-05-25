@@ -42,6 +42,7 @@ export const useBonusModal = (): [React.ReactNode, () => void] => {
 
   const handleSubmit = ({ email, name }: { email: string; name: string }) => {
     setValue({ email, name });
+    form.reset();
     signupOpen();
     close();
   };

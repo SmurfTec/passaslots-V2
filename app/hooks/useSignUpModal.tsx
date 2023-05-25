@@ -50,10 +50,10 @@ export const useSignUpModal = (): [JSX.Element, () => void] => {
           setMessage(false);
         }, 5000);
 
-        // Clean up the timer when the component is unmounted or the dependency changes
-        return () => clearTimeout(timer);
         thankYouOpen();
         close();
+        // Clean up the timer when the component is unmounted or the dependency changes
+        return () => clearTimeout(timer);
       })
       .catch((e) => {
         setMessage(false);
