@@ -109,7 +109,7 @@ export function SingleBlogHero({ blogData }: BlogComponentInterface) {
         </Group>
       ) : undefined}
       <div className="py-[100px] ml-5 lg:ml-[90px] mr-5 lg:mr-[90px] pt-[150px]">
-        <Image radius={'13px'} width={'100%'} height={'60%'} src={blogData.image} alt="heroSingleBlog" />
+        <Image radius={'13px'} maw={500} mah={700} src={blogData.image} alt="heroSingleBlog" />
         <Title mt={50} className="uppercase font-[900] text-[48px] leading-[56px] tracking-[-0.015em]">
           {/* NEW CASINO TRENDS 2023 */}
           {blogData.title}
