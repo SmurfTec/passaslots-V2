@@ -22,9 +22,9 @@ export function SingleBlog({ image, date, title, author, id }: SingleBlogProps) 
       style={{
         border: image ? undefined : '4px solid #016BE6',
         backgroundColor: '#016BE6 !important',
-        background: `linear-gradient(180deg, rgba(1, 107, 230, 0.2046) 53.23%, rgba(1, 107, 230, 0.93) 100%), url("${image}")`,
+        background: `linear-gradient(180deg, rgba(1, 107, 230, 0.2046) 5.23%, rgba(1, 107, 230, 0.99) 100%), url("${image}")`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
+        backgroundSize: 'cover',
 
         backgroundPosition: 'center',
         // margin: 'auto',
@@ -33,7 +33,14 @@ export function SingleBlog({ image, date, title, author, id }: SingleBlogProps) 
       radius={30}
       mt={matches ? 20 : 50}
     >
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', height: '100%' }}>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-end',
+          height: '100%',
+        }}
+      >
         <Card.Section
           style={{
             borderTop: '1px solid white',
@@ -53,7 +60,7 @@ export function SingleBlog({ image, date, title, author, id }: SingleBlogProps) 
                 By: {author}
               </Text>
               <Text color="white" className="font-[400] md:text-[14px] sm:text-[8px] xs:text-[8px] leading-[20px]">
-                {date}
+                {formatDate(date)}
               </Text>
             </div>
           </div>
@@ -62,3 +69,13 @@ export function SingleBlog({ image, date, title, author, id }: SingleBlogProps) 
     </Card>
   );
 }
+
+const formatDate = (date: string) => {
+  const currentDate = new Date(date);
+
+  const day = String(currentDate.getDate()).padStart(2, '0');
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+  const year = currentDate.getFullYear();
+
+  return `${day}-${month}-${year}`;
+};
