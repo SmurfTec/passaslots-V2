@@ -29,10 +29,11 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
                 },
               ],
             },
+            orderBy: { createdAt: 'desc' },
           });
           res.status(200).json(allUsers);
         } else {
-          const allUsers = await prisma.playerRegistration.findMany();
+          const allUsers = await prisma.playerRegistration.findMany({ orderBy: { createdAt: 'desc' } });
           res.status(200).json(allUsers);
         }
       } catch (err) {
