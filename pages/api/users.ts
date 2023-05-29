@@ -5,7 +5,7 @@ import NextCors from 'nextjs-cors';
 const prisma = new PrismaClient();
 
 export default async function ContactHandler(req: NextApiRequest, res: NextApiResponse<any>) {
-  const { method, body } = req;
+  const { method, body, query } = req;
   switch (method) {
     case 'GET':
       try {
@@ -14,8 +14,28 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
           origin: '*',
           optionsSuccessStatus: 200,
         });
-        const users = await prisma.playerRegistration.findMany();
-        res.status(200).json(users);
+        if (query.keyword) {
+          const allUsers = await prisma.playerRegistration.findMany({
+            where: {
+              OR: [
+                {
+                  email: { contains: query.keyword as string },
+                },
+                {
+                  name: { contains: query.keyword as string },
+                },
+                {
+                  phone: { contains: query.keyword as string },
+                },
+              ],
+            },
+            orderBy: { createdAt: 'desc' },
+          });
+          res.status(200).json(allUsers);
+        } else {
+          const allUsers = await prisma.playerRegistration.findMany({ orderBy: { createdAt: 'desc' } });
+          res.status(200).json(allUsers);
+        }
       } catch (err) {
         res.status(400).json({ message: `Something went wrong! Please read the error message '${err}'` });
       }

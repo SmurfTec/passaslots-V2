@@ -52,10 +52,11 @@ export default async function ContactHandler(req: NextApiRequest, res: NextApiRe
                 { email: { contains: query.keyword as string } },
               ],
             },
+            orderBy: { createdAt: 'desc' },
           });
           res.status(200).json(contactRequests);
         } else {
-          const contactRequests = await prisma.signup_Contact.findMany();
+          const contactRequests = await prisma.signup_Contact.findMany({ orderBy: { createdAt: 'desc' } });
           res.status(200).json(contactRequests);
         }
       } catch (err) {

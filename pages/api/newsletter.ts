@@ -39,10 +39,11 @@ export default async function NewsLetterHandler(req: NextApiRequest, res: NextAp
             where: {
               OR: [{ email: { contains: query.keyword as string } }],
             },
+            orderBy: { createdAt: 'desc' },
           });
           res.status(200).json(allNewsLetters);
         } else {
-          const allNewsLetters = await prisma.newsLetter.findMany();
+          const allNewsLetters = await prisma.newsLetter.findMany({ orderBy: { createdAt: 'desc' } });
           res.status(200).json(allNewsLetters);
         }
       } catch (err) {
