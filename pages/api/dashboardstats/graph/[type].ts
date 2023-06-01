@@ -65,6 +65,9 @@ const getSubscribersGraphData = async (days: number) => {
         lt: endDate,
       },
     },
+    orderBy: {
+      createdAt: 'desc',
+    },
   });
 
   return getCountByMonth(data);
@@ -85,6 +88,9 @@ const getDistributerGraphData = async (days: number) => {
       },
       purpose: 'signup',
     },
+    orderBy: {
+      createdAt: 'desc',
+    },
   });
 
   return getCountByMonth(data);
@@ -103,6 +109,9 @@ const getPlayersGraphData = async (days: number) => {
         gte: startDate,
         lt: endDate,
       },
+    },
+    orderBy: {
+      createdAt: 'desc',
     },
   });
 
