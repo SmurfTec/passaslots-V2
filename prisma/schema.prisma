@@ -48,6 +48,7 @@ model blogs {
   image String
   author String
   richText String
+  createdAt DateTime @default(now())
 }
 
 model admin {

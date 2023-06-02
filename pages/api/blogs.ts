@@ -39,7 +39,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
             },
             take: query.take ? +query.take : undefined,
             skip: query.skip ? +query.skip : 0,
-            orderBy: { title: 'asc' },
+            orderBy: { createdAt: 'desc' },
           });
 
           res.status(200).json(blogs as any);
@@ -48,7 +48,7 @@ export default async function BlogsHandler(req: NextApiRequest, res: NextApiResp
             where: { isDeleted: false },
             take: query.take ? +query.take : undefined,
             skip: query.skip ? +query.skip : 0,
-            orderBy: { title: 'asc' },
+            orderBy: { createdAt: 'desc' },
           });
 
           res.status(200).json(blogs as any);
