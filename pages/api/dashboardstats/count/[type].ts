@@ -20,6 +20,7 @@ export default async function dashboard(req: NextApiRequest, res: NextApiRespons
       const data = await returnCountForDashboardStats(query.type as string);
       if (typeof data === 'number') res.status(200).json({ count: data } as any);
       else res.status(400).json(data as any);
+
       break;
   }
 }
